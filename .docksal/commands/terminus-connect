@@ -1,0 +1,39 @@
+#!/bin/bash
+
+## DOOR3 Docksal package, v1.0
+##
+## @author Anatoliy Polyakov anatoliy.polyakov@door3.com
+##
+## Docksal custom command for connection of terminus to the project.
+##
+## Use this command at the start of working with the project.
+##
+## Usage: fin terminus-connect
+
+
+# Abort if anything fails
+set -e
+
+# Console colors
+red='\033[0;31m'
+green='\033[0;32m'
+green_bg='\033[42m'
+yellow='\033[1;33m'
+NC='\033[0m'
+
+# Helper functions for console output
+echo-red () { echo -e "${red}$1${NC}"; }
+echo-green () { echo -e "${green}$1${NC}"; }
+echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
+echo-yellow () { echo -e "${yellow}$1${NC}"; }
+
+#Show some art
+clear
+cat "${PROJECT_ROOT}/build-scripts/ascii.txt"
+
+echo-green "Please, go to Pantheon, create new terminus key and paste it here (https://dashboard.pantheon.io/machine-token/create/cli)"
+read terminus_key
+
+fin terminus auth:login --machine-token=$terminus_key
+
+echo-green " <<<<<<< Terminus has been connected ¯\_(ツ)_/¯ >>>>>>> "

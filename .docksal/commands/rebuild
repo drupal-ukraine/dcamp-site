@@ -1,0 +1,114 @@
+#!/bin/bash
+
+## DOOR3 Docksal package, v1.1
+##
+## @author Anton Trokhymenko antroxim@gmail.com
+##
+## Docksal custom command rebuild script
+## Syncs DB from Pantheon environment, @see PANTHEON_ENV setting below
+## Runs composer, drush cim, drush updb, drush cr
+## Builds theme @see scripts/build_theme.sh
+##
+## TODO: Add ability to force new Pantheon backup to be create for latest DB sync
+##
+## Usage: fin rebuild
+
+
+# Trapping CTRL-C
+trap ctrl_c INT
+trap ctrl_c SIGINT
+trap ctrl_c SIGTERM
+# trap ctrl-c and call ctrl_c()
+function ctrl_c() {
+    echo-red "\n Canceled, deleting DB dump if any"
+    rm -f $PROJECT_ROOT/db/database.sql.gz
+    echo-red "Good bye."
+    exit $?
+}
+
+#Paths and environment settings
+PANTHEON_ENV="adco.live"
+DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
+MAIN_THEME_PATH="${DOCROOT_PATH}/themes/adco"
+
+# Console colors
+red='\033[0;31m'
+green='\033[0;32m'
+green_bg='\033[42m'
+yellow='\033[1;33m'
+NC='\033[0m'
+
+# Helper functions for console output
+echo-red () { echo -e "${red}$1${NC}"; }
+echo-green () { echo -e "${green}$1${NC}"; }
+echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
+echo-yellow () { echo -e "${yellow}$1${NC}"; }
+
+#Show some art
+clear
+cat "${PROJECT_ROOT}/build-scripts/ascii.txt"
+
+# Database download
+echo-yellow "Downloading Database from ${PANTHEON_ENV} Pantheon environment, please wait. This might take a while..."
+
+rm -f $PROJECT_ROOT/db/database.sql.gz
+
+# We nee do catch error if any
+set +e
+
+fin terminus backup:get --element=db $PANTHEON_ENV --to=/var/www/db/database.sql.gz
+if [ $? -ne 0 ] ; then
+
+    echo-red "## Interrupted ## \n"
+    echo-red "Error downloading database from Pantheon."
+    echo-red "Try connecting Terminus with 'fin terminus-connect' first, then try 'fin rebuild' again\n"
+    exit $?
+else
+    echo-green "Done. Downloaded to ${PROJECT_ROOT}/db/database.sql.gz\n"
+fi
+
+# Abort if anything fails
+set -e
+
+#Database extcation
+echo-yellow "Extracting..."
+gunzip $PROJECT_ROOT/db/database.sql.gz
+echo-green "Done.\n"
+
+#Database import
+echo-yellow "Importing..."
+fin db import $PROJECT_ROOT/db/database.sql --db-user=user --db-password=user
+echo-green "Done.\n"
+
+#Removing unnecessary sql dump files
+echo-yellow "Removing files..."
+rm -f $PROJECT_ROOT/db/database.sql
+echo-green "Done.\n"
+
+#Running composer
+echo-yellow "Running composer install"
+cd $PROJECT_ROOT
+fin exec composer install
+echo-green "Done.\n"
+
+#Running Drush commands
+echo-yellow "Running drush cim, drush updb, drush cr"
+cd $DOCROOT_PATH
+fin drush updb -y
+fin drush cim -y
+fin drush cr
+echo-green "Done.\n"
+
+#Building theme
+echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
+if [ -e "$MAIN_THEME_PATH/package-lock.json" ]; then
+    echo-yellow "package-lock.json is available, running npm, bower and gulp...\n"
+    cd $MAIN_THEME_PATH
+    #fin exec bash -i /var/www/scripts/build_theme.sh
+else
+    echo-yellow "package-lock.json is not available, deleting node_modules and npm install\n"
+    rm -rf $MAIN_THEME_PATH/node_modules
+    cd $MAIN_THEME_PATH
+    #fin exec bash -i /var/www/scripts/build_theme.sh
+fi
+echo-green " <<<<<<< Rebuild is complete >>>>>>> "
