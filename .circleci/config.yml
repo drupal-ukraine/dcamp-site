@@ -31,4 +31,3 @@ workflows:
   default-workflow:
     jobs:
       - build:
-          context: org-global  # Load org level environment variables from CircleCI
