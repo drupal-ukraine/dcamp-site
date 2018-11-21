@@ -23,6 +23,7 @@ jobs:
       - run:
           name: Other commands
           command: |
+            DEBUG=1 source build-env
             build-exec 'pwd'
             build-exec 'cd docroot && fin drush st'
 
