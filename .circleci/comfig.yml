@@ -1,0 +1,34 @@
+version: 2
+
+jobs:
+  build:
+    # Override CIRCLE_WORKING_DIRECTORY (set to ~/project by default)
+    working_directory: /home/agent/build
+    docker:
+      - image: docksal/ci-agent:php
+    steps:
+      # Inject build environment variables.
+      # Each run statement runs in its own isolated shell (exported variables are not preserved).
+      # $BASH_ENV can be used to pass environment variables between run statements.
+      - run:
+          name: Configure agent environment
+          command: echo 'source build-env' > $BASH_ENV
+      # Code checkout in the build agent
+      - checkout
+      # Launch a sandbox on the sandbox server
+      - run:
+          name: Build sandbox
+          command: sandbox-init
+      # Run other commands
+      - run:
+          name: Other commands
+          command: |
+            build-exec 'pwd'
+            build-exec 'cd docroot && fin drush st'
+
+workflows:
+  version: 2
+  default-workflow:
+    jobs:
+      - build:
+          context: org-global  # Load org level environment variables from CircleCI
