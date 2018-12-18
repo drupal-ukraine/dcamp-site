@@ -1,0 +1,45 @@
+//NDA message paragraph
+
+.paragraph--type--nda-message {
+  position: fixed;
+  z-index: 5;
+  width: 95%;
+  max-width: 820px;
+  height: 500px;
+  max-height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-concrete;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.1);
+
+  @include mq($bp768) {
+    padding: 20px;
+    width: 56%;
+  }
+  .title {
+    padding-bottom: 5px;
+    line-height: 1.63;
+  }
+
+  .content {
+    height: 93%;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: $color-white;
+    overflow-y: scroll;
+
+    @include mq($bp768) {
+      padding: 20px 28px;
+    }
+    .field--name-field-format-text {
+      line-height: 1.62;
+    }
+
+    form {
+      padding: 40px 0 20px 0;
+    }
+  }
+}

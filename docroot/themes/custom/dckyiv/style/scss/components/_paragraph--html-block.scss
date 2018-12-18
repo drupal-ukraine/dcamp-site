@@ -1,0 +1,19 @@
+// paragraph--type--html-block
+.paragraph--type--html-block {
+  .field--name-field-title {
+    margin: 20px 0;
+    font-family: $font-montserrat;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $color-mine-shaft;
+  }
+
+  .field--name-field-text p {
+    padding-bottom: 10px;
+    font-family: $font-lato;
+    font-size: 1.6rem;
+    line-height: 1.63;
+    color: $color-mine-shaft;
+  }
+}

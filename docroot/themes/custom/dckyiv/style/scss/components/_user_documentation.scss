@@ -1,0 +1,167 @@
+
+.user-documentation {
+  $ud: &;
+
+  display: flex;
+  flex-direction: column;
+  @include mq($bp580) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &--description {
+    display: none;
+    padding-bottom: 35px;
+    font-family: $font-lato;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $color-mine-shaft;
+
+    @include mq($bp960) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &--menu {
+    @include mq($bp580) {
+      margin-right: 20px;
+      padding: 0;
+    }
+
+    @include mq($bp580) {
+      flex: 2 0 0;
+    }
+
+    & > li {
+      @include mq($bp580) {
+        border-right: 1px solid rgba($color-black, .4);
+        box-sizing: border-box;
+      }
+    }
+
+    #{$ud}--submenu {
+      display: none;
+      padding-left: 4rem;
+      @include mq($bp580) {
+        display: block;
+      }
+    }
+  }
+
+  &--content {
+    @include mq($bp580) {
+      flex: 4 0 0;
+    }
+    #{$ud}--submenu {
+      padding: 0 0 40px;
+      display: block;
+      @include mq($bp580) {
+        display: none;
+      }
+    }
+  }
+
+  &--submenu {
+
+    a {
+      font-family: $font-lato;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.63;
+    }
+  }
+
+  &--versions {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 30px;
+
+    a {
+      padding: 0 25px;
+      border-right: 1px solid rgba($color-black, .2);
+    }
+
+    li {
+      &:first-child a {
+        padding-left: 0;
+      }
+
+      &:last-child a {
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+
+    .active-version {
+      color: $color-mine-shaft;
+    }
+  }
+
+  &--link {
+    display: block;
+
+    @include mq($bp960) {
+      padding: 0.5rem 0 0.5rem 2rem;
+      font-family: $font-lato;
+      font-size: 1.6rem;
+      font-weight: 900;
+      line-height: 2;
+      box-sizing: border-box;
+    }
+    &.active {
+      @include mq($bp580) {
+        background-color: rgba($color-black, .05);
+        border-right: 5px solid $color-bondi-blue;
+      }
+    }
+  }
+
+  &--title {
+    font-family: $font-montserrat;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.42;
+    color: $color-calypso;
+  }
+
+  &--item {
+
+    &-title > a {
+      font-family: $font-montserrat;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $color-mine-shaft;
+    }
+
+    &-text {
+      padding-bottom: 10px;
+      font-family: $font-lato;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.63;
+      color: $color-mine-shaft;
+
+      p {
+        padding: 0 0 20px;
+      }
+
+      a {
+        font-weight: 500;
+      }
+    }
+  }
+
+  // Style for dropdown list.
+  &.wrap-list-as-dropdown {
+    @include mq($bp579max) {
+      margin-top: 20px;
+    }
+  }
+  .select {
+    margin-bottom: 16px;
+  }
+
+}

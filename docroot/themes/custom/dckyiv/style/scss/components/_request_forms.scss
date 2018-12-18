@@ -1,0 +1,89 @@
+// AD-CO website request support form styles
+
+form.request-form,
+.request-form.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include mq($bp580) {
+    flex-direction: row;
+  }
+  @include mq($bp1280) {
+    max-width: 610px;
+  }
+
+  // Hide description for upload field.
+  & .description {
+    display: none;
+  }
+
+  .form-item {
+    &-first-name,
+    &-last-name,
+    &-email,
+    &-email-address,
+    &-phone-number,
+    &-company,
+    &-company-name,
+    &-title-role-department,
+    &-model-application,
+    &-model-application-version,
+    &-delivery-channel,
+    &-interested-ad-co-offering,
+    &-subscription-channel,
+    &-how-did-you-hear-about-us-select {
+      @include mq($bp580) {
+        width: 49%;
+      }
+    }
+
+    &-how-did-you-hear-about-us-select {
+      margin: 0 0 20px;
+      @include mq($bp580) {
+        margin: 0;
+      }
+    }
+    &-how-did-you-hear-about-us-other {
+      display: block !important;
+      @include mq($bp580) {
+        width: 49% !important;
+        margin: -26px 0 0;
+      }
+    }
+
+    &-questions-comments,
+    &-comments,
+    &-questions-comments+#ajax-wrapper {
+      width: 100%;
+      @include mq($bp1280) {
+        max-width: 610px;
+      }
+    }
+  }
+
+  .captcha,
+  .webform-select-other,
+  .webform-actions {
+    @include mq($bp580) {
+      width: 100%;
+    }
+  }
+
+  .webform-select-other {
+    .fieldset-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include mq($bp580) {
+        flex-direction: row;
+      }
+      @include mq($bp1280) {
+        max-width: 610px;
+      }
+    }
+  }
+}

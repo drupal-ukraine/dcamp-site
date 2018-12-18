@@ -1,0 +1,8 @@
+// Adds default paddings page components
+
+@mixin paddings {
+  padding: 0 20px;
+  @include mq($bp768){
+    padding: 0 ;
+  }
+}

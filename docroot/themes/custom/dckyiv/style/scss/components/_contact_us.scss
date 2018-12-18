@@ -1,0 +1,49 @@
+// Contact page
+.node--type-contact-us {
+
+  .field--name-field-header {
+    margin-bottom: 40px;
+  }
+
+  .field--name-field-page-content {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mq($bp960) {
+      flex-direction: row;
+    }
+
+    .paragraph {
+      border-top: 5px solid $color-key-lime-pie;
+    }
+
+    > .field__item {
+
+      &:nth-child(1) {
+        width: 100%;
+        & > .paragraph--type--html-block {
+          margin: 0 auto 150px;
+          max-width: 610px;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+
+        @include mq($bp960) {
+          margin-left: 20px;
+          max-width: 210px;
+        }
+
+        @include mq($bp1024) {
+          max-width: 295px;
+        }
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,104 @@
+//Events List Styles
+
+.paragraph--type--events-list {
+  @include clearfix;
+  margin: 20px 0;
+
+  .field--type-viewsreference {
+    float: left;
+    width: 100%;
+
+    @include mq($bp1024) {
+      width: 49%;
+    }
+  }
+
+  @include mq($bp1024) {
+    padding: 0 100px;
+    .field--name-field-upcoming-events-view {
+      float: left;
+    }
+
+    .field--name-field-past-events-view {
+      float: right;
+    }
+  }
+
+  @include mq($bp1400) {
+    padding: 0;
+  }
+
+  .viewsreference--view-title {
+    color: $color-calypso;
+    max-width: 610px;
+    margin: 0 auto;
+  }
+
+  ul {
+    @include no-bullet;
+
+    li {
+      max-width: 610px;
+      border-top: 5px solid $color-caper;
+      padding: 20px 0 40px 0;
+      margin: 0 auto;
+
+      .views-field-field-image img {
+        display: block;
+        width: 100%;
+        margin: 0 auto 20px auto;
+      }
+
+      .views-field-title {
+        margin-bottom: 5px;
+        a {
+          font-family: $font-montserrat;
+          color: $color-mine-shaft;
+          font-size: 2.0rem;
+          font-weight: 500;
+          line-height: 1.5;
+
+          &:hover {
+            color: rgba($color-bondi-blue, .6);
+          }
+        }
+      }
+
+      .views-field-field-event-location {
+        float: left;
+      }
+
+      .views-field-field-event-date {
+        float: right;
+      }
+
+      .views-field-field-event-location, .views-field-field-event-date {
+        font-family: $font-lato;
+        color: $color-dusty-gray;
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.36;
+        text-transform: uppercase;
+      }
+
+      .views-field-field-event-description-future,.views-field-field-event-description-past {
+        clear: both;
+        line-height: 1.63;
+        padding-top: 20px;
+      }
+
+      .views-field-view-node a {
+        font-family: $font-lato;
+        color: $color-bondi-blue;
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: 1.63;
+        @include icoMoon('arrow-right', 'after');
+
+        &:hover {
+          color: rgba($color-bondi-blue, .6);
+        }
+      }
+    }
+  }
+}

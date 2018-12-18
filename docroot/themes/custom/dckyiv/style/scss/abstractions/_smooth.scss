@@ -1,0 +1,19 @@
+// @mixin smooth
+// Used to add font smoothing to text element
+
+@mixin smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} // @mixin smooth
+
+// @mixin unsmooth
+// Used to remove font smoothing from text element
+
+@mixin unsmooth {
+  -o-font-smoothing: auto;
+  -moz-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+} // @mixin unsmooth

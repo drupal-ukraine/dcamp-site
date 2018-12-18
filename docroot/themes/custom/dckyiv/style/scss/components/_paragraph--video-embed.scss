@@ -1,0 +1,8 @@
+// Paragraph video embed.
+
+.paragraph--type--video-embed {
+  padding: 15px;
+  @include mq($bp1024) {
+    padding: 20px 0;
+  }
+}

@@ -1,0 +1,34 @@
+//Request CTA block styles
+
+.paragraph--type--request-cta {
+  @include clearfix;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  .field {
+    text-align: center;
+  }
+
+  h1, h2 {
+    margin: 0;
+  }
+
+  h1 a {
+    font-family: $font-montserrat;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.42;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  h2 a {
+    font-family: $font-montserrat;
+    font-size: 2.0rem;
+    font-weight: 500;
+  }
+}

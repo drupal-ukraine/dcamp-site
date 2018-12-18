@@ -1,0 +1,244 @@
+// AD-CO website header styles
+
+header.main-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $color-black;
+  z-index: 5;
+
+  .region-top-header {
+    position: relative;
+    border-bottom: 1px solid rgba($color-white, 0.4);
+    @include clearfix;
+    @include wrapper;
+  }
+
+  .region-header {
+    position: relative;
+    @include wrapper;
+    @include clearfix;
+
+    nav {
+      display: none;
+      @include mq($bp1024) {
+        display: block;
+      }
+    }
+  }
+
+  #block-aboutdckyiv {
+    float: right;
+    display: none;
+    @include mq($bp1024) {
+      display: block;
+    }
+
+    ul.menu {
+      @include inline-list-items;
+
+      li {
+        margin-right: 20px;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        a {
+          display: block;
+          padding: 8px 20px;
+          text-transform: uppercase;
+          color: $color-white;
+          font-size: 1.1rem;
+          line-height: 1.36;
+          transition: color .3s;
+
+          &:hover {
+            color: rgba($color-white, .6);
+          }
+
+          &.contact-us {
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: $color-key-lime-pie;
+            color: $color-black;
+
+            &:hover {
+              color: rgba($color-black, .6);
+            }
+          }
+
+          &.search-toggle {
+            position: relative;
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 5px;
+              background-color: transparent;
+              transition: background-color .3s;
+            }
+            &.search-open:after {
+              background-color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobilenavtoggle, .opensearch {
+    position: absolute;
+    color: $color-white;
+    padding: 18px;
+    bottom: -1px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .mobilenavtoggle {
+    left: 0;
+    @include icoMoon('menu');
+    @include mq($bp1024) {
+      display: none;
+    }
+    &:before {
+      font-size: 24px;
+    }
+  }
+  .opensearch {
+    right: 0;
+    transition: color .3s, background-color .3s;
+    color: $color-white;
+    @include icoMoon('search');
+    @include mq($bp1024) {
+      display: none;
+    }
+    &:before {
+      font-size: 24px;
+    }
+    &.search-open {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+
+  #block-dckyiv-branding {
+    text-align: center;
+    @include mq($bp1024) {
+      text-align: left;
+      float: left;
+      padding: 18px 0 18px 0;
+    }
+    img {
+      display: block;
+      height: 100%;
+    }
+    a {
+      padding: 13px 0;
+      display: inline-block;
+      height: 57px;
+      @include mq($bp1024) {
+        padding: 0;
+        height: auto;
+      }
+    }
+  }
+}
+// Global search block
+.block-globalsearch-block {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  top: 61px;
+  @include mq($bp1024) {
+    top: 30px;
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  & > .wrapper {
+    max-width: 1440px;
+    @include mq($bp1024) {
+      padding: 0 100px;
+    }
+    margin: 0 auto;
+    @include clearfix;
+  }
+  form {
+    float: right;
+    padding: 20px 15px;
+    width: 100%;
+    background-color: $color-white;
+    box-shadow: 0 2px 8px 0 rgba($color-black, 0.2);
+    @include mq($bp1024) {
+      display: flex;
+      padding: 20px 20px 20px 22px;
+      max-width: 435px;
+      box-shadow: none;
+    }
+
+    .form-item-search {
+      margin-bottom: 10px;
+      @include mq($bp1024) {
+        margin: 0 20px 0 0;
+        max-width: 230px;
+      }
+    }
+    .form-actions {
+      width: 100%;
+      @include mq($bp1024) {
+        width: auto;
+        margin-top: 26px;
+      }
+      input.form-submit {
+        margin: 0;
+        padding: 8px 40px;
+        line-height: 1;
+        width: 100%;
+        @include mq($bp1024) {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+// Making header semi-transparent if class is added to body
+body.transparent-header header.main-header {
+  @include mq($bp1024) {
+    background-color: rgba($color-black, .7);
+  }
+}
+// Positioning header if admin menu is present
+body {
+  &.adminimal-admin-toolbar {
+    header.main-header {
+      top: 39px;
+    }
+
+    &.toolbar-vertical.toolbar-tray-open {
+      header.main-header {
+        padding-left: 15rem;
+      }
+    }
+
+    &.toolbar-horizontal.toolbar-tray-open {
+      header.main-header {
+        top: 97px;
+      }
+    }
+  }
+}
+

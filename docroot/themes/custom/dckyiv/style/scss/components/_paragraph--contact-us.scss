@@ -1,0 +1,116 @@
+// paragraph--type--contact-us
+.paragraph--type--contact-us {
+  .vertical-tabs {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    float: none;
+    border: none;
+
+    @include mq($bp768) {
+      flex-direction: row;
+    }
+
+    &__menu,
+    &__menu-item {
+      border: none;
+      background: $color-white;
+      outline: none !important;
+      float: none;
+      padding: 0;
+      margin: 0;
+
+      & > a {
+        padding: 0 0.3rem 2rem 3.5rem;
+
+        &:hover {
+          outline: none;
+        }
+
+        .vertical-tabs__menu-item-title {
+          text-decoration: none;
+        }
+      }
+
+      &.last {
+        & > a {
+          padding: 0 0.3rem 0 3.5rem;
+        }
+      }
+    }
+
+    .vertical-tabs__menu-item {
+      &.is-selected {
+        .vertical-tabs__menu-item-title {
+          &:before {
+            content: "";
+
+            position: absolute;
+            left: -30px;
+            top: 2px;
+            z-index: 2;
+
+            width: 16px;
+            height: 16px;
+            border-radius: 12px;
+            background-color: $color-bondi-blue;
+          }
+        }
+      }
+
+      &-title {
+        position: relative;
+        text-indent: 10px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $color-mine-shaft;
+
+        &:after {
+          content: "";
+
+          position: absolute;
+          left: -34px;
+          top: -2px;
+          z-index: 1;
+
+          width: 24px;
+          height: 24px;
+          border-radius: 12px;
+          border: solid 1px $color-silver;
+          background-color: $color-white;
+        }
+      }
+    }
+
+    &__menu-title,
+    &__panes-title {
+      margin: 20px 0 15px;
+      font-family: $font-montserrat;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $color-mine-shaft;
+    }
+
+    &__panes-title {
+      @include mq($bp767max) {
+        margin-top: 30px;
+      }
+    }
+
+    &__left,
+    &__right {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__left {
+      width: 100%;
+
+      @include mq($bp768) {
+        max-width: 295px;
+      }
+    }
+  }
+}

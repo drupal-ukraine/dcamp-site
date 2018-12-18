@@ -1,0 +1,46 @@
+// AD-CO website request support form styles
+
+form.request-support-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 610px;
+
+  @include mq($bp580) {
+    flex-direction: row;
+  }
+
+  // Hide description for upload field.
+  & .description {
+    display: none;
+  }
+
+  .form-item {
+    &-first-name,
+    &-last-name,
+    &-email-address,
+    &-company-name,
+    &-model-application,
+    &-model-application-version,
+    &-delivery-channel {
+      @include mq($bp580) {
+        width: 49%;
+      }
+    }
+
+    &-questions-comments,
+    &-questions-comments+#ajax-wrapper {
+      @include mq($bp580) {
+        width: 100%;
+      }
+    }
+  }
+
+  .captcha,
+  .webform-actions {
+    @include mq($bp580) {
+      width: 100%;
+    }
+  }
+}

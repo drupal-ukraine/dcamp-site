@@ -1,0 +1,74 @@
+//iFrame wrapper styles
+
+.field-formatter-paragraph-tabs {
+  padding: 20px 15px;
+
+  @include mq($bp580) {
+    padding: 36px 0 0;
+  }
+
+  ul.ui-tabs-nav {
+    @include mq($bp580) {
+      padding: 30px 15px 20px;
+
+      @include container;
+      padding: 30px 0 0 0;
+      border: none;
+      border-radius: 0;
+      background-color: $color-white;
+      display: flex;
+      flex-direction: row;
+    }
+
+    & > li.ui-tabs-tab {
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+
+      @include mq($bp580) {
+        width: auto;
+      }
+
+      a {
+        display: block;
+        float: none;
+        width: 100%;
+        font-weight: 500;
+
+        @include mq($bp580) {
+          position: relative;
+          width: auto;
+          color: $color-bondi-blue;
+          padding: 10px 20px;
+          font-size: 1.6rem;
+          font-weight: 900;
+          &:after {
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            transition: background-color .3s;
+          }
+
+          &:hover:after {
+            background-color: rgba($color-bondi-blue, .4);
+          }
+        }
+      }
+
+      &.ui-state-active {
+        a:after {
+          background-color: $color-bondi-blue;
+        }
+      }
+    }
+  }
+
+  &>.select {
+   padding: 20px 15px;
+  }
+}

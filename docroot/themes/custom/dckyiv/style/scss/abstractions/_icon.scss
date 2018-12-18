@@ -1,0 +1,39 @@
+// @mixin icon()
+// This mixin adds an icon centered inside a container.
+// The container must have position: absolute, fixed, or relative.
+// To override, after @include icon() add styles to &::after {}
+
+@mixin icon($width: null, $height: null, $image: null, $icon-transform: null, $origin: center) {
+  @if ($image) {
+    position: relative;
+  }
+
+  &::after {
+    @if ($width) {
+      width: $width;
+    }
+
+    @if ($height) {
+      height: $height;
+    }
+
+    @if ($image) {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-image: url($images-path + $image);
+      @include background-cover;
+      @include minimize-text;
+      transform-origin: $origin;
+    }
+
+    @if ($icon-transform) {
+      @include transition-3d($transform: $icon-transform);
+    }
+    @else {
+      @include transition-3d($transform: translate(-50%, -50%));
+    }
+  } // &::after
+} // @mixin icon

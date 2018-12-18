@@ -1,0 +1,27 @@
+// Adds default paddings page components
+
+@mixin container {
+  padding: 0 15px;
+
+  @include mq($bp1024) {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  @include mq($bp1280) {
+    padding: 0;
+  }
+}
+
+@mixin wrapper {
+  & > .wrapper {
+    max-width: 1440px;
+    padding: 0;
+    margin: 0 auto;
+    @include mq($bp1024) {
+      padding: 0 100px;
+    }
+
+  }
+}

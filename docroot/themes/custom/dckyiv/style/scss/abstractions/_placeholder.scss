@@ -1,0 +1,37 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+    color: $color-mako;
+    font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &:-moz-placeholder {
+    @content;
+    color: $color-mako;
+    font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &::-moz-placeholder {
+    @content;
+    color: $color-mako;
+    font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+    color: $color-mako;
+    font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}

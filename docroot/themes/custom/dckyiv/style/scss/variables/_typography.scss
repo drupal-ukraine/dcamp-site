@@ -1,0 +1,9 @@
+// Font-families
+
+$fontsPath: '../../fonts/';
+
+/* font-family: "ICOMOON"; */
+@include font-face('Icomoon', $fontsPath+'icomoon/fonts/icomoon',  $file-formats: eot svg ttf woff);
+
+$font-lato: 'Lato', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;

@@ -1,0 +1,63 @@
+// Default dckyiv buttons
+
+@mixin button($type: 'primary', $inverse: false) {
+  width: 100%;
+  height: 40px;
+  padding: 6px 8px;
+  position: relative;
+  border: 0;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.71;
+  cursor: pointer;
+  transition: all .1s;
+  @content;
+
+  @if $type == 'secondary' {
+    border: solid 1px $color-bondi-blue;
+    background-color: $color-white;
+    color: $color-bondi-blue;
+    &:active, &:hover {
+      border: solid 1px rgba($color-bondi-blue, 0.6);
+      background-color: $color-white;
+      color: rgba($color-bondi-blue, 0.6);
+    }
+  }
+  @else {
+    background-color: $color-bondi-blue;
+    color: $color-white;
+    &:active, &:hover {
+      background-color: rgba($color-bondi-blue, 0.6);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  // TODO: Implement that part.
+  //@if $inverse {
+  //  background-color: $color-java;
+  //  border-color: $color-java;
+  //  color: $color-white;
+  //  &:hover {
+  //    color: $color-mine-shaft;
+  //    background-color: $color-white;
+  //    border-color: $color-mine-shaft;
+  //  }
+  //}
+
+  &[disabled=disabled] {
+    background-color: $color-silver;
+    border-color: $color-silver;
+    color: $color-dusty-gray;
+    &:hover {
+      cursor: not-allowed;
+      background-color: $color-white;
+      color: $color-silver;
+    }
+  }
+}

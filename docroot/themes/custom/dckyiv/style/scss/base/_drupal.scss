@@ -1,0 +1,92 @@
+.block-local-tasks-block {
+  margin: 0 0 20px;
+  border-bottom: solid 1px $color-silver;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 0 10px;
+  }
+}
+// Prevent webkit styles fot input.
+//input {
+//  appearance: none;
+//}
+
+// Add green border top for specific paragraphs.
+.paragraph--type {
+  &--pipeline-list,
+  &--qp-list,
+  &--teaser,
+  &--one-third-teaser,
+  &--pipeline-issue-teasers {
+    border-top: 5px solid $color-key-lime-pie;
+  }
+  &--pipeline-list,
+  &--pipeline-issue-teasers {
+    border-top: 5px solid $color-caper;
+  }
+}
+// Style for view title in a paragraph.
+.viewsreference--view-title {
+  display: none;
+  @include mq($bp580) {
+    display: block;
+    padding: 20px 0 0;
+    font-family: $font-montserrat;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $color-mine-shaft;
+  }
+}
+// Add style for section-intro and pipeline-issue-teasers
+// if exist RR.
+.field--name-field-right-rail {
+  & + .field--name-field-page-content {
+    .paragraph--type--section-intro,
+    .paragraph--type--pipeline-issue-teasers {
+      @include mq($bp1024) {
+        width: 65%;
+        min-height: 240px;
+      }
+    }
+    .paragraph--type--pipeline-list {
+      @include mq($bp1024) {
+        clear: both;
+      }
+    }
+  }
+}
+// General page title
+.block-page-title-block {
+  background: url("../../images/hero-image-1.jpg") no-repeat center;
+  background-size: cover;
+  padding: 45px 0 20px 0;
+  @include mq($bp1024) {
+    padding: 144px 0 20px 0;
+  }
+  h1 {
+    @include container;
+    display: block;
+    color: $color-white;
+    font-size: 2.0rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+
+    @include mq($bp1024) {
+      font-size: 3.0rem;
+      padding: 0 20px;
+    }
+  }
+}
+
+.region .messages--error {
+  @include container;
+  padding: 15px 20px 15px 35px;
+}
