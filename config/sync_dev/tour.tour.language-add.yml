@@ -1,0 +1,35 @@
+uuid: 521ca731-d099-4725-a49c-8ce37a46d952
+langcode: uk
+status: true
+dependencies:
+  module:
+    - language
+_core:
+  default_config_hash: PM2qJqRak_LRDoD905MdombBZUvJvM4ID29VbjtYcZA
+id: language-add
+label: 'Додавання мов'
+module: language
+routes:
+  -
+    route_name: language.add
+tips:
+  language-add-overview:
+    id: language-add-overview
+    plugin: text
+    label: 'Додавання мов'
+    body: '<p>На цій сторінці стає можливим додати на сайт загальновідомі мови.</p><p>Якщо потрібна мова відсутня, можна додати власну мову.</p>'
+    weight: 1
+  language-add-choose:
+    id: language-add-choose
+    plugin: text
+    label: 'Вибір мови'
+    body: '<p>Оберіть мову з переліку, або оберіть пункт "Власна мова...", що в кінці списку.</p><p>Обравши мову, натисніть кнопку "Додати мову" .</p><p>При додаванні власної мови, з''явиться додаткова форма, де буде необхідно ввести назву, код і напрямок мови.</p>'
+    weight: 2
+    attributes:
+      data-id: edit-predefined-langcode
+  language-add-continue:
+    id: language-add-continue
+    plugin: text
+    label: Продовження
+    body: '<p>Після огляду функції "Додати мови", можна перейти до:<ul><li>Додавання мови</li><li>Додавання власної мови</li><li><a href="[site:url]admin/config/regional/language">Перегляду налаштованих мов</a></li></ul></p>'
+    weight: 3

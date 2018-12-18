@@ -1,0 +1,59 @@
+uuid: 3e3d4549-1421-4f88-bc4f-da45146db711
+langcode: uk
+status: true
+dependencies:
+  module:
+    - language
+_core:
+  default_config_hash: K3KVksdkREnIdd2idoIA9TDHQew_WreFzTG-DHmz9Z4
+id: language
+label: Мова
+module: language
+routes:
+  -
+    route_name: entity.configurable_language.collection
+tips:
+  language-overview:
+    id: language-overview
+    plugin: text
+    label: Мови
+    body: '<p>Сторінка "Мови" дозволяє додавати, редагувати, видаляти та перевпорядковувати мови на сайті.</p>'
+    weight: 1
+  language-add:
+    id: language-add
+    plugin: text
+    label: 'Додавання мов'
+    body: '<p>Щоб додати ще кілька мов на сайт, натисніть кнопку "Додати мову".</p><p>Додані мови будуть з''являтись у переліку мов, де потім їх можна редагувати чи видаляти.</p>'
+    weight: 2
+    attributes:
+      data-class: button-action
+  language-reorder:
+    id: language-reorder
+    plugin: text
+    label: 'Перешикування мов'
+    body: '<p>Для перешикування мов сайту, використовуйте відповідні іконки для перенесення поруч з кожною мовою.</p><p>У наведеній тут послідовності мови будуть відображатися у списках мов на сайті, наприклад, у блоці перемикання мови, котрий пропонується модулями Переклад інтерфейсу та Переклад матеріалів.</p><p>Після виконання необхідних перевпорядкувань мов аби зміни набули чинності натисніть кнопку "Зберегти конфігурацію".</p>'
+    weight: 3
+    attributes:
+      data-class: draggable
+  language-default:
+    id: language-default
+    plugin: text
+    label: 'Встановлення мови базовою'
+    body: '<p>Є можливим змінити базову мову сайту обравши базовою одну з налаштованих мов. Сайт буде використовувати базову мову у випадках, де мови не вибрано, а вона має бути встановленою, наприклад мова відображуваного інтерфейсу.</p>'
+    weight: 4
+    attributes:
+      data-class: js-form-item-site-default-language
+  language-operations:
+    id: language-operations
+    plugin: text
+    label: 'Дії з мовами'
+    body: '<p>Операції призначені для редагування і видалення ваших мов.</p><p>Є можливість змінити назву та напрямок мови.</p><p>Видалені мови можуть бути знову додані пізніше. Видалення мови видалить всі переклади інтерфейсу пов''язані з нею, а матеріали на цій мові будуть перенесені у нейтральну мову. Зверніть увагу, що видалити базову мову сайту неможливо.</p>'
+    weight: 5
+    attributes:
+      data-class: dropbutton-wrapper
+  language-continue:
+    id: language-continue
+    plugin: text
+    label: Продовження
+    body: '<p>Після огляду сторінки "Мови" можна перейти до:<ul><li><a href="[site:url]admin/config/regional/language/add">Додавання мови</a></li><li>Перешикування мов</li><li>Редагування мови</li><li>Видалення мови</li></ul></p>'
+    weight: 6

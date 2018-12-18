@@ -15,21 +15,21 @@
 
 
 # Trapping CTRL-C
-trap ctrl_c INT
-trap ctrl_c SIGINT
-trap ctrl_c SIGTERM
-# trap ctrl-c and call ctrl_c()
-function ctrl_c() {
-    echo-red "\n Canceled, deleting DB dump if any"
-    rm -f $PROJECT_ROOT/db/database.sql.gz
-    echo-red "Good bye."
-    exit $?
-}
+#trap ctrl_c INT
+#trap ctrl_c SIGINT
+#trap ctrl_c SIGTERM
+## trap ctrl-c and call ctrl_c()
+#function ctrl_c() {
+#    echo-red "\n Canceled, deleting DB dump if any"
+#    rm -f $PROJECT_ROOT/db/database.sql.gz
+#    echo-red "Good bye."
+#    exit $?
+#}
 
 #Paths and environment settings
 PANTHEON_ENV="adco.live"
 DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
-MAIN_THEME_PATH="${DOCROOT_PATH}/themes/adco"
+MAIN_THEME_PATH="${DOCROOT_PATH}/themes/custom/dckyiv"
 
 # Console colors
 red='\033[0;31m'
@@ -48,42 +48,42 @@ echo-yellow () { echo -e "${yellow}$1${NC}"; }
 clear
 cat "${PROJECT_ROOT}/.docksal/assets/ascii.txt"
 
-# Database download
-echo-yellow "Downloading Database from ${PANTHEON_ENV} Pantheon environment, please wait. This might take a while..."
-
-rm -f $PROJECT_ROOT/db/database.sql.gz
-
-# We nee do catch error if any
-set +e
-
-fin terminus backup:get --element=db $PANTHEON_ENV --to=/var/www/db/database.sql.gz
-if [ $? -ne 0 ] ; then
-
-    echo-red "## Interrupted ## \n"
-    echo-red "Error downloading database from Pantheon."
-    echo-red "Try connecting Terminus with 'fin terminus-connect' first, then try 'fin rebuild' again\n"
-    exit $?
-else
-    echo-green "Done. Downloaded to ${PROJECT_ROOT}/db/database.sql.gz\n"
-fi
-
-# Abort if anything fails
-set -e
-
-#Database extcation
-echo-yellow "Extracting..."
-gunzip $PROJECT_ROOT/db/database.sql.gz
-echo-green "Done.\n"
+## Database download
+#echo-yellow "Downloading Database from ${PANTHEON_ENV} Pantheon environment, please wait. This might take a while..."
+#
+#rm -f $PROJECT_ROOT/db/database.sql.gz
+#
+## We nee do catch error if any
+#set +e
+#
+#fin terminus backup:get --element=db $PANTHEON_ENV --to=/var/www/db/database.sql.gz
+#if [ $? -ne 0 ] ; then
+#
+#    echo-red "## Interrupted ## \n"
+#    echo-red "Error downloading database from Pantheon."
+#    echo-red "Try connecting Terminus with 'fin terminus-connect' first, then try 'fin rebuild' again\n"
+#    exit $?
+#else
+#    echo-green "Done. Downloaded to ${PROJECT_ROOT}/db/database.sql.gz\n"
+#fi
+#
+## Abort if anything fails
+#set -e
+#
+##Database extcation
+#echo-yellow "Extracting..."
+#gunzip $PROJECT_ROOT/db/database.sql.gz
+#echo-green "Done.\n"
 
 #Database import
 echo-yellow "Importing..."
 fin db import $PROJECT_ROOT/db/database.sql --db-user=user --db-password=user
 echo-green "Done.\n"
 
-#Removing unnecessary sql dump files
-echo-yellow "Removing files..."
-rm -f $PROJECT_ROOT/db/database.sql
-echo-green "Done.\n"
+##Removing unnecessary sql dump files
+#echo-yellow "Removing files..."
+#rm -f $PROJECT_ROOT/db/database.sql
+#echo-green "Done.\n"
 
 #Running composer
 echo-yellow "Running composer install"

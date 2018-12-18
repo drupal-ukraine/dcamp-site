@@ -1,0 +1,20 @@
+uuid: 9f8cfea8-b0e4-4fa0-a172-a056781798c2
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - dckyiv
+_core:
+  default_config_hash: ik4PTMlBD0MWansnSMpSXq5SUlWRJ1IVVt6C7AIbQmc
+id: dckyiv_local_actions
+theme: dckyiv
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
