@@ -1,0 +1,25 @@
+uuid: 73d32840-fc5a-47c0-9c8c-6d285e95299e
+langcode: uk
+status: true
+dependencies:
+  module:
+    - file
+    - media
+_core:
+  default_config_hash: z5mgbn1PIVZ5TNMByBmivqo_u3Rdk58UIzpyN4ypTeM
+id: media.field_media_video_file
+field_name: field_media_video_file
+entity_type: media
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
