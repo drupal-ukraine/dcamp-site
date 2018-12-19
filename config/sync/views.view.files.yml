@@ -1,5 +1,5 @@
-uuid: 39ad8bca-b735-4087-b51b-afd559ba65e0
-langcode: en
+uuid: eac48ac0-9f50-41c4-8018-c601a355e2d1
+langcode: uk
 status: true
 dependencies:
   module:
@@ -8,9 +8,9 @@ dependencies:
 _core:
   default_config_hash: rRWxAX-IQkJ5viACQRovRkC784EyCl9493GU_G23n2Q
 id: files
-label: Files
+label: Файли
 module: file
-description: 'Find and manage files.'
+description: 'Пошук файлів та керування ними.'
 tag: default
 base_table: file_managed
 base_field: fid
@@ -250,7 +250,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'MIME type'
+          label: 'Тип MIME'
           exclude: false
           alter:
             alter_text: false
@@ -302,7 +302,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Size
+          label: Розмір
           exclude: false
           alter:
             alter_text: false
@@ -398,8 +398,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: Temporary
-            format_custom_true: Permanent
+            format_custom_false: Тимчасово
+            format_custom_true: Постійно
           plugin_id: field
           entity_type: file
           entity_field: status
@@ -410,7 +410,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Upload date'
+          label: 'Дата відвантаження'
           exclude: false
           alter:
             alter_text: false
@@ -466,7 +466,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Changed date'
+          label: 'Дата зміни'
           exclude: false
           alter:
             alter_text: false
@@ -522,7 +522,7 @@ display:
           relationship: fid
           group_type: sum
           admin_label: ''
-          label: 'Used in'
+          label: 'Використано в'
           exclude: false
           alter:
             alter_text: false
@@ -586,7 +586,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: Filename
+            label: 'Назва файла'
             description: ''
             use_operator: false
             operator: filename_op
@@ -626,7 +626,7 @@ display:
           exposed: true
           expose:
             operator_id: filemime_op
-            label: 'MIME type'
+            label: 'Тип MIME'
             description: ''
             use_operator: false
             operator: filemime_op
@@ -695,7 +695,7 @@ display:
           entity_type: file
           entity_field: status
       sorts: {  }
-      title: Files
+      title: Файли
       header: {  }
       footer: {  }
       empty:
@@ -704,7 +704,7 @@ display:
           table: views
           field: area_text_custom
           empty: true
-          content: 'No files available.'
+          content: 'Файли відсутні.'
           plugin_id: text_custom
       relationships:
         fid:
@@ -731,13 +731,13 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: 'Files overview'
+    display_title: 'Огляд файлів'
     position: 1
     display_options:
       path: admin/content/files
       menu:
         type: tab
-        title: Files
+        title: Файли
         description: ''
         menu_name: admin
         weight: 0
@@ -816,7 +816,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Entity
+          label: Сутність
           exclude: false
           alter:
             alter_text: false
@@ -866,7 +866,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Entity type'
+          label: 'Тип сутності'
           exclude: false
           alter:
             alter_text: false
@@ -915,7 +915,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Registering module'
+          label: 'Реєстрація модуля'
           exclude: false
           alter:
             alter_text: false
@@ -964,7 +964,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Use count'
+          label: 'Підрахунок використань'
           exclude: false
           alter:
             alter_text: false
@@ -1030,7 +1030,7 @@ display:
             title_enable: false
             title: All
           title_enable: true
-          title: 'File usage information for {{ arguments.fid }}'
+          title: 'Відомості про використання файла для {{ arguments.fid }}'
           default_argument_type: fixed
           default_argument_options:
             argument: ''

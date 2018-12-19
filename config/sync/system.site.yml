@@ -1,4 +1,4 @@
-uuid: 27b5fead-a7cf-4be6-92d8-3c915f2446bd
+uuid: e82bc47a-6c84-449b-a44f-b863b75a6753
 name: DrupalCampKyiv
 mail: anpolimus@gmail.com
 slogan: ''
@@ -8,7 +8,7 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
-default_langcode: en
+langcode: uk
+default_langcode: uk
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

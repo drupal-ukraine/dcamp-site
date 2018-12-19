@@ -41,7 +41,11 @@ module:
   history: 0
   image: 0
   inline_entity_form: 0
+  language: 0
   link: 0
+  locale: 0
+  media: 0
+  media_library: 0
   menu_ui: 0
   metatag: 0
   metatag_open_graph: 0
@@ -82,6 +86,9 @@ theme:
   classy: 0
   bartik: 0
   seven: 0
+  adminimal_theme: 0
+  dckyiv: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
+langcode: uk

@@ -1,5 +1,5 @@
-uuid: 34e37284-2df3-4747-ab1a-68e9a028cddc
-langcode: en
+uuid: b848e9de-7db9-49ca-b198-8dfc459b96af
+langcode: uk
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
 _core:
   default_config_hash: o_8fSWHZOVIbydZACGsSX09DtuJhqkRmNOzcVj-4bQI
 id: who_s_new
-label: 'Who''s new'
+label: 'Хто новенький'
 module: user
-description: 'Shows a list of the newest user accounts on the site.'
+description: 'Показує перелік найновіших облікових записів на сайті.'
 tag: default
 base_table: users_field_data
 base_field: uid
@@ -160,7 +160,7 @@ display:
           plugin_id: date
           entity_type: user
           entity_field: created
-      title: 'Who''s new'
+      title: 'Хто новенький'
       header: {  }
       footer: {  }
       empty: {  }
@@ -177,11 +177,11 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'Who''s new'
+    display_title: 'Хто новенький'
     position: 1
     display_options:
-      display_description: 'A list of new users'
-      block_description: 'Who''s new'
+      display_description: 'Список нових користувачів'
+      block_description: 'Хто новенький'
       block_category: User
       display_extenders: {  }
     cache_metadata:

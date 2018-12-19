@@ -94,7 +94,7 @@ $databases['default']['default'] = array (
 );
 
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = '../config/sync_dev';
+$config_directories['sync'] = '../config/sync';
 $config['system.logging']['error_level'] = 'verbose';
 
 /*

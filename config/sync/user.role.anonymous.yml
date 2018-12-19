@@ -1,11 +1,11 @@
-uuid: 4c536b6e-1a09-43b8-b0db-bf4af0df03fd
-langcode: en
+uuid: fe846bb5-0195-4924-9b02-e39a44fefafd
+langcode: uk
 status: true
 dependencies: {  }
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
-label: 'Anonymous user'
+label: 'Анонімний користувач'
 weight: 0
 is_admin: false
 permissions:
@@ -16,3 +16,4 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view commerce_product'
+  - 'view media'

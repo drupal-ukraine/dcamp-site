@@ -1,5 +1,5 @@
-uuid: a531fd85-b878-4d37-b402-cab33578e8a0
-langcode: en
+uuid: 7f1cfa04-6c9f-40cd-8a39-2a35e078ee53
+langcode: uk
 status: false
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: 4tedlMuvQjDOdvHdw86_e-2Rt78aR7TGFMfOK8Ejppg
 id: block_content.full
-label: Full
+label: Повністю
 targetEntityType: block_content
 cache: true

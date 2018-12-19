@@ -1,11 +1,12 @@
-uuid: c8ebe5a3-8e30-4617-ac00-04d8e88de3d4
-langcode: en
+uuid: 912059e8-41f6-4ab6-a5a8-8ca3f8d7523f
+langcode: uk
 status: true
 dependencies:
   enforced:
     module:
       - commerce_order
   module:
+    - commerce_order
     - entity
 _core:
   default_config_hash: GDUgwBmDhcGNHBz3FBgXqXvyuMJVsKy9oytH9wNOJns

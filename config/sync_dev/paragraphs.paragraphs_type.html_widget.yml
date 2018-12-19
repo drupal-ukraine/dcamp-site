@@ -1,9 +1,0 @@
-uuid: 30861ca1-9197-4539-a038-d79c03f39679
-langcode: en
-status: true
-dependencies: {  }
-id: html_widget
-label: 'HTML Widget'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

@@ -1,5 +1,5 @@
-uuid: 1b96584d-2618-4212-ba74-77ef39788a15
-langcode: en
+uuid: bc43e777-5c63-4e2c-a39c-78b506fa2dba
+langcode: uk
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ _core:
 id: content
 label: Content
 module: node
-description: 'Find and manage content.'
+description: 'Пошук матеріалів і керування ними.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -187,7 +187,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Content type'
+          label: 'Тип матеріалів'
           exclude: false
           alter:
             alter_text: false
@@ -418,7 +418,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Content type'
+            label: 'Тип матеріалів'
             description: ''
             use_operator: false
             operator: type_op
@@ -550,7 +550,7 @@ display:
           table: views
           field: area_text_custom
           empty: true
-          content: 'No content available.'
+          content: 'Матеріали відсутні.'
           plugin_id: text_custom
       arguments: {  }
       relationships:
@@ -596,7 +596,7 @@ display:
       tab_options:
         type: normal
         title: Content
-        description: 'Find and manage content'
+        description: 'Пошук матеріалів та керування ними'
         menu_name: admin
         weight: -10
       display_extenders: {  }

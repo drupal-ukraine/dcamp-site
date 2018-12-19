@@ -1,5 +1,5 @@
-uuid: 019295db-43d8-4c72-8e7f-c1139e1093c2
-langcode: en
+uuid: 1a2dd289-7554-4cdd-af92-06a605e11fc4
+langcode: uk
 status: true
 dependencies:
   config:
@@ -13,6 +13,13 @@ targetEntityType: commerce_product_variation
 bundle: default
 mode: default
 content:
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   list_price:
     type: commerce_list_price
     weight: -1

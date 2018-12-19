@@ -1,5 +1,5 @@
-uuid: 76248c29-df08-4498-8c20-753d432cd5fd
-langcode: en
+uuid: fd798792-2162-4c68-ac53-1f9bd063b944
+langcode: uk
 status: true
 dependencies: {  }
 _core:
@@ -10,5 +10,5 @@ recipients:
   - anpolimus@gmail.com
 reply: ''
 weight: 0
-message: 'Your message has been sent.'
+message: 'Ваше повідомлення було надіслано.'
 redirect: ''

@@ -1,5 +1,5 @@
-uuid: cc43a299-90c9-4c42-a512-edaf74f60c9c
-langcode: en
+uuid: bc341efb-e035-4d53-aca8-b10cf2163fb9
+langcode: uk
 status: false
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: mQIF_foYjmnVSr9MpcD4CTaJE_FpO1AyDd_DskztGhM
 id: user.full
-label: 'User account'
+label: 'Обліковий запис користувача'
 targetEntityType: user
 cache: true

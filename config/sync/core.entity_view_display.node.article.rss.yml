@@ -1,5 +1,5 @@
-uuid: b9389a3e-9e82-434a-b2bc-7ceca2714221
-langcode: en
+uuid: 6e031a22-25ae-421f-b795-95603e97f713
+langcode: uk
 status: true
 dependencies:
   config:
@@ -26,3 +26,4 @@ hidden:
   comment: true
   field_image: true
   field_tags: true
+  langcode: true
