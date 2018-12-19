@@ -1,0 +1,10 @@
+uuid: bb43fb99-8843-45a2-bfa6-43d981f107c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_attribute_value.token
+label: Token
+targetEntityType: commerce_product_attribute_value
+cache: true
