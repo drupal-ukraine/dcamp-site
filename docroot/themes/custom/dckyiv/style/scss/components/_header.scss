@@ -5,7 +5,7 @@ header.main-header {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: $color-black;
+  background-color: $color-tuna;
   z-index: 5;
 
   .region-top-header {
@@ -128,24 +128,26 @@ header.main-header {
     }
   }
 
-  #block-dckyiv-branding {
+  #block-sitebranding {
     text-align: center;
     @include mq($bp1024) {
       text-align: left;
       float: left;
-      padding: 18px 0 18px 0;
-    }
-    img {
-      display: block;
-      height: 100%;
+      padding: 49px 0 49px 0;
     }
     a {
-      padding: 13px 0;
       display: inline-block;
       height: 57px;
+      padding: 13px 0;
+      font-size: 1.6rem;
+      font-family: $font-proxima-nova-bold;
+      color: $color-white;
       @include mq($bp1024) {
         padding: 0;
         height: auto;
+      }
+      span {
+        color: $color-fern;
       }
     }
   }

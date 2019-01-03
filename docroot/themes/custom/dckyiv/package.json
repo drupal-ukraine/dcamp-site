@@ -32,7 +32,7 @@
     "gulp-sourcemaps": "^2.1.1",
     "gulp-uglify": "^1.5.3",
     "reset-css": "^4.0.1",
-    "support-for": "^1.0.6",
+    "support-for": "^1.0.6"
   },
   "assets": [
     "formstone/dist/**/*"
