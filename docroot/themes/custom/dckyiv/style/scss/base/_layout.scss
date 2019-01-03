@@ -30,12 +30,14 @@ body {
   }
 
 }
+
 main.container {
   padding-top: 60px;
   @include mq($bp1024) {
     padding-top: 125px;
   }
 }
+
 .page-content-wrapper {
   @include clearfix;
   display: flex;
@@ -48,21 +50,4 @@ main.container {
     max-width: 1270px; // compensating padding
   }
 
-  .field--name-field-page-content {
-    order: 0;
-    width: 100%;
-  }
-
-  .field--name-field-right-rail {
-    order: 1;
-    width: 100%;
-
-    @include mq($bp1024) {
-      display: block;
-      margin-left: 20px;
-      padding: 0;
-      float: right;
-      width: 33%;
-    }
-  }
 }
