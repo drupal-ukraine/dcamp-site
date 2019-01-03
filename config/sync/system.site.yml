@@ -1,14 +1,14 @@
 uuid: e82bc47a-6c84-449b-a44f-b863b75a6753
-name: DrupalCampKyiv
+name: 'DRUPALCAMP KYIV''19'
 mail: anpolimus@gmail.com
-slogan: ''
+slogan: 'DRUPALCAMP <span>KYIV''19</span>'
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
 langcode: uk
-default_langcode: uk
+default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

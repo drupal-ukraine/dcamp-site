@@ -8,8 +8,8 @@ _core:
   default_config_hash: CyX_aDKAka2_eihevNLscCHDYrzDgIqwWzFVEFRKIww
 id: dckyiv_primary_local_tasks
 theme: dckyiv
-region: header
-weight: 0
+region: content
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

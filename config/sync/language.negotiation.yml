@@ -3,10 +3,11 @@ session:
 url:
   source: path_prefix
   prefixes:
-    uk: ''
+    uk: uk
     en: en
   domains:
     uk: ''
+    en: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

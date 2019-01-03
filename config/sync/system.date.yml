@@ -1,6 +1,6 @@
 country:
   default: UA
-first_day: 0
+first_day: 1
 timezone:
   default: Europe/Kiev
   user:

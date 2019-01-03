@@ -4,17 +4,25 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.field_widgets
     - node.type.landing_page
   module:
+    - entity_reference_revisions
     - user
 id: node.landing_page.teaser
 targetEntityType: node
 bundle: landing_page
 mode: teaser
 content:
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
+  field_widgets:
+    type: entity_reference_revisions_entity_view
+    weight: 0
     region: content
-hidden: {  }
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true
