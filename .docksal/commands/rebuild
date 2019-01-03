@@ -78,7 +78,7 @@ cat "${PROJECT_ROOT}/.docksal/assets/ascii.txt"
 #Database import
 echo-yellow "Importing..."
 fin db import $PROJECT_ROOT/db/database.sql --db-user=user --db-password=user
-echo-green "Done.\n"
+echo
 
 ##Removing unnecessary sql dump files
 #echo-yellow "Removing files..."
@@ -99,16 +99,17 @@ fin drush cim -y
 fin drush cr
 echo-green "Done.\n"
 
-#Building theme
+# Removing package-lock.json.
+echo-yellow "Removing package-lock.json..."
+rm -f $MAIN_THEME_PATH/package-lock.json
+echo-green "Done."
+echo
+
+# Building theme.
 echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
-if [ -e "$MAIN_THEME_PATH/package-lock.json" ]; then
-    echo-yellow "package-lock.json is available, running npm, bower and gulp...\n"
-    cd $MAIN_THEME_PATH
-    #fin exec bash -i /var/www/scripts/build_theme.sh
-else
-    echo-yellow "package-lock.json is not available, deleting node_modules and npm install\n"
-    rm -rf $MAIN_THEME_PATH/node_modules
-    cd $MAIN_THEME_PATH
-    #fin exec bash -i /var/www/scripts/build_theme.sh
-fi
+fin gulp build
+
 echo-green " <<<<<<< Rebuild is complete >>>>>>> "
+echo
+echo-green " Welcome to: http://dckyiv.docksal "
+echo
