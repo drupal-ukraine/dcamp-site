@@ -1,0 +1,42 @@
+uuid: b80d13d7-1166-4d2c-a59e-d0c99fc4d311
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_block.field_background_image
+    - field.field.paragraph.cta_block.field_title
+    - paragraphs.paragraphs_type.cta_block
+  module:
+    - content_moderation
+id: paragraph.cta_block.default
+targetEntityType: paragraph
+bundle: cta_block
+mode: default
+content:
+  field_background_image:
+    weight: 101
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 102
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

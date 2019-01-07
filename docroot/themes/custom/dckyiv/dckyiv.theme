@@ -5,8 +5,6 @@
  * Functions to support theming in dckyiv theme.
  */
 
-use Drupal\Core\Asset\AttachedAssetsInterface;
-
 /**
  * Implements hook_preprocess_html().
  * TODO: Check if this function needed.

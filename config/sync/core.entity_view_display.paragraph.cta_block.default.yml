@@ -1,0 +1,31 @@
+uuid: b62b39c3-45c5-439d-a6a6-268aa3835be0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_block.field_background_image
+    - field.field.paragraph.cta_block.field_title
+    - paragraphs.paragraphs_type.cta_block
+id: paragraph.cta_block.default
+targetEntityType: paragraph
+bundle: cta_block
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

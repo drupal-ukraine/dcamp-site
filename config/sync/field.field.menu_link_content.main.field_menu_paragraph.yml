@@ -1,0 +1,43 @@
+uuid: b0bd478f-288d-4216-ba2d-dc18fa554e18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_menu_paragraph
+    - paragraphs.paragraphs_type.menu_cta
+    - system.menu.main
+  module:
+    - entity_reference_revisions
+id: menu_link_content.main.field_menu_paragraph
+field_name: field_menu_paragraph
+entity_type: menu_link_content
+bundle: main
+label: 'Menu paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      menu_cta: menu_cta
+    target_bundles_drag_drop:
+      cta_block:
+        weight: 6
+        enabled: false
+      hero:
+        weight: 7
+        enabled: false
+      menu_cta:
+        enabled: true
+        weight: 8
+      paragraph_free_demo:
+        weight: 9
+        enabled: false
+      product_teaser_item:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

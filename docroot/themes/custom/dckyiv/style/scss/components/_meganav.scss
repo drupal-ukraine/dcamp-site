@@ -1,6 +1,6 @@
 // DCKyiv Meganav
 
-#block-dckyiv-main-menu {
+#block-meganav-main-menu {
   float: right;
   padding-top: 33px;
   position: static;
@@ -11,9 +11,9 @@
     & > li {
       float: left;
       & > .link-container > a {
-        @include icoMoon('chevron-down', 'after');
+        @include icoMoon('sort-down', 'after');
         position: relative;
-        padding: 13px 66px 21px 33px;
+        padding: 20px;
         display: block;
         color: $color-white;
         line-height: 1.63;

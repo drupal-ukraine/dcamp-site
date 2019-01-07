@@ -10,7 +10,7 @@
   /**
    * The main menu behavior object.
    */
-  Drupal.dckyivMenu = function ($links, options) {
+  Drupal.meganavMenu = function ($links, options) {
 
     var defaults = {
       menuBehaviour: 'click' // or mouseover.
@@ -186,16 +186,16 @@
 
   /**
    *
-   * @type {{attach: Drupal.behaviors.dckyivMenu.attach}}
+   * @type {{attach: Drupal.behaviors.meganavMenu.attach}}
    */
-  Drupal.behaviors.dckyivMenu = {
+  Drupal.behaviors.meganavMenu = {
     attach: function (context, settings) {
-      var $menuContainer = $('#block-dckyiv-main-menu');
+      var $menuContainer = $('#block-meganav-main-menu');
 
-      $menuContainer.once('dckyivMenu').each(function () {
+      $menuContainer.once('meganavMenu').each(function () {
         var $links = $('.menu-level-0 > li > .link-container', $(this));
         if ($links.length > 0) {
-          var menu = new Drupal.dckyivMenu($links);
+          var menu = new Drupal.meganavMenu($links);
           menu.init();
         }
       });

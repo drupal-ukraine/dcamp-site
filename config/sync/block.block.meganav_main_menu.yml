@@ -1,4 +1,4 @@
-uuid: 37d37aec-0c5e-4924-bded-b2740004edfa
+uuid: bdbe656f-d486-493d-80a2-cc59f1c21403
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - system
   theme:
     - dckyiv
-id: osnovnanavigaciya
+id: meganav_main_menu
 theme: dckyiv
 region: header
 weight: 0
@@ -16,7 +16,7 @@ provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Основна навіґація'
+  label: 'Main navigation'
   provider: system
   label_display: '0'
   level: 1
