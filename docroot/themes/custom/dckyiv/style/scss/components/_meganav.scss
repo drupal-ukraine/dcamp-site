@@ -2,7 +2,7 @@
 
 #block-meganav-main-menu {
   float: right;
-  padding-top: 33px;
+  padding-top: 29px;
   position: static;
 
   ul.menu-level-0 {
@@ -11,7 +11,7 @@
     & > li {
       float: left;
       & > .link-container > a {
-        @include icoMoon('sort-down', 'after');
+        @include icoMoon('arrow-down', 'after');
         position: relative;
         padding: 20px;
         display: block;
@@ -23,11 +23,11 @@
         transition: background-color .3s, color .3s;
 
         &:after {
-          font-size: 2.4rem;
+          font-size: .8rem;
           color: $color-dusty-gray;
           position: absolute;
-          right: 36px;
-          bottom: 19px;
+          right: 5px;
+          top: 30px;
         }
         &:before {
           content: '';

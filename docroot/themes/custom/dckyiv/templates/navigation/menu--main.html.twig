@@ -47,7 +47,9 @@
             {% endif %}
           </div>
           {% if item.below %}
-            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            <div class="menu-dropdown menu-dropdown-{{ menu_level }}">
+              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            </div>
           {% endif %}
         </li>
       {% endfor %}

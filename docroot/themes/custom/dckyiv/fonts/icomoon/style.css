@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7w7c2z');
-  src:  url('fonts/icomoon.eot?7w7c2z#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7w7c2z') format('truetype'),
-    url('fonts/icomoon.woff?7w7c2z') format('woff'),
-    url('fonts/icomoon.svg?7w7c2z#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?lib10s');
+  src:  url('fonts/icomoon.eot?lib10s#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?lib10s') format('truetype'),
+    url('fonts/icomoon.woff?lib10s') format('woff'),
+    url('fonts/icomoon.svg?lib10s#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,8 +24,29 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-sort-down:before {
+.icon-arrow-down:before {
+  content: "\e912";
+}
+.icon-linkedin:before {
+  content: "\e908";
+}
+.icon-user:before {
   content: "\e90c";
+}
+.icon-download:before {
+  content: "\e90d";
+}
+.icon-link-2:before {
+  content: "\e90e";
+}
+.icon-settings:before {
+  content: "\e90f";
+}
+.icon-star:before {
+  content: "\e910";
+}
+.icon-upload:before {
+  content: "\e911";
 }
 .icon-sort-asc:before {
   content: "\e90a";
@@ -59,7 +80,4 @@
 }
 .icon-chevron-down:before {
   content: "\e901";
-}
-.icon-linkedin:before {
-  content: "\e908";
 }
