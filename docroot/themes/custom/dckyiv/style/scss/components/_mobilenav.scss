@@ -44,7 +44,7 @@
         display: inline-block;
         height: 57px;
         padding: 13px 0;
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-family: $font-proxima-nova-bold;
         color: $color-white;
         @include mq($bp1024) {
@@ -61,10 +61,10 @@
       @include icoMoon('x');
       position: absolute;
       left: 0;
-      top: 0;
+      top: 2px;
       color: $color-white;
       padding: 18px;
-      font-size: 24px;
+      font-size: 1.8rem;
     }
 
   }
