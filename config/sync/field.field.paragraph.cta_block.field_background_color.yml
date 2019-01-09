@@ -1,0 +1,22 @@
+uuid: 25511413-ca4c-4750-834c-bcae4268dd42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.cta_block
+  module:
+    - color_field
+id: paragraph.cta_block.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: cta_block
+label: 'Background color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

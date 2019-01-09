@@ -1,0 +1,15 @@
+settings:
+  default_submit_button_label: Надіслати
+  default_reset_button_label: Reset
+  default_wizard_confirmation_label: Завершене
+  default_preview_next_button_label: Preview
+  default_preview_label: Preview
+  dialog_options:
+    narrow:
+      title: Вузький
+    wide:
+      title: Широкий
+element:
+  default_more_title: Ще
+mail:
+  default_from_name: '[site:name]'

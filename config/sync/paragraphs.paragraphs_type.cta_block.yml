@@ -1,0 +1,9 @@
+uuid: 444511e4-6a8a-422b-abb6-7149b272283c
+langcode: en
+status: true
+dependencies: {  }
+id: cta_block
+label: 'CTA block'
+icon_uuid: null
+description: 'CTA block with background image, title, link and configurable color for use on pages.'
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 67dcc857-3559-47e9-9fa3-beeb58d8a27f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.teaser
+  module:
+    - text
+id: paragraph.teaser.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: teaser
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

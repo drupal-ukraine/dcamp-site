@@ -1,0 +1,22 @@
+uuid: 365e3585-5cc2-4f3b-a934-8e981d31b262
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_color
+    - paragraphs.paragraphs_type.cta_block
+  module:
+    - color_field
+id: paragraph.cta_block.field_text_color
+field_name: field_text_color
+entity_type: paragraph
+bundle: cta_block
+label: 'Text Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

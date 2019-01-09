@@ -26,4 +26,16 @@ settings:
       html_widget:
         weight: 2
         enabled: false
+      cta_block:
+        weight: 6
+        enabled: false
+      container:
+        weight: 7
+        enabled: false
+      menu_cta:
+        weight: 9
+        enabled: false
+      teaser:
+        weight: 10
+        enabled: false
 field_type: entity_reference_revisions

@@ -3,10 +3,8 @@ session:
 url:
   source: path_prefix
   prefixes:
-    uk: uk
     en: en
   domains:
-    uk: ''
     en: ''
 selected_langcode: site_default
 _core:

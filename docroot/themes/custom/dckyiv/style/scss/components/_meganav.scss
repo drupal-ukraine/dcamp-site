@@ -2,18 +2,19 @@
 
 #block-meganav-main-menu {
   float: right;
-  padding-top: 29px;
+  padding-top: 32px;
   position: static;
 
   ul.menu-level-0 {
-    @include clearfix;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     & > li {
-      float: left;
       & > .link-container > a {
         @include icoMoon('arrow-down', 'after');
         position: relative;
-        padding: 20px;
+        padding: 20px 27px 20px 12px;
         display: block;
         color: $color-white;
         line-height: 1.63;
@@ -26,7 +27,7 @@
           font-size: .8rem;
           color: $color-dusty-gray;
           position: absolute;
-          right: 5px;
+          right: 13px;
           top: 30px;
         }
         &:before {
@@ -36,7 +37,7 @@
           left: 0;
           width: 100%;
           height: 0;
-          background-color: $color-bondi-blue;
+          background-color: $color-main-header;
           opacity: 0;
           transition: opacity .3s, height .3s;
         }

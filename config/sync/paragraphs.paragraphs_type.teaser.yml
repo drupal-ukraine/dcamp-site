@@ -1,0 +1,9 @@
+uuid: 66d66f79-a50b-4be3-9dbf-6a41c80e2d30
+langcode: en
+status: true
+dependencies: {  }
+id: teaser
+label: Teaser
+icon_uuid: null
+description: 'Teaser brick is used inside container brick'
+behavior_plugins: {  }

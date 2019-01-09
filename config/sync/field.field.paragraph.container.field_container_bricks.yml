@@ -1,0 +1,32 @@
+uuid: 12a30143-b7fc-41d8-a34e-09d8b18bc1ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_bricks
+    - paragraphs.paragraphs_type.container
+  module:
+    - entity_reference_revisions
+id: paragraph.container.field_container_bricks
+field_name: field_container_bricks
+entity_type: paragraph
+bundle: container
+label: 'Container bricks'
+description: 'Container brick is used to stack in a row up to 4 other bricks automatically aligning them by grid'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      container:
+        weight: 3
+        enabled: false
+      html_widget:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

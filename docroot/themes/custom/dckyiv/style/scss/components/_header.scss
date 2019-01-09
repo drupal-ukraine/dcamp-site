@@ -90,11 +90,13 @@ header.main-header {
     }
   }
 
-  .mobilenavtoggle, .opensearch {
+  .mobilenavtoggle,
+  .opensearch,
+  .user-login {
     position: absolute;
     color: $color-white;
     padding: 18px;
-    bottom: -1px;
+    bottom: -2px;
 
     &:hover {
       cursor: pointer;
@@ -128,6 +130,20 @@ header.main-header {
     }
   }
 
+  .user-login {
+    right: 0;
+    bottom: -8px;
+    transition: color .3s, background-color .3s;
+    color: $color-white;
+    @include icoMoon('user');
+    @include mq($bp1024) {
+      display: none;
+    }
+    &:before {
+      font-size: 24px;
+    }
+  }
+
   #block-sitebranding {
     text-align: center;
     @include mq($bp1024) {
@@ -139,7 +155,7 @@ header.main-header {
       display: inline-block;
       height: 57px;
       padding: 13px 0;
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-family: $font-proxima-nova-bold;
       color: $color-white;
       @include mq($bp1024) {

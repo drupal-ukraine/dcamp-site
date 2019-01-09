@@ -1,0 +1,23 @@
+uuid: 54f69b1a-5c66-41eb-acbb-b047c8178f32
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dckyiv
+id: sitebranding_mobile
+theme: dckyiv
+region: mobile_navigation
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: false
+  use_site_slogan: true
+visibility: {  }

@@ -1,0 +1,149 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        sid:
+          separator: ', '
+        in_draft:
+          label: Чернетка
+          separator: ', '
+        created:
+          label: Створено
+          separator: ', '
+        remote_addr:
+          label: IP-адреса
+          separator: ', '
+        view_webform_submission:
+          label: Operations
+          text: переглянути
+      header:
+        result:
+          content: 'Показ @start - @end з @total'
+      arguments:
+        in_draft:
+          exception:
+            title: All
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Action
+        sid:
+          separator: ', '
+        in_draft:
+          label: Чернетка
+          separator: ', '
+        sticky:
+          label: Прикріплені
+          separator: ', '
+        locked:
+          label: Заблоковано
+          separator: ', '
+        created:
+          label: Створено
+          separator: ', '
+        completed:
+          label: Завершено
+          separator: ', '
+        remote_addr:
+          label: IP-адреса
+          separator: ', '
+        operations:
+          label: Operations
+      filters:
+        sticky:
+          expose:
+            label: Прикріплені
+        locked:
+          expose:
+            label: Заблоковано
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Action
+        sid:
+          separator: ', '
+        in_draft:
+          label: Чернетка
+          separator: ', '
+        sticky:
+          label: Прикріплені
+          separator: ', '
+        locked:
+          label: Заблоковано
+          separator: ', '
+        created:
+          label: Створено
+          separator: ', '
+        completed:
+          label: Завершено
+          separator: ', '
+        remote_addr:
+          label: IP-адреса
+          separator: ', '
+        view_webform_submission:
+          label: Operations
+          text: переглянути
+        edit_webform_submission:
+          label: Operations
+          text: редагувати
+      filters:
+        sticky:
+          expose:
+            label: Прикріплені
+        locked:
+          expose:
+            label: Заблоковано
+  embed_review:
+    display_options:
+      fields:
+        sid:
+          separator: ', '
+        in_draft:
+          label: Чернетка
+          separator: ', '
+        sticky:
+          label: Прикріплені
+          separator: ', '
+        locked:
+          label: Заблоковано
+          separator: ', '
+        created:
+          label: Створено
+          separator: ', '
+        completed:
+          label: Завершено
+          separator: ', '
+        remote_addr:
+          label: IP-адреса
+          separator: ', '
+        view_webform_submission:
+          label: Operations
+          text: переглянути
+      filters:
+        sticky:
+          expose:
+            label: Прикріплені
+        locked:
+          expose:
+            label: Заблоковано
