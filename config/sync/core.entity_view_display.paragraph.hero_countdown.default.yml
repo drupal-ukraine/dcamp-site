@@ -1,0 +1,65 @@
+uuid: 15189d1b-7d30-4560-88d0-6f5ddfda8c8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_countdown.field_cta_link
+    - field.field.paragraph.hero_countdown.field_date
+    - field.field.paragraph.hero_countdown.field_heading
+    - field.field.paragraph.hero_countdown.field_image
+    - field.field.paragraph.hero_countdown.field_subheading
+    - paragraphs.paragraphs_type.hero_countdown
+  module:
+    - datetime
+    - link
+    - text
+id: paragraph.hero_countdown.default
+targetEntityType: paragraph
+bundle: hero_countdown
+mode: default
+content:
+  field_cta_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_date:
+    weight: 1
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_heading:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_subheading:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 93300e6f-d06d-4b87-9d81-ac79f8865239
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_link
+    - paragraphs.paragraphs_type.hero_countdown
+  module:
+    - link
+id: paragraph.hero_countdown.field_cta_link
+field_name: field_cta_link
+entity_type: paragraph
+bundle: hero_countdown
+label: 'CTA Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
