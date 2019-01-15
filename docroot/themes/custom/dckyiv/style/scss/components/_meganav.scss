@@ -79,11 +79,19 @@
           padding-right: 0;
         }
 
-        & > .link-container > a {
-          font-size: 1.4rem;
-          color: $color-mine-shaft;
-          font-weight: bold;
-          line-height: 2.29;
+        & > .link-container {
+          text-align: center;
+
+          & > a {
+            font-size: 1.4rem;
+            color: $color-mine-shaft;
+            font-weight: bold;
+            line-height: 2.29;
+
+            &:hover {
+              color: rgba($color-mine-shaft, .6);
+            }
+          }
         }
       }
     }
