@@ -1,5 +1,0 @@
-name: 'Drupal Camp Core Features'
-type: module
-description: 'Drupal Camp Core Features'
-core: 8.x
-package: 'DrupalCamp'
