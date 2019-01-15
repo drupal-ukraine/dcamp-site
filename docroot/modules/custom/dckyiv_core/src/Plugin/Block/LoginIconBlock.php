@@ -21,6 +21,12 @@ class LoginIconBlock extends BlockBase {
    */
   public function build() {
     $url = Url::fromRoute('user.login')->toString();
+
+    $current= \Drupal::currentUser();
+    if (!$current->id()) {
+      $url = Url::fromRoute('user.page')->toString();
+    }
+
     return ['#markup' => '<a href="' . $url . '" class="login_icon"></a>'];
   }
 
