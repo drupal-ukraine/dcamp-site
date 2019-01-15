@@ -19,7 +19,7 @@ class SearchIconBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    return ['#markup' => '<div class="search_icon"></div>'];
+    return ['#markup' => '<a href="#" class="search_icon"></a>'];
   }
 
 }
