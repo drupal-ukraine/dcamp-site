@@ -155,9 +155,9 @@
           // Level 2+ menu links
           .menu-dropdown {
             li a {
-              color: $color-bondi-blue;
+              color: $color-fern;
               &:active, &:hover {
-                color: rgba($color-bondi-blue, .6);
+                color: rgba($color-fern, .6);
               }
             }
           }
@@ -177,7 +177,7 @@
           right: 0;
           top: 0;
           padding: 20px 15px 20px 20px;
-          color: $color-bondi-blue;
+          color: $color-fern;
           cursor: pointer;
           &:before {
             transition: transform .3s;
