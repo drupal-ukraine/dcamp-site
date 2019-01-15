@@ -2,7 +2,6 @@
 
 #block-meganav-main-menu {
   float: right;
-  padding-top: 32px;
   position: static;
 
   ul.menu-level-0 {
@@ -10,11 +9,10 @@
     flex-direction: row;
     justify-content: space-between;
 
-    & > li {
+    & > .menu-item {
       & > .link-container > a {
-        @include icoMoon('arrow-down', 'after');
         position: relative;
-        padding: 20px 27px 20px 12px;
+        padding: 24px 20px 24px 20px;
         display: block;
         color: $color-white;
         line-height: 1.63;
@@ -23,13 +21,6 @@
         background-color: transparent;
         transition: background-color .3s, color .3s;
 
-        &:after {
-          font-size: .8rem;
-          color: $color-dusty-gray;
-          position: absolute;
-          right: 13px;
-          top: 30px;
-        }
         &:before {
           content: '';
           position: absolute;
@@ -47,6 +38,40 @@
         }
       }
     }
+
+    & > .menu-item.menu-item--has-children {
+      & > .link-container > a {
+        @include icoMoon('arrow-down', 'after');
+        position: relative;
+        padding: 24px 27px 24px 12px;
+        display: block;
+        color: $color-white;
+        line-height: 1.63;
+        font-size: 1.6rem;
+        font-weight: bold;
+        background-color: transparent;
+        transition: background-color .3s, color .3s;
+
+        &:after {
+          font-size: .8rem;
+          color: $color-dusty-gray;
+          position: absolute;
+          right: 13px;
+          top: 35px;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          background-color: $color-fern;
+          opacity: 0;
+          transition: opacity .3s, height .3s;
+        }
+      }
+    }
   }
 
   .menu-dropdown-0 {
@@ -55,7 +80,7 @@
     width: 100%;
     background-color: $color-white;
     left: 0;
-    top: 93px;
+    top: 73px;
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s, visibility .3s;
