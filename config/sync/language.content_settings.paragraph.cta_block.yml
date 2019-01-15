@@ -1,0 +1,11 @@
+uuid: c6369de2-63dd-4e8f-9d77-4560f20c6c04
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cta_block
+id: paragraph.cta_block
+target_entity_type_id: paragraph
+target_bundle: cta_block
+default_langcode: site_default
+language_alterable: false

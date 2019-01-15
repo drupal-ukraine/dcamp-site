@@ -1,0 +1,11 @@
+uuid: 264c06c5-5faa-4471-b92b-01a703f0925d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.teaser
+id: paragraph.teaser
+target_entity_type_id: paragraph
+target_bundle: teaser
+default_langcode: site_default
+language_alterable: false
