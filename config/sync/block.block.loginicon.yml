@@ -1,0 +1,20 @@
+uuid: 75f57931-7c56-4e44-a550-860956e1547a
+langcode: en
+status: true
+dependencies:
+  module:
+    - dckyiv_core
+  theme:
+    - dckyiv
+id: loginicon
+theme: dckyiv
+region: header
+weight: -5
+provider: null
+plugin: login_icon
+settings:
+  id: login_icon
+  label: 'Login Icon'
+  provider: dckyiv_core
+  label_display: '0'
+visibility: {  }

@@ -167,6 +167,21 @@ header.main-header {
       }
     }
   }
+
+  #block-searchicon,
+  #block-loginicon {
+    display: none;
+
+    @include mq($bp1024) {
+      display: block;
+      float: right;
+      padding: 24px 0 12px 8px;
+    }
+    @include mq($bp1280) {
+      padding: 24px 0 12px 20px;
+    }
+  }
+
 }
 // Global search block
 .block-globalsearch-block {

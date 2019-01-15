@@ -27,7 +27,7 @@ third_party_settings:
         show_label: false
         label_element: h3
         attributes: ''
-        effect: collapsible
+        effect: none
         speed: fast
         id: ''
         classes: ''

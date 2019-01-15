@@ -6,11 +6,11 @@
   @include mq($bp1024) {
     max-width: 1240px;
     margin: 0 auto;
-    padding: 0 5px;
+    padding: 24px 5px 0;
   }
 
   @include mq($bp1280) {
-    padding: 0;
+    padding: 24px 0 0;
   }
 }
 

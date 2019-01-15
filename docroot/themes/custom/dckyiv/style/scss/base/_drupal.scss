@@ -11,3 +11,27 @@
     }
   }
 }
+
+.login_icon {
+  transition: color .3s, background-color .3s;
+  color: $color-white;
+  @include icoMoon('user');
+
+  &:before {
+    font-size: 24px;
+  }
+}
+
+.search_icon {
+  transition: color .3s, background-color .3s;
+  color: $color-white;
+  @include icoMoon('search');
+
+  &:before {
+    font-size: 24px;
+  }
+  &.search-open {
+    background-color: $color-white;
+    color: $color-black;
+  }
+}

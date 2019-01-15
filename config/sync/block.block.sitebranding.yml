@@ -9,7 +9,7 @@ dependencies:
 id: sitebranding
 theme: dckyiv
 region: header
-weight: -4
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:
