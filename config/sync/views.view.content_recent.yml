@@ -1,5 +1,5 @@
-uuid: b40bce0a-9ed1-4551-8f03-a0c82b769a13
-langcode: en
+uuid: 1fb1bf42-bf3a-4d4c-924a-4fb0fd244fbe
+langcode: uk
 status: true
 dependencies:
   module:
@@ -8,9 +8,9 @@ dependencies:
 _core:
   default_config_hash: sqwEJaSgef4rCaRMf-JdNAdV_kCICU1SfQh5Wl2sUrc
 id: content_recent
-label: 'Recent content'
+label: 'Останні матеріали'
 module: node
-description: 'Recent content.'
+description: 'Останні матеріали.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -258,7 +258,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: date
-      title: 'Recent content'
+      title: 'Останні матеріали'
       header: {  }
       footer: {  }
       empty:
@@ -271,7 +271,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No content available.'
+          content: 'Матеріали відсутні.'
           plugin_id: text_custom
       relationships:
         uid:
@@ -289,7 +289,7 @@ display:
       display_extenders: {  }
       use_more: false
       use_more_always: false
-      use_more_text: More
+      use_more_text: Ще
       link_url: ''
       link_display: '0'
     cache_metadata:
@@ -304,7 +304,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: Блок
     position: 1
     display_options:
       display_extenders: {  }

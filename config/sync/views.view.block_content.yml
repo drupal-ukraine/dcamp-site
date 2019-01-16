@@ -1,5 +1,5 @@
-uuid: 24d87491-35f3-4081-927d-592deee1991a
-langcode: en
+uuid: 152393e0-566e-42b9-978a-93e8913c4d55
+langcode: uk
 status: true
 dependencies:
   module:
@@ -8,9 +8,9 @@ dependencies:
 _core:
   default_config_hash: BmeDSOTSaTVy5QLgxgJ5ye_ZseG5t88JXRP1apFoBkk
 id: block_content
-label: 'Custom block library'
+label: 'Бібліотека власних блоків'
 module: views
-description: 'Find and manage custom blocks.'
+description: 'Пошук власних блоків та керування ними.'
 tag: default
 base_table: block_content_field_data
 base_field: id
@@ -122,7 +122,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Block description'
+          label: 'Опис блоку'
           exclude: false
           alter:
             alter_text: false
@@ -187,7 +187,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Block type'
+          label: 'Тип блоку'
           exclude: false
           alter:
             alter_text: false
@@ -366,7 +366,7 @@ display:
           exposed: true
           expose:
             operator_id: info_op
-            label: 'Block description'
+            label: 'Опис блоку'
             description: ''
             use_operator: false
             operator: info_op
@@ -406,7 +406,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Block type'
+            label: 'Тип блоку'
             description: ''
             use_operator: false
             operator: type_op
@@ -473,7 +473,7 @@ display:
           entity_field: reusable
           plugin_id: boolean
       sorts: {  }
-      title: 'Custom block library'
+      title: 'Бібліотека власних блоків'
       header: {  }
       footer: {  }
       empty:
@@ -486,7 +486,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'There are no custom blocks available.'
+          content: 'Доступні власні блоки відсутні'
           plugin_id: text_custom
         block_content_listing_empty:
           admin_label: ''
@@ -521,7 +521,7 @@ display:
       path: admin/structure/block/block-content
       menu:
         type: tab
-        title: 'Custom block library'
+        title: 'Бібліотека власних блоків'
         description: ''
         parent: block.admin_display
         weight: 0

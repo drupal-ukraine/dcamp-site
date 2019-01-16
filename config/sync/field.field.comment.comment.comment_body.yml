@@ -1,5 +1,5 @@
-uuid: c7112a16-b6b8-4ad4-99ef-a86f5b64529a
-langcode: en
+uuid: 0acad787-3cc0-41e0-89d9-8d278a51e921
+langcode: uk
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: comment.comment.comment_body
 field_name: comment_body
 entity_type: comment
 bundle: comment
-label: Comment
+label: Коментар
 description: ''
 required: true
 translatable: true

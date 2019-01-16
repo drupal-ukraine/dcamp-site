@@ -1,0 +1,21 @@
+uuid: dc539dcf-f2d2-4057-88ab-937a14ee8828
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.hero_countdown
+  module:
+    - text
+id: paragraph.hero_countdown.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: hero_countdown
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

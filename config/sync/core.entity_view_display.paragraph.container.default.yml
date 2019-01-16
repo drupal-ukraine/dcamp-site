@@ -1,0 +1,24 @@
+uuid: 55d287d3-602f-4969-839a-16c2dd7264c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.container.field_container_bricks
+    - paragraphs.paragraphs_type.container
+  module:
+    - entity_reference_revisions
+id: paragraph.container.default
+targetEntityType: paragraph
+bundle: container
+mode: default
+content:
+  field_container_bricks:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

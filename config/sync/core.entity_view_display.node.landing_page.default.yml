@@ -3,7 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.field_widgets
+    - field.field.node.landing_page.field_header
+    - field.field.node.landing_page.field_page_content
+    - field.field.node.landing_page.field_right_sidebar
+    - field.field.node.landing_page.field_transparent_header
     - node.type.landing_page
   module:
     - entity_reference_revisions
@@ -13,18 +16,34 @@ targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  field_widgets:
+  field_header:
     type: entity_reference_revisions_entity_view
-    weight: 101
+    weight: 0
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
+  field_page_content:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-hidden: {  }
+    region: content
+  field_right_sidebar:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_transparent_header: true
+  langcode: true
+  links: true

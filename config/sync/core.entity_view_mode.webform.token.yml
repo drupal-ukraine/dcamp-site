@@ -1,0 +1,10 @@
+uuid: ae6f447d-d521-4293-a440-1ce1ed7bf288
+langcode: uk
+status: true
+dependencies:
+  module:
+    - webform
+id: webform.token
+label: Token
+targetEntityType: webform
+cache: true

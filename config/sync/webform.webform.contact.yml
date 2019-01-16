@@ -194,6 +194,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
   email_notification:
     id: email
     label: 'Email notification'
@@ -228,3 +229,4 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''

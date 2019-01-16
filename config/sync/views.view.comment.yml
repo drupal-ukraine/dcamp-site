@@ -1,5 +1,5 @@
-uuid: 992a9738-719d-467b-bc82-96c35567dfd2
-langcode: en
+uuid: 9df77a4c-718f-47f9-8248-b76185365cd1
+langcode: uk
 status: true
 dependencies:
   module:
@@ -8,9 +8,9 @@ dependencies:
 _core:
   default_config_hash: cCq1vjj1qmyd39oBIUyOe8YPDsobJ5fZRhp2Xy5O7lA
 id: comment
-label: Comments
+label: Коментарі
 module: comment
-description: 'Find and manage comments.'
+description: 'Пошук коментарів та керування ними.'
 tag: default
 base_table: comment_field_data
 base_field: cid
@@ -194,7 +194,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Subject
+          label: Тема
           exclude: false
           alter:
             alter_text: false
@@ -388,7 +388,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Posted in'
+          label: Опубліковане
           exclude: false
           alter:
             alter_text: false
@@ -681,7 +681,7 @@ display:
           exposed: true
           expose:
             operator_id: subject_op
-            label: Subject
+            label: Тема
             description: ''
             use_operator: false
             operator: subject_op
@@ -721,7 +721,7 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: 'Author name'
+            label: 'Ім’я автора'
             description: ''
             use_operator: false
             operator: combine_op
@@ -806,7 +806,7 @@ display:
           entity_type: comment
           entity_field: changed
           plugin_id: date
-      title: Comments
+      title: Коментарі
       header: {  }
       footer: {  }
       empty:
@@ -819,13 +819,13 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No comments available.'
+          content: 'Коментарі відсутні.'
           plugin_id: text_custom
       arguments: {  }
       display_extenders: {  }
       use_more: false
       use_more_always: true
-      use_more_text: more
+      use_more_text: ще
       use_ajax: false
       hide_attachment_summary: false
       show_admin_links: true
@@ -860,19 +860,19 @@ display:
   page_published:
     display_plugin: page
     id: page_published
-    display_title: 'Published comments'
+    display_title: 'Опубліковані коментарі'
     position: 1
     display_options:
       path: admin/content/comment
       menu:
         type: tab
-        title: Comments
-        description: 'Comments published'
+        title: Коментарі
+        description: 'Коментарі опубліковано'
         parent: ''
         weight: 0
         context: '0'
         menu_name: admin
-      display_description: 'The approved comments listing.'
+      display_description: 'Список затверджених коментарів.'
       display_extenders: {  }
       exposed_block: false
       display_comment: ''
@@ -889,19 +889,19 @@ display:
   page_unapproved:
     display_plugin: page
     id: page_unapproved
-    display_title: 'Unapproved comments'
+    display_title: 'Несхвалені коментарі'
     position: 2
     display_options:
       path: admin/content/comment/approval
       menu:
         type: tab
-        title: 'Unapproved comments'
-        description: 'Comments unapproved'
+        title: 'Несхвалені коментарі'
+        description: 'Коментарі не затверджено'
         parent: ''
         weight: 1
         context: '0'
         menu_name: admin
-      display_description: 'The unapproved comments listing.'
+      display_description: 'Список незатверджених коментарів.'
       filters:
         status:
           id: status
@@ -954,7 +954,7 @@ display:
           exposed: true
           expose:
             operator_id: subject_op
-            label: Subject
+            label: Тема
             description: ''
             use_operator: false
             operator: subject_op
@@ -994,7 +994,7 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: 'Author Name'
+            label: 'Ім''я автора'
             description: ''
             use_operator: false
             operator: combine_op
@@ -1131,7 +1131,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Subject
+          label: Тема
           exclude: false
           alter:
             alter_text: false
@@ -1325,7 +1325,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Posted in'
+          label: Опубліковане
           exclude: false
           alter:
             alter_text: false

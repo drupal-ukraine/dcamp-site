@@ -1,0 +1,33 @@
+/*
+ * IcoMoon
+ * see @ http://jshak.es/easy-icomoon-icons-with-sass/
+ * see @ https://jshakespeare.com/easy-icomoon-icons-with-sass
+ */
+
+@import "icons";
+
+@mixin icoMoon($icon, $position: "before", $replace: false) {
+  // If we're replacing the text, set font-size to 0
+  @if $replace {
+    font-size: 0;
+  }
+  // Pseudo-element properties
+  &:#{$position} {
+    content: map-get($icons, $icon);
+    font-family: 'Icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    @if $replace {
+      font-size: 1rem;
+    }
+    @content;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

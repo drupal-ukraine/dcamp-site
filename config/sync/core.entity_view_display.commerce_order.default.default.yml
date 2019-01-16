@@ -1,5 +1,5 @@
-uuid: c9e7d61c-a5c9-4c3d-afd0-99f28db2d401
-langcode: en
+uuid: 6c0e5556-e555-49ec-af7d-410e15367193
+langcode: uk
 status: true
 dependencies:
   config:
@@ -93,3 +93,4 @@ hidden:
   billing_profile: true
   order_number: true
   store_id: true
+  total_paid: true

@@ -1,4 +1,5 @@
-admin: seven
-default: bartik
+admin: adminimal_theme
+default: dckyiv
 _core:
   default_config_hash: fOjer9hADYYnbCJVZMFZIIM1azTFWyg84ZkFDHfAbUg
+langcode: uk

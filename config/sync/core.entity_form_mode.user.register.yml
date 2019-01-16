@@ -1,5 +1,5 @@
-uuid: a4378c6b-e590-46c9-9807-29a1374b9511
-langcode: en
+uuid: 49da8c1b-db52-4ef6-917f-36668626f8dc
+langcode: uk
 status: true
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: flXhTcp55yLcyy7ZLOhPGKGZobZQJdkAFVWV3LseiuI
 id: user.register
-label: Register
+label: Реєстрація
 targetEntityType: user
 cache: true

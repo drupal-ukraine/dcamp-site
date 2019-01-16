@@ -1,0 +1,12 @@
+uuid: 8ac155dc-3d94-426c-a5d6-6ac3ad1fa137
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+_core:
+  default_config_hash: 5tiVG1-LjSP5f2N2dAUGYeXg5ZBvOfkN1DPrXBuUA_4
+id: menu_link_content.terms
+label: Terms
+targetEntityType: menu_link_content
+cache: true

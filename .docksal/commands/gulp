@@ -1,0 +1,32 @@
+#!/bin/bash
+
+## DOOR3 Docksal package, v1.0
+##
+## Run Gulp in the theme folder
+##
+## Usage: fin gulp <gulpcommand>
+
+THEME_PATH_INSIDE_CONTAINER="/var/www/${DOCROOT}/themes/custom/${THEME_NAME}"
+DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
+MAIN_THEME_PATH="${DOCROOT_PATH}/themes/custom/${THEME_NAME}"
+
+install_gulp() {
+  fin exec "npm install -g gulp"
+  fin exec "cd ${THEME_PATH_INSIDE_CONTAINER}; npm install"
+  set +e
+}
+
+echo "Running gulp tasks in theme ${THEME_PATH_INSIDE_CONTAINER}"
+
+echo "${MAIN_THEME_PATH}/package-lock.json"
+
+if [ -f "${MAIN_THEME_PATH}/package-lock.json" ]; then
+    echo "package-lock.json is available, just running gulp compilation."
+else
+    echo "package-lock.json is not available, deleting node_modules and npm install\n"
+    rm -rf $THEME_PATH_INSIDE_CONTAINER/node_modules
+    install_gulp
+fi
+
+
+fin exec "cd ${THEME_PATH_INSIDE_CONTAINER}; gulp $1"

@@ -1,0 +1,22 @@
+uuid: 83c7d37f-570a-48cb-b83d-8a8402d560d6
+langcode: uk
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - dckyiv
+_core:
+  default_config_hash: 862sIulDdHmF0vBU1s2j2_a_CwkxursrL0pIrMDzzOg
+id: dckyiv_login
+theme: dckyiv
+region: content
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

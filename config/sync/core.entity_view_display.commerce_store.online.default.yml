@@ -1,5 +1,5 @@
-uuid: aa26b143-15af-401c-b612-b6f0736100e2
-langcode: en
+uuid: 34a8aaf0-0b5f-4b03-857a-9bd9f7df1725
+langcode: uk
 status: true
 dependencies:
   config:
@@ -23,5 +23,6 @@ content:
 hidden:
   billing_countries: true
   default_currency: true
+  langcode: true
   mail: true
   name: true

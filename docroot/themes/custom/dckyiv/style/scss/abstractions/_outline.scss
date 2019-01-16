@@ -1,0 +1,13 @@
+// @mixin outline;
+// Displays border around container for accessibility purposes
+// Use if default "outline" styles are cut off or low contrast
+// Options include $color, $blur, $spread, and $opacity
+
+@mixin outline($color: $color-navy-blue, $blur: rem(2), $spread: rem(2), $opacity: 0.75) {
+  outline: 0;
+
+  &:focus {
+    box-shadow: inset 0 0 $blur $spread rgba($color, $opacity);
+  } // &:focus
+
+} // @mixin outline

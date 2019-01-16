@@ -1,5 +1,5 @@
-uuid: 7004a8fc-e6ad-4a3e-b100-2beb67a77bdb
-langcode: en
+uuid: 55790f11-8a07-41b9-9bbf-7bed2a2adb0c
+langcode: uk
 status: false
 dependencies:
   config:
@@ -10,9 +10,9 @@ dependencies:
 _core:
   default_config_hash: SRH1EhxAiIRj01P9xYv0h_LfIfWxjll0Yq-eDfjziFI
 id: archive
-label: Archive
+label: Архів
 module: node
-description: 'All content, by month.'
+description: 'Всі матеріали, за місяцем.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -32,7 +32,7 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      title: 'Monthly archive'
+      title: 'Щомісячний архів'
       access:
         type: perm
         options:
@@ -184,7 +184,7 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Блок
     display_plugin: block
     position: 1
     display_options:

@@ -1,0 +1,37 @@
+uuid: 093f82c8-7cae-42f6-968d-153c0aab5a72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.container.field_container_bricks
+    - paragraphs.paragraphs_type.container
+  module:
+    - paragraphs
+id: paragraph.container.default
+targetEntityType: paragraph
+bundle: container
+mode: default
+content:
+  field_container_bricks:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Brick
+      title_plural: Bricks
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

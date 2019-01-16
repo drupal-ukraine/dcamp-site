@@ -1,5 +1,5 @@
-uuid: 63bd1a3d-3b1d-48bf-a9d8-000e6e55b5cf
-langcode: en
+uuid: 997cff0f-1c9a-4423-9f8a-e4818298cf92
+langcode: uk
 status: true
 dependencies:
   config:
@@ -76,6 +76,13 @@ content:
     third_party_settings: {  }
     type: yoast_seo_widget
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

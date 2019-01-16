@@ -1,5 +1,5 @@
-uuid: 2536507c-d465-440b-8be3-9db0c1e7b9e9
-langcode: en
+uuid: 7cdd273c-53fd-4ae8-a2a7-711760bc541f
+langcode: uk
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: vpBH8OmL4sdesCdeZLsW8KOutB5gkbreWJbfjhfFKaQ
 id: comment_delete_action
-label: 'Delete comment'
+label: 'Видалити коментар'
 type: comment
 plugin: 'entity:delete_action:comment'
 configuration: {  }

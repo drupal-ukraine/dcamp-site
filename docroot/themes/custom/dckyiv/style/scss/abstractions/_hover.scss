@@ -1,0 +1,9 @@
+@mixin hover($transition-duration: $transition-duration-fast) {
+  .no-touchevents & {
+    transition: all $transition-duration;
+
+    &:hover {
+      @content;
+    }
+  }
+}

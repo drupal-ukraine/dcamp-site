@@ -1,0 +1,20 @@
+styles:
+  css:
+    theme:
+      style/css/styles.css: {}
+      'https://fonts.googleapis.com/css?family=Lato|Montserrat': { type: external }
+
+global-header:
+  js:
+    js/dist/global-header.min.js: {minified: true}
+  dependencies:
+  - core/drupal
+  - core/jquery.once
+  - core/underscore
+
+global-menu:
+  js:
+    js/dist/global-menu.min.js: {minified: true}
+  dependencies:
+  - core/drupal
+  - core/jquery.once

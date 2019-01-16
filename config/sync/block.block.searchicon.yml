@@ -1,0 +1,20 @@
+uuid: 60fba555-d2ec-49de-a71f-f0a73d221069
+langcode: en
+status: true
+dependencies:
+  module:
+    - dckyiv_core
+  theme:
+    - dckyiv
+id: searchicon
+theme: dckyiv
+region: header
+weight: -6
+provider: null
+plugin: search_icon
+settings:
+  id: search_icon
+  label: 'Search Icon'
+  provider: dckyiv_core
+  label_display: '0'
+visibility: {  }

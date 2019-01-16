@@ -59,6 +59,7 @@ Thumbs.db
 !core/**/*.gz
 
 .idea
+.scannerwork
 .env
 docker-runtime/
 .DS_Store

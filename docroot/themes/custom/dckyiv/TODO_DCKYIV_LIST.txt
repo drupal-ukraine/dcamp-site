@@ -1,0 +1,5 @@
+- create screenshot for theme
+- update icon for site
+- update iconmoon library
+
+https://github.com/Door3Dev/AndrewDavidson/pull/24/files

@@ -1,5 +1,5 @@
-uuid: e12df0f9-0cae-4aa6-ad68-49b788e80b0d
-langcode: en
+uuid: 64e11d5b-7b32-4f0d-8cc7-8613937f8e70
+langcode: uk
 status: false
 dependencies:
   config:
@@ -10,9 +10,9 @@ dependencies:
 _core:
   default_config_hash: _12Vkw1VGBz_s0_W_LLVCrBPpioNSnB6zcd1lUAQubM
 id: glossary
-label: Glossary
+label: Глосарій
 module: node
-description: 'All content, by letter.'
+description: 'Всі матеріали, за літерою.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -176,7 +176,7 @@ display:
           id: changed
           table: node_field_data
           field: changed
-          label: 'Last update'
+          label: 'Останнє оновлення'
           type: timestamp
           settings:
             date_format: long
@@ -364,7 +364,7 @@ display:
       tags: {  }
   attachment_1:
     id: attachment_1
-    display_title: Attachment
+    display_title: Долучення
     display_plugin: attachment
     position: 2
     display_options:
@@ -442,7 +442,7 @@ display:
       path: glossary
       menu:
         type: normal
-        title: Glossary
+        title: Глосарій
         weight: 0
         menu_name: main
         parent: ''

@@ -1,0 +1,11 @@
+@import 'bourbon';
+
+@import 'normalize/**/*.scss';
+@import 'variables/**/*.scss';
+@import 'abstractions/**/*.scss';
+
+@import 'base/*.scss';
+
+body.cke_editable {
+  padding: 1rem;
+}

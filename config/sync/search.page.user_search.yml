@@ -1,5 +1,5 @@
-uuid: 894aa3e7-5825-4686-8300-77e8acd9a020
-langcode: en
+uuid: 0a39e06f-5cf6-40e1-adab-c933f445140c
+langcode: uk
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: k3aUaZXGDuhkek2TZIee0PApOPTvYZLadziekdyHA5A
 id: user_search
-label: Users
+label: Користувачі
 path: user
 weight: 0
 plugin: user_search

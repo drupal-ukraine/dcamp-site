@@ -1,0 +1,14 @@
+// Font-families
+
+$fontsPath: '../../fonts/';
+
+/* font-family: "ICOMOON"; */
+@include font-face('Icomoon', $fontsPath+'icomoon/fonts/icomoon',  $file-formats: eot svg ttf woff);
+
+/* font-family: Proxima Nova */
+$pn-font-path: $fontsPath+'font-proxima-nova-scss/fonts';
+@import '../../fonts/font-proxima-nova-scss/font-proxima-nova-scss';
+
+$font-proxima-nova-regular: 'Proxima Nova';
+$font-proxima-nova-light: 'Proxima Nova Lt';
+$font-proxima-nova-bold: 'Proxima Nova Rg';

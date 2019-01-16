@@ -1,0 +1,11 @@
+uuid: bb7b1ca8-7ca3-4efe-9c8c-951283de0100
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.menu_cta
+id: paragraph.menu_cta
+target_entity_type_id: paragraph
+target_bundle: menu_cta
+default_langcode: site_default
+language_alterable: false

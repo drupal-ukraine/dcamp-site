@@ -1,0 +1,69 @@
+//Page header styles
+
+.paragraph--type--page-heading {
+  @include clearfix;
+  width: 100%;
+  height: 100%;
+  border-bottom: 5px solid;
+  background-size: cover;
+
+  @include mq($bp1024) {
+    padding: 0 100px;
+  }
+
+  .breadcrumbs {
+    @include container;
+    padding-top: 80px;
+    padding-bottom: 10px;
+    font-size: 1.1rem;
+
+    ol {
+      @include inline-list-items;
+
+      li {
+        float: left;
+
+        a {
+          margin-right: 5px;
+          color: white;
+          font-size: 1.1rem;
+          line-height: 1.36;
+          text-transform: uppercase;
+        }
+      }
+
+      .breadcrumb-icon {
+        color: rgba($color-white, 0.4);
+        @include icoMoon('chevron-right', 'after');
+        margin-right: 5px;
+        font-size: 1rem;
+      }
+    }
+
+    @include mq($bp1024) {
+      padding-top: 144px;
+    }
+  }
+
+  .field--name-field_title {
+    @include container;
+    margin-bottom: 20px;
+    h1 {
+      display: block;
+      font-size: 2.0rem;
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0;
+
+      @include mq($bp768) {
+        font-size: 3.0rem;
+        font-weight: 300;
+      }
+
+      @include mq($bp1024) {
+        margin-bottom: 20px;
+        font-size: 4.0rem;
+      }
+    }
+  }
+}

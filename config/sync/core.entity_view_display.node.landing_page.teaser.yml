@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.field_header
+    - field.field.node.landing_page.field_page_content
+    - field.field.node.landing_page.field_right_sidebar
     - node.type.landing_page
   module:
     - user
@@ -11,10 +14,10 @@ id: node.landing_page.teaser
 targetEntityType: node
 bundle: landing_page
 mode: teaser
-content:
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+content: {  }
+hidden:
+  field_header: true
+  field_page_content: true
+  field_right_sidebar: true
+  langcode: true
+  links: true

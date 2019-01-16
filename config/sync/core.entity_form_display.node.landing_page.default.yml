@@ -3,11 +3,36 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.field_widgets
+    - field.field.node.landing_page.field_header
+    - field.field.node.landing_page.field_page_content
+    - field.field.node.landing_page.field_right_sidebar
+    - field.field.node.landing_page.field_transparent_header
     - node.type.landing_page
   module:
+    - content_moderation
+    - field_group
     - paragraphs
     - path
+third_party_settings:
+  field_group:
+    group_header:
+      children:
+        - field_header
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: Header
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+        required_fields: false
+      label: Header
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -15,31 +40,87 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_widgets:
+  field_header:
     type: paragraphs
-    weight: 121
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: summary
-      autocollapse: none
+      edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: html_widget
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
       features:
         duplicate: duplicate
         collapse_edit_all: collapse_edit_all
-        add_above: '0'
     third_party_settings: {  }
     region: content
+  field_page_content:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+  field_right_sidebar:
+    type: paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+  field_transparent_header:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  langcode:
+    type: language_select
+    weight: 6
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 12
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -47,26 +128,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 9
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 13
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -74,7 +155,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60

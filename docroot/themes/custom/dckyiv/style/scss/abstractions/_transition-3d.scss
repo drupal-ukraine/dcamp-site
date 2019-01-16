@@ -1,0 +1,19 @@
+@mixin transition-3d($property: all, $duration: $base-duration, $timing: $base-timing, $transform: null, $transition: true, $origin: null) {
+
+  @if ($transition == true) {
+    transition: $property $duration $timing;
+  }
+
+  $translate-3d: translate3d(0, 0, 0);
+
+  @if ($transform) {
+    transform: $transform $translate-3d;
+  }
+  @else {
+    transform: $translate-3d;
+  }
+
+  @if ($origin) {
+    transform-origin: $origin;
+  }
+} // @mixin transition-3d

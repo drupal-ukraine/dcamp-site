@@ -1,11 +1,11 @@
-uuid: ba91647f-637a-4470-b408-88bb34d5ce06
-langcode: en
+uuid: 6f998dc4-f2ec-4a76-b8b5-9264cd9385e7
+langcode: uk
 status: true
 dependencies: {  }
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
-label: 'Authenticated user'
+label: 'Авторизований користувач'
 weight: 1
 is_admin: false
 permissions:
@@ -20,4 +20,5 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'view commerce_product'
+  - 'view media'
   - 'view own commerce_order'

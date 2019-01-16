@@ -1,5 +1,5 @@
-uuid: d96526f8-dcf6-4d67-8ca3-980beae45f4c
-langcode: en
+uuid: 7033d5cf-e849-4305-8980-ca2803f4bbc6
+langcode: uk
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ dependencies:
     - path
     - text
 _core:
-  default_config_hash: BlEklVMbiVXa3RmLlhs2g6ssIXEwuYq562wMiS5q1vc
+  default_config_hash: HVGduYEFVxNAGFkB2jgFc7Pf88pl_pTojrPnpJwXWrI
 id: commerce_product.default.default
 targetEntityType: commerce_product
 bundle: default
@@ -34,6 +34,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 7

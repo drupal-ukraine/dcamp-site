@@ -1,0 +1,33 @@
+uuid: 4eb7fb11-e9d8-4e5b-ab42-b82b4ae20a34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.menu_cta.field_background_color
+    - field.field.paragraph.menu_cta.field_text
+    - paragraphs.paragraphs_type.menu_cta
+  module:
+    - color_field
+    - text
+id: paragraph.menu_cta.default
+targetEntityType: paragraph
+bundle: menu_cta
+mode: default
+content:
+  field_background_color:
+    weight: 1
+    label: hidden
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }
