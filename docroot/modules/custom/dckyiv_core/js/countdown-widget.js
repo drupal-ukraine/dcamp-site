@@ -26,5 +26,4 @@
         }
     };
 
-
 })(jQuery, Drupal, drupalSettings);
