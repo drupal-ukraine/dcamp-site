@@ -23,5 +23,5 @@ clear
 cat "${PROJECT_ROOT}/.docksal/assets/ascii.txt"
 
 echo-yellow "Dump dbs..."
-fin db dump --db=sportbaza --db-user=user --db-password=user $PROJECT_ROOT/db/database.sql
+fin db dump --db=default --db-user=user --db-password=user $PROJECT_ROOT/db/database.sql
 echo
