@@ -152,6 +152,10 @@
         display: block;
       }
     }
+
+    .transparent-header & {
+      background-color: rgba($color-white, .95);
+    }
   }
 
   // Sign in required caption
@@ -181,6 +185,10 @@
         &:before {
           opacity: 1;
           height: 5px;
+        }
+
+        .transparent-header & {
+          background-color: rgba($color-white, .95);
         }
       }
 
