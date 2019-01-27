@@ -57,6 +57,8 @@
         {{ content|without('field_image', 'field_date', 'field_cta_link') }}
         <input type="hidden" id="countdown-clock-value" value="{{ content.field_date|render|striptags }}">
         <div id="countdown-clock"></div>
+        <a href="#" class="btn btn--bordered-primary">Button</a>
+
         {{ content.field_cta_link }}
       </div>
     {% endblock %}
