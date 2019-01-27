@@ -34,10 +34,10 @@ content:
     weight: 1
     label: hidden
     settings:
-      format_type: medium
-      timezone_override: ''
+      timezone_override: Europe/Kiev
+      date_format: Y/m/d
     third_party_settings: {  }
-    type: datetime_default
+    type: datetime_custom
     region: content
   field_heading:
     weight: 2

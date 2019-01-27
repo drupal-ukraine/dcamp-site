@@ -17,7 +17,7 @@ footer.main-footer {
     }
 
     #block-footertopcontact {
-      background-color: $color-key-lime-pie;
+      background-color: $color-fern;
       float: right;
       width: 148px;
       height: 40px;
@@ -31,7 +31,7 @@ footer.main-footer {
           color: rgba($color-black, .8);
           font-size: 1.1rem;
           &:hover {
-            color: rgba($color-mine-shaft, 0.6);
+            color: rgba($color-shark, 0.6);
           }
           text-align: center;
         }
@@ -75,7 +75,7 @@ footer.main-footer {
     nav {
       > ul > li {
         > a {
-          color: $color-dusty-gray;
+          color: $color-bali-hai;
           margin-bottom: 10px;
           font-size: 1.1rem;
           text-transform: uppercase;
@@ -198,7 +198,7 @@ footer.bottom-footer {
         li a {
           font-size: 1.4rem;
           padding: 0 7px;
-          border-right: 1px solid rgba($color-dusty-gray, .5);
+          border-right: 1px solid rgba($color-bali-hai, .5);
           font-weight: normal;
         }
         li:last-child a {

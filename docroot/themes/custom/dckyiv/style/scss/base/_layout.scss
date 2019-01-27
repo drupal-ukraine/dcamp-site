@@ -52,8 +52,3 @@ main.container {
     max-width: 1270px;
   }
 }
-
-.wrap-content,
-.region-content .contextual-region {
-  @include container;
-}

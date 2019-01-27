@@ -61,7 +61,7 @@ header.main-header {
           &.contact-us {
             padding-left: 40px;
             padding-right: 40px;
-            background-color: $color-key-lime-pie;
+            background-color: $color-fern;
             color: $color-black;
 
             &:hover {
@@ -278,7 +278,7 @@ body {
 
 .login_icon {
   transition: color .3s, background-color .3s;
-  color: $color-white;
+  color: rgba($color-white, .6);
   @include icoMoon('user');
 
   &:before {
@@ -288,7 +288,7 @@ body {
 
 .search_icon {
   transition: color .3s, background-color .3s;
-  color: $color-white;
+  color: rgba($color-white, .6);
   @include icoMoon('search');
 
   &:before {

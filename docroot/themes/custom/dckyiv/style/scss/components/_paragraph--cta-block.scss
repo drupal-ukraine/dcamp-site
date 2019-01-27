@@ -40,13 +40,13 @@
     border-radius: 0 0 6px 6px;
     height: 63px;
     padding: 20px;
-    background-color: $color-botticelli;
+    background-color: $color-bali-hai;
     @include icoMoon('arrow-right', 'after');
 
     a {
       font-weight: 400;
       &:hover {
-        color: rgba($color-bondi-blue, .6);
+        color: rgba($color-fountain-blue, .6);
       }
     }
 
