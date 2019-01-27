@@ -2,7 +2,9 @@
 
 footer.main-footer {
   clear: both;
-  background-color: rgba($color-black, .8);
+  background-color: $color-tuna;
+  display: flex;
+  flex-direction: column;
 
   .region-footer-top {
     @include clearfix;
@@ -46,11 +48,10 @@ footer.main-footer {
 
   .region-footer {
     @include clearfix;
-    margin: 20px 7%;
-    padding-bottom: 40px;
+    margin: 10px 10px;
 
     @include mq($bp1400) {
-      margin: 20px auto;
+      margin: 50px auto;
       max-width: 1240px;
     }
 
@@ -154,6 +155,24 @@ footer.main-footer {
       #block-footersolutions,
       #block-footerinsights {
         clear: none;
+      }
+    }
+
+    #block-sitebranding-footer {
+      a {
+        display: inline-block;
+        padding: 13px 0;
+        font-size: 1.2rem;
+        font-family: $font-proxima-nova-bold;
+        color: $color-white;
+        @include mq($bp1024) {
+          font-size: 1.6rem;
+          padding: 0;
+          height: auto;
+        }
+        span {
+          color: $color-fern;
+        }
       }
     }
 
