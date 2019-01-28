@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_content_type
     - field.field.node.landing_page.field_header
     - field.field.node.landing_page.field_page_content
     - field.field.node.landing_page.field_right_sidebar
@@ -10,12 +11,20 @@ dependencies:
     - node.type.landing_page
   module:
     - entity_reference_revisions
+    - options
     - user
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
 mode: default
 content:
+  field_content_type:
+    type: list_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_header:
     type: entity_reference_revisions_entity_view
     weight: 0

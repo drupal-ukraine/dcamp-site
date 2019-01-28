@@ -2,7 +2,9 @@
 
 footer.main-footer {
   clear: both;
-  background-color: rgba($color-black, .8);
+  background-color: $color-tuna;
+  display: flex;
+  flex-direction: column;
 
   .region-footer-top {
     @include clearfix;
@@ -17,7 +19,7 @@ footer.main-footer {
     }
 
     #block-footertopcontact {
-      background-color: $color-key-lime-pie;
+      background-color: $color-fern;
       float: right;
       width: 148px;
       height: 40px;
@@ -31,7 +33,7 @@ footer.main-footer {
           color: rgba($color-black, .8);
           font-size: 1.1rem;
           &:hover {
-            color: rgba($color-mine-shaft, 0.6);
+            color: rgba($color-shark, 0.6);
           }
           text-align: center;
         }
@@ -46,11 +48,10 @@ footer.main-footer {
 
   .region-footer {
     @include clearfix;
-    margin: 20px 7%;
-    padding-bottom: 40px;
+    margin: 10px 10px;
 
     @include mq($bp1400) {
-      margin: 20px auto;
+      margin: 50px auto;
       max-width: 1240px;
     }
 
@@ -75,7 +76,7 @@ footer.main-footer {
     nav {
       > ul > li {
         > a {
-          color: $color-dusty-gray;
+          color: $color-bali-hai;
           margin-bottom: 10px;
           font-size: 1.1rem;
           text-transform: uppercase;
@@ -157,6 +158,24 @@ footer.main-footer {
       }
     }
 
+    #block-sitebranding-footer {
+      a {
+        display: inline-block;
+        padding: 13px 0;
+        font-size: 1.2rem;
+        font-family: $font-proxima-nova-bold;
+        color: $color-white;
+        @include mq($bp1024) {
+          font-size: 1.6rem;
+          padding: 0;
+          height: auto;
+        }
+        span {
+          color: $color-fern;
+        }
+      }
+    }
+
     @include mq($bp1280) {
       nav {
         width: 20%;
@@ -198,7 +217,7 @@ footer.bottom-footer {
         li a {
           font-size: 1.4rem;
           padding: 0 7px;
-          border-right: 1px solid rgba($color-dusty-gray, .5);
+          border-right: 1px solid rgba($color-bali-hai, .5);
           font-weight: normal;
         }
         li:last-child a {

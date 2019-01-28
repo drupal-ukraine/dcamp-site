@@ -1,6 +1,6 @@
 // Site level alert
 .block-dckyiv-site-alert-block {
-  background-color: $color-calypso;
+  background-color: $color-fern;
   text-align: center;
   visibility: hidden;
   height: 0;
@@ -41,7 +41,7 @@
     }
 
     &:before {
-      color: $color-key-lime-pie;
+      color: $color-fern;
       font-size: 40px;
       left: 0;
       @include vertical-align();
@@ -60,7 +60,7 @@
   }
 
   .dismiss {
-    color: $color-key-lime-pie;
+    color: $color-fern;
     margin-left: auto;
     display: block;
     padding: 1rem;
