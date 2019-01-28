@@ -3,7 +3,6 @@
 namespace Drupal\dckyiv_user\Form;
 
 use Drupal\Component\Datetime\TimeInterface;
-use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
@@ -95,19 +94,6 @@ class DCKUserRegisterForm extends ProfileForm {
 
     $form['action']['#weight'] = 10;
 
-    // Add information about return_to page.
-    $request = $this->getRequest();
-    $baseUrl = $request->getSchemeAndHttpHost();
-    $referer = $request->server->get('HTTP_REFERER');
-    $referer_uri = str_replace($baseUrl, '', $referer);
-
-    if (!empty($referer_uri) && (strpos($referer, $baseUrl) !== FALSE)) {
-      $form['ifw_referer'] = [
-        '#type' => 'hidden',
-        '#value' => $referer_uri,
-      ];
-    }
-
     return $form;
   }
 
@@ -128,13 +114,6 @@ class DCKUserRegisterForm extends ProfileForm {
       $form_state->setErrorByName('name', 'Your username should be unique');
     }
 
-    // Add subscriber role by default.
-    $form_state->setValue(
-      'roles',
-      [
-        'subscriber' => 'subscriber',
-      ]
-    );
     parent::validateForm($form, $form_state);
 
   }
