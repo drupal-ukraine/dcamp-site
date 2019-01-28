@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\dckyiv_user\Form\DCKUserRegisterForm;
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function dckyiv_user_entity_type_build(array &$entity_types) {
+  // Map the Project Form view mode to the class who handle that view mode.
+  /** @var \Drupal\Core\Entity\EntityTypeInterface[] $entity_types */
+  if (isset($entity_types['user'])) {
+    $entity_types['user']
+      ->setFormClass('register', DCKUserRegisterForm::class);
+
+  }
+}
