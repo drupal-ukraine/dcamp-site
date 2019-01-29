@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_footer
     - field.field.node.landing_page.field_header
     - field.field.node.landing_page.field_page_content
     - field.field.node.landing_page.field_right_sidebar
@@ -44,6 +45,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_footer:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_header:
     type: paragraphs
     weight: 3

@@ -33,15 +33,19 @@ module:
   dblog: 0
   dckyiv_core: 0
   dckyiv_user: 0
+  dropzonejs: 0
+  dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
+  entity_browser: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0
   field_ui: 0
   file: 0
   filter: 0
+  geolocation: 0
   google_analytics: 0
   help: 0
   history: 0
@@ -52,6 +56,7 @@ module:
   link_attributes: 0
   locale: 0
   media: 0
+  media_entity_browser: 0
   media_library: 0
   menu_ui: 0
   metatag: 0
@@ -74,6 +79,7 @@ module:
   state_machine: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   token: 0
   toolbar: 0
