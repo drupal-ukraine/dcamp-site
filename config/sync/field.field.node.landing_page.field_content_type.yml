@@ -1,0 +1,21 @@
+uuid: 8dc6b5ff-943e-4b10-868b-ab99e053845c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_type
+    - node.type.landing_page
+  module:
+    - options
+id: node.landing_page.field_content_type
+field_name: field_content_type
+entity_type: node
+bundle: landing_page
+label: 'Content type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

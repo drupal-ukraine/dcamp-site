@@ -51,12 +51,13 @@
 {% set style = 'style=' ~ bg_img %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }} >
+  <div{{ attributes.addClass(classes) }} {{ style }}>
     {% block content %}
-      <div class="content" {{ style }}>
-          {{ content|without('field_image', 'field_date') }}
-          <input type="hidden" id="countdown-clock-value" value="{{ content.field_date|render|striptags }}">
-          <div id="countdown-clock"></div>
+      <div class="content">
+        {{ content|without('field_image', 'field_date', 'field_cta_link') }}
+        <input type="hidden" id="countdown-clock-value" value="{{ content.field_date|render|striptags }}">
+        <div id="countdown-clock"></div>
+        {{ content.field_cta_link }}
       </div>
     {% endblock %}
   </div>

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.field_footer
     - field.field.node.landing_page.field_header
     - field.field.node.landing_page.field_page_content
     - field.field.node.landing_page.field_right_sidebar
@@ -20,7 +19,7 @@ third_party_settings:
       children:
         - field_header
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: html_element
       format_settings:
         label: Header
@@ -62,6 +61,12 @@ content:
         duplicate: duplicate
         collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
+    region: content
+  field_content_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_header:
     type: paragraphs

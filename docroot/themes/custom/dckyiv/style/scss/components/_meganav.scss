@@ -14,7 +14,7 @@
         position: relative;
         padding: 24px 14px 24px 14px;
         display: block;
-        color: $color-white;
+        color: rgba($color-white, .6);
         line-height: 1.63;
         font-size: 1.6rem;
         font-weight: bold;
@@ -34,7 +34,7 @@
         }
 
         &:hover {
-          color: rgba($color-white, .6);
+          color: $color-white;
         }
       }
     }
@@ -45,7 +45,7 @@
         position: relative;
         padding: 24px 27px 24px 12px;
         display: block;
-        color: $color-white;
+        color: rgba($color-white, .6);
         line-height: 1.63;
         font-size: 1.6rem;
         font-weight: bold;
@@ -54,7 +54,7 @@
 
         &:after {
           font-size: .8rem;
-          color: $color-dusty-gray;
+          color: $color-storm-gray;
           position: absolute;
           right: 13px;
           top: 35px;
@@ -69,6 +69,9 @@
           background-color: $color-fern;
           opacity: 0;
           transition: opacity .3s, height .3s;
+        }
+        &:hover {
+          color: $color-white;
         }
       }
     }
@@ -90,7 +93,6 @@
       margin: 0 auto;
       padding: 20px 0;
       display: flex;
-      border-bottom: 1px solid $color-silver;
 
       & > li {
         flex: 1 0 0;
@@ -109,12 +111,12 @@
 
           & > a {
             font-size: 1.6rem;
-            color: $color-mine-shaft;
+            color: rgba($color-shark, .6);
             font-weight: bold;
             line-height: 2.29;
 
             &:hover {
-              color: rgba($color-mine-shaft, .6);
+              color: $color-shark;
             }
           }
         }
@@ -142,7 +144,7 @@
           right: 0;
           bottom: 1.5rem;
           font-size: 1.1rem;
-          color: $color-dusty-gray;
+          color: $color-storm-gray;
         }
         //////////////////////////////
       }
@@ -152,6 +154,10 @@
         display: block;
       }
     }
+
+    .transparent-header & {
+      background-color: rgba($color-white, .95);
+    }
   }
 
   // Sign in required caption
@@ -159,7 +165,7 @@
     @include icoMoon('lock', 'before');
     display: none;
     text-align: center;
-    color: $color-dusty-gray;
+    color: $color-storm-gray;
     padding: 30px 0;
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -175,12 +181,19 @@
   ul.menu-level-0 > li.menu-item {
     &.open {
       & > .link-container > a {
-        color: $color-mine-shaft;
+        color: $color-shark;
         background-color: $color-white;
         transition-delay: 0s;
         &:before {
           opacity: 1;
           height: 5px;
+        }
+
+        .transparent-header & {
+          background-color: rgba($color-white, .95);
+        }
+        &:hover {
+          color: $color-shark;
         }
       }
 
@@ -203,7 +216,7 @@
 
 // Paragraph type menu CTA
 .paragraph--type--menu-cta {
-  background-color: $color-calypso;
+  background-color: $color-fern;
   color: $color-white;
   min-width: 216px;
   padding: 20px;
@@ -215,7 +228,7 @@
   }
   a {
     line-height: 1.71;
-    color: $color-key-lime-pie;
+    color: $color-fern;
     font-weight: normal;
   }
 }
