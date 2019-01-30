@@ -15,7 +15,6 @@ body {
   .dialog-off-canvas-main-canvas {
     position: relative;
     min-height: 100%;
-    padding-bottom: 75px;
   }
   &.no-scroll {
     position: fixed;
@@ -32,11 +31,18 @@ body {
   }
 }
 
-main.container {
-  padding-top: 60px;
+main {
+  &.container {
+    padding-top: 60px;
 
-  @include mq($bp1024) {
-    padding-top: 125px;
+    @include mq($bp1024) {
+      padding-top: 125px;
+    }
+  }
+
+  .wrap-content {
+    @include wrap-content;
+    margin: 0 15px;
   }
 }
 
