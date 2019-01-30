@@ -24,7 +24,6 @@ jobs:
           name: Other commands
           command: |
             DEBUG=1 source build-env
-            build-exec 'fin exec composer install'
             build-exec 'fin drush status'
 
 workflows:
