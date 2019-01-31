@@ -1,0 +1,55 @@
+uuid: 998ec94c-3975-4568-b629-bad1d9415918
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_links
+    - paragraphs.paragraphs_type.icomoon_link
+    - paragraphs.paragraphs_type.social_links
+  module:
+    - entity_reference_revisions
+id: paragraph.social_links.field_links
+field_name: field_links
+entity_type: paragraph
+bundle: social_links
+label: Links
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      icomoon_link: icomoon_link
+    target_bundles_drag_drop:
+      contacts:
+        weight: 10
+        enabled: false
+      container:
+        weight: 11
+        enabled: false
+      cta_block:
+        weight: 12
+        enabled: false
+      hero_countdown:
+        weight: 13
+        enabled: false
+      html_widget:
+        weight: 14
+        enabled: false
+      icomoon_link:
+        enabled: true
+        weight: 15
+      menu_cta:
+        weight: 16
+        enabled: false
+      social_links:
+        weight: 17
+        enabled: false
+      teaser:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

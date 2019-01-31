@@ -1,0 +1,9 @@
+uuid: 244219c3-dc3a-44f4-a168-8e9f6bd1ca22
+langcode: en
+status: true
+dependencies: {  }
+id: icomoon_link
+label: 'Icomoon Link'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
