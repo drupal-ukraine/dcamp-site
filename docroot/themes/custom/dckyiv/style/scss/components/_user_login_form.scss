@@ -70,18 +70,29 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
 
   .separator {
     text-align: center;
-    border-bottom: 1px solid $color-storm-gray;
+    border-bottom: 1px solid $color-silver;
     height: 30px;
     margin-bottom: 30px;
 
     span {
       position: relative;
-      color: $color-storm-gray;
+      color: $color-silver;
       font-size: 14px;
       bottom: -20px;
       padding: 0 10px;
       background-color: $color-white;
     }
+  }
+
+  .separator_second {
+    text-align: center;
+    border-bottom: 1px solid $color-silver;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .user-register {
+    text-align: right;
   }
 
   .form-item .description {

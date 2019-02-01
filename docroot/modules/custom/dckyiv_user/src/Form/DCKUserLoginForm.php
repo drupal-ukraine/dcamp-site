@@ -2,6 +2,7 @@
 
 namespace Drupal\dckyiv_user\Form;
 
+use Drupal\Core\Render\Element;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Drupal\user\Form\UserLoginForm;
@@ -120,11 +121,23 @@ class DCKUserLoginForm extends UserLoginForm {
     $form['actions'] = ['#type' => 'actions'];
     $form['actions']['submit'] = ['#type' => 'submit', '#value' => $this->t('Log in')];
 
+    $form['separator_second'] = [
+      '#markup' => '<div class="separator_second"></div>',
+    ];
+
     $form['register'] = [
-      '#type' => 'link',
-      '#title' => $this->t('Register'),
-      '#url' => Url::fromRoute('user.register'),
-      '#attributes' => ['class' => ['user-register']],
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['user-register'],
+      ],
+      'message' => [
+        '#markup' => t("Don't have an account? "),
+      ],
+      'link' => [
+        '#type' => 'link',
+        '#title' => $this->t('Register'),
+        '#url' => Url::fromRoute('user.register'),
+      ],
       '#access' => TRUE,
     ];
 
@@ -141,6 +154,11 @@ class DCKUserLoginForm extends UserLoginForm {
 
     // Use previous class in order not to break styling.
     $form['#attributes']['class'][] = 'user-login-form';
+
+    $elements = Element::getVisibleChildren($form);
+    foreach ($elements as $num => $name) {
+      $form[$name]['#weight'] = $num;
+    }
 
     // Since we are adding referer info to the form we have to disable cache.
     $form['#cache'] = ['max-age' => 0];
