@@ -18,7 +18,7 @@ This is template for Drupal Camp sites in Ukraine.
 - VirtualBox (you need if you work on WIndows or MacOS)
 - Gulp (for compile js, icons and scss files in the our custom theme)
 - SCSS (for css styles)
-- Composer (for menage Drupal Core, modules and Libraries)
+- Composer (Drupal Core, Modules, Libraries packet management)
 - Circle CI (for testing and create builds)
 - CI Agent (for create builds via Docksal)
 - IDE C9 (for write and edit code, with support xDebug)
