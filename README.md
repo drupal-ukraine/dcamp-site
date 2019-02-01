@@ -45,8 +45,10 @@ curl -fsSL https://get.docksal.io | bash
 # Up and run project
 # If your Docksal VM is not yet started it will ask you.
 fin p start
+
 # Start the project
 fin rebuild
+
 # Wait till finish. First time it takes 10-15 minutes for downloading of the database. 
 # If everything is ok, your project would be available at http://dckyiv.docksal/ and enjoy you work!
 ```
