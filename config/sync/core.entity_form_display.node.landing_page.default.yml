@@ -44,6 +44,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_content_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_footer:
     type: paragraphs
     weight: 5
@@ -61,12 +67,6 @@ content:
         duplicate: duplicate
         collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
-    region: content
-  field_content_type:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_header:
     type: paragraphs

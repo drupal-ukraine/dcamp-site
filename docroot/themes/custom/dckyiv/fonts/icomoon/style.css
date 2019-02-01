@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?lib10s');
-  src:  url('fonts/icomoon.eot?lib10s#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?lib10s') format('truetype'),
-    url('fonts/icomoon.woff?lib10s') format('woff'),
-    url('fonts/icomoon.svg?lib10s#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?3alqu8');
+  src:  url('fonts/icomoon.eot?3alqu8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3alqu8') format('truetype'),
+    url('fonts/icomoon.woff?3alqu8') format('woff'),
+    url('fonts/icomoon.svg?3alqu8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,11 +24,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-down:before {
-  content: "\e912";
+.icon-login:before {
+  content: "\e914";
 }
-.icon-linkedin:before {
-  content: "\e908";
+.icon-facebook:before {
+  content: "\e913";
 }
 .icon-user:before {
   content: "\e90c";
@@ -80,4 +80,10 @@
 }
 .icon-chevron-down:before {
   content: "\e901";
+}
+.icon-arrow-down:before {
+  content: "\e912";
+}
+.icon-linkedin:before {
+  content: "\e908";
 }
