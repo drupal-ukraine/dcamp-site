@@ -50,10 +50,10 @@ fin p start
 fin rebuild
 
 # Wait till finish. First time it takes 10-15 minutes for downloading of the database. 
-# If everything is ok, your project would be available at http://dckyiv.docksal/ and enjoy you work!
 ```
+#### If everything is 'OK' AWESOME!, your project would be available at [http://dckyiv.docksal](http://dckyiv.docksal)
 
-Virtualhost: [http://dckyiv.docksal](http://dckyiv.docksal)
+#### ENJOY YOUR WORK AND CONTRIBUTION!
 
 ### Files clone
 We use stage_file_proxy to proxy files from staging to local. 
@@ -91,7 +91,7 @@ After you run the "fin rebuild" and have your environment ready you need to do f
 - Open `.docksal/docksal.env` file
 - Find `IDE_ENABLED` and change value to `1`
 - Run `fin p restart`
-- In the your browser open [http://ide.dckyiv.docksal](http://ide.dckyiv.docksal) and enjoy you work!
+- In the your browser open [http://ide.dckyiv.docksal](http://ide.dckyiv.docksal) and enjoy your work and contribution!
 
 ### Access to local Database
-In the your browser open [http://pma.dckyiv.docksal](http://pma.dckyiv.docksal) and enjoy you work!
+In the your browser open [http://pma.dckyiv.docksal](http://pma.dckyiv.docksal) and enjoy your work and contribution!
