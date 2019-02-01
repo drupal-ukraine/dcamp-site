@@ -14,8 +14,7 @@
 
   .field {
     &--name-field-heading,
-    &--name-field-subheading,
-    &--name-field-cta-link {
+    &--name-field-subheading {
       text-align: center;
       text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.3);
     }
@@ -47,37 +46,17 @@
 
     &--name-field-cta-link {
       margin: 0 0 2vh;
+      text-align: center;
+
       a {
-        width: 70vw;
-        height: 55px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        font-family: $font-proxima-nova-light;
-        font-size: 5vw;
-        text-align: center;
-        color: $color-white;
-        background-color: $color-fern;
-        text-shadow: none;
+        @include button;
         box-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.1);
 
-        &:hover {
-          background-color: lightness($color-fern);
-        }
-
-        @include mq($bp580) {
-          font-size: 3.5vw;
-        }
-
         @include mq($bp1024) {
-          width: 350px;
-          height: 45px;
-          font-size: 2rem;
+          padding: 10px 120px;
         }
       }
     }
-
   }
 
   #countdown-clock {
@@ -87,7 +66,7 @@
     margin: 5vh 0 5vh;
 
     @include mq($bp1024) {
-      margin: 8vh 0 5vh;
+      margin: 8vh 0 6vh;
     }
 
     .time-item {

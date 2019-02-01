@@ -1,0 +1,11 @@
+// Default IFW buttons
+
+@mixin invert-links() {
+  a {
+    color: $color-fern;
+    outline: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
