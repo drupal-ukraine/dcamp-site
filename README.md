@@ -16,20 +16,33 @@ This is template for Drupal Camp sites in Ukraine.
 - Drupal 8
 - Docksal (for develepment)
 - VirtualBox (you need if you work on WIndows or MacOS)
-- Gulp (for compile theme)
-- SCSS (for ccs styles)
+- Gulp (for compile js, icons and scss files in the our custom theme)
+- SCSS (for css styles)
 - Composer (for menage Drupal Core, modules and Libraries)
 - Circle CI (for testing and create builds)
 - CI Agent (for create builds via Docksal)
 - IDE C9 (for write and edit code, with support xDebug)
 
 ### Full install from scratch
-In project root folder execute commands:
+- Create project folder (Ex.: `dckyiv`):
+```
+mkdir dckyiv
+```
+- Copy repository to your folder (copy project files):
+```
+cd dckyiv
+git clone https://github.com/drupal-ukraine/dcamp-site.git ./
+```
+
+- In project root folder execute commands:
 ```bash
 # Install Docksal
 curl -fsSL https://get.docksal.io | bash
-# Up and run project
+
 # If your Docksal VM is not yet started it will ask you.
+# https://docksal.io/installation/#macos-virtualbox
+
+# Up and run project
 fin p start
 # Start the project
 fin rebuild
