@@ -39,10 +39,11 @@ git clone https://github.com/drupal-ukraine/dcamp-site.git ./
 # Install Docksal
 curl -fsSL https://get.docksal.io | bash
 
-# If your Docksal VM is not yet started it will ask you.
+# Install VirtualBox (if you use MacOS or Windows):
 # https://docksal.io/installation/#macos-virtualbox
 
 # Up and run project
+# If your Docksal VM is not yet started it will ask you.
 fin p start
 # Start the project
 fin rebuild
