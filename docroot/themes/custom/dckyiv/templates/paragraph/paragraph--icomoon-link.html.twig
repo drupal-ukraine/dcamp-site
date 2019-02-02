@@ -44,6 +44,12 @@
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
 ] %}
+
+{% set icon_class = [
+  'fab',
+  'fa-' ~ content.field_icon_name.0['#context']['value']
+] %}
+
 {% block paragraph %}
-    <a href="{{ content.field_link|render|striptags }}"><span class="{{ content.field_icon_name|field_value }}"></span></a>
+    <a href="{{ content.field_link.0['#url'] }}"><span{{ attributes.addClass(icon_class) }}></span></a>
 {% endblock paragraph %}
