@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.contacts.field_address
     - field.field.paragraph.contacts.field_email
     - field.field.paragraph.contacts.field_geolocation
+    - field.field.paragraph.contacts.field_headline
     - field.field.paragraph.contacts.field_phone
     - paragraphs.paragraphs_type.contacts
   module:
@@ -16,6 +17,7 @@ third_party_settings:
   field_group:
     group_left:
       children:
+        - field_headline
         - field_address
         - field_email
         - field_phone
@@ -54,7 +56,7 @@ bundle: contacts
 mode: default
 content:
   field_address:
-    weight: 1
+    weight: 5
     label: above
     settings:
       link_to_entity: false
@@ -62,11 +64,11 @@ content:
     type: string
     region: content
   field_email:
-    weight: 2
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: email_mailto
     region: content
   field_geolocation:
     weight: 2
@@ -76,15 +78,16 @@ content:
       title: ''
       info_text: ''
       google_map_settings:
-        height: 300px
-        width: 300px
+        height: ''
+        width: ''
         type: ROADMAP
-        zoom: '18'
+        zoom: '14'
         maxZoom: 18
         minZoom: 0
         mapTypeControl: 1
         streetViewControl: 1
         zoomControl: 1
+        fullscreenControl: 1
         scrollwheel: 1
         gestureHandling: auto
         draggable: 1
@@ -93,7 +96,6 @@ content:
         marker_icon_path: ''
         disableAutoPan: 1
         rotateControl: 0
-        fullscreenControl: 0
         preferScrollingToZooming: 0
         disableDoubleClickZoom: 0
       use_overridden_map_settings: 0
@@ -101,8 +103,16 @@ content:
     third_party_settings: {  }
     type: geolocation_map
     region: content
+  field_headline:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_phone:
-    weight: 3
+    weight: 7
     label: above
     settings:
       title: ''

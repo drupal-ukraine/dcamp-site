@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.contacts.field_address
     - field.field.paragraph.contacts.field_email
     - field.field.paragraph.contacts.field_geolocation
+    - field.field.paragraph.contacts.field_headline
     - field.field.paragraph.contacts.field_phone
     - paragraphs.paragraphs_type.contacts
   module:
@@ -17,7 +18,7 @@ bundle: contacts
 mode: default
 content:
   field_address:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -25,7 +26,7 @@ content:
     type: string_textfield
     region: content
   field_email:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -33,7 +34,7 @@ content:
     type: email_default
     region: content
   field_geolocation:
-    weight: 2
+    weight: 3
     settings:
       populate_address_field: ''
       target_address_field: null
@@ -67,8 +68,16 @@ content:
     third_party_settings: {  }
     type: geolocation_googlegeocoder
     region: content
+  field_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_phone:
-    weight: 3
+    weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
