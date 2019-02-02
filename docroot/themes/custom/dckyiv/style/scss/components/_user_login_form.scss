@@ -44,7 +44,7 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
   &#user-pass-reset {
     margin-top: 0;
     p {
-      font-size: 14px;
+      font-size: 1.4rem;
     }
   }
 
@@ -55,13 +55,13 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
     width: 100%;
     background-color: $color-chambray;
     border-radius: 0;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
     color: $color-white;
     @include icoMoon('facebook');
 
     &:before {
-      font-size: 24px;
+      font-size: 2.4rem;
       margin-right: 16px;
       position: relative;
       bottom: -4px;
@@ -77,7 +77,7 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
     span {
       position: relative;
       color: $color-silver;
-      font-size: 14px;
+      font-size: 1.4rem;
       bottom: -20px;
       padding: 0 10px;
       background-color: $color-white;

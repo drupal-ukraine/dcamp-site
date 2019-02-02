@@ -34,9 +34,14 @@
       }
 
       &--name-field-headline {
-        font-size: 30px;
+        font-size: 3rem;
         font-family: $font-proxima-nova-bold;
         text-transform: uppercase;
+        padding-top: 10px;
+
+        @include mq($bp1280) {
+          padding-top: auto;
+        }
       }
 
       &--name-field-address {
@@ -63,14 +68,14 @@
         .field__label {
           position: relative;
           font-family: $font-proxima-nova-bold;
-          font-size: 14px;
+          font-size: 1.4rem;
           text-transform: uppercase;
           color: $color-nobel;
 
           &:before {
             top: -8px;
             left: -50px;
-            font-size: 28px;
+            font-size: 2.8rem;
             position: absolute;
             color: $color-fern;
           }
