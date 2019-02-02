@@ -47,7 +47,7 @@
   not paragraph.isPublished() ? 'paragraph--unpublished'
 ] %}
 
-{% set bg_img = content.field_image ? 'background-image:url(' ~ file_url(content.field_image|field_target_entity.field_media_image.entity.uri.value) ~ ');' : '' %}
+{% set bg_img = content.field_image ? 'background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(' ~ file_url(content.field_image|field_target_entity.field_media_image.entity.uri.value) ~ ');' : '' %}
 {% set style = 'style=' ~ bg_img %}
 
 {% block paragraph %}
