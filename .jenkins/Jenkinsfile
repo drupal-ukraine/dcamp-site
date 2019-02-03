@@ -6,7 +6,7 @@ pipeline {
             echo "Scripted block"
             sh 'php --version'
             script {
-            	php --version
+
             }
             }
         }
