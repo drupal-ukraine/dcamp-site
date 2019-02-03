@@ -5,9 +5,7 @@ pipeline {
     stages {
         stage("CI-Agent") {
             steps {
-                script {
-                    source build-env
-                }
+                sh 'source build-env'
             }
         }
     }
