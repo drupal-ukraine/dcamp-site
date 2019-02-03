@@ -10,7 +10,14 @@ pipeline {
         REMOTE_BUILD_BASE='/home/berz/builds'
         CI='true'
         CIRCLECI='true'
+        CIRCLE_PROJECT_USERNAME='ivan-berezhnov'
+        CIRCLE_PROJECT_REPONAME='dcamp-site'
+        CIRCLE_REPOSITORY_URL="${env.GIT_URL}"
         CIRCLE_BRANCH="${env.NODE_NAME}"
+        CIRCLE_SHA1="${env.GIT_COMMIT}"
+        CIRCLE_PULL_REQUEST=""
+        CIRCLE_BUILD_NUM="${env.BUILD_ID}"
+        CIRCLE_WORKING_DIRECTORY="${env.WORKSPACE}"
     }
     stages {
         stage("Build") {
