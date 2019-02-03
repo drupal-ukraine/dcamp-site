@@ -10,7 +10,7 @@ pipeline {
         REMOTE_BUILD_BASE='/home/berz/builds'
         CI='true'
         CIRCLECI='true'
-        CIRCLE_BRANCH="${env.BRANCH_NAME}"
+        CIRCLE_BRANCH="${env.NODE_NAME}"
     }
     stages {
         stage("Build") {
