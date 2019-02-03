@@ -8,9 +8,9 @@ pipeline {
         DOCKSAL_HOST_USER='ivo'
         GITHUB_TOKEN='git_token'
         REMOTE_BUILD_BASE='/home/berz/builds'
-        CI=true
-        CIRCLECI=true
-        CIRCLE_BRANCH=${env.BRANCH_NAME}
+        CI='true'
+        CIRCLECI='true'
+        CIRCLE_BRANCH="${env.BRANCH_NAME}"
     }
     stages {
         stage("Build") {
