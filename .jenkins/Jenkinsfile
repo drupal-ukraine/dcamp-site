@@ -2,8 +2,15 @@ pipeline {
     agent {
         docker 'docksal/ci-agent:php'
     }
+    environment {
+        DOCKSAL_HOST='build.ivo.group'
+        DOCKSAL_HOST_SSH_KEY='here_my_key'
+        DOCKSAL_HOST_USER='ivo'
+        GITHUB_TOKEN='git_token'
+        REMOTE_BUILD_BASE='/home/berz/builds'
+    }
     stages {
-        stage("CI-Agent") {
+        stage("Build") {
             steps {
                 sh 'printenv'
             }
