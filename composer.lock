@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e25133ebacbed00612ee9c59f44bad1",
+    "content-hash": "84ee06f42edd53e1884de36a4fffc8cb",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3107,6 +3107,61 @@
             "time": "2017-07-28T17:11:54+00:00"
         },
         {
+            "name": "drupal/content_moderation_notifications",
+            "version": "3.0.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/content_moderation_notifications",
+                "reference": "8.x-3.0-rc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/content_moderation_notifications-8.x-3.0-rc2.zip",
+                "reference": "8.x-3.0-rc2",
+                "shasum": "e51ac2174d0262812aa13cee782861a53fd9583b"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "require-dev": {
+                "drupal/token": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-rc2",
+                    "datestamp": "1517332380",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Holmes",
+                    "homepage": "https://www.drupal.org/user/1774034"
+                },
+                {
+                    "name": "jhedstrom",
+                    "homepage": "https://www.drupal.org/user/208732"
+                }
+            ],
+            "description": "Manage notifications for content moderation transitions.",
+            "homepage": "https://www.drupal.org/project/content_moderation_notifications",
+            "support": {
+                "source": "http://cgit.drupalcode.org/content_moderation_notifications",
+                "issues": "https://www.drupal.org/project/issues/content_moderation_notifications"
+            }
+        },
+        {
             "name": "drupal/contribute",
             "version": "5.0.0-beta3",
             "source": {
@@ -4149,6 +4204,69 @@
             }
         },
         {
+            "name": "drupal/mailsystem",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/mailsystem",
+                "reference": "8.x-4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/mailsystem-8.x-4.1.zip",
+                "reference": "8.x-4.1",
+                "shasum": "318b87f1fdf96e6db30b04a98108af02a0fc3dcc"
+            },
+            "require": {
+                "drupal/core": "^8.0.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.1",
+                    "datestamp": "1467993646",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Les Lim",
+                    "homepage": "https://www.drupal.org/user/84263"
+                },
+                {
+                    "name": "Nafes",
+                    "homepage": "https://www.drupal.org/user/2489926"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "pillarsdotnet",
+                    "homepage": "https://www.drupal.org/user/36148"
+                }
+            ],
+            "description": "Mail System",
+            "homepage": "https://www.drupal.org/project/mailsystem",
+            "support": {
+                "source": "http://cgit.drupalcode.org/mailsystem"
+            }
+        },
+        {
             "name": "drupal/media_entity",
             "version": "1.8.0",
             "source": {
@@ -4952,6 +5070,70 @@
             }
         },
         {
+            "name": "drupal/sendgrid_integration",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/sendgrid_integration",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/sendgrid_integration-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "a3d9baea4389a6f8804adc5f736c9920ae200131"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/mailsystem": "^4",
+                "fastglass/sendgrid": ">=1.0.6",
+                "html2text/html2text": "~4.0.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1528941232",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL v2"
+            ],
+            "authors": [
+                {
+                    "name": "Brady Owens (perignon)",
+                    "homepage": "https://www.drupal.org/u/perignon",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "exlin",
+                    "homepage": "https://www.drupal.org/user/695136"
+                }
+            ],
+            "description": "Drupal module for integrating with the SendGrid API.",
+            "homepage": "https://www.drupal.org/project/sendgrid_integration",
+            "keywords": [
+                "SendGrid",
+                "email",
+                "grid",
+                "php",
+                "send",
+                "sendgrid"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/sendgrid_integration",
+                "issues": "https://drupal.org/project/issues/sendgrid_integration"
+            }
+        },
+        {
             "name": "drupal/stage_file_proxy",
             "version": "1.0.0-alpha3",
             "source": {
@@ -5573,6 +5755,72 @@
             }
         },
         {
+            "name": "drupal/workbench_email",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/workbench_email",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/workbench_email-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "986c961d1052e470ade2c82146450e97bb292ae5"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "require-dev": {
+                "drupal/workbench_moderation": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1542952080",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fenstrat",
+                    "homepage": "https://www.drupal.org/user/362649"
+                },
+                {
+                    "name": "frosev",
+                    "homepage": "https://www.drupal.org/user/195325"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "teknic",
+                    "homepage": "https://www.drupal.org/user/367359"
+                },
+                {
+                    "name": "unobot",
+                    "homepage": "https://www.drupal.org/user/731188"
+                }
+            ],
+            "description": "Send emails to users when workbench transitions occur",
+            "homepage": "https://www.drupal.org/project/workbench_email",
+            "support": {
+                "source": "http://cgit.drupalcode.org/workbench_email"
+            }
+        },
+        {
             "name": "drupal/workflow",
             "version": "1.1.0",
             "source": {
@@ -5955,6 +6203,60 @@
             "type": "drupal-library"
         },
         {
+            "name": "fastglass/sendgrid",
+            "version": "1.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/taz77/sendgrid-php-ng.git",
+                "reference": "95f16f748d609f8455b7c4be74fdd1a8febacaea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/taz77/sendgrid-php-ng/zipball/95f16f748d609f8455b7c4be74fdd1a8febacaea",
+                "reference": "95f16f748d609f8455b7c4be74fdd1a8febacaea",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": ">=6.2.1",
+                "php": ">=5.5.0",
+                "sendgrid/smtpapi": "~0.5"
+            },
+            "replace": {
+                "sendgrid/sendgrid-php": "*"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~7.3",
+                "vlucas/phpdotenv": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SendGrid\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brady Owens",
+                    "email": "brady@fastglass.net",
+                    "homepage": "https://github.com/taz77"
+                }
+            ],
+            "description": "This library allows you to send emails through SendGrid using PHP and Guzzle 6.x.",
+            "homepage": "https://github.com/taz77/sendgrid-php-ng",
+            "keywords": [
+                "email",
+                "grid",
+                "send",
+                "sendgrid"
+            ],
+            "time": "2019-01-16T00:58:24+00:00"
+        },
+        {
             "name": "grasmash/expander",
             "version": "1.0.0",
             "source": {
@@ -6242,6 +6544,43 @@
                 "shasum": null
             },
             "type": "drupal-library"
+        },
+        {
+            "name": "html2text/html2text",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mtibben/html2text.git",
+                "reference": "f55104b7c9f99b0937f0e20fe051b19f9c0ecad1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mtibben/html2text/zipball/f55104b7c9f99b0937f0e20fe051b19f9c0ecad1",
+                "reference": "f55104b7c9f99b0937f0e20fe051b19f9c0ecad1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance",
+                "symfony/polyfill-mbstring": "If you can't install ext-mbstring"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Html2Text\\": [
+                        "src/",
+                        "test/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "description": "Converts HTML to formatted plain text",
+            "time": "2016-03-16T23:24:34+00:00"
         },
         {
             "name": "hussainweb/drupal-composer-helper",
@@ -6926,6 +7265,57 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2016-02-11T07:05:27+00:00"
+        },
+        {
+            "name": "sendgrid/smtpapi",
+            "version": "0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sendgrid/smtpapi-php.git",
+                "reference": "1c835388c11dc5e792260ae3e9662d6a661ace30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sendgrid/smtpapi-php/zipball/1c835388c11dc5e792260ae3e9662d6a661ace30",
+                "reference": "1c835388c11dc5e792260ae3e9662d6a661ace30",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "replace": {
+                "sendgrid/smtpapi-php": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "swiftmailer/swiftmailer": "^5.4 - Needed to run the example scripts"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Smtpapi": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Build SendGrid X-SMTPAPI headers in PHP.",
+            "homepage": "http://github.com/sendgrid/smtpapi-php",
+            "keywords": [
+                "X-SMTP",
+                "api",
+                "email",
+                "grid",
+                "send",
+                "sendgrid",
+                "smtp",
+                "smtpapi",
+                "xsmtp"
+            ],
+            "time": "2017-07-06T22:11:41+00:00"
         },
         {
             "name": "stack/builder",
@@ -10622,6 +11012,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/conditional_fields": 15,
+        "drupal/content_moderation_notifications": 5,
         "drupal/contribute": 10,
         "drupal/dropzonejs": 15,
         "drupal/inline_entity_form": 5,
