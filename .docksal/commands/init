@@ -38,6 +38,11 @@ sleep 10
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # This runs inside cli using http://docs.docksal.io/en/v1.4.0/fin/custom-commands/#executing-commands-inside-cli
 
+# Database import
+echo-yellow "Importing..."
+fin db import $PROJECT_ROOT/db/database.sql --db-user=root --db-password=root
+echo
+
 # Abort if anything fails
 set -e
 
@@ -46,11 +51,6 @@ echo-yellow "Running composer install"
 cd $PROJECT_ROOT
 fin exec composer install
 echo-green "Done.\n"
-
-# Database import
-echo-yellow "Importing..."
-fin db import $PROJECT_ROOT/db/database.sql --db-user=root --db-password=root
-echo
 
 # Running Drush commands
 echo-yellow "Running drush cim, drush updb, drush cr"
