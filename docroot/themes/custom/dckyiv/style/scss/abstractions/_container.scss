@@ -15,13 +15,9 @@
 }
 
 @mixin wrap-content {
+  padding: 0 15px;
   max-width: 1440px;
-  padding: 0;
   margin: 0 auto;
-
-  @include mq($bp1024) {
-    padding: 0 15px;
-  }
 
   @include mq($bp1280) {
     padding: 0 100px;

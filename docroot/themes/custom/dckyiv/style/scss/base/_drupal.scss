@@ -11,3 +11,17 @@
     }
   }
 }
+
+.blue_link {
+  color: $color-cerulean-blue;
+  &:hover {
+    color: rgba($color-cerulean-blue, .6);
+  }
+}
+
+.orange_link {
+ color: $color-mango-tango;
+  &:hover {
+    color: rgba($color-mango-tango, .6);
+  }
+}

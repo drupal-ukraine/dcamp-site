@@ -1,16 +1,7 @@
-@import 'bourbon';
+// Paragraph HTML Widget
 
-@import 'normalize/**/*.scss';
-@import 'variables/**/*.scss';
-@import 'icomoon/icomoon';
-@import 'abstractions/**/*.scss';
-@import 'components/**/*.scss';
-
-@import 'base/*.scss';
-
-body.cke_editable {
-  padding: 0.5rem;
-
+.paragraph--type--html-widget {
+  padding-top: 20px;
 
   p {
     padding-bottom: 20px;
@@ -48,19 +39,22 @@ body.cke_editable {
   ol {
     display: flex;
     flex-direction: column;
-    padding: 30px 0 30px 30px;
+    padding: 10px 0 10px;
     counter-reset: item;
     max-width: 700px;
+
+    @include mq($bp1024) {
+      padding: 30px 0 30px 10px;
+    }
 
     li {
       display: flex;
       flex-direction: row;
       align-items: center;
-      font-family: $font-proxima-nova-regular;
       font-size: 1.6rem;
-      line-height: 1.4;
-      padding: 20px 10px 20px 10px;
+      padding: 20px 10px 20px 30px;
       border-bottom: 1px solid $color-tuna;
+      line-height: 1.4;
 
       &:last-child {
         border-bottom: none;
@@ -75,14 +69,25 @@ body.cke_editable {
         counter-increment: item;
         color: $color-fern;
       }
+
+
+      &:first-child {
+        &::before {
+          padding-right: 30px;
+        }
+      }
     }
   }
 
   ul {
     display: flex;
     flex-direction: column;
-    padding: 0 0 20px 60px;
+    padding: 0 0 20px 30px;
     max-width: 700px;
+
+    @include mq($bp1024) {
+      padding: 0 0 20px 45px;
+    }
 
     li {
       display: flex;
@@ -90,8 +95,6 @@ body.cke_editable {
       align-items: center;
       padding-right: 10px;
       margin-bottom: 15px;
-      font-family: $font-proxima-nova-regular;
-      font-size: 1.6rem;
       line-height: 1.4;
 
       &:last-child {
@@ -106,20 +109,6 @@ body.cke_editable {
         content: "◼";
         color: $color-fern;
       }
-    }
-  }
-
-  .blue_link {
-    color: $color-cerulean-blue;
-    &:hover {
-      color: rgba($color-cerulean-blue, .6);;
-    }
-  }
-
-  .orange_link {
-    color: $color-mango-tango;
-    &:hover {
-      color: rgba($color-mango-tango, .6);;
     }
   }
 
@@ -156,6 +145,7 @@ body.cke_editable {
         &:last-child {
           font-size: 2.4rem;
           font-family: $font-proxima-nova-bold;
+          line-height: 1.4;
         }
       }
     }
