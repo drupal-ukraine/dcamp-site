@@ -108,4 +108,56 @@ body.cke_editable {
       }
     }
   }
+
+  .blue_link {
+    color: $color-cerulean-blue;
+    &:hover {
+      color: rgba($color-cerulean-blue, .6);;
+    }
+  }
+
+  .orange_link {
+    color: $color-mango-tango;
+    &:hover {
+      color: rgba($color-mango-tango, .6);;
+    }
+  }
+
+  .table_week tbody {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 10px;
+
+    @include mq($bp1024) {
+      padding: 30px 0 30px;
+    }
+
+    tr {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 1.6rem;
+      padding: 20px 10px 20px 30px;
+      border-bottom: 1px solid $color-tuna;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      td {
+        &:first-child {
+          padding-right: 20px;
+          font-size: 4.8rem;
+          font-family: $font-proxima-nova-bold;
+          text-align: center;
+          color: $color-fern;
+        }
+
+        &:last-child {
+          font-size: 2.4rem;
+          font-family: $font-proxima-nova-bold;
+        }
+      }
+    }
+  }
 }
