@@ -1,7 +1,7 @@
 // Paragraph HTML Widget
 
 .paragraph--type--html-widget {
-  padding-top: 20px;
+  padding-top: 30px;
 
   p {
     padding-bottom: 20px;
@@ -39,12 +39,12 @@
   ol {
     display: flex;
     flex-direction: column;
-    padding: 10px 0 10px;
+    padding: 0;
     counter-reset: item;
     max-width: 700px;
 
     @include mq($bp1024) {
-      padding: 30px 0 30px 10px;
+      padding: 0 0 0 10px;
     }
 
     li {
@@ -115,11 +115,7 @@
   .table_week tbody {
     display: flex;
     flex-direction: column;
-    padding: 10px 0 10px;
-
-    @include mq($bp1024) {
-      padding: 30px 0 30px;
-    }
+    padding: 0;
 
     tr {
       display: flex;
@@ -149,5 +145,18 @@
         }
       }
     }
+  }
+
+  .table_week + h3,
+  .table_week + h2,
+  ol + h3,
+  ol + h2,
+  ul + h3,
+  ul + h2,
+  p + h3,
+  p + h2,
+  blockquote + h3,
+  blockquote + h2 {
+    padding-top: 10px;
   }
 }

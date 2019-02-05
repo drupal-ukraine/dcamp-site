@@ -38,8 +38,6 @@ sleep 10
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # This runs inside cli using http://docs.docksal.io/en/v1.4.0/fin/custom-commands/#executing-commands-inside-cli
 
-#
-
 # Abort if anything fails
 set -e
 
