@@ -38,13 +38,16 @@ sleep 10
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # This runs inside cli using http://docs.docksal.io/en/v1.4.0/fin/custom-commands/#executing-commands-inside-cli
 
-# Database import
-echo-yellow "Importing..."
-fin db import $PROJECT_ROOT/db/database.sql --db-user=root --db-password=root
-echo
+fin ps
 
 # Abort if anything fails
 set -e
+
+# Database import
+echo-yellow "Importing..."
+fin db list
+fin db import $PROJECT_ROOT/db/database.sql --db-user=root --db-password=root
+echo
 
 # Running composer
 echo-yellow "Running composer install"
