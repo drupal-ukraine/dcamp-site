@@ -38,7 +38,7 @@ cat "${PROJECT_ROOT}/.docksal/assets/ascii.txt"
 # Running composer
 echo-yellow "Running composer install"
 cd $PROJECT_ROOT
-fin exec composer install
+fin composer install
 echo-green "Done.\n"
 
 # Database import
