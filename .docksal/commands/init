@@ -45,7 +45,7 @@ set -e
 
 # Database import
 echo-yellow "Importing..."
-fin db list
+#
 fin db import $PROJECT_ROOT/db/database.sql --db=default --db-user=user --db-password=user
 echo
 
