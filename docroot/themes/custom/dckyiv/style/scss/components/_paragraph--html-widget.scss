@@ -52,12 +52,22 @@
       flex-direction: row;
       align-items: center;
       font-size: 1.6rem;
-      padding: 20px 10px 20px 30px;
+      padding: 20px 10px 20px 15px;
       border-bottom: 1px solid $color-tuna;
       line-height: 1.4;
 
+      @include mq($bp1024) {
+        padding: 20px 10px 20px 30px;
+      }
+
       &:last-child {
         border-bottom: none;
+      }
+
+      &:first-child {
+        &::before {
+          padding-right: 30px;
+        }
       }
 
       &::before {
@@ -69,20 +79,13 @@
         counter-increment: item;
         color: $color-fern;
       }
-
-
-      &:first-child {
-        &::before {
-          padding-right: 30px;
-        }
-      }
     }
   }
 
   ul {
     display: flex;
     flex-direction: column;
-    padding: 0 0 20px 30px;
+    padding: 0 0 20px 20px;
     max-width: 700px;
 
     @include mq($bp1024) {
@@ -122,8 +125,12 @@
       flex-direction: row;
       align-items: center;
       font-size: 1.6rem;
-      padding: 20px 10px 20px 30px;
+      padding: 20px 10px 20px 15px;
       border-bottom: 1px solid $color-tuna;
+
+      @include mq($bp1024) {
+        padding: 20px 10px 20px 30px;
+      }
 
       &:last-child {
         border-bottom: none;
