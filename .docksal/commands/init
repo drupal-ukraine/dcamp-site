@@ -4,8 +4,9 @@
 ##
 ## Usage: fin init
 
-# Abort if anything fails
-set -e
+# Paths and environment settings
+DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
+MAIN_THEME_PATH="${DOCROOT_PATH}/themes/custom/dckyiv"
 
 #-------------------------- Helper functions --------------------------------
 
@@ -36,9 +37,38 @@ sleep 10
 # Site initialization
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # This runs inside cli using http://docs.docksal.io/en/v1.4.0/fin/custom-commands/#executing-commands-inside-cli
-fin rebuild
 
-echo -en "${green_bg} Composer compiled! ${NC} "
+# Abort if anything fails
+set -e
+
+# Running composer
+echo-yellow "Running composer install"
+cd $PROJECT_ROOT
+fin exec composer install
+echo-green "Done.\n"
+
+# Database import
+echo-yellow "Importing..."
+fin db import $PROJECT_ROOT/db/database.sql --db-user=root --db-password=root
+echo
+
+# Running Drush commands
+echo-yellow "Running drush cim, drush updb, drush cr"
+cd $DOCROOT_PATH
+fin drush updb -y
+fin drush cim -y
+fin drush cr
+echo-green "Done.\n"
+
+# Removing package-lock.json.
+echo-yellow "Removing package-lock.json..."
+rm -f $MAIN_THEME_PATH/package-lock.json
+echo-green "Done."
+echo
+
+# Building theme.
+echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
+fin gulp build
 
 echo -en "${green_bg} DONE! ${NC} "
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
