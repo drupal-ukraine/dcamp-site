@@ -14,7 +14,6 @@
 ## Usage: fin rebuild
 
 #Paths and environment settings
-#
 DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
 MAIN_THEME_PATH="${DOCROOT_PATH}/themes/custom/dckyiv"
 
