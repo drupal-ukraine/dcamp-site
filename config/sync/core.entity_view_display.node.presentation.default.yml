@@ -1,0 +1,29 @@
+uuid: 4816bd27-d970-4130-acdd-9da427295579
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.presentation.body
+    - node.type.presentation
+  module:
+    - text
+    - user
+id: node.presentation.default
+targetEntityType: node
+bundle: presentation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

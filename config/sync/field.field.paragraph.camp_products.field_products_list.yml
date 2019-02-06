@@ -1,0 +1,58 @@
+uuid: 5d562d46-2ef5-4a5d-8a58-5396e0e8a3db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_products_list
+    - paragraphs.paragraphs_type.camp_products
+  module:
+    - viewsreference
+id: paragraph.camp_products.field_products_list
+field_name: field_products_list
+entity_type: paragraph
+bundle: camp_products
+label: 'Products List'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    default: default
+    page: 0
+    block: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    camp_tickets: camp_tickets
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    commerce_carts: 0
+    commerce_cart_block: 0
+    commerce_cart_form: 0
+    commerce_checkout_order_summary: 0
+    commerce_orders: 0
+    commerce_order_item_table: 0
+    commerce_products: 0
+    commerce_stores: 0
+    commerce_user_orders: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    media: 0
+    media_library: 0
+    profiles: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

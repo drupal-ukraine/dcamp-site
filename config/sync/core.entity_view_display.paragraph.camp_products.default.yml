@@ -1,0 +1,24 @@
+uuid: 74aaa3e4-5bea-4ca9-8eac-e495271f3852
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.camp_products.field_products_list
+    - paragraphs.paragraphs_type.camp_products
+  module:
+    - viewsreference
+id: paragraph.camp_products.default
+targetEntityType: paragraph
+bundle: camp_products
+mode: default
+content:
+  field_products_list:
+    weight: 0
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }

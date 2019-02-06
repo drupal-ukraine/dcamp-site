@@ -1,0 +1,27 @@
+uuid: 6a60b288-d1f6-4bd0-8a58-fa938cac0257
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.camp_products.field_products_list
+    - paragraphs.paragraphs_type.camp_products
+  module:
+    - viewsreference
+id: paragraph.camp_products.default
+targetEntityType: paragraph
+bundle: camp_products
+mode: default
+content:
+  field_products_list:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: '60'
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

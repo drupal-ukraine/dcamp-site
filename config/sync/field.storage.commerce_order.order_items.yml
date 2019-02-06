@@ -1,11 +1,9 @@
-uuid: 83584fd5-3317-4793-bde0-a96050729540
-langcode: uk
+uuid: 7ffe526f-cc97-4f3d-957e-83de82eccba4
+langcode: en
 status: true
 dependencies:
   module:
     - commerce_order
-_core:
-  default_config_hash: XXkG3364KELPh2dm7U58qNcPNoUgrvC2zj9LTHF4V5E
 id: commerce_order.order_items
 field_name: order_items
 entity_type: commerce_order
