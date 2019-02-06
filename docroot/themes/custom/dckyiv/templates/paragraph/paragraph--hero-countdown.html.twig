@@ -55,7 +55,7 @@
     {% block content %}
       <div class="content">
         {{ content|without('field_image', 'field_date', 'field_cta_link') }}
-        <input type="hidden" id="countdown-clock-value" value="{{ content.field_date|render|striptags }}">
+        <input type="hidden" id="countdown-clock-value" value="{{ content.field_date|field_value }}">
         <div id="countdown-clock"></div>
         {{ content.field_cta_link }}
       </div>
