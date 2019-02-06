@@ -1,0 +1,58 @@
+uuid: 401d0e96-6464-40e8-941c-1d64f1262e90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_teasers
+    - paragraphs.paragraphs_type.teaser
+    - paragraphs.paragraphs_type.wrapper_teasers
+  module:
+    - entity_reference_revisions
+id: paragraph.wrapper_teasers.field_teasers
+field_name: field_teasers
+entity_type: paragraph
+bundle: wrapper_teasers
+label: Teasers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      teaser: teaser
+    target_bundles_drag_drop:
+      wrapper_teasers:
+        weight: 11
+        enabled: false
+      contacts:
+        weight: 12
+        enabled: false
+      container:
+        weight: 13
+        enabled: false
+      cta_block:
+        weight: 14
+        enabled: false
+      hero_countdown:
+        weight: 15
+        enabled: false
+      html_widget:
+        weight: 16
+        enabled: false
+      icomoon_link:
+        weight: 17
+        enabled: false
+      menu_cta:
+        weight: 18
+        enabled: false
+      social_links:
+        weight: 19
+        enabled: false
+      teaser:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

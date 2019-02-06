@@ -1,0 +1,10 @@
+uuid: 74bebd78-3d74-4ae2-916e-fc91ef63d40d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.in_wrapper
+label: 'In Wrapper'
+targetEntityType: paragraph
+cache: true

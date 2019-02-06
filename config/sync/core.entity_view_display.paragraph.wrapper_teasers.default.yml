@@ -1,0 +1,34 @@
+uuid: 46e1722b-4cad-4b1c-a0c4-fd3c4daaf8aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wrapper_teasers.field_background_image
+    - field.field.paragraph.wrapper_teasers.field_teasers
+    - paragraphs.paragraphs_type.wrapper_teasers
+  module:
+    - entity_reference_revisions
+id: paragraph.wrapper_teasers.default
+targetEntityType: paragraph
+bundle: wrapper_teasers
+mode: default
+content:
+  field_background_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_teasers:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: in_wrapper
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

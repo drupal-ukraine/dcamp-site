@@ -1,0 +1,23 @@
+uuid: 7655334b-a6f3-498e-b336-9d2813fa6f69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wrapper_webform.field_webform
+    - paragraphs.paragraphs_type.wrapper_webform
+  module:
+    - webform
+id: paragraph.wrapper_webform.default
+targetEntityType: paragraph
+bundle: wrapper_webform
+mode: default
+content:
+  field_webform:
+    weight: 0
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }
