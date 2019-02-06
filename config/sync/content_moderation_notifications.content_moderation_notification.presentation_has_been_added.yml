@@ -1,0 +1,16 @@
+uuid: 6657a826-a1d5-468f-93e9-3b892bc55a25
+langcode: en
+status: true
+dependencies: {  }
+id: presentation_has_been_added
+workflow: presentation
+transitions:
+  create_new_draft: create_new_draft
+roles: {  }
+author: true
+emails: ''
+subject: 'Your Presentation has been added [Notifications Module]'
+body:
+  value: "Your topic has been added to the system\r\nTitle: <b>[node:title]</b>."
+  format: restricted_html
+label: 'Presentation has been added'

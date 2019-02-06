@@ -1,0 +1,22 @@
+uuid: e1a07ccd-09cf-4baf-90fb-dfbcb42f908a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.presentation
+id: node.presentation.status
+field_name: status
+entity_type: node
+bundle: presentation
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean
