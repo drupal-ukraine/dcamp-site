@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.wrapper_webform.field_title
     - field.field.paragraph.wrapper_webform.field_webform
     - paragraphs.paragraphs_type.wrapper_webform
   module:
@@ -12,9 +13,17 @@ targetEntityType: paragraph
 bundle: wrapper_webform
 mode: default
 content:
-  field_webform:
+  field_title:
     weight: 0
-    label: above
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_webform:
+    weight: 1
+    label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
