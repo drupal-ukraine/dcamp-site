@@ -1,0 +1,9 @@
+uuid: 31a08f90-2d62-4eba-a0cc-497b90fb1d80
+langcode: en
+status: true
+dependencies: {  }
+id: presentations
+label: Presentations
+icon_uuid: null
+description: 'Presentations widget for HP'
+behavior_plugins: {  }
