@@ -1,0 +1,71 @@
+.paragraph--view-mode--in-wrapper {
+  @include mq($bp1024) {
+    max-width: 250px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 310px;
+
+    .field--name-field {
+
+      &-intro-image {
+        padding: 0 0 30px;
+
+        img {
+          height: 40px;
+          filter: invert(.5) sepia(1);
+        }
+      }
+
+      &-title {
+        font-size: 1.8rem;
+        font-family: $font-proxima-nova-bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-fern;
+        padding: 0 0 40px;
+      }
+
+      &-text {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 1.29;
+
+        P {
+          color: $color-white;
+        }
+      }
+
+      &-link {
+        margin: auto 0 0;
+        text-transform: uppercase;
+
+        a {
+          font-size: 1.2rem;
+          line-height: 1.5;
+          &::after {
+            content: '';
+            padding-left: 0;
+            position: relative;
+            bottom: 0;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .field--type-text-long {
+      margin: 0;
+    }
+  }
+}
+

@@ -1,0 +1,32 @@
+// Paragraph Wrapper Teasers
+.paragraph--type--wrapper-teasers {
+  margin-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mq($bp1024) {
+    height: 440px;
+    margin-bottom: 80px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 950px;
+  }
+
+  .field--name-field-teasers {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @include mq($bp1024) {
+     flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+
+}

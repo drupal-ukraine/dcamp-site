@@ -44,11 +44,15 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   not paragraph.isPublished() ? 'paragraph--unpublished'
 ] %}
+
+{% set bg_img = content.field_background_image ? 'background:linear-gradient(0deg,rgba(58,58,67,0.75),rgba(58,58,67,0.75)),url(' ~ file_url(content.field_background_image|field_target_entity.field_media_image.entity.uri.value) ~ ');background-size:cover;background-position:center;' : '' %}
+{% set style = 'style=' ~ bg_img %}
+
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }} {{ style }}>
     {% block content %}
       <div class="content">
-        {{ content }}
+        {{ content|without('field_background_image') }}
       </div>
     {% endblock %}
   </div>
