@@ -1,0 +1,8 @@
+services:
+  dckyiv_user.fb_connect_link:
+    class: Drupal\dckyiv_user\FbConnectLink
+    arguments: ['@request_stack']
+  dckyiv_user.route_subscriber:
+    class: Drupal\dckyiv_user\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.field_content_type
+    - field.field.node.landing_page.field_footer
     - field.field.node.landing_page.field_header
     - field.field.node.landing_page.field_page_content
     - field.field.node.landing_page.field_right_sidebar
@@ -11,20 +12,21 @@ dependencies:
     - node.type.landing_page
   module:
     - entity_reference_revisions
-    - options
     - user
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  field_content_type:
-    type: list_default
+  field_footer:
+    type: entity_reference_revisions_entity_view
     weight: 3
-    region: content
     label: hidden
-    settings: {  }
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
+    region: content
   field_header:
     type: entity_reference_revisions_entity_view
     weight: 0
@@ -53,6 +55,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_content_type: true
   field_transparent_header: true
   langcode: true
   links: true

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "84ee06f42edd53e1884de36a4fffc8cb",
+    "content-hash": "e574971e6bbb964a36e8d7301915ced0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -135,24 +135,24 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "1.27.0",
+            "version": "1.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "a839bc89d385087d8a7a96a9c1c4bd470ffb627e"
+                "reference": "a43131309b56a4c1874f39a9eaa4f6cb1a9832cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/a839bc89d385087d8a7a96a9c1c4bd470ffb627e",
-                "reference": "a839bc89d385087d8a7a96a9c1c4bd470ffb627e",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/a43131309b56a4c1874f39a9eaa4f6cb1a9832cd",
+                "reference": "a43131309b56a4c1874f39a9eaa4f6cb1a9832cd",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": ">=5.5.9",
-                "symfony/console": "~2.7|^3",
-                "symfony/filesystem": "~2.7|^3",
-                "twig/twig": "^1.23.1"
+                "symfony/console": "^3.4 || ^4.0",
+                "symfony/filesystem": "^3.4 || ^4.0",
+                "twig/twig": "^1.35"
             },
             "bin": [
                 "bin/dcg"
@@ -176,7 +176,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal code generator",
-            "time": "2018-10-11T08:05:59+00:00"
+            "time": "2019-01-30T10:34:16+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -2390,259 +2390,6 @@
             }
         },
         {
-            "name": "drupal/commerce_liqpay_gateway",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/commerce_liqpay_gateway",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce_liqpay_gateway-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "71a0758543529942dce142e4c7d248c2089ffc38"
-            },
-            "require": {
-                "drupal/commerce_payment": "*",
-                "drupal/core": "~8.0",
-                "drupal/token": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1513672985",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Detal",
-                    "homepage": "https://www.drupal.org/user/3541864"
-                }
-            ],
-            "description": "Implements LiqPay payment gateway for commerce(Off-site redirect).",
-            "homepage": "https://www.drupal.org/project/commerce_liqpay_gateway",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce_liqpay_gateway"
-            }
-        },
-        {
-            "name": "drupal/commerce_order",
-            "version": "2.11.0",
-            "require": {
-                "drupal/commerce": "self.version",
-                "drupal/commerce_price": "*",
-                "drupal/commerce_store": "*",
-                "drupal/core": "*",
-                "drupal/entity_reference_revisions": "*",
-                "drupal/profile": "*",
-                "drupal/state_machine": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.11",
-                    "datestamp": "1541003139",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "jsacksick",
-                    "homepage": "https://www.drupal.org/user/972218"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Defines the Order entity and associated features.",
-            "homepage": "https://www.drupal.org/project/commerce",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce"
-            }
-        },
-        {
-            "name": "drupal/commerce_payment",
-            "version": "2.11.0",
-            "require": {
-                "drupal/commerce": "self.version",
-                "drupal/commerce_order": "*",
-                "drupal/core": "*",
-                "drupal/entity_reference_revisions": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.11",
-                    "datestamp": "1541003139",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "jsacksick",
-                    "homepage": "https://www.drupal.org/user/972218"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Provides payment functionality.",
-            "homepage": "https://www.drupal.org/project/commerce",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce"
-            }
-        },
-        {
-            "name": "drupal/commerce_price",
-            "version": "2.11.0",
-            "require": {
-                "drupal/commerce": "self.version",
-                "drupal/core": "~8.0"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.11",
-                    "datestamp": "1541003139",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "jsacksick",
-                    "homepage": "https://www.drupal.org/user/972218"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Defines the Currency entity.",
-            "homepage": "https://www.drupal.org/project/commerce",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce"
-            }
-        },
-        {
-            "name": "drupal/commerce_store",
-            "version": "2.11.0",
-            "require": {
-                "drupal/commerce": "self.version",
-                "drupal/commerce_price": "*",
-                "drupal/core": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.11",
-                    "datestamp": "1541003139",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "jsacksick",
-                    "homepage": "https://www.drupal.org/user/972218"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Defines the Store entity and associated features.",
-            "homepage": "https://www.drupal.org/project/commerce",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce"
-            }
-        },
-        {
             "name": "drupal/conditional_fields",
             "version": "1.0.0-alpha4",
             "source": {
@@ -3105,61 +2852,6 @@
             ],
             "description": "Drupal Console Extend Plugin",
             "time": "2017-07-28T17:11:54+00:00"
-        },
-        {
-            "name": "drupal/content_moderation_notifications",
-            "version": "3.0.0-rc2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/content_moderation_notifications",
-                "reference": "8.x-3.0-rc2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/content_moderation_notifications-8.x-3.0-rc2.zip",
-                "reference": "8.x-3.0-rc2",
-                "shasum": "e51ac2174d0262812aa13cee782861a53fd9583b"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "require-dev": {
-                "drupal/token": "^1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-rc2",
-                    "datestamp": "1517332380",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Rob Holmes",
-                    "homepage": "https://www.drupal.org/user/1774034"
-                },
-                {
-                    "name": "jhedstrom",
-                    "homepage": "https://www.drupal.org/user/208732"
-                }
-            ],
-            "description": "Manage notifications for content moderation transitions.",
-            "homepage": "https://www.drupal.org/project/content_moderation_notifications",
-            "support": {
-                "source": "http://cgit.drupalcode.org/content_moderation_notifications",
-                "issues": "https://www.drupal.org/project/issues/content_moderation_notifications"
-            }
         },
         {
             "name": "drupal/contribute",
@@ -3988,6 +3680,57 @@
             }
         },
         {
+            "name": "drupal/geolocation",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/geolocation",
+                "reference": "8.x-1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "a401d5c576a8c4886e84272f2ca2a3c524c46869"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.11",
+                    "datestamp": "1505687043",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "ChristianAdamski",
+                    "homepage": "https://www.drupal.org/user/867880"
+                },
+                {
+                    "name": "derjochenmeyer",
+                    "homepage": "https://www.drupal.org/user/106134"
+                }
+            ],
+            "description": "Provides a simple geolocation Drupal field type to store and display location data (lat, lng).",
+            "homepage": "https://www.drupal.org/project/geolocation",
+            "support": {
+                "source": "http://cgit.drupalcode.org/geolocation"
+            }
+        },
+        {
             "name": "drupal/google_analytics",
             "version": "2.3.0",
             "source": {
@@ -4204,101 +3947,34 @@
             }
         },
         {
-            "name": "drupal/mailsystem",
-            "version": "4.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/mailsystem",
-                "reference": "8.x-4.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/mailsystem-8.x-4.1.zip",
-                "reference": "8.x-4.1",
-                "shasum": "318b87f1fdf96e6db30b04a98108af02a0fc3dcc"
-            },
-            "require": {
-                "drupal/core": "^8.0.5"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-4.1",
-                    "datestamp": "1467993646",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Les Lim",
-                    "homepage": "https://www.drupal.org/user/84263"
-                },
-                {
-                    "name": "Nafes",
-                    "homepage": "https://www.drupal.org/user/2489926"
-                },
-                {
-                    "name": "miro_dietiker",
-                    "homepage": "https://www.drupal.org/user/227761"
-                },
-                {
-                    "name": "pillarsdotnet",
-                    "homepage": "https://www.drupal.org/user/36148"
-                }
-            ],
-            "description": "Mail System",
-            "homepage": "https://www.drupal.org/project/mailsystem",
-            "support": {
-                "source": "http://cgit.drupalcode.org/mailsystem"
-            }
-        },
-        {
             "name": "drupal/media_entity",
-            "version": "1.8.0",
+            "version": "2.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/media_entity",
-                "reference": "8.x-1.8"
+                "reference": "8.x-2.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_entity-8.x-1.8.zip",
-                "reference": "8.x-1.8",
-                "shasum": "c0ab77156c0e431f958d615f043e0255486db155"
+                "url": "https://ftp.drupal.org/files/projects/media_entity-8.x-2.0-beta3.zip",
+                "reference": "8.x-2.0-beta3",
+                "shasum": "c07bf870f279efaf642b9963ea23ea6977982e67"
             },
             "require": {
                 "drupal/core": "*",
                 "drupal/entity": "*"
             },
-            "require-dev": {
-                "drupal/entity": "*",
-                "drupal/inline_entity_form": "*"
-            },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.x": "1.x-dev"
+                    "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.8",
-                    "datestamp": "1532693881",
+                    "version": "8.x-2.0-beta3",
+                    "datestamp": "1536584580",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4429,6 +4105,74 @@
             "homepage": "https://www.drupal.org/project/media_entity_browser",
             "support": {
                 "source": "http://cgit.drupalcode.org/media_entity_browser"
+            }
+        },
+        {
+            "name": "drupal/menu_item_extras",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/menu_item_extras",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_item_extras-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "50a7d5873ca0c30c573c9255fc35fd1dce167e21"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1547131380",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Khomych",
+                    "homepage": "https://www.drupal.org/u/andriy-khomych",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Bogdan Hepting",
+                    "homepage": "https://www.drupal.org/u/bogdan-hepting",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Oleh Vehera",
+                    "homepage": "https://www.drupal.org/u/voleger",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mykhailo Gurei",
+                    "homepage": "https://www.drupal.org/u/ozin",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provide an additional custom fields which can be used on Menu link",
+            "homepage": "https://www.drupal.org/project/menu_item_extras",
+            "keywords": [
+                "Drupal",
+                "Mega Menu"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/menu_item_extras",
+                "issues": "https://www.drupal.org/project/issues/menu_item_extras"
             }
         },
         {
@@ -5070,33 +4814,34 @@
             }
         },
         {
-            "name": "drupal/sendgrid_integration",
-            "version": "1.2.0",
+            "name": "drupal/simple_fb_connect",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/sendgrid_integration",
-                "reference": "8.x-1.2"
+                "url": "https://git.drupal.org/project/simple_fb_connect",
+                "reference": "8.x-3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sendgrid_integration-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "a3d9baea4389a6f8804adc5f736c9920ae200131"
+                "url": "https://ftp.drupal.org/files/projects/simple_fb_connect-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "2c171bf3a504a4b380fb8db5fe3d8eff4c1b85f5"
             },
             "require": {
                 "drupal/core": "~8.0",
-                "drupal/mailsystem": "^4",
-                "fastglass/sendgrid": ">=1.0.6",
-                "html2text/html2text": "~4.0.1"
+                "facebook/graph-sdk": "~5.0"
+            },
+            "require-dev": {
+                "drupal/rules": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.x": "1.x-dev"
+                    "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1528941232",
+                    "version": "8.x-3.1",
+                    "datestamp": "1501958344",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5105,32 +4850,23 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL v2"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
-                    "name": "Brady Owens (perignon)",
-                    "homepage": "https://www.drupal.org/u/perignon",
-                    "role": "Maintainer"
+                    "name": "masipila",
+                    "homepage": "https://www.drupal.org/user/109674"
                 },
                 {
-                    "name": "exlin",
-                    "homepage": "https://www.drupal.org/user/695136"
+                    "name": "saitanay",
+                    "homepage": "https://www.drupal.org/user/220136"
                 }
             ],
-            "description": "Drupal module for integrating with the SendGrid API.",
-            "homepage": "https://www.drupal.org/project/sendgrid_integration",
-            "keywords": [
-                "SendGrid",
-                "email",
-                "grid",
-                "php",
-                "send",
-                "sendgrid"
-            ],
+            "description": "Allows users to authenticate with their Facebook accounts.",
+            "homepage": "https://www.drupal.org/project/simple_fb_connect",
             "support": {
-                "source": "http://cgit.drupalcode.org/sendgrid_integration",
-                "issues": "https://drupal.org/project/issues/sendgrid_integration"
+                "source": "http://cgit.drupalcode.org/simple_fb_connect",
+                "issues": "https://www.drupal.org/project/issues/simple_fb_connect"
             }
         },
         {
@@ -5755,72 +5491,6 @@
             }
         },
         {
-            "name": "drupal/workbench_email",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/workbench_email",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/workbench_email-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "986c961d1052e470ade2c82146450e97bb292ae5"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "require-dev": {
-                "drupal/workbench_moderation": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1542952080",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "fenstrat",
-                    "homepage": "https://www.drupal.org/user/362649"
-                },
-                {
-                    "name": "frosev",
-                    "homepage": "https://www.drupal.org/user/195325"
-                },
-                {
-                    "name": "larowlan",
-                    "homepage": "https://www.drupal.org/user/395439"
-                },
-                {
-                    "name": "teknic",
-                    "homepage": "https://www.drupal.org/user/367359"
-                },
-                {
-                    "name": "unobot",
-                    "homepage": "https://www.drupal.org/user/731188"
-                }
-            ],
-            "description": "Send emails to users when workbench transitions occur",
-            "homepage": "https://www.drupal.org/project/workbench_email",
-            "support": {
-                "source": "http://cgit.drupalcode.org/workbench_email"
-            }
-        },
-        {
             "name": "drupal/workflow",
             "version": "1.1.0",
             "source": {
@@ -6203,58 +5873,62 @@
             "type": "drupal-library"
         },
         {
-            "name": "fastglass/sendgrid",
-            "version": "1.0.11",
+            "name": "facebook/graph-sdk",
+            "version": "5.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/taz77/sendgrid-php-ng.git",
-                "reference": "95f16f748d609f8455b7c4be74fdd1a8febacaea"
+                "url": "https://github.com/facebook/php-graph-sdk.git",
+                "reference": "2d8250638b33d73e7a87add65f47fabf91f8ad9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/taz77/sendgrid-php-ng/zipball/95f16f748d609f8455b7c4be74fdd1a8febacaea",
-                "reference": "95f16f748d609f8455b7c4be74fdd1a8febacaea",
+                "url": "https://api.github.com/repos/facebook/php-graph-sdk/zipball/2d8250638b33d73e7a87add65f47fabf91f8ad9b",
+                "reference": "2d8250638b33d73e7a87add65f47fabf91f8ad9b",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": ">=6.2.1",
-                "php": ">=5.5.0",
-                "sendgrid/smtpapi": "~0.5"
-            },
-            "replace": {
-                "sendgrid/sendgrid-php": "*"
+                "php": "^5.4|^7.0"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~7.3",
-                "vlucas/phpdotenv": "~1.0"
+                "guzzlehttp/guzzle": "~5.0",
+                "mockery/mockery": "~0.8",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client",
+                "paragonie/random_compat": "Provides a better CSPRNG option in PHP 5"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "SendGrid\\": "src/"
-                }
+                    "Facebook\\": "src/Facebook/"
+                },
+                "files": [
+                    "src/Facebook/polyfills.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "Facebook Platform"
             ],
             "authors": [
                 {
-                    "name": "Brady Owens",
-                    "email": "brady@fastglass.net",
-                    "homepage": "https://github.com/taz77"
+                    "name": "Facebook",
+                    "homepage": "https://github.com/facebook/php-graph-sdk/contributors"
                 }
             ],
-            "description": "This library allows you to send emails through SendGrid using PHP and Guzzle 6.x.",
-            "homepage": "https://github.com/taz77/sendgrid-php-ng",
+            "description": "Facebook SDK for PHP",
+            "homepage": "https://github.com/facebook/php-graph-sdk",
             "keywords": [
-                "email",
-                "grid",
-                "send",
-                "sendgrid"
+                "facebook",
+                "sdk"
             ],
-            "time": "2019-01-16T00:58:24+00:00"
+            "time": "2018-12-11T22:56:31+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -6544,43 +6218,6 @@
                 "shasum": null
             },
             "type": "drupal-library"
-        },
-        {
-            "name": "html2text/html2text",
-            "version": "4.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mtibben/html2text.git",
-                "reference": "f55104b7c9f99b0937f0e20fe051b19f9c0ecad1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mtibben/html2text/zipball/f55104b7c9f99b0937f0e20fe051b19f9c0ecad1",
-                "reference": "f55104b7c9f99b0937f0e20fe051b19f9c0ecad1",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4"
-            },
-            "suggest": {
-                "ext-mbstring": "For best performance",
-                "symfony/polyfill-mbstring": "If you can't install ext-mbstring"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Html2Text\\": [
-                        "src/",
-                        "test/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPLv2"
-            ],
-            "description": "Converts HTML to formatted plain text",
-            "time": "2016-03-16T23:24:34+00:00"
         },
         {
             "name": "hussainweb/drupal-composer-helper",
@@ -7265,57 +6902,6 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2016-02-11T07:05:27+00:00"
-        },
-        {
-            "name": "sendgrid/smtpapi",
-            "version": "0.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sendgrid/smtpapi-php.git",
-                "reference": "1c835388c11dc5e792260ae3e9662d6a661ace30"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sendgrid/smtpapi-php/zipball/1c835388c11dc5e792260ae3e9662d6a661ace30",
-                "reference": "1c835388c11dc5e792260ae3e9662d6a661ace30",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "replace": {
-                "sendgrid/smtpapi-php": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "suggest": {
-                "swiftmailer/swiftmailer": "^5.4 - Needed to run the example scripts"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Smtpapi": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Build SendGrid X-SMTPAPI headers in PHP.",
-            "homepage": "http://github.com/sendgrid/smtpapi-php",
-            "keywords": [
-                "X-SMTP",
-                "api",
-                "email",
-                "grid",
-                "send",
-                "sendgrid",
-                "smtp",
-                "smtpapi",
-                "xsmtp"
-            ],
-            "time": "2017-07-06T22:11:41+00:00"
         },
         {
             "name": "stack/builder",
@@ -11011,8 +10597,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/captcha": 10,
         "drupal/conditional_fields": 15,
-        "drupal/content_moderation_notifications": 5,
         "drupal/contribute": 10,
         "drupal/dropzonejs": 15,
         "drupal/inline_entity_form": 5,

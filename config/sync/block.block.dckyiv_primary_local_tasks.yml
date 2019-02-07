@@ -2,6 +2,8 @@ uuid: 4a96a511-c1f6-453e-9894-002b65d89419
 langcode: uk
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - dckyiv
 _core:
@@ -19,4 +21,9 @@ settings:
   label_display: '0'
   primary: true
   secondary: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/login\r\n/user/register"
+    negate: true
+    context_mapping: {  }

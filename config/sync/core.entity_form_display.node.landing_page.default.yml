@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.field_content_type
     - field.field.node.landing_page.field_header
     - field.field.node.landing_page.field_page_content
     - field.field.node.landing_page.field_right_sidebar
@@ -51,6 +50,24 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_footer:
+    type: paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
   field_header:
     type: paragraphs
     weight: 3
@@ -71,7 +88,7 @@ content:
     region: content
   field_page_content:
     type: paragraphs
-    weight: 4
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -89,7 +106,7 @@ content:
     region: content
   field_right_sidebar:
     type: paragraphs
-    weight: 5
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs

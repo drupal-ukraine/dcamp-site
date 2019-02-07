@@ -1,0 +1,137 @@
+// User login page and form
+
+body.user-login, body.user-pass, body.user-register, body.ifw_user-guest_register {
+  .layout-content {
+    padding: 25px;
+    border-bottom: 1px solid $color-storm-gray;
+    border-left: 1px solid $color-storm-gray;
+    border-right: 1px solid $color-storm-gray;
+  }
+}
+// Custom blocks with links for login, register and lost password pages
+#block-loginformlinks, #block-registerlinks, #block-lostpasswordlinks {
+  max-width: 340px;
+  margin: 0 auto;
+  .lost-password {
+    padding-bottom: 24px;
+    text-align: right;
+    border-bottom: 1px solid $color-storm-gray;
+  }
+  .terms-of-use {
+    padding-bottom: 24px;
+    text-align: left;
+    border-bottom: 1px solid $color-storm-gray;
+  }
+  .register, .login {
+    padding: 24px 0;
+    text-align: center;
+  }
+  .form-item-pass-pass2 {
+    margin-bottom: 0;
+  }
+  .password-suggestions {
+    margin: 0;
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+}
+// User login, password reset, register forms
+form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-reset {
+  max-width: 340px;
+  margin: 56px auto 30px auto;
+
+  &#user-pass-reset {
+    margin-top: 0;
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  .fb-login {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    background-color: $color-chambray;
+    border-radius: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $color-white;
+    @include icoMoon('facebook');
+
+    &:before {
+      font-size: 2.4rem;
+      margin-right: 16px;
+      position: relative;
+      bottom: -4px;
+    }
+  }
+
+  .separator {
+    text-align: center;
+    border-bottom: 1px solid $color-silver;
+    height: 30px;
+    margin-bottom: 30px;
+
+    span {
+      position: relative;
+      color: $color-silver;
+      font-size: 1.4rem;
+      bottom: -20px;
+      padding: 0 10px;
+      background-color: $color-white;
+    }
+  }
+
+  .separator_second {
+    text-align: center;
+    border-bottom: 1px solid $color-silver;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .user-register {
+    text-align: center;
+  }
+
+  .form-item .description {
+    display: none;
+  }
+  .form-submit {
+    width: 100%;
+    @include icoMoon('login');
+  }
+  .lost-password {
+    padding: 24px 0;
+    text-align: right;
+    border-bottom: 1px solid $color-storm-gray;
+  }
+  .terms-of-use {
+    padding: 24px 0;
+    text-align: left;
+    border-bottom: 1px solid $color-storm-gray;
+  }
+  .register, .login {
+    padding: 24px 0;
+    text-align: center;
+  }
+  .form-item-pass-pass2 {
+    margin-bottom: 0;
+  }
+  .password-suggestions {
+    margin: 0;
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+  .field--name-f-guest-name > .form-item {
+    margin-bottom: 8px;
+  }
+
+  .display-name-description {
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    line-height: 1.14;
+  }
+}
