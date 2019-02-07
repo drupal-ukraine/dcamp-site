@@ -95,3 +95,6 @@ After you run the "fin rebuild" and have your environment ready you need to do f
 
 ### Access to local Database
 In the your browser open [http://pma.dckyiv.docksal](http://pma.dckyiv.docksal) and enjoy your work and contribution!
+
+## Design in Zeplin
+https://zpl.io/bAZxnLO
