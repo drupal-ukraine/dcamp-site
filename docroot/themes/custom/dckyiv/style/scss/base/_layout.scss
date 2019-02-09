@@ -23,7 +23,7 @@ body {
   }
 
   &.transparent-header main.container {
-    padding-top: 60px;
+    padding-top: 57px;
 
     @include mq($bp1024) {
       padding-top: 0;
