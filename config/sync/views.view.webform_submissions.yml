@@ -244,7 +244,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Чернетка
+          label: Draft
           exclude: false
           alter:
             alter_text: false
@@ -311,7 +311,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Створено
+          label: Created
           exclude: false
           alter:
             alter_text: false
@@ -378,7 +378,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: IP-адреса
+          label: 'IP address'
           exclude: false
           alter:
             alter_text: false
@@ -500,7 +500,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Показ @start - @end з @total'
+          content: 'Displaying @start - @end of @total'
           plugin_id: result
       footer: {  }
       empty:
@@ -842,7 +842,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Чернетка
+          label: Draft
           exclude: false
           alter:
             alter_text: false
@@ -909,7 +909,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Прикріплені
+          label: Sticky
           exclude: false
           alter:
             alter_text: false
@@ -976,7 +976,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Заблоковано
+          label: Locked
           exclude: false
           alter:
             alter_text: false
@@ -1043,7 +1043,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Створено
+          label: Created
           exclude: false
           alter:
             alter_text: false
@@ -1110,7 +1110,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Завершено
+          label: Completed
           exclude: false
           alter:
             alter_text: false
@@ -1177,7 +1177,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: IP-адреса
+          label: 'IP address'
           exclude: false
           alter:
             alter_text: false
@@ -1341,7 +1341,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Прикріплені
+            label: Sticky
             description: ''
             use_operator: false
             operator: sticky_op
@@ -1381,7 +1381,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Заблоковано
+            label: Locked
             description: ''
             use_operator: false
             operator: locked_op
@@ -1647,7 +1647,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Чернетка
+          label: Draft
           exclude: false
           alter:
             alter_text: false
@@ -1714,7 +1714,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Прикріплені
+          label: Sticky
           exclude: false
           alter:
             alter_text: false
@@ -1781,7 +1781,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Заблоковано
+          label: Locked
           exclude: false
           alter:
             alter_text: false
@@ -1848,7 +1848,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Створено
+          label: Created
           exclude: false
           alter:
             alter_text: false
@@ -1915,7 +1915,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Завершено
+          label: Completed
           exclude: false
           alter:
             alter_text: false
@@ -1982,7 +1982,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: IP-адреса
+          label: 'IP address'
           exclude: false
           alter:
             alter_text: false
@@ -2141,7 +2141,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: редагувати
+          text: edit
           output_url_as_text: false
           absolute: false
           entity_type: webform_submission
@@ -2311,7 +2311,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Прикріплені
+            label: Sticky
             description: ''
             use_operator: false
             operator: sticky_op
@@ -2351,7 +2351,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Заблоковано
+            label: Locked
             description: ''
             use_operator: false
             operator: locked_op
@@ -2475,7 +2475,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Чернетка
+          label: Draft
           exclude: false
           alter:
             alter_text: false
@@ -2542,7 +2542,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Прикріплені
+          label: Sticky
           exclude: false
           alter:
             alter_text: false
@@ -2609,7 +2609,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Заблоковано
+          label: Locked
           exclude: false
           alter:
             alter_text: false
@@ -2676,7 +2676,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Створено
+          label: Created
           exclude: false
           alter:
             alter_text: false
@@ -2743,7 +2743,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Завершено
+          label: Completed
           exclude: false
           alter:
             alter_text: false
@@ -2810,7 +2810,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: IP-адреса
+          label: 'IP address'
           exclude: false
           alter:
             alter_text: false
@@ -3086,7 +3086,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Прикріплені
+            label: Sticky
             description: ''
             use_operator: false
             operator: sticky_op
@@ -3126,7 +3126,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Заблоковано
+            label: Locked
             description: ''
             use_operator: false
             operator: locked_op

@@ -1,10 +1,4 @@
-label: 'Останні матеріали'
-description: 'Останні матеріали.'
 display:
   default:
     display_options:
-      title: 'Останні матеріали'
-      empty:
-        area_text_custom:
-          content: 'Матеріали відсутні.'
       use_more_text: More

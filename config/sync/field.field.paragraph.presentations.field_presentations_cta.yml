@@ -1,0 +1,55 @@
+uuid: 05b61689-5dcb-4b55-bd4f-19094871bdb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_presentations_cta
+    - paragraphs.paragraphs_type.presentations
+    - paragraphs.paragraphs_type.presentations_cta
+  module:
+    - entity_reference_revisions
+id: paragraph.presentations.field_presentations_cta
+field_name: field_presentations_cta
+entity_type: paragraph
+bundle: presentations
+label: 'Presentations CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      presentations_cta: presentations_cta
+    target_bundles_drag_drop:
+      presentations_cta:
+        enabled: true
+        weight: 10
+      camp_products:
+        weight: 11
+        enabled: false
+      container:
+        weight: 12
+        enabled: false
+      cta_block:
+        weight: 13
+        enabled: false
+      hero_countdown:
+        weight: 14
+        enabled: false
+      html_widget:
+        weight: 15
+        enabled: false
+      menu_cta:
+        weight: 16
+        enabled: false
+      presentations:
+        weight: 17
+        enabled: false
+      teaser:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

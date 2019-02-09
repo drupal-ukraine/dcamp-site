@@ -1,0 +1,23 @@
+uuid: 25463161-b93d-4aa9-8cb6-770924e0be4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facebook
+    - node.type.presentation
+  module:
+    - link
+id: node.presentation.field_facebook
+field_name: field_facebook
+entity_type: node
+bundle: presentation
+label: Facebook
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

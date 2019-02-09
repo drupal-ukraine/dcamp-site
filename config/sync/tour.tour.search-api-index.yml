@@ -46,7 +46,7 @@ tips:
   search-api-index-tracker:
     id: search-api-index-tracker
     plugin: text
-    label: Відстежувач
+    label: Tracker
     body: 'The tracker used by the index. Only one ("Default") is available by default.'
     weight: 5
     attributes:

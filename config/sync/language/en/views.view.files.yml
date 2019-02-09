@@ -1,19 +1,6 @@
-label: Файли
-description: 'Пошук файлів та керування ними.'
 display:
   default:
     display_options:
       fields:
-        filemime:
-          label: 'Тип MIME'
         filesize:
           label: Size
-      filters:
-        filemime:
-          expose:
-            label: 'Тип MIME'
-      title: Файли
-  page_1:
-    display_options:
-      menu:
-        title: Файли

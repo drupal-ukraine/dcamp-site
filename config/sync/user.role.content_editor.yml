@@ -1,0 +1,19 @@
+uuid: 439f2162-c1f4-4384-ac9a-352c9f15d82d
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content Editor'
+weight: 3
+is_admin: null
+permissions:
+  - 'administer comments'
+  - 'administer commerce_order'
+  - 'administer media'
+  - 'administer meta tags'
+  - 'administer nodes'
+  - 'bypass node access'
+  - 'use presentation transition publish'
+  - 'use presentation transition request_additional_info'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
