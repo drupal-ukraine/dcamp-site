@@ -8,7 +8,7 @@ id: default
 label: Default
 description: ''
 variationType: default
-multipleVariations: true
+multipleVariations: false
 injectVariationFields: true
 traits: {  }
 locked: false

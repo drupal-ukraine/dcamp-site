@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_products_list
     - paragraphs.paragraphs_type.camp_products
+    - views.view.camp_tickets
   module:
     - viewsreference
 id: paragraph.camp_products.field_products_list
@@ -15,7 +16,16 @@ label: 'Products List'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: default
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 60ce0f2a-b45f-441a-9fd8-2c8f7f276c2a
 default_value_callback: ''
 settings:
   handler: 'default:view'
@@ -27,6 +37,7 @@ settings:
     page: 0
     block: 0
     feed: 0
+    entity_browser: 0
     embed: 0
   preselect_views:
     camp_tickets: camp_tickets
@@ -47,6 +58,7 @@ settings:
     files: 0
     frontpage: 0
     media: 0
+    media_entity_browser: 0
     media_library: 0
     profiles: 0
     taxonomy_term: 0

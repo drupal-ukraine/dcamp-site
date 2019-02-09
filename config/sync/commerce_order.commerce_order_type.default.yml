@@ -1,6 +1,7 @@
 uuid: 3b74f201-12ad-4472-9804-04e604a8f504
 langcode: en
 status: true
+dependencies: {  }
 label: Default
 id: default
 workflow: order_default

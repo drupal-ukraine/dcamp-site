@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-  - commerce_order
+    - commerce_order
 id: commerce_order.order_items
 field_name: order_items
 entity_type: commerce_order
