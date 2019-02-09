@@ -41,7 +41,7 @@ main {
   }
 
   .wrap-content {
-    @include wrap-content;
+    @include container;
   }
 }
 

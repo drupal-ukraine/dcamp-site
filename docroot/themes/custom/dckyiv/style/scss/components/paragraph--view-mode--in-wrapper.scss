@@ -1,5 +1,13 @@
 .paragraph--view-mode--in-wrapper {
+
+  padding: 36px 0;
+
+  @include mq($bp768) {
+    max-width: 400px;
+  }
+
   @include mq($bp1024) {
+    padding: 0;
     max-width: 250px;
   }
 
@@ -8,16 +16,21 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 310px;
+
+    @include mq($bp1024) {
+      height: 285px;
+    }
 
     .field--name-field {
-
       &-intro-image {
-        padding: 0 0 30px;
+        padding: 0 0 16px;
+
+        @include mq($bp1024) {
+          padding: 0 0 30px;
+        }
 
         img {
           height: 40px;
-          filter: invert(.5) sepia(1);
         }
       }
 
@@ -27,15 +40,24 @@
         text-transform: uppercase;
         text-align: center;
         color: $color-fern;
-        padding: 0 0 40px;
+        padding: 0 0 16px;
+
+        @include mq($bp1024) {
+          padding: 0 0 24px;
+        }
       }
 
       &-text {
         padding: 0;
         width: 100%;
         text-align: center;
-        font-size: 1.4rem;
-        line-height: 1.29;
+        font-size: 1.6rem;
+        line-height: 1.5;
+
+        @include mq($bp1024) {
+          font-size: 1.4rem;
+          line-height: 1.4;
+        }
 
         P {
           color: $color-white;
@@ -44,7 +66,12 @@
 
       &-link {
         margin: auto 0 0;
+        padding-top: 20px;
         text-transform: uppercase;
+
+        @include mq($bp1024) {
+          padding: 0;
+        }
 
         a {
           font-size: 1.2rem;
@@ -57,7 +84,7 @@
           }
 
           &:hover {
-            text-decoration: underline;
+            border-bottom: 1px solid;
           }
         }
       }
