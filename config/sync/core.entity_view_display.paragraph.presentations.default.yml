@@ -3,17 +3,31 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.presentations.field_link_go_to
     - field.field.paragraph.presentations.field_presentations_cta
     - field.field.paragraph.presentations.field_presentations_list
     - paragraphs.paragraphs_type.presentations
   module:
     - entity_reference_revisions
+    - link
     - viewsreference
 id: paragraph.presentations.default
 targetEntityType: paragraph
 bundle: presentations
 mode: default
 content:
+  field_link_go_to:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_presentations_cta:
     type: entity_reference_revisions_entity_view
     weight: 1

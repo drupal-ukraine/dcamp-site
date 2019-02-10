@@ -1,0 +1,23 @@
+uuid: 5739be58-7198-4d5c-89fd-4c2811bf9c27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_go_to
+    - paragraphs.paragraphs_type.presentations
+  module:
+    - link
+id: paragraph.presentations.field_link_go_to
+field_name: field_link_go_to
+entity_type: paragraph
+bundle: presentations
+label: 'Link "Go to"'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

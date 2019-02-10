@@ -1,0 +1,29 @@
+// Paragraph: Presentations
+
+.paragraph--type--presentations {
+  & > .content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+
+    @include mq($bp1024) {
+      flex-direction: row;
+    }
+  }
+}
+
+.field--name-field {
+
+  &-presentations-list {
+    //max-width: 825px;
+    width: 100%;
+  }
+
+  &-presentations-cta {
+    width: 100%;
+
+    @include mq($bp1024) {
+      max-width: 280px;
+    }
+  }
+}

@@ -27,9 +27,9 @@ mode: default
 content:
   content_moderation_control:
     weight: -20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_company:
     weight: 104
     label: above
@@ -40,7 +40,7 @@ content:
     region: content
   field_drupal_org:
     weight: 111
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -52,7 +52,7 @@ content:
     region: content
   field_facebook:
     weight: 108
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -64,7 +64,7 @@ content:
     region: content
   field_information_about_author:
     weight: 107
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
@@ -85,7 +85,7 @@ content:
     region: content
   field_linkedin:
     weight: 109
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -97,7 +97,7 @@ content:
     region: content
   field_name:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -105,14 +105,14 @@ content:
     region: content
   field_presentation_description:
     weight: 101
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_second_name:
     weight: 103
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -120,7 +120,7 @@ content:
     region: content
   field_twitter:
     weight: 110
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -132,8 +132,8 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true

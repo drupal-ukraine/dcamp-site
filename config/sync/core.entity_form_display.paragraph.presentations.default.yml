@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.presentations.field_link_go_to
     - field.field.paragraph.presentations.field_presentations_cta
     - field.field.paragraph.presentations.field_presentations_list
     - paragraphs.paragraphs_type.presentations
   module:
+    - link
     - paragraphs
     - viewsreference
 id: paragraph.presentations.default
@@ -14,6 +16,14 @@ targetEntityType: paragraph
 bundle: presentations
 mode: default
 content:
+  field_link_go_to:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_presentations_cta:
     type: entity_reference_paragraphs
     weight: 1
