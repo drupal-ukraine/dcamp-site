@@ -57,3 +57,12 @@ main {
     max-width: 1270px;
   }
 }
+
+.layout-container {
+  margin: 0;
+}
+
+.block-system-main-block {
+  @include container;
+}
+
