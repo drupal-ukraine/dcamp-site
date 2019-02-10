@@ -1,5 +1,6 @@
 .paragraph--type--camp-products {
-  padding: 0 0 40px;
+  padding: 20px 0 30px;
+
   .camp-tickets-list {
     display: flex;
     flex-direction: column;
@@ -11,7 +12,6 @@
   }
 
   .views-row {
-    max-width: 350px;
     width: 100%;
     padding: 15px;
     margin-bottom: 24px;
@@ -19,6 +19,7 @@
 
     @include mq($bp1024) {
       margin-bottom: 0;
+      max-width: 350px;
     }
 
     article {
@@ -53,5 +54,6 @@
 
   .button {
     text-transform: uppercase;
+    appearance: none;
   }
 }

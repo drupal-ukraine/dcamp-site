@@ -83,6 +83,7 @@
       @include mq($bp1024) {
         width: 350px;
         text-transform: uppercase;
+        appearance: none;
       }
     }
   }
