@@ -2,14 +2,22 @@
   padding-bottom: 30px;
 
   fieldset {
-    border-top: 2px solid $color-gallery;
-
-    padding: 20px 0;
+    @include mq($bp1024) {
+      border-top: 2px solid $color-gallery;
+      padding: 20px 0;
+    }
 
     legend {
+      padding: 20px 0;
+      display: block;
+      width: 100%;
+      border-top: 2px solid $color-gallery;
+
       @include mq($bp1024) {
         width: 20%;
         float: left;
+        border: 0;
+        padding: 0;
       }
     }
 
@@ -22,7 +30,8 @@
   }
 
   .fieldset-legend,
-  .vertical-tabs__menu-item-title {
+  .vertical-tabs__menu-item-title,
+  summary {
     font-size: 1.8rem;
     font-family: $font-proxima-nova-regular;
     font-weight: 600;
@@ -36,6 +45,10 @@
 
   label {
     font-family: $font-proxima-nova-bold;
+  }
+
+  summary {
+    padding: 0 0 20px;
   }
 
   .vertical-tabs__menu-item,
@@ -54,10 +67,25 @@
 
   .form-actions,
   .field--name-moderation-state {
-    text-align: right;
+    @include mq($bp1024) {
+      text-align: right;
+    }
   }
 
-  $height: 36;
+  .form-actions {
+    @include mq($bp1023max) {
+      text-align: right;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      input {
+        width: calc(50% - 5px);
+      }
+    }
+  }
+
+  $height: 43;
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -66,10 +94,14 @@
     border-radius: 0;
     line-height: $height + px;
     height: $height + px;
-    background: #fff;
-    min-width: 208px;
+    background: $color-white;
+    width: 100%;
     margin: 0 5px 5px 0;
     font-size: 1.4rem;
+
+    @include mq($bp1024) {
+      min-width: 208px;
+    }
   }
 
   .js-form-type-select {
@@ -81,7 +113,7 @@
         color: $color-storm-gray;
         position: absolute;
         right: 15px;
-        top: 38px;
+        top: 40px;
 
         .presentation-info & {
           left: 15px;
