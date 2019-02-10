@@ -4,7 +4,7 @@
   & > .content {
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
+    padding: 30px 0;
 
     @include mq($bp1024) {
       flex-direction: row;
@@ -15,7 +15,6 @@
 .field--name-field {
 
   &-presentations-list {
-    //max-width: 825px;
     width: 100%;
   }
 
