@@ -64,5 +64,8 @@ main {
 
 .block-system-main-block {
   @include container;
+  @include mq($bp1023max) {
+    padding: 0;
+  }
 }
 
