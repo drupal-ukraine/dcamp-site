@@ -17,7 +17,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': 'Ім''я'\n  '#placeholder': 'Ім''я'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\ntelefon:\n  '#type': tel\n  '#title': Телефон\n  '#placeholder': Телефон\nemail:\n  '#type': email\n  '#title': Email\n  '#placeholder': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#type': textfield\n  '#title': Тема\n  '#placeholder': Тема\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Меседж\n  '#placeholder': 'Опишіть своє питання до нас...'\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: "name:\n  '#type': textfield\n  '#title': 'Ім''я'\n  '#placeholder': 'Ім''я'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nsubject:\n  '#type': textfield\n  '#title': Тема\n  '#placeholder': Тема\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\ntelefon:\n  '#type': tel\n  '#title': Телефон\n  '#placeholder': Телефон\nemail:\n  '#type': email\n  '#title': Email\n  '#placeholder': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nmessage:\n  '#type': textarea\n  '#title': Меседж\n  '#placeholder': 'Опишіть своє питання до нас...'\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
 css: ''
 javascript: ''
 settings:
