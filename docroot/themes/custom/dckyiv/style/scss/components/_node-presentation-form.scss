@@ -1,5 +1,5 @@
 .node-presentation-form {
-  padding-bottom: 30px;
+  @include container;
 
   fieldset {
     @include mq($bp1024) {
@@ -73,6 +73,8 @@
   }
 
   .form-actions {
+    padding-bottom: 30px;
+
     @include mq($bp1023max) {
       text-align: right;
       display: flex;
@@ -100,6 +102,7 @@
     font-size: 1.4rem;
 
     @include mq($bp1024) {
+      width: 0;
       min-width: 208px;
     }
   }
