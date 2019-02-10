@@ -24,7 +24,7 @@
   .wrap-content {
     @include mq($bp1024) {
       padding-top: 0;
-      min-width: 960px;
+      width: 100%;
     }
   }
 

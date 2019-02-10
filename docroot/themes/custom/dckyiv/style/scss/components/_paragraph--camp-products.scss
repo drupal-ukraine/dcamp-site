@@ -3,7 +3,7 @@
   .camp-tickets-list {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 
     @include mq($bp1024) {
       flex-direction: row;
