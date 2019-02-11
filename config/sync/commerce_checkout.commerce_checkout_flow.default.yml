@@ -13,17 +13,20 @@ configuration:
   display_checkout_progress: true
   panes:
     login:
-      allow_guest_checkout: true
-      allow_registration: false
+      allow_guest_checkout: false
+      allow_registration: true
       step: login
       weight: 0
-    contact_information:
-      double_entry: false
-      step: _disabled
-      weight: 6
+    payment_information:
+      step: order_information
+      weight: 1
     review:
       step: review
       weight: 2
+    payment_process:
+      capture: true
+      step: payment
+      weight: 3
     completion_message:
       step: complete
       weight: 4
@@ -31,10 +34,7 @@ configuration:
       view: commerce_checkout_order_summary
       step: _sidebar
       weight: 5
-    payment_information:
-      step: order_information
-      weight: 1
-    payment_process:
-      capture: true
-      step: payment
-      weight: 3
+    contact_information:
+      double_entry: false
+      step: _disabled
+      weight: 6
