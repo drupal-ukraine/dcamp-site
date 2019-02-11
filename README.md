@@ -28,7 +28,7 @@ If you want to help us - feel free to take a ticket that you like from the proje
 ### How to start your development?
 - Clone repository to your local:
 ```
-git clone https://github.com/drupal-ukraine/dcamp-site.git ./
+git clone https://github.com/drupal-ukraine/dcamp-site.git
 ```
 
 - Install Docksal (if needed):
