@@ -12,7 +12,7 @@ id: commerce_product.default.variations
 field_name: variations
 entity_type: commerce_product
 bundle: default
-label: Variations
+label: Варіації
 description: ''
 required: true
 translatable: false

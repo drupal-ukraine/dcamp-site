@@ -23,7 +23,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Головне
     position: 0
     display_options:
       access:
@@ -43,13 +43,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Застосувати
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
       pager:
         type: none
         options:
@@ -92,7 +92,7 @@ display:
           relationship: order_items
           group_type: group
           admin_label: ''
-          label: Item
+          label: Елемент
           exclude: false
           alter:
             alter_text: false
@@ -157,7 +157,7 @@ display:
           relationship: order_items
           group_type: group
           admin_label: ''
-          label: Price
+          label: Ціна
           exclude: false
           alter:
             alter_text: false
@@ -223,7 +223,7 @@ display:
           relationship: order_items
           group_type: group
           admin_label: ''
-          label: Quantity
+          label: Кількість
           exclude: false
           alter:
             alter_text: false
@@ -274,7 +274,7 @@ display:
           relationship: order_items
           group_type: group
           admin_label: ''
-          label: Remove
+          label: Вилучити
           exclude: false
           alter:
             alter_text: false
@@ -324,7 +324,7 @@ display:
           relationship: order_items
           group_type: group
           admin_label: ''
-          label: Total
+          label: Всього
           exclude: false
           alter:
             alter_text: false
@@ -433,7 +433,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: All
+            title: Все
           title_enable: false
           title: ''
           default_argument_type: fixed

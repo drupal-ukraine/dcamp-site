@@ -89,7 +89,7 @@ tips:
   views-ui-preview:
     id: views-ui-preview
     plugin: text
-    label: Preview
+    label: 'Попередній перегляд'
     body: 'Показати попередній перегляд виведення виду.'
     weight: 10
     location: left

@@ -1,0 +1,20 @@
+uuid: 6ddcc4a9-e652-42af-b029-3a0d2c566cb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - dckyiv
+id: languageswitcher
+theme: dckyiv
+region: header
+weight: -5
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }

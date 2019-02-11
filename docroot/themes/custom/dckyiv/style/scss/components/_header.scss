@@ -144,6 +144,13 @@ header.main-header {
     }
   }
 
+  .lang_links {
+    right: 0;
+    bottom: -8px;
+    transition: color .3s, background-color .3s;
+    color: $color-white;
+  }
+
   #block-sitebranding {
     text-align: center;
     @include mq($bp1024) {
@@ -169,7 +176,8 @@ header.main-header {
   }
 
   #block-searchicon,
-  #block-loginicon {
+  #block-loginicon,
+  #block-languageswitcher {
     display: none;
 
     @include mq($bp1024) {

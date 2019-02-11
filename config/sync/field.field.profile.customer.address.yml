@@ -13,7 +13,7 @@ id: profile.customer.address
 field_name: address
 entity_type: profile
 bundle: customer
-label: Address
+label: Адреса
 description: ''
 required: true
 translatable: false
