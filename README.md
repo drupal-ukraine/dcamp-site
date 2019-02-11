@@ -1,5 +1,7 @@
 # DCKyiv project
-This is template for Drupal Camp sites in Ukraine. 
+Purpose of this project - website development for DrupalCampKyiv conference.
+If you want to help us - feel free to take a ticket that you like from the project board and propose your changes using Pull Request here.
+
 
 ## Get Started
 
@@ -18,23 +20,18 @@ This is template for Drupal Camp sites in Ukraine.
 - VirtualBox (you need if you work on WIndows or MacOS)
 - Gulp (for compile js, icons and scss files in the our custom theme)
 - SCSS (for css styles)
-- Composer (Drupal Core, Modules, Libraries packet management)
-- Circle CI (for testing and create builds)
+- Composer (Drupal Core, Modules, Libraries packet management and patches)
+- Circle CI (We are creating build for every pull request that you create at gitbub for better code review)
 - CI Agent (for create builds via Docksal)
-- IDE C9 (for write and edit code, with support xDebug)
+- IDE C9 (for write and edit code, with support xDebug) - use it if you forgot your laptop with installed PHPStorm :)
 
-### Full install from scratch
-- Create project folder (Ex.: `dckyiv`):
+### How to start your development?
+- Clone repository to your local:
 ```
-mkdir dckyiv
-```
-- Copy repository to your folder (copy project files):
-```
-cd dckyiv
 git clone https://github.com/drupal-ukraine/dcamp-site.git ./
 ```
 
-- In project root folder execute commands:
+- Install Docksal (if needed):
 ```bash
 # Install Docksal
 curl -fsSL https://get.docksal.io | bash
@@ -42,11 +39,11 @@ curl -fsSL https://get.docksal.io | bash
 # Install VirtualBox (if you use MacOS or Windows):
 # https://docksal.io/installation/#macos-virtualbox
 
-# Up and run project
+# Up start project containers
 # If your Docksal VM is not yet started it will ask you.
-fin p start
+fin project start
 
-# Start the project
+# Rebuild your local instance with last content and changes.
 fin rebuild
 
 # Wait till finish. First time it takes 10-15 minutes for downloading of the database. 
@@ -96,5 +93,6 @@ After you run the "fin rebuild" and have your environment ready you need to do f
 ### Access to local Database
 In the your browser open [http://pma.dckyiv.docksal](http://pma.dckyiv.docksal) and enjoy your work and contribution!
 
-## Design in Zeplin
-https://zpl.io/bAZxnLO
+### Share your local to the world
+Run `fin share` command if you want to share your local. Use it if you want to show your local changes to your friends or if you want test you local on different devices.
+
