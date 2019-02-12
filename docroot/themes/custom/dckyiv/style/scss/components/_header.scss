@@ -144,15 +144,10 @@ header.main-header {
     }
   }
 
-  .lang_links {
-    right: 0;
-    bottom: -8px;
-    transition: color .3s, background-color .3s;
-    color: $color-white;
-  }
-
   #block-sitebranding {
     text-align: center;
+    padding-right: 30px;
+
     @include mq($bp1024) {
       text-align: left;
       float: left;
@@ -178,10 +173,8 @@ header.main-header {
   #block-searchicon,
   #block-loginicon,
   #block-languageswitcher {
-    display: none;
 
     @include mq($bp1024) {
-      display: block;
       float: right;
       padding: 24px 0 12px 20px;
     }
@@ -191,7 +184,94 @@ header.main-header {
     }
   }
 
+  #block-searchicon,
+  #block-loginicon {
+    display: none;
+
+    @include mq($bp1024) {
+      display: block;
+    }
+  }
+
+  #block-languageswitcher {
+    @include mq($bp1023max) {
+      width: 24px;
+      position: absolute;
+      top: 16px;
+      right: 55px;
+    }
+  }
+
+  .lang {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  .lang_links {
+    position: absolute;
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & > li {
+      font: bold 12px/18px sans-serif;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      transition: color .3s, background-color .3s;
+      color: rgba($color-white, .6);
+      @include icoMoon('worlwide', 'before');
+
+      &:before {
+        font-size: 2.4rem;
+      }
+    }
+
+    li {
+      &:hover {
+        ul {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      ul {
+        text-align: left;
+        padding: 15px 0 0;
+        position: absolute;
+        left: -15px;
+        box-shadow: none;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+
+        @include mq($bp1024) {
+          padding: 0;
+        }
+
+        li {
+          min-width: 80px;
+          padding: 0 0 5px;
+
+          @include mq($bp1024) {
+            padding: 0;
+          }
+
+          & > a {
+            text-decoration: none;
+            display: block;
+            color: $color-ebony-clay;
+          }
+        }
+      }
+    }
+  }
 }
+
 // Global search block
 .block-globalsearch-block {
   position: absolute;
