@@ -9,7 +9,7 @@ dependencies:
     - field.field.commerce_product.default.variations
   module:
     - commerce
-    - inline_entity_form
+    - commerce_product
     - path
     - text
 _core:
@@ -81,19 +81,9 @@ content:
     third_party_settings: {  }
     region: content
   variations:
-    type: inline_entity_form_complex
-    weight: 6
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_duplicate: true
-      override_labels: false
-      collapsible: false
-      collapsed: false
-      allow_existing: false
-      match_operator: CONTAINS
+    type: commerce_product_single_variation
+    weight: 2
+    settings: {  }
     third_party_settings: {  }
     region: content
 hidden: {  }

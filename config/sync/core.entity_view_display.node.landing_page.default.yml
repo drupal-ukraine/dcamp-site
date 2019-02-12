@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.field_content_type
     - field.field.node.landing_page.field_footer
     - field.field.node.landing_page.field_header
     - field.field.node.landing_page.field_page_content
@@ -55,7 +54,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_content_type: true
   field_transparent_header: true
   langcode: true
   links: true

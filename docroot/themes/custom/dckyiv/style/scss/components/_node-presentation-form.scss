@@ -1,0 +1,156 @@
+.node-presentation-form {
+  @include container;
+
+  fieldset {
+    @include mq($bp1024) {
+      border-top: 2px solid $color-gallery;
+      padding: 20px 0;
+    }
+
+    legend {
+      padding: 20px 0;
+      display: block;
+      width: 100%;
+      border-top: 2px solid $color-gallery;
+
+      @include mq($bp1024) {
+        width: 20%;
+        float: left;
+        border: 0;
+        padding: 0;
+      }
+    }
+
+    .fieldset-wrapper {
+      @include mq($bp1024) {
+        width: 80%;
+        float: left;
+      }
+    }
+  }
+
+  .fieldset-legend,
+  .vertical-tabs__menu-item-title,
+  summary {
+    font-size: 1.8rem;
+    font-family: $font-proxima-nova-regular;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+
+  .js-form-type-vertical-tabs {
+    border-top: 2px solid $color-gallery;
+    padding: 20px 0 0;
+  }
+
+  label {
+    font-family: $font-proxima-nova-bold;
+  }
+
+  summary {
+    padding: 0 0 20px;
+  }
+
+  .vertical-tabs__menu-item,
+  .vertical-tabs__menu,
+  .vertical-tabs {
+    border: 0;
+  }
+
+  .js-form-type-textarea {
+    margin: 0;
+  }
+
+  .vertical-tabs__menu-item a {
+    padding: 0;
+  }
+
+  .form-actions,
+  .field--name-moderation-state {
+    @include mq($bp1024) {
+      text-align: right;
+    }
+  }
+
+  .form-actions {
+    padding-bottom: 30px;
+
+    @include mq($bp1023max) {
+      text-align: right;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      input {
+        width: calc(50% - 5px);
+      }
+    }
+  }
+
+  $height: 43;
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 30px 0 10px;
+    border-radius: 0;
+    line-height: $height + px;
+    height: $height + px;
+    background: $color-white;
+    width: 100%;
+    margin: 0 5px 5px 0;
+    font-size: 1.4rem;
+
+    @include mq($bp1024) {
+      width: 0;
+      min-width: 208px;
+    }
+  }
+
+  .js-form-type-select {
+    label {
+      position: relative;
+      @include icoMoon('arrow-down', 'after');
+      &:after {
+        font-size: .8rem;
+        color: $color-storm-gray;
+        position: absolute;
+        right: 15px;
+        top: 40px;
+
+        .presentation-info & {
+          left: 15px;
+        }
+      }
+    }
+  }
+
+  .field--widget-options-select {
+    @include mq($bp1024) {
+      float: left;
+      width: 50%;
+    }
+  }
+
+  .field--widget-link-default {
+    @include mq($bp1024) {
+      float: left;
+      width: calc(50% - 10px);
+
+      &:nth-child(1n) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .presentation-info {
+    label {
+      &:after {
+        @include mq($bp1024) {
+          left: 178px;
+          right: 0;
+        }
+      }
+    }
+  }
+}

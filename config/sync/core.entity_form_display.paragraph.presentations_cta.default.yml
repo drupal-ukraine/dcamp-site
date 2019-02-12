@@ -1,0 +1,44 @@
+uuid: 54a33c88-dc1b-42d6-9b56-ede488d2ec90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.presentations_cta.field_background_image
+    - field.field.paragraph.presentations_cta.field_heading
+    - field.field.paragraph.presentations_cta.field_link
+    - paragraphs.paragraphs_type.presentations_cta
+  module:
+    - link
+    - media_library
+    - text
+id: paragraph.presentations_cta.default
+targetEntityType: paragraph
+bundle: presentations_cta
+mode: default
+content:
+  field_background_image:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

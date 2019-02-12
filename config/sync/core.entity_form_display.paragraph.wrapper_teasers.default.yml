@@ -1,0 +1,47 @@
+uuid: 2576238b-4d86-40a5-a7e9-7982b83a6177
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image
+    - field.field.paragraph.wrapper_teasers.field_background_image
+    - field.field.paragraph.wrapper_teasers.field_teasers
+    - paragraphs.paragraphs_type.wrapper_teasers
+  module:
+    - entity_browser
+    - paragraphs
+id: paragraph.wrapper_teasers.default
+targetEntityType: paragraph
+bundle: wrapper_teasers
+mode: default
+content:
+  field_background_image:
+    weight: 0
+    settings:
+      entity_browser: image
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_teasers:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

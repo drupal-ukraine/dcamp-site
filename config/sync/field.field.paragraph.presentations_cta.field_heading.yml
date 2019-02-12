@@ -1,0 +1,21 @@
+uuid: 002ecb2f-0e47-42a3-b887-45cb622ec68d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.presentations_cta
+  module:
+    - text
+id: paragraph.presentations_cta.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: presentations_cta
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

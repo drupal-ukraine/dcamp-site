@@ -5,10 +5,10 @@ dependencies: {  }
 _core:
   default_config_hash: 5TqAuVTl1_arKIBeD1qDfJM-pKmaFnqyYSQNdwEK_DQ
 id: default
-label: Default
+label: Базово
 description: ''
 variationType: default
-multipleVariations: true
+multipleVariations: false
 injectVariationFields: true
 traits: {  }
 locked: false

@@ -23,7 +23,7 @@ body {
   }
 
   &.transparent-header main.container {
-    padding-top: 60px;
+    padding-top: 57px;
 
     @include mq($bp1024) {
       padding-top: 0;
@@ -41,7 +41,7 @@ main {
   }
 
   .wrap-content {
-    @include wrap-content;
+    @include container;
   }
 }
 
@@ -56,4 +56,8 @@ main {
     display: block;
     max-width: 1270px;
   }
+}
+
+.layout-container {
+  margin: 0;
 }

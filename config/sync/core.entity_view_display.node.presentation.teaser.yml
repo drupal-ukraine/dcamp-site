@@ -1,0 +1,37 @@
+uuid: 1b2851e7-f229-47e8-8ac9-6e110ebfdc97
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.presentation
+  module:
+    - user
+id: node.presentation.teaser
+targetEntityType: node
+bundle: presentation
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_company: true
+  field_drupal_org: true
+  field_facebook: true
+  field_information_about_author: true
+  field_language: true
+  field_level: true
+  field_linkedin: true
+  field_name: true
+  field_presentation_description: true
+  field_second_name: true
+  field_twitter: true
+  langcode: true

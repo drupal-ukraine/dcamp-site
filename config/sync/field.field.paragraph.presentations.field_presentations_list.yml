@@ -1,0 +1,58 @@
+uuid: a3962e98-c553-4c2d-b67d-1c24ff078e51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_presentations_list
+    - paragraphs.paragraphs_type.presentations
+  module:
+    - viewsreference
+id: paragraph.presentations.field_presentations_list
+field_name: field_presentations_list
+entity_type: paragraph
+bundle: presentations
+label: 'Presentations list'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    block_content: 0
+    camp_tickets: 0
+    comment: 0
+    comments_recent: 0
+    commerce_carts: 0
+    commerce_cart_block: 0
+    commerce_cart_form: 0
+    commerce_checkout_order_summary: 0
+    commerce_orders: 0
+    commerce_order_item_table: 0
+    commerce_products: 0
+    commerce_stores: 0
+    commerce_user_orders: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    media: 0
+    media_library: 0
+    profiles: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

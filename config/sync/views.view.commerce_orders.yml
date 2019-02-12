@@ -13,7 +13,7 @@ dependencies:
 _core:
   default_config_hash: aZuHpmCug9xtPfZcCkS2TO7Jmgp63Rki0SVdLqetV1A
 id: commerce_orders
-label: Orders
+label: Замовлення
 module: views
 description: ''
 tag: Commerce
@@ -24,7 +24,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Головне
     position: 0
     display_options:
       access:
@@ -45,13 +45,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Фільтр
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
       pager:
         type: full
         options:
@@ -61,17 +61,17 @@ display:
           total_pages: null
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Елементів на сторінку'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Усе -'
             offset: false
-            offset_label: Offset
+            offset_label: Зміщення
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
           quantity: 9
       style:
         type: table
@@ -288,7 +288,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Date
+          label: Дата
           exclude: false
           alter:
             alter_text: false
@@ -355,7 +355,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Type
+          label: Тип
           exclude: false
           alter:
             alter_text: false
@@ -421,7 +421,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Store
+          label: Магазин
           exclude: false
           alter:
             alter_text: false
@@ -487,7 +487,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Customer
+          label: Покупець
           exclude: false
           alter:
             alter_text: false
@@ -552,7 +552,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Email
+          label: 'Електронна пошта'
           exclude: false
           alter:
             alter_text: false
@@ -616,7 +616,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: State
+          label: Стан
           exclude: false
           alter:
             alter_text: false
@@ -680,7 +680,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Total
+          label: Всього
           exclude: false
           alter:
             alter_text: false
@@ -746,7 +746,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Операції
           exclude: false
           alter:
             alter_text: false
@@ -804,7 +804,7 @@ display:
           exposed: true
           expose:
             operator_id: order_number_op
-            label: 'Order number'
+            label: 'Номер замовлення'
             description: ''
             use_operator: false
             operator: order_number_op
@@ -844,7 +844,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Тип
             description: ''
             use_operator: false
             operator: type_op
@@ -886,7 +886,7 @@ display:
           exposed: true
           expose:
             operator_id: state_op
-            label: State
+            label: Стан
             description: ''
             use_operator: false
             operator: state_op
@@ -915,7 +915,7 @@ display:
           entity_field: state
           plugin_id: state_machine_state
       sorts: {  }
-      title: Orders
+      title: Замовлення
       header: {  }
       footer: {  }
       empty:
@@ -951,14 +951,14 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: Сторінка
     position: 1
     display_options:
       display_extenders: {  }
       path: admin/commerce/orders/list
       menu:
         type: 'default tab'
-        title: Orders
+        title: Замовлення
         description: ''
         expanded: false
         parent: ''
@@ -967,8 +967,8 @@ display:
         menu_name: main
       tab_options:
         type: normal
-        title: Orders
-        description: 'Manage your orders.'
+        title: Замовлення
+        description: 'Керування своїми замовленнями.'
         weight: 0
     cache_metadata:
       contexts:

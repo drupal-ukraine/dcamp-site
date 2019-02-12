@@ -1,0 +1,19 @@
+uuid: f0dc1416-9692-43ca-abc6-1c5612da421e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_presentations
+field_name: field_presentations
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

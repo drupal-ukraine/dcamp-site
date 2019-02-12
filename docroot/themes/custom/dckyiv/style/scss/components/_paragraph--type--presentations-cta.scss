@@ -1,0 +1,54 @@
+// Paragraph: Presentations CTA
+
+.paragraph--type--presentations-cta {
+  height: 450px;
+  background-size:140%;
+  background-position: center;
+
+  & > .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .field--name-field {
+
+    &-heading {
+      color: $color-white;
+      width: 100%;
+      font-size: 1.8rem;
+      font-family: $font-proxima-nova-bold;
+      line-height: 1.5;
+      text-align: center;
+      margin-top: 140px;
+      max-width: 180px;
+
+      @include mq($bp768) {
+        font-size: 2.4rem;
+      }
+
+      @include mq($bp1024) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-link {
+      display: block;
+      width: 100%;
+      margin-top: 151px;
+
+      a {
+        @include button;
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mq($bp1024) {
+          max-width: 280px;
+        }
+      }
+    }
+
+  }
+}

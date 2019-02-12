@@ -1,0 +1,139 @@
+uuid: 4816bd27-d970-4130-acdd-9da427295579
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.presentation.field_company
+    - field.field.node.presentation.field_drupal_org
+    - field.field.node.presentation.field_facebook
+    - field.field.node.presentation.field_information_about_author
+    - field.field.node.presentation.field_language
+    - field.field.node.presentation.field_level
+    - field.field.node.presentation.field_linkedin
+    - field.field.node.presentation.field_name
+    - field.field.node.presentation.field_presentation_description
+    - field.field.node.presentation.field_second_name
+    - field.field.node.presentation.field_twitter
+    - node.type.presentation
+  module:
+    - link
+    - options
+    - text
+    - user
+id: node.presentation.default
+targetEntityType: node
+bundle: presentation
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_company:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_drupal_org:
+    weight: 111
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_facebook:
+    weight: 108
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_information_about_author:
+    weight: 107
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_language:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_level:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_linkedin:
+    weight: 109
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_name:
+    weight: 102
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_presentation_description:
+    weight: 101
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_second_name:
+    weight: 103
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_twitter:
+    weight: 110
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

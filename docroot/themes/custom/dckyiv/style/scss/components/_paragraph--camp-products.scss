@@ -1,0 +1,59 @@
+.paragraph--type--camp-products {
+  padding: 0 0 30px;
+
+  .camp-tickets-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mq($bp1024) {
+      flex-direction: row;
+    }
+  }
+
+  .views-row {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 24px;
+    border: 1px solid $color-tuna;
+
+    @include mq($bp1024) {
+      margin-bottom: 0;
+      max-width: 350px;
+    }
+
+    article {
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .field--name-title {
+    font-size: 2.4rem;
+    font-family: $font-proxima-nova-regular;
+    color: $color-tuna;
+    line-height: 1.2;
+    padding: 0 10px 10px;
+    border-bottom: 2px solid $color-silver;
+  }
+
+  .field--name-purchased-entity,
+  .field--name-quantity {
+    display: none;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-proxima-nova-bold;
+  }
+
+  .button {
+    text-transform: uppercase;
+    appearance: none;
+  }
+}

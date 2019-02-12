@@ -1,27 +1,29 @@
+label: 'Надсилання з веб-форми'
 display:
   default:
-    display_title: Master
+    display_title: Головне
     display_options:
       exposed_form:
         options:
-          submit_button: Apply
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          submit_button: Застосувати
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
       pager:
         options:
           tags:
             previous: ‹‹
             next: ››
-            first: '« First'
-            last: 'Last »'
+            first: '« Перша'
+            last: 'Остання »'
           expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
-            offset_label: Offset
+            items_per_page_label: 'Елементів на сторінку'
+            items_per_page_options_all_label: '- Усе -'
+            offset_label: Зміщення
       fields:
         sid:
+          label: '#'
           separator: ', '
         in_draft:
           label: Чернетка
@@ -33,7 +35,7 @@ display:
           label: IP-адреса
           separator: ', '
         view_webform_submission:
-          label: Operations
+          label: Операції
           text: переглянути
       header:
         result:
@@ -41,13 +43,15 @@ display:
       arguments:
         in_draft:
           exception:
-            title: All
+            title: Все
+      title: 'Надсилання з веб-форми'
   embed_administer:
     display_options:
       fields:
         webform_submission_bulk_form:
-          action_title: Action
+          action_title: Дія
         sid:
+          label: '#'
           separator: ', '
         in_draft:
           label: Чернетка
@@ -68,7 +72,7 @@ display:
           label: IP-адреса
           separator: ', '
         operations:
-          label: Operations
+          label: Операції
       filters:
         sticky:
           expose:
@@ -80,8 +84,9 @@ display:
     display_options:
       fields:
         webform_submission_bulk_form:
-          action_title: Action
+          action_title: Дія
         sid:
+          label: '#'
           separator: ', '
         in_draft:
           label: Чернетка
@@ -102,10 +107,10 @@ display:
           label: IP-адреса
           separator: ', '
         view_webform_submission:
-          label: Operations
+          label: Операції
           text: переглянути
         edit_webform_submission:
-          label: Operations
+          label: Операції
           text: редагувати
       filters:
         sticky:
@@ -118,6 +123,7 @@ display:
     display_options:
       fields:
         sid:
+          label: '#'
           separator: ', '
         in_draft:
           label: Чернетка
@@ -138,7 +144,7 @@ display:
           label: IP-адреса
           separator: ', '
         view_webform_submission:
-          label: Operations
+          label: Операції
           text: переглянути
       filters:
         sticky:

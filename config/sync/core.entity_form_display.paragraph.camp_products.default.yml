@@ -1,0 +1,34 @@
+uuid: 6a60b288-d1f6-4bd0-8a58-fa938cac0257
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.camp_products.field_products_list
+    - field.field.paragraph.camp_products.field_text
+    - paragraphs.paragraphs_type.camp_products
+  module:
+    - text
+    - viewsreference
+id: paragraph.camp_products.default
+targetEntityType: paragraph
+bundle: camp_products
+mode: default
+content:
+  field_products_list:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+  field_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

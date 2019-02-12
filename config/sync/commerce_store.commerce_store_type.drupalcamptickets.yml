@@ -1,0 +1,9 @@
+uuid: dd5bacfb-5e98-42d0-b18d-3dfe18739436
+langcode: en
+status: true
+dependencies: {  }
+id: drupalcamptickets
+label: DrupalCampTickets
+description: ''
+traits: {  }
+locked: false

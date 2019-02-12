@@ -1,0 +1,16 @@
+uuid: 44a17d0c-4fcb-477a-92fd-7c11f312f988
+langcode: en
+status: true
+dependencies: {  }
+id: need_changes
+workflow: presentation
+transitions:
+  need_changes: need_changes
+roles: {  }
+author: true
+emails: ''
+subject: 'Please update your Presentation with additional data'
+body:
+  value: "Hi.\r\nYou need to update your content.\r\nMessage from our Editorial Team:\r\n[node:log]"
+  format: restricted_html
+label: 'Need Changes'
