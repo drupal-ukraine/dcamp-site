@@ -761,6 +761,10 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
+if (file_exists($app_root . '/' . $site_path . '/prod.settings.php')) {
+  include $app_root . '/' . $site_path . '/prod.settings.php';
+}
+
 // Include pantheon env.
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   include __DIR__ . "/settings.pantheon.php";
