@@ -1,5 +1,6 @@
 /vendor/
 # Ignore paths that contain user-generated content.
+docroot/sites/default/prod.settings.php
 docroot/sites/*/files
 docroot/sites/*/private
 files/*
