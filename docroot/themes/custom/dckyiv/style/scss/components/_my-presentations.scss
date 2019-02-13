@@ -1,0 +1,18 @@
+#block-views-block-my-presentations-my-presentations-block {
+  @include container;
+  padding-bottom: 40px !important;
+
+  table {
+    width: 100%;
+  }
+
+  thead,
+  tbody {
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid $color-gallery;
+    }
+  }
+}
