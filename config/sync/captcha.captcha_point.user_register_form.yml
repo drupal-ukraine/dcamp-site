@@ -6,4 +6,4 @@ _core:
   default_config_hash: O11nB9Assnic6AhIuaeK_CQdh_zO0udxABDnUZJupis
 formId: user_register_form
 captchaType: recaptcha/reCAPTCHA
-label: user_register_form
+label: dckyiv_user_public_form
