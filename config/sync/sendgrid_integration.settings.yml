@@ -1,4 +1,4 @@
-apikey: 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
+apikey: 
 test_defaults:
   to: anpolimus@gmail.com
   subject: 'Test Email from SendGrid Module'
