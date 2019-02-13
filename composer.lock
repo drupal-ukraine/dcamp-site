@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5400ba7eafe37f062d92e4fc7575226c",
+    "content-hash": "69dc3d025c13e9beec796fc148639cc1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3718,6 +3718,70 @@
                 "source": "https://www.drupal.org/project/dropzonejs",
                 "issues": "https://www.drupal.org/project/issues/dropzonejs",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/email_registration",
+            "version": "1.0.0-rc6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/email_registration",
+                "reference": "8.x-1.0-rc6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/email_registration-8.x-1.0-rc6.zip",
+                "reference": "8.x-1.0-rc6",
+                "shasum": "b004bc24b79faaa9e8b2fe59a04eaab02f44c363"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-rc6",
+                    "datestamp": "1545350880",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Knaddison (greggles)",
+                    "homepage": "https://www.drupal.org/u/greggles",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Andrey Postnikov (andypost)",
+                    "homepage": "https://www.drupal.org/u/andypost",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Chris Herberte",
+                    "homepage": "https://www.drupal.org/u/chris-herberte",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Moshe Weitzman (moshe weitzman)",
+                    "homepage": "https://www.drupal.org/u/moshe-weitzman",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Allows users to register with an email address as their username.",
+            "homepage": "https://www.drupal.org/project/email_registration",
+            "support": {
+                "source": "http://cgit.drupalcode.org/email_registration",
+                "issues": "http://drupal.org/project/issues/email_registration"
             }
         },
         {
@@ -11271,6 +11335,7 @@
         "drupal/content_moderation_notifications": 5,
         "drupal/contribute": 10,
         "drupal/dropzonejs": 15,
+        "drupal/email_registration": 5,
         "drupal/rabbit_hole": 10,
         "drupal/restrict_by_ip": 20,
         "drupal/stage_file_proxy": 15,

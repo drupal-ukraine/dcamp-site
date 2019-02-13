@@ -1,0 +1,22 @@
+uuid: a31cf80c-2477-4ea4-90e8-0ae04996b052
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.status
+field_name: status
+entity_type: media
+bundle: audio
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

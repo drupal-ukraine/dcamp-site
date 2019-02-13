@@ -1,0 +1,22 @@
+uuid: 8ec6e22f-037c-41cd-8cff-54a8b062e6af
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mie_demo_content
+id: taxonomy_term.mie_demo_content.status
+field_name: status
+entity_type: taxonomy_term
+bundle: mie_demo_content
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

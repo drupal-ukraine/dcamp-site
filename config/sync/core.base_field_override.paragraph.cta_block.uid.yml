@@ -1,0 +1,20 @@
+uuid: ea9fcafc-64ba-4b97-95e8-1be674907edc
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cta_block
+id: paragraph.cta_block.uid
+field_name: uid
+entity_type: paragraph
+bundle: cta_block
+label: 'Authored by'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

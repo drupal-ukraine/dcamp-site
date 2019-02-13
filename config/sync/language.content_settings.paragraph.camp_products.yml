@@ -1,0 +1,18 @@
+uuid: 17077926-38ed-4dd5-a060-63322149cf89
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.camp_products
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.camp_products
+target_entity_type_id: paragraph
+target_bundle: camp_products
+default_langcode: site_default
+language_alterable: false

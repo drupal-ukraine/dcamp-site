@@ -1,0 +1,18 @@
+uuid: db043851-9d2b-4639-bbc0-65cc3567a382
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mie_demo_content
+id: taxonomy_term.mie_demo_content.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: mie_demo_content
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

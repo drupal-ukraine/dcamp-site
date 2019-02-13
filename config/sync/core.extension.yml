@@ -26,6 +26,7 @@ module:
   config: 0
   config_filter: 0
   config_split: 0
+  config_translation: 0
   contact: 0
   content_moderation: 0
   content_moderation_notifications: 0
@@ -39,6 +40,7 @@ module:
   dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   editor: 0
+  email_registration: 0
   entity: 0
   entity_browser: 0
   entity_reference_revisions: 0
@@ -103,6 +105,7 @@ module:
   contribute: 1
   menu_link_content: 1
   pathauto: 1
+  content_translation: 10
   views: 10
   paragraphs: 11
   standard: 1000

@@ -1,0 +1,18 @@
+uuid: bd028dc2-19d4-4184-bd4b-983b39c2f3c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.icomoon_link
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.icomoon_link
+target_entity_type_id: paragraph
+target_bundle: icomoon_link
+default_langcode: site_default
+language_alterable: false
