@@ -16,14 +16,16 @@
 .field--name-field {
 
   &-presentations-list {
-    
+    //width: 100%;
   }
 
   &-presentations-cta {
     width: 100%;
-    margin: 0 auto;
+
     @include mq($bp1024) {
-      max-width: 280px;
+      margin: 0 auto;
+      max-width: 450px;
+      min-height: 280px;
     }
   }
 }
