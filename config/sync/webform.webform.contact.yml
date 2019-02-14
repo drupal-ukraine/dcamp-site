@@ -17,7 +17,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#placeholder': 'Ім''я'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#placeholder': Тема\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\ntelefon:\n  '#type': tel\n  '#title': Phone\n  '#placeholder': Телефон\nemail:\n  '#type': email\n  '#title': Email\n  '#placeholder': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#placeholder': 'Опишіть своє питання до нас...'\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#placeholder': 'Ім''я'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#placeholder': Тема\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\ntelefon:\n  '#type': tel\n  '#title': Phone\n  '#placeholder': Телефон\nemail:\n  '#type': email\n  '#title': Email\n  '#placeholder': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#placeholder': 'Опишіть своє питання до нас...'\n  '#required': true\n  '#test': 'Please ignore this email.'\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
 css: ''
 javascript: ''
 settings:
@@ -179,7 +179,7 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      subject: '[webform_submission:values:subject:raw]'
+      subject: 'Your message to DrupalCampKyiv is delivered'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
       ignore_access: false
@@ -205,7 +205,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: _default
+      to_mail: org.drupalcamp.kyiv@gmail.com
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -214,7 +214,7 @@ handlers:
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
+      subject: 'New request at the Contact form of website.'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
       ignore_access: false
