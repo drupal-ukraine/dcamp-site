@@ -3,9 +3,10 @@ secret_key: 6LejM40UAAAAAJRBzxW9Ccm4aOwI-u_zf_R_TXgY
 widget:
   theme: light
   type: image
-  size: compact
+  size: ''
   tabindex: 0
   noscript: false
 _core:
   default_config_hash: ZKQ03ePk4sH2zESRw4tdZYw__nG2YN4Ru5roPL23g3A
-langcode: uk
+verify_hostname: false
+use_globally: false

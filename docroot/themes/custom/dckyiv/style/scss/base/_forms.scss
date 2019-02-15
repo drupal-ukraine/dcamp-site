@@ -352,3 +352,22 @@ input.secondary[type="submit"] {
     font-size: 1.4rem;
   }
 }
+
+form {
+  .captcha {
+    margin: 0 auto 10px;
+
+    .g-recaptcha {
+      text-align: center;
+
+      & > div,
+      iframe {
+        width: 100% !important;
+
+        @include mq($bp1024) {
+          width: 350px !important;
+        }
+      }
+    }
+  }
+}
