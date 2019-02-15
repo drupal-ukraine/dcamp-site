@@ -9,7 +9,7 @@ dependencies:
 id: languageswitcher
 theme: dckyiv
 region: header
-weight: -5
+weight: -4
 provider: null
 plugin: 'language_block:language_interface'
 settings:
