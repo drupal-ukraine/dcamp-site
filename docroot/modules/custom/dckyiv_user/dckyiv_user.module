@@ -14,3 +14,21 @@ function dckyiv_user_entity_type_build(array &$entity_types) {
 
   }
 }
+
+/**
+ * Implements hook_mail_alter().
+ */
+function dckyiv_user_mail_alter(&$message) {
+  // Set html type.
+  $use_html = FALSE;
+  foreach ($message['body'] as $item) {
+    if ($item != strip_tags($item)) {
+      $use_html = TRUE;
+      continue;
+    }
+  }
+
+  if ($use_html) {
+    $message['headers']['Content-Type'] = 'text/html';
+  }
+}
