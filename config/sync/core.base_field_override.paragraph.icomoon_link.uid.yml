@@ -1,0 +1,20 @@
+uuid: f68fe2fa-e6fe-47b7-bb06-c65b28f092b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.icomoon_link
+id: paragraph.icomoon_link.uid
+field_name: uid
+entity_type: paragraph
+bundle: icomoon_link
+label: 'Authored by'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 902d19fc-778e-4749-bdc6-7105219ec9f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.hero_countdown
+id: paragraph.hero_countdown.status
+field_name: status
+entity_type: paragraph
+bundle: hero_countdown
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

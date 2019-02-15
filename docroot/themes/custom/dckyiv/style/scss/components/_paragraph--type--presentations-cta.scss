@@ -5,6 +5,11 @@
   background-size:140%;
   background-position: center;
 
+  @include mq($bp1024) {
+    min-width: 450px;
+    padding: 0 0 30px;
+  }
+
   & > .content {
     display: flex;
     flex-direction: column;
@@ -27,15 +32,15 @@
         font-size: 2.4rem;
       }
 
-      @include mq($bp1024) {
-        font-size: 1.8rem;
-      }
+      //@include mq($bp1024) {
+      //  font-size: 1.8rem;
+      //}
     }
 
     &-link {
       display: block;
       width: 100%;
-      margin-top: 151px;
+      margin-top: 150px;
 
       a {
         @include button;
@@ -45,10 +50,9 @@
         text-transform: uppercase;
 
         @include mq($bp1024) {
-          max-width: 280px;
+          max-width: 450px;
         }
       }
     }
-
   }
 }

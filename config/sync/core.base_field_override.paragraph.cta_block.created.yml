@@ -1,0 +1,18 @@
+uuid: acd6749a-112a-45b4-a574-6d3826602c31
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cta_block
+id: paragraph.cta_block.created
+field_name: created
+entity_type: paragraph
+bundle: cta_block
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

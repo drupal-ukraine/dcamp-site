@@ -3,10 +3,12 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_company
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
-    - image
+    - svg_image
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -15,8 +17,13 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  member_for:
-    weight: 5
+  field_company:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   user_picture:
     type: image
@@ -25,7 +32,14 @@ content:
     settings:
       image_style: thumbnail
       image_link: content
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
     third_party_settings: {  }
     label: hidden
 hidden:
+  commerce_remote_id: true
   langcode: true
+  member_for: true
+  profile_customer: true

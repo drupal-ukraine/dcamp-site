@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains dckyiv_commerce.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dckyiv_commerce_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dckyiv_commerce module.
+    case 'help.page.dckyiv_commerce':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('DCKyiv commerce custom code') . '</p>';
+      return $output;
+
+    default:
+  }
+}

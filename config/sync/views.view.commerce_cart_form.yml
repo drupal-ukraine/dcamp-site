@@ -23,7 +23,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Головне
+    display_title: Master
     position: 0
     display_options:
       access:
@@ -43,13 +43,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Застосувати
+          submit_button: Apply
           reset_button: false
-          reset_button_label: Скинути
-          exposed_sorts_label: 'Впорядкувати за'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Зрост
-          sort_desc_label: Спад
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         type: none
         options:
@@ -433,7 +433,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: Все
+            title: All
           title_enable: false
           title: ''
           default_argument_type: fixed

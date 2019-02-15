@@ -11,7 +11,7 @@ _core:
 id: dckyiv_content
 theme: dckyiv
 region: content
-weight: -1
+weight: -5
 provider: null
 plugin: system_main_block
 settings:

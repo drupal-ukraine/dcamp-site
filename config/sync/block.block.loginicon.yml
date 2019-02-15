@@ -9,7 +9,7 @@ dependencies:
 id: loginicon
 theme: dckyiv
 region: header
-weight: -6
+weight: -8
 provider: null
 plugin: login_icon
 settings:

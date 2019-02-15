@@ -4,12 +4,12 @@ url:
   source: path_prefix
   prefixes:
     en: en
+    uk: ''
     '': null
-    uk: uk
   domains:
     en: ''
     uk: ''
-selected_langcode: site_default
+selected_langcode: uk
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
 langcode: uk

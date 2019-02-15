@@ -25,3 +25,51 @@
     color: rgba($color-mango-tango, .6);
   }
 }
+
+.region-content {
+  .block-local-tasks-block {
+    @include container;
+
+    ul {
+      display: flex;
+    }
+    li {
+      padding: 0 20px 0 0;
+    }
+  }
+
+  .node--type-presentation {
+    @include container;
+
+    .field {
+      padding-bottom: 20px;
+    }
+
+    .field__label {
+      font-family: $font-proxima-nova-bold;
+      color: $color-silver;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      border-bottom: 1px solid $color-gallery;
+    }
+
+    .field__item {
+      padding-top: 5px;
+    }
+  }
+}
+
+// Override operation links.
+.dropbutton-multiple .dropbutton-arrow {
+  top: 13px !important;
+}
+.dropbutton-multiple.open .dropbutton-arrow {
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  top: 3px !important;
+}
+
+.dropbutton-toggle {
+  height: 0;
+}

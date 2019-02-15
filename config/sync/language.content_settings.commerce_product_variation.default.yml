@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.default
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: commerce_product_variation.default
 target_entity_type_id: commerce_product_variation
 target_bundle: default

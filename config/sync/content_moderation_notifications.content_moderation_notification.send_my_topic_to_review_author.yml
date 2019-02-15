@@ -1,0 +1,16 @@
+uuid: 6df3ba5d-5885-4556-95b4-91c1cedf58d1
+langcode: en
+status: true
+dependencies: {  }
+id: send_my_topic_to_review_author
+workflow: presentation
+transitions:
+  send_my_topic_to_review: send_my_topic_to_review
+roles: {  }
+author: true
+emails: ''
+subject: 'Your Presentation is sent to review'
+body:
+  value: "<p>Hi.</p>\r\n\r\n<p>Your presentation <b>[node:title]</b> is sent to review. Our Editorial team will review it and ask you for additional changes if needed.</p>\r\n\r\n<p>Thank you for your request!</p>\r\n\r\n<hr />\r\n<p>Drupal Camp Kyiv org team.</p>\r\n\r\n<p>Please, don't forget to mark that you will attend our camp at the Facebook event: <a href=\"https://www.facebook.com/events/713182682365246/\">https://www.facebook.com/events/713182682365246/</a></p>\r\n"
+  format: full_html
+label: 'Send My Topic to Review Author'

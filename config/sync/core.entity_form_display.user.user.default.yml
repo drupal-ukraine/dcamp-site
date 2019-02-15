@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_company
     - field.field.user.user.user_picture
   module:
     - user
@@ -19,6 +20,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_company:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
 hidden:
   commerce_remote_id: true
   contact: true

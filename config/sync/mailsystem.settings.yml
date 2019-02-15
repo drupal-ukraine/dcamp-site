@@ -1,7 +1,7 @@
 theme: dckyiv
 defaults:
   sender: sendgrid_integration
-  formatter: sendgrid_integration
+  formatter: swiftmailer
 _core:
   default_config_hash: IhwTepsVwtbtbcT5GzQKhCXDCRvbk3MNkWqPiuiZ10s
 modules:
@@ -9,3 +9,8 @@ modules:
     none:
       formatter: sendgrid_integration
       sender: sendgrid_integration
+  swiftmailer:
+    none:
+      formatter: swiftmailer
+      sender: swiftmailer
+langcode: uk

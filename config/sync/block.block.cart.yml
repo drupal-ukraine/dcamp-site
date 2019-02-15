@@ -1,0 +1,21 @@
+uuid: 1e59d5bc-87bf-435d-ba3b-bedbe3737a98
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - dckyiv
+id: cart
+theme: dckyiv
+region: header
+weight: -7
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart
+  label_display: '0'
+  dropdown: true
+visibility: {  }

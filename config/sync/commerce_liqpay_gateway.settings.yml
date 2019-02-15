@@ -5,3 +5,4 @@ commerce_liqpay_gateway:
   api_url: 'https://www.liqpay.ua/api/'
 _core:
   default_config_hash: f9dGqHjCv-XqZN2JgbxaRqz4W1ljqh8LPhBr7zs-rTs
+langcode: uk
