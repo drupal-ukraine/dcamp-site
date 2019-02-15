@@ -43,6 +43,7 @@
         "drupal/stage_file_proxy": "^1.0@alpha",
         "drupal/svg_formatter": "^1.8",
         "drupal/svg_image": "^1.9",
+        "drupal/swiftmailer": "^1.0@beta",
         "drupal/token": "^1.5",
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_tweak": "^2.1",
@@ -149,9 +150,8 @@
             "drupal/views_infinite_scroll": {
                 "Different item count for 1st and other pages": "https://www.drupal.org/files/issues/different_item_count-2852080-9.patch"
             },
-            "drupal/conditional_fields": {
-                "Filled with value doesn't work": "https://www.drupal.org/files/issues/2018-06-13/field-js-selectors-updated-with-inputs-2911857-9.patch",
-                "Multiple conditions for one field value change": "https://www.drupal.org/files/issues/2018-12-04/multiple-conditions-for-one-field-value-change-3017437-4.patch"
+            "drupal/content_moderation_notifications": {
+                "Fixed To sending": "https://www.drupal.org/files/issues/2018-10-29/show-emails-3010067-1.patch"
             }
         }
     },

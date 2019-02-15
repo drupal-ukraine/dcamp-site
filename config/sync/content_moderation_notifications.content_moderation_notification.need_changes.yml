@@ -9,8 +9,8 @@ transitions:
 roles: {  }
 author: true
 emails: ''
-subject: 'Please update your Presentation with additional data'
+subject: 'Please update your information at [node:title] presentation.'
 body:
-  value: "Hi.\r\nYou need to update your content.\r\nMessage from our Editorial Team:\r\n[node:log]"
-  format: restricted_html
+  value: "<p>Hi!</p>\r\n\r\n<p>Our editorial team reviewed your presentation and is asking for changes.</p>\r\n\r\n<p><b>Message from our Editorial Team:</b></p>\r\n\r\n<p>[node:log]</p>\r\n"
+  format: full_html
 label: 'Need Changes'

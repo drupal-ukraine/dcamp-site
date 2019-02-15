@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - commerce_payment
+    - dckyiv_commerce
+    - email_registration
 _core:
   default_config_hash: wwkDVBiXUqSzRifJbb71ajFBklJdNJ_DgS67IF-_qgY
 id: default
@@ -12,8 +14,8 @@ plugin: multistep_default
 configuration:
   display_checkout_progress: true
   panes:
-    login:
-      allow_guest_checkout: false
+    dckyiv_login:
+      allow_guest_checkout: true
       allow_registration: true
       step: login
       weight: 0
@@ -38,3 +40,13 @@ configuration:
       double_entry: false
       step: _disabled
       weight: 6
+    login:
+      allow_guest_checkout: true
+      allow_registration: false
+      step: _disabled
+      weight: 7
+    email_registration_login:
+      allow_guest_checkout: true
+      allow_registration: false
+      step: _disabled
+      weight: 8

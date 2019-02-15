@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: K3KVksdkREnIdd2idoIA9TDHQew_WreFzTG-DHmz9Z4
 id: language
-label: Мова
+label: Language
 module: language
 routes:
   -
@@ -16,7 +16,7 @@ tips:
   language-overview:
     id: language-overview
     plugin: text
-    label: Мови
+    label: Languages
     body: '<p>Сторінка "Мови" дозволяє додавати, редагувати, видаляти та перевпорядковувати мови на сайті.</p>'
     weight: 1
   language-add:
