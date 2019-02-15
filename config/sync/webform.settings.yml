@@ -178,7 +178,7 @@ requirements:
 contribute:
   account_type: user
   account_id: null
-langcode: en
+langcode: uk
 third_party_settings: {  }
 _core:
   default_config_hash: XnmG1BrhZAdaoSmW4bJlclbCiKLyxaqLL8Nqo71OvYE
