@@ -360,13 +360,8 @@ form {
     .g-recaptcha {
       text-align: center;
 
-      & > div,
-      iframe {
+      & > div {
         width: 100% !important;
-
-        @include mq($bp1024) {
-          width: 350px !important;
-        }
       }
     }
   }
