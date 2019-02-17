@@ -2,9 +2,12 @@ uuid: 9fa3dbf4-0da1-4ca6-9b42-3e92c0e09977
 langcode: uk
 status: true
 dependencies:
+  config:
+    - field.storage.commerce_order_item.field_t_shirt_size
   module:
     - commerce_order
     - commerce_price
+    - options
 _core:
   default_config_hash: UE_BIm69Zww4UFa4pD5Qiu7XY-rGJGrGYDJHUSZKupw
 id: commerce_order_item_table
@@ -370,6 +373,68 @@ display:
           entity_type: commerce_order_item
           entity_field: total_price
           plugin_id: field
+        field_t_shirt_size:
+          id: field_t_shirt_size
+          table: commerce_order_item__field_t_shirt_size
+          field: field_t_shirt_size
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'T-shirt size'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters: {  }
       sorts: {  }
       header: {  }
@@ -432,4 +497,5 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-      tags: {  }
+      tags:
+        - 'config:field.storage.commerce_order_item.field_t_shirt_size'

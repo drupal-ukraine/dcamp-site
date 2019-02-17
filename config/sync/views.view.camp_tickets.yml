@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.default
-    - core.entity_view_mode.commerce_product.teaser
+    - field.storage.commerce_product.body
     - field.storage.commerce_product.variations
   module:
     - commerce
     - commerce_product
+    - text
 id: camp_tickets
 label: 'Camp Tickets'
 module: views
@@ -74,18 +75,135 @@ display:
           default_row_class: true
           uses_fields: false
       row:
-        type: 'entity:commerce_product'
+        type: fields
         options:
-          relationship: none
-          view_mode: teaser
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
+        view_commerce_product:
+          id: view_commerce_product
+          table: commerce_product
+          field: view_commerce_product
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: true
+          absolute: false
+          entity_type: commerce_product
+          plugin_id: entity_link
         title:
+          id: title
           table: commerce_product_field_data
           field: title
-          id: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{{ title }}\r\n<a href=\"{{ view_commerce_product}}\" class=\"cart-button button edit-button use-ajax\" data-dialog-type=\"modal\">{{ 'Add to Cart'|t }}</a>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           entity_type: null
           entity_field: title
           plugin_id: field
+        body:
+          id: body
+          table: commerce_product__body
+          field: body
           relationship: none
           group_type: group
           admin_label: ''
@@ -122,7 +240,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -130,8 +248,8 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: summary
+          type: text_default
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -143,6 +261,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         variations:
           id: variations
           table: commerce_product__variations
@@ -192,9 +311,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: commerce_add_to_cart
+          type: entity_reference_entity_view
           settings:
-            combine: false
+            view_mode: default
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -242,4 +361,5 @@ display:
         - 'languages:language_interface'
         - url.query_args
       tags:
+        - 'config:field.storage.commerce_product.body'
         - 'config:field.storage.commerce_product.variations'
