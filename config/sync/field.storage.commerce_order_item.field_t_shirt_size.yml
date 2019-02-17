@@ -18,16 +18,16 @@ settings:
       value: s
       label: S
     -
-      value: M
+      value: m
       label: M
     -
-      value: L
+      value: l
       label: L
     -
-      value: XL
+      value: xl
       label: XL
     -
-      value: XXL
+      value: xxl
       label: XXL
   allowed_values_function: ''
 module: options

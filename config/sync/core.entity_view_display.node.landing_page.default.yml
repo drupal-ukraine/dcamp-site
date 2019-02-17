@@ -5,12 +5,15 @@ dependencies:
   config:
     - field.field.node.landing_page.field_footer
     - field.field.node.landing_page.field_header
+    - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_page_content
     - field.field.node.landing_page.field_right_sidebar
     - field.field.node.landing_page.field_transparent_header
+    - field.field.node.landing_page.field_yoast_seo
     - node.type.landing_page
   module:
     - entity_reference_revisions
+    - metatag
     - user
 id: node.landing_page.default
 targetEntityType: node
@@ -35,6 +38,13 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_meta_tags:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
   field_page_content:
     type: entity_reference_revisions_entity_view
     weight: 1
@@ -52,6 +62,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_yoast_seo:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden:
   field_transparent_header: true

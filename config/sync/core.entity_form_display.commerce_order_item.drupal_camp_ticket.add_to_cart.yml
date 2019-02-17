@@ -5,25 +5,30 @@ dependencies:
   config:
     - commerce_order.commerce_order_item_type.drupal_camp_ticket
     - core.entity_form_mode.commerce_order_item.add_to_cart
+    - field.field.commerce_order_item.drupal_camp_ticket.field_t_shirt_size
   module:
     - commerce_order
+    - commerce_product
 id: commerce_order_item.drupal_camp_ticket.add_to_cart
 targetEntityType: commerce_order_item
 bundle: drupal_camp_ticket
 mode: add_to_cart
 content:
+  field_t_shirt_size:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   purchased_entity:
-    type: entity_reference_autocomplete
-    weight: -1
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    type: commerce_product_variation_attributes
+    weight: 0
+    settings: {  }
     region: content
     third_party_settings: {  }
   quantity:
     type: commerce_quantity
-    weight: 1
+    weight: 2
     region: content
     settings:
       step: '1'
