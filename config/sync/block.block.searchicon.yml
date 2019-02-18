@@ -9,7 +9,7 @@ dependencies:
 id: searchicon
 theme: dckyiv
 region: header
-weight: -5
+weight: -3
 provider: null
 plugin: search_icon
 settings:

@@ -224,11 +224,6 @@ header.main-header {
       cursor: pointer;
       transition: color .3s, background-color .3s;
       color: rgba($color-white, .6);
-      @include icoMoon('worlwide', 'before');
-
-      &:before {
-        font-size: 2.4rem;
-      }
     }
 
     li {
@@ -246,7 +241,6 @@ header.main-header {
         position: absolute;
         left: -15px;
         box-shadow: none;
-        display: none;
         opacity: 0;
         visibility: hidden;
 
