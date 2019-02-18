@@ -193,7 +193,8 @@ header.main-header {
     }
   }
 
-  #block-languageswitcher {
+  #block-languageswitcher,
+  #block-cart {
     @include mq($bp1023max) {
       width: 24px;
       position: absolute;
