@@ -18,3 +18,10 @@ global-menu:
   dependencies:
   - core/drupal
   - core/jquery.once
+
+fonts:
+  css:
+    theme:
+      assets/font-proxima-nova-scss/fonts/ProximaNova-Regular.ttf {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-Semibold.ttf {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-RegularIt.ttf {}
