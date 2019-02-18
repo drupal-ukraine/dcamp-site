@@ -22,6 +22,6 @@ global-menu:
 fonts:
   css:
     theme:
-      assets/font-proxima-nova-scss/fonts/ProximaNova-Regular.ttf {}
-      assets/font-proxima-nova-scss/fonts/ProximaNova-Semibold.ttf {}
-      assets/font-proxima-nova-scss/fonts/ProximaNova-RegularIt.ttf {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-Regular.ttf: {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-Semibold.ttf: {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-RegularIt.ttf: {}
