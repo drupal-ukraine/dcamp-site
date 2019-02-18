@@ -23,5 +23,11 @@ fonts:
   css:
     theme:
       assets/font-proxima-nova-scss/fonts/ProximaNova-Regular.ttf: {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-Regular.woff: {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-Regular.eot: {}
       assets/font-proxima-nova-scss/fonts/ProximaNova-Semibold.ttf: {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-Semibold.woff: {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-Semibold.eot: {}
       assets/font-proxima-nova-scss/fonts/ProximaNova-RegularIt.ttf: {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-RegularIt.woff: {}
+      assets/font-proxima-nova-scss/fonts/ProximaNova-RegularIt.eot: {}
