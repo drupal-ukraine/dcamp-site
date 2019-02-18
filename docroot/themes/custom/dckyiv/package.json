@@ -11,7 +11,8 @@
     "node": "4.4.4"
   },
   "dependencies": {
-    "swiper": "^4.4.1"
+    "swiper": "^4.4.1",
+    "font-proxima-nova-scss": "^1.0.1"
   },
   "devDependencies": {
     "bourbon": "^4.3.4",

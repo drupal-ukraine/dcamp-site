@@ -31,18 +31,26 @@
     }
   }
 
-  .field--name-title {
+  .views-field-title {
     font-size: 2.4rem;
     font-family: $font-proxima-nova-regular;
     color: $color-tuna;
     line-height: 1.2;
     padding: 0 10px 10px;
     border-bottom: 2px solid $color-silver;
+    text-align: center;
   }
 
-  .field--name-purchased-entity,
-  .field--name-quantity {
-    display: none;
+  .views-field-body {
+    font-family: $font-proxima-nova-bold;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .views-field-variations,
+  .views-field-nothing {
+    padding: 0 0 30px;
+    text-align: center;
   }
 
   h2 {
