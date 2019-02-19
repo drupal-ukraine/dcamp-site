@@ -14,7 +14,7 @@
   .views-row {
     width: 100%;
     padding: 15px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     border: 1px solid $color-tuna;
 
     @include mq($bp1024) {
@@ -47,10 +47,24 @@
     text-align: center;
   }
 
-  .views-field-variations,
-  .views-field-nothing {
-    padding: 0 0 30px;
+  .views-field-variations {
+    padding: 0 0 10px;
     text-align: center;
+
+    .field-content {
+      display: flex;
+      flex-direction: column;
+
+      & > div {
+        padding-bottom: 20px;
+        font-size: 2rem;
+        font-family: $font-proxima-nova-bold;
+      }
+
+      .field__label {
+        padding-bottom: 10px;
+      }
+    }
   }
 
   h2 {
