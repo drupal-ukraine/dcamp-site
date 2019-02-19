@@ -23,7 +23,6 @@ negotiation:
   language_interface:
     enabled:
       language-url: -20
-      language-user: -19
       language-selected: -15
     method_weights:
       language-url: -20

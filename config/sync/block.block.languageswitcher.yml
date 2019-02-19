@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - dckyiv_core
-    - language
   theme:
     - dckyiv
 id: languageswitcher
@@ -18,12 +17,4 @@ settings:
   label: 'Language switcher'
   provider: dckyiv_core
   label_display: '0'
-visibility:
-  language:
-    id: language
-    langcodes:
-      en: en
-      uk: uk
-    negate: false
-    context_mapping:
-      language: '@language.current_language_context:language_interface'
+visibility: {  }
