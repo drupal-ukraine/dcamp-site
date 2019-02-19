@@ -15,10 +15,30 @@
       border: 1px solid $color-gallery;
     }
   }
+
+  .views-field-changed {
+    display: none;
+
+    @include mq($bp580) {
+      display: table-cell;
+    }
+  }
+
+  .dropbutton {
+    min-width: 47px;
+  }
 }
 
 .js td .dropbutton-multiple {
   @include mq($bp767max) {
     padding-right: 0;
+  }
+}
+
+.js .dropbutton-multiple .dropbutton-widget,
+.js td .dropbutton-widget {
+  @include mq($bp767max) {
+    position: relative;
+    padding: 0;
   }
 }
