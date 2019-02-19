@@ -34,6 +34,7 @@ body {
 main {
   &.container {
     padding-top: 60px;
+    min-height: calc(100vh - 110px);
 
     @include mq($bp1024) {
       padding-top: 125px;
