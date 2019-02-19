@@ -57,3 +57,35 @@
     text-align: center;
   }
 }
+
+#drupal-modal {
+
+  .field--name-body {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .field--name-price {
+    .field__item {
+      font-weight: bold;
+    }
+  }
+
+  .commerce-order-item-add-to-cart-form {
+
+    .form-item-quantity-0-value {
+      input {
+        width: 45px;
+      }
+    }
+
+    .field--name-purchased-entity,
+    .field--name-field-t-shirt-size,
+    .field--name-body,
+    .field--name-price {
+      padding: 5px 0 5px 0;
+    }
+
+  }
+
+}
