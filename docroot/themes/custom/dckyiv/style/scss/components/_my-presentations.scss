@@ -16,3 +16,9 @@
     }
   }
 }
+
+.js td .dropbutton-multiple {
+  @include mq($bp767max) {
+    padding-right: 0;
+  }
+}
