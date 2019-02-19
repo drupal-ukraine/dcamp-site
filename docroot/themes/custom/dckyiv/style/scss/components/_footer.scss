@@ -164,14 +164,26 @@ footer.main-footer {
         padding: 13px 0;
         font-size: 1.2rem;
         font-family: $font-proxima-nova-bold;
-        color: $color-white;
         @include mq($bp1024) {
           font-size: 1.6rem;
           padding: 0;
           height: auto;
         }
         span {
+          color: $color-white;
+        }
+        span:last-child {
+          display: inline-block;
           color: $color-fern;
+        }
+      }
+
+      .logo {
+        &_desktop {
+          display: inline-block;
+        }
+        &_mobile {
+          display: none;
         }
       }
     }
