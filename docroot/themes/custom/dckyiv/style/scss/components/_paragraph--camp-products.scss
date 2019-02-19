@@ -14,7 +14,7 @@
   .views-row {
     width: 100%;
     padding: 15px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     border: 1px solid $color-tuna;
 
     @include mq($bp1024) {
@@ -31,18 +31,40 @@
     }
   }
 
-  .field--name-title {
+  .views-field-title {
     font-size: 2.4rem;
     font-family: $font-proxima-nova-regular;
     color: $color-tuna;
     line-height: 1.2;
     padding: 0 10px 10px;
     border-bottom: 2px solid $color-silver;
+    text-align: center;
   }
 
-  .field--name-purchased-entity,
-  .field--name-quantity {
-    display: none;
+  .views-field-body {
+    font-family: $font-proxima-nova-bold;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .views-field-variations {
+    padding: 0 0 10px;
+    text-align: center;
+
+    .field-content {
+      display: flex;
+      flex-direction: column;
+
+      & > div {
+        padding-bottom: 20px;
+        font-size: 2rem;
+        font-family: $font-proxima-nova-bold;
+      }
+
+      .field__label {
+        padding-bottom: 10px;
+      }
+    }
   }
 
   h2 {

@@ -9,6 +9,7 @@ transitions:
 roles: {  }
 author: true
 emails: ''
+recipient: false
 subject: 'Please update your information at [node:title] presentation.'
 body:
   value: "<p>Hi!</p>\r\n\r\n<p>Our editorial team reviewed your presentation and is asking for changes.</p>\r\n\r\n<p><b>Message from our Editorial Team:</b></p>\r\n\r\n<p>[node:log]</p>\r\n"

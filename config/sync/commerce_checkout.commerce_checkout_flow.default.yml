@@ -15,7 +15,7 @@ configuration:
   display_checkout_progress: true
   panes:
     dckyiv_login:
-      allow_guest_checkout: true
+      allow_guest_checkout: false
       allow_registration: true
       step: login
       weight: 0

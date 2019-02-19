@@ -18,3 +18,11 @@ global-menu:
   dependencies:
   - core/drupal
   - core/jquery.once
+
+global-scripts:
+  js:
+    js/dist/list-as-dropdown.min.js: {minified: true}
+  dependencies:
+  - core/drupal
+  - core/jquery
+  - core/jquery.once

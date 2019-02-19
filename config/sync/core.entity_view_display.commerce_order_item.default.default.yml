@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - commerce_order.commerce_order_item_type.default
+    - field.field.commerce_order_item.default.field_t_shirt_size
   enforced:
     module:
       - commerce_product
   module:
     - commerce_price
+    - options
 _core:
   default_config_hash: na1I045I2I_Fv3VhEW6TVW4IwUqNkexoPdIcvDoRUss
 id: commerce_order_item.default.default
@@ -26,6 +28,13 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+  field_t_shirt_size:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   purchased_entity:
     type: entity_reference_entity_view
     weight: 0
