@@ -1,7 +1,7 @@
 uuid: e82bc47a-6c84-449b-a44f-b863b75a6753
 name: 'DRUPALCAMP KYIV''19'
 mail: info@drupalcampkyiv.org
-slogan: 'DRUPALCAMP <span>KYIV''19</span>'
+slogan: '<span class="logo_desktop">DRUPALCAMP</span> <span class="logo_mobile">DC</span> <span>KYIV''19</span>'
 page:
   403: ''
   404: ''
