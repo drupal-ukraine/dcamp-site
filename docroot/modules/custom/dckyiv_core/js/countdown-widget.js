@@ -13,13 +13,13 @@
             var countdownDate = $('#countdown-clock-value').val();
             $('#countdown-clock').countdown(countdownDate, function(event) {
                 var $this = $(this).html(event.strftime(''
-                    + '<div class="time-item"><span>%D</span> <span>' + Drupal.t('днів') + '</span></div>'
+                    + '<div class="time-item"><span>%D</span> <span>' + Drupal.t('days') + '</span></div>'
                     + '<div class="time-dots"><span>:</span></div>'
-                    + '<div class="time-item"><span>%H</span> <span>' + Drupal.t('годин') + '</span></div>'
+                    + '<div class="time-item"><span>%H</span> <span>' + Drupal.t('hours') + '</span></div>'
                     + '<div class="time-dots"><span>:</span></div>'
-                    + '<div class="time-item"><span>%M</span> <span>' + Drupal.t('хвилин') + '</span></div>'
+                    + '<div class="time-item"><span>%M</span> <span>' + Drupal.t('minutes') + '</span></div>'
                     + '<div class="time-dots"><span>:</span></div>'
-                    + '<div class="time-item"><span>%S</span> <span>' + Drupal.t('секунд') + '</span></div>'));
+                    + '<div class="time-item"><span>%S</span> <span>' + Drupal.t('seconds') + '</span></div>'));
             });
         },
 
