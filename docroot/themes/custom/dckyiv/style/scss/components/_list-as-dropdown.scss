@@ -20,11 +20,11 @@
       border: 1px solid $color-silver;
       background: $color-white;
       display: block;
+      position: relative;
 
       & > li {
         display: block;
         position: relative;
-
         &:first-child {
           &:first-child:before {
             position: absolute;
