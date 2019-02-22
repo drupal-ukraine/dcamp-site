@@ -3,9 +3,6 @@
 body.user-login, body.user-pass, body.user-register, body.ifw_user-guest_register {
   .layout-content {
     padding: 0 25px;
-    border-bottom: 1px solid $color-storm-gray;
-    border-left: 1px solid $color-storm-gray;
-    border-right: 1px solid $color-storm-gray;
 
     @include mq($bp1024) {
       padding: 25px;
