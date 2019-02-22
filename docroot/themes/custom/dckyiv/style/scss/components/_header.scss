@@ -156,7 +156,7 @@ header.main-header {
     a {
       display: inline-block;
       height: 57px;
-      padding: 10px 0;
+      padding: 8px 0;
       font-size: 2.5rem;
       font-family: $font-proxima-nova-bold;
       @include mq($bp1024) {
