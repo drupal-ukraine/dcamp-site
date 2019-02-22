@@ -73,3 +73,21 @@
 .dropbutton-toggle {
   height: 0;
 }
+
+.messages {
+  @include container;
+
+  box-shadow: none;
+  border-left: 8px solid #e62600;
+
+  margin-top: 20px;
+
+  @include mq($bp1024) {
+    margin-top: 0;
+  }
+
+  & > div {
+    padding: 10px 5px 10px 30px;
+    font-size: 1.4rem;
+  }
+}
