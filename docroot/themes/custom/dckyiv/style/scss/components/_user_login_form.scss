@@ -139,3 +139,7 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
     line-height: 1.14;
   }
 }
+
+.user-form {
+  @include container;
+}

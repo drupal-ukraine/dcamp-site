@@ -46,6 +46,10 @@ main {
   }
 }
 
+.main-footer {
+  margin-bottom: -1px;
+}
+
 .page-content-wrapper {
   @include clearfix;
   display: flex;
