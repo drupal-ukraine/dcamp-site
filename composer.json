@@ -182,6 +182,9 @@
       },
       "drupal/content_moderation_notifications": {
         "Fixed To sending": "https://www.drupal.org/files/issues/2018-10-29/show-emails-3010067-1.patch"
+      },
+      "drupal/commerce_liqpay_gateway": {
+        "Fixed negative scenario for payments": "https://www.drupal.org/files/issues/2019-02-25/2983818-2.patch"
       }
     }
   },
