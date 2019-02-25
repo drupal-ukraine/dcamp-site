@@ -10,7 +10,7 @@
     display: inline-block;
     cursor: pointer;
     padding: 0 15px;
-    margin: 0 0 30px;
+    margin: 20px 0 30px;
     transition: opacity .25s ease-in-out;
 
     & > ul {
@@ -20,11 +20,11 @@
       border: 1px solid $color-silver;
       background: $color-white;
       display: block;
+      position: relative;
 
       & > li {
         display: block;
         position: relative;
-
         &:first-child {
           &:first-child:before {
             position: absolute;

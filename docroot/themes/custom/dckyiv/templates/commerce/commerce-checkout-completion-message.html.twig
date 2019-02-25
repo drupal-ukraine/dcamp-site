@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the completion message.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+ * - payment_instructions: The payment instructions, if provided.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="checkout-complete">
+  <div class="checkout-complete__message">
+    <div class="checkout-complete__heading">
+      {{ 'Great News!'|t }} <br>
+    </div>
+    <div class="checkout-complete__text">
+      <p>
+        {{ 'You just payed for your DrupalCampKyiv ticket.'|t }}
+      </p>
+      <p>
+        {{ 'Please, reserve 25-26 of May at your calendar. You will have a lot of Drupal in your life at that date.'|t }}
+      </p>
+      <p>
+        {{ 'If you want to be a speaker please, send us your presentation notes here: <a href="http://drupalcampkyiv/en/node/add/presentations">http://drupalcampkyiv/en/node/add/presentations</a>'|t }}
+      </p>
+      <p>
+        {{ 'Please, check yourself at our facebook event and you will not loose important news.'|t }}
+      </p>
+    </div>
+    <div class="checkout-complete__shares">
+      <div id="fb-root"></div>
+      <script async defer
+              src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v3.2&appId=2020216808272525&autoLogAppEvents=1"></script>
+      <div class="fb-page" data-href="https://www.facebook.com/drupalcampkyiv/" data-tabs="events"
+           data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/drupalcampkyiv/" class="fb-xfbml-parse-ignore"><a
+                  href="https://www.facebook.com/drupalcampkyiv/">DrupalCamp Kyiv</a></blockquote>
+      </div>
+    </div>
+  </div>
+</div>

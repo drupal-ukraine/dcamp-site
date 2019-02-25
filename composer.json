@@ -1,166 +1,199 @@
 {
-    "name": "anpolimus/dcamp-site",
-    "description": "DrupalCampKyiv website",
-    "type": "project",
-    "require": {
-        "bgrins/spectrum": "^1.8",
-        "cweagans/composer-patches": "^1.6.0",
-        "drupal/admin_toolbar": "^1.24",
-        "drupal/adminimal_admin_toolbar": "^1.8",
-        "drupal/adminimal_theme": "^1.3",
-        "drupal/captcha": "^1.0@beta",
-        "drupal/color_field": "^2.0",
-        "drupal/commerce": "2.11",
-        "drupal/commerce_liqpay_gateway": "^1.0",
-        "drupal/conditional_fields": "^1.0@alpha",
-        "drupal/config_split": "^1.4",
-        "drupal/console": "^1.0.2",
-        "drupal/content_moderation_notifications": "^3.0@RC",
-        "drupal/contribute": "^5.0@beta",
-        "drupal/core": "^8.6",
-        "drupal/devel": "^1.2",
-        "drupal/dropzonejs": "^2.0@alpha",
-        "drupal/email_registration": "^1.0@RC",
-        "drupal/entity_browser": "^2.0",
-        "drupal/field_group": "^1.0",
-        "drupal/geolocation": "^1.11",
-        "drupal/google_analytics": "^3.0",
-        "drupal/link_attributes": "^1.5",
-        "drupal/media_entity": "^2",
-        "drupal/media_entity_browser": "^2.0",
-        "drupal/menu_item_extras": "^2.3",
-        "drupal/metatag": "^1.7",
-        "drupal/paragraphs": "^1.3",
-        "drupal/pathauto": "^1.3",
-        "drupal/persistent_login": "^1.0",
-        "drupal/rabbit_hole": "^1.0@beta",
-        "drupal/recaptcha": "^2.3",
-        "drupal/restrict_by_ip": "4.x-dev",
-        "drupal/restrict_ip": "^1.3",
-        "drupal/search_api": "^1.10",
-        "drupal/sendgrid_integration": "^1.2",
-        "drupal/simple_fb_connect": "^3.1",
-        "drupal/stage_file_proxy": "^1.0@alpha",
-        "drupal/svg_formatter": "^1.8",
-        "drupal/svg_image": "^1.9",
-        "drupal/swiftmailer": "^1.0@beta",
-        "drupal/token": "^1.5",
-        "drupal/twig_field_value": "^1.1",
-        "drupal/twig_tweak": "^2.1",
-        "drupal/video_embed_field": "^2.0",
-        "drupal/views_infinite_scroll": "^1.5",
-        "drupal/viewsreference": "^1.2",
-        "drupal/webform": "^5.0@RC",
-        "drupal/workflow": "^1.1",
-        "drupal/yoast_seo": "^1.3",
-        "drush/drush": "~8.0|^9.0.0-beta8",
-        "enyo/dropzone": "^5.5",
-        "hilios/jQuery.countdown": "^2.2",
-        "hussainweb/drupal-composer-helper": "^1.0",
-        "oomphinc/composer-installers-extender": "^1.1",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
-    },
-    "require-dev": {
-        "behat/mink": "~1.7",
-        "behat/mink-goutte-driver": "~1.2",
-        "jcalderonzumba/gastonjs": "~1.0.2",
-        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsstream": "~1.2",
-        "phpunit/phpunit": ">=4.8.28 <5",
-        "symfony/css-selector": "~2.8"
-    },
-    "authors": [
-        {
-            "name": "Anatoliy Polyakov",
-            "email": "anpolimus@gmail.com"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "enyo/dropzone",
-                "version": "v4.3.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/enyo/dropzone/archive/v4.3.0.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "bgrins/spectrum",
-                "version": "1.8.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/bgrins/spectrum/archive/1.8.0.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "enyo/dropzone",
-                "version": "v5.5.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/enyo/dropzone/archive/v5.5.0.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "hilios/jQuery.countdown",
-                "version": "v2.2.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/hilios/jQuery.countdown/releases/download/2.2.0/jquery.countdown-2.2.0.zip",
-                    "type": "zip"
-                }
-            }
-        }
-    ],
-    "minimum-stability": "dev",
-    "extra": {
-        "drupal-composer-helper": {
-            "web-prefix": "docroot"
-        },
-        "enable-patching": true,
-        "installer-paths": {
-            "docroot/core": [
-                "type:drupal-core"
-            ],
-            "docroot/libraries/{$name}": [
-                "type:drupal-library"
-            ]
-        },
-        "patches": {
-            "drupal/core": {
-                "Allow access to menu_item_extra for anonymous": "https://www.drupal.org/files/issues/menu_link_content-view-permissions-2915792.patch"
-            },
-            "drupal/views_infinite_scroll": {
-                "Different item count for 1st and other pages": "https://www.drupal.org/files/issues/different_item_count-2852080-9.patch"
-            },
-            "drupal/content_moderation_notifications": {
-                "Fixed To sending": "https://www.drupal.org/files/issues/2018-10-29/show-emails-3010067-1.patch"
-            }
-        }
-    },
-    "prefer-stable": true,
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "config": {
-        "sort-packages": true,
-        "optimize-autoloader": true
+  "name": "anpolimus/dcamp-site",
+  "description": "DrupalCampKyiv website",
+  "type": "project",
+  "require": {
+    "bgrins/spectrum": "^1.8",
+    "cweagans/composer-patches": "^1.6.0",
+    "drupal/admin_toolbar": "^1.24",
+    "drupal/adminimal_admin_toolbar": "^1.8",
+    "drupal/adminimal_theme": "^1.3",
+    "drupal/captcha": "^1.0@beta",
+    "drupal/color_field": "^2.0",
+    "drupal/commerce": "2.11",
+    "drupal/commerce_liqpay_gateway": "^1.0",
+    "drupal/conditional_fields": "^1.0@alpha",
+    "drupal/config_split": "^1.4",
+    "drupal/console": "^1.0.2",
+    "drupal/content_moderation_notifications": "^3.0@RC",
+    "drupal/contribute": "^5.0@beta",
+    "drupal/core": "^8.6.10",
+    "drupal/devel": "^1.2",
+    "drupal/dropzonejs": "^2.0@alpha",
+    "drupal/email_registration": "^1.0@RC",
+    "drupal/entity_browser": "^2.0",
+    "drupal/field_group": "^1.0",
+    "drupal/geolocation": "^1.11",
+    "drupal/google_analytics": "^3.0",
+    "drupal/link_attributes": "^1.5",
+    "drupal/media_entity": "^2",
+    "drupal/media_entity_browser": "^2.0",
+    "drupal/menu_item_extras": "^2.3",
+    "drupal/metatag": "^1.8",
+    "drupal/paragraphs": "1.6",
+    "drupal/pathauto": "^1.3",
+    "drupal/persistent_login": "^1.0",
+    "drupal/rabbit_hole": "^1.0@beta",
+    "drupal/recaptcha": "^2.3",
+    "drupal/restrict_by_ip": "4.x-dev",
+    "drupal/restrict_ip": "^1.3",
+    "drupal/search_api": "^1.10",
+    "drupal/sendgrid_integration": "^1.2",
+    "drupal/simple_fb_connect": "^3.1",
+    "drupal/stage_file_proxy": "^1.0@alpha",
+    "drupal/svg_formatter": "^1.8",
+    "drupal/svg_image": "^1.9",
+    "drupal/swiftmailer": "^1.0@beta",
+    "drupal/token": "^1.5",
+    "drupal/twig_field_value": "^1.1",
+    "drupal/twig_tweak": "^2.1",
+    "drupal/video_embed_field": "^2.0",
+    "drupal/views_infinite_scroll": "^1.5",
+    "drupal/viewsreference": "^1.2",
+    "drupal/webform": "^5.0@RC",
+    "drupal/workflow": "^1.1",
+    "drupal/yoast_seo": "^1.3",
+    "drush/drush": "~8.0|^9.0.0-beta8",
+    "enyo/dropzone": "^5.5",
+    "hilios/jQuery.countdown": "^2.2",
+    "hussainweb/drupal-composer-helper": "^1.0",
+    "oomphinc/composer-installers-extender": "^1.1",
+    "zaporylie/composer-drupal-optimizations": "^1.0"
+  },
+  "require-dev": {
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "jcalderonzumba/gastonjs": "~1.0.2",
+    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+    "mikey179/vfsstream": "~1.2",
+    "phpunit/phpunit": ">=4.8.28 <5",
+    "symfony/css-selector": "~2.8"
+  },
+  "authors": [
+    {
+      "name": "Anatoliy Polyakov",
+      "email": "anpolimus@gmail.com"
     }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "package",
+      "package": {
+        "version": "v0.5.0-beta4",
+        "name": "html2canvas",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/niklasvh/html2canvas.git",
+          "type": "git",
+          "reference": "v0.5.0-beta4"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "version": "v4.1.0",
+        "name": "es6-promise",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/stefanpenner/es6-promise.git",
+          "type": "git",
+          "reference": "v4.1.0"
+        },
+        "dist": {
+          "url": "https://github.com/stefanpenner/es6-promise/archive/v4.1.0.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "enyo/dropzone",
+        "version": "v4.3.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/enyo/dropzone/archive/v4.3.0.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "bgrins/spectrum",
+        "version": "1.8.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/bgrins/spectrum/archive/1.8.0.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "enyo/dropzone",
+        "version": "v5.5.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/enyo/dropzone/archive/v5.5.0.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "hilios/jQuery.countdown",
+        "version": "v2.2.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/hilios/jQuery.countdown/releases/download/2.2.0/jquery.countdown-2.2.0.zip",
+          "type": "zip"
+        }
+      }
+    }
+  ],
+  "minimum-stability": "dev",
+  "extra": {
+    "drupal-composer-helper": {
+      "web-prefix": "docroot"
+    },
+    "enable-patching": true,
+    "installer-paths": {
+      "docroot/core": [
+        "type:drupal-core"
+      ],
+      "docroot/libraries/{$name}": [
+        "type:drupal-library"
+      ]
+    },
+    "patches": {
+      "drupal/core": {
+        "Allow access to menu_item_extra for anonymous": "https://www.drupal.org/files/issues/menu_link_content-view-permissions-2915792.patch"
+      },
+      "drupal/views_infinite_scroll": {
+        "Different item count for 1st and other pages": "https://www.drupal.org/files/issues/different_item_count-2852080-9.patch"
+      },
+      "drupal/content_moderation_notifications": {
+        "Fixed To sending": "https://www.drupal.org/files/issues/2018-10-29/show-emails-3010067-1.patch"
+      },
+      "drupal/commerce_liqpay_gateway": {
+        "Fixed negative scenario for payments": "https://www.drupal.org/files/issues/2019-02-25/2983818-2.patch"
+      }
+    }
+  },
+  "prefer-stable": true,
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
 }

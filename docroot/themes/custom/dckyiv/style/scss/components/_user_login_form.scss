@@ -3,9 +3,6 @@
 body.user-login, body.user-pass, body.user-register, body.ifw_user-guest_register {
   .layout-content {
     padding: 0 25px;
-    border-bottom: 1px solid $color-storm-gray;
-    border-left: 1px solid $color-storm-gray;
-    border-right: 1px solid $color-storm-gray;
 
     @include mq($bp1024) {
       padding: 25px;
@@ -137,5 +134,22 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
     margin-bottom: 25px;
     font-size: 1.4rem;
     line-height: 1.14;
+  }
+}
+
+.user-form {
+  padding: 20px 10px;
+  max-width: 420px;
+  margin: 0 auto;
+  label {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .description {
+    font-size: 1.6rem;
+  }
+  #edit-submit {
+    width: 100%;
+    margin-bottom: 30px;
   }
 }

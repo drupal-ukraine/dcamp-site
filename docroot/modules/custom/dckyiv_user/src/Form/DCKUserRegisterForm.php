@@ -92,7 +92,7 @@ class DCKUserRegisterForm extends ProfileForm {
       '#markup' => '<div class="separator"><span>' . $this->t('or') . '</span></div>',
     ];
 
-    $form['action']['#weight'] = 10;
+    $form['actions']['submit']['#value'] = $this->t('Register Me');
 
     return $form;
   }
@@ -101,18 +101,6 @@ class DCKUserRegisterForm extends ProfileForm {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-
-    /*
-     * Since we have deleted UniqueName constraint from User Entity
-     * we have to make that validation in code at this validation method.
-     */
-    $name = $form_state->getValue('name');
-    $query = \Drupal::entityQuery('user')
-      ->condition('name', $name)
-      ->execute();
-    if (!empty($query)) {
-      $form_state->setErrorByName('name', 'Your username should be unique');
-    }
 
     parent::validateForm($form, $form_state);
 
