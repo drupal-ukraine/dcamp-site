@@ -70,6 +70,14 @@
           margin-bottom: 10px;
         }
       }
+
+      & > li {
+        &:first-child {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+      }
     }
   }
 }
