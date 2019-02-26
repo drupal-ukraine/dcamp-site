@@ -82,6 +82,11 @@
   border-left: 8px solid #e62600;
   padding: 10px 0 10px 35px !important;
   margin-top: 20px !important;
+  margin-bottom: 30px !important;
+
+  @include mq($bp1023max) {
+    margin: 20px 15px 30px;
+  }
 
   & > div {
     padding: 10px 5px 10px 30px;
