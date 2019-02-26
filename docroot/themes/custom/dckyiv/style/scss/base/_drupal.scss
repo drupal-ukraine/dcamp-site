@@ -77,14 +77,11 @@
 .messages {
   @include container;
 
+  background-position: 10px center !important;
   box-shadow: none;
   border-left: 8px solid #e62600;
-
-  margin-top: 20px;
-
-  @include mq($bp1024) {
-    margin-top: 0;
-  }
+  padding: 10px 0 10px 35px !important;
+  margin-top: 20px !important;
 
   & > div {
     padding: 10px 5px 10px 30px;
