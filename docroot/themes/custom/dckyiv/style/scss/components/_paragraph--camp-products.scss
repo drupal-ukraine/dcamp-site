@@ -8,6 +8,7 @@
 
     @include mq($bp1024) {
       flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 
@@ -20,6 +21,10 @@
     @include mq($bp1024) {
       margin-bottom: 0;
       max-width: 350px;
+
+      &:nth-child(n+4) {
+        margin-top: 20px;
+      }
     }
 
     article {

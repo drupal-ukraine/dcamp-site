@@ -34,7 +34,6 @@ body {
 main {
   &.container {
     padding-top: 60px;
-    min-height: calc(100vh - 110px);
 
     @include mq($bp1024) {
       padding-top: 125px;
@@ -46,8 +45,10 @@ main {
   }
 }
 
-.main-footer {
-  margin-bottom: -1px;
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .page-content-wrapper {
