@@ -1,6 +1,6 @@
 # DCKyiv project
 Purpose of this project - website development for DrupalCampKyiv conference.
-If you want to help us - feel free to take a ticket that you like from the project board and propose your changes using Pull Request here.
+If you want to help us - feel free to take a ticket that you like from the project board (https://github.com/drupal-ukraine/dcamp-site/projects/1) and propose your changes using Pull Request here.
 
 
 ## Get Started
