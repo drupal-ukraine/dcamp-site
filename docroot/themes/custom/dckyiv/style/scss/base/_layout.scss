@@ -67,3 +67,11 @@ main {
 .layout-container {
   margin: 0;
 }
+
+#block-dckyiv-content,
+#block-dckyiv-local-actions {
+  @include mq($bp1023max) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
