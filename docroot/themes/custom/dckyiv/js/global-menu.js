@@ -154,8 +154,13 @@
 
         case 'click':
           $links.on('click', function (e) {
-            e.preventDefault();
-            showHide($(this));
+
+            var $parent = $(this).parent();
+
+            if ($parent.hasClass('menu-item--has-children')) {
+              e.preventDefault();
+              showHide($(this));
+            }
           });
 
           $('body').on('click touchstart', function (e) {
