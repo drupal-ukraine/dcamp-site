@@ -1,0 +1,19 @@
+uuid: 46cb2dc7-3785-48d5-b738-e7e3291434a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.sponsor_section
+id: paragraph.sponsor_section.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: sponsor_section
+label: 'Section  title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

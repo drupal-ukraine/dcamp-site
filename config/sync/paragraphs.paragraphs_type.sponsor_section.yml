@@ -1,0 +1,9 @@
+uuid: cbe6968d-2132-41fc-998a-6c69a7eb97d4
+langcode: en
+status: true
+dependencies: {  }
+id: sponsor_section
+label: 'Sponsor Section'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

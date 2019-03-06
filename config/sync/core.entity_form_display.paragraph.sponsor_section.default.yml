@@ -1,0 +1,62 @@
+uuid: ceccb190-7175-45dc-935e-a45ab8505597
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sponsor_section.field_background_color
+    - field.field.paragraph.sponsor_section.field_background_gradient_color
+    - field.field.paragraph.sponsor_section.field_section_title
+    - field.field.paragraph.sponsor_section.field_sponsor_items
+    - paragraphs.paragraphs_type.sponsor_section
+  module:
+    - color_field
+    - paragraphs
+id: paragraph.sponsor_section.default
+targetEntityType: paragraph
+bundle: sponsor_section
+mode: default
+content:
+  field_background_color:
+    weight: 1
+    settings:
+      show_input: ''
+      show_palette: ''
+      palette: ''
+      show_palette_only: ''
+      show_buttons: ''
+      allow_empty: ''
+    third_party_settings: {  }
+    type: color_field_widget_spectrum
+    region: content
+  field_background_gradient_color:
+    weight: 2
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sponsor_items:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

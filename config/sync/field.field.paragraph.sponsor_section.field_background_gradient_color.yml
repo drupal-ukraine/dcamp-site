@@ -1,0 +1,22 @@
+uuid: 36f4a68b-1ae0-41c0-ac16-4d9b57e96da1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_gradient_color
+    - paragraphs.paragraphs_type.sponsor_section
+  module:
+    - color_field
+id: paragraph.sponsor_section.field_background_gradient_color
+field_name: field_background_gradient_color
+entity_type: paragraph
+bundle: sponsor_section
+label: 'Background gradient color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

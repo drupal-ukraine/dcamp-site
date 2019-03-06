@@ -1,0 +1,10 @@
+uuid: 6b36add6-baf2-4a62-920d-9dbe2b933714
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.raw
+label: Raw
+targetEntityType: media
+cache: true

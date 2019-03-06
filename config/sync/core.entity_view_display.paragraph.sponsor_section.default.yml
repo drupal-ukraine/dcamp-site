@@ -1,0 +1,54 @@
+uuid: 893be143-7e14-4c9f-9631-1b17b350c71f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sponsor_section.field_background_color
+    - field.field.paragraph.sponsor_section.field_background_gradient_color
+    - field.field.paragraph.sponsor_section.field_section_title
+    - field.field.paragraph.sponsor_section.field_sponsor_items
+    - paragraphs.paragraphs_type.sponsor_section
+  module:
+    - color_field
+    - entity_reference_revisions
+id: paragraph.sponsor_section.default
+targetEntityType: paragraph
+bundle: sponsor_section
+mode: default
+content:
+  field_background_color:
+    weight: 0
+    label: hidden
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_background_gradient_color:
+    weight: 3
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_section_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sponsor_items:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden: {  }

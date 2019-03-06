@@ -1,0 +1,9 @@
+uuid: f229b78b-02b4-4bc5-aafc-a44ca8ed172c
+langcode: en
+status: true
+dependencies: {  }
+id: sponsor_item
+label: 'Sponsor Item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

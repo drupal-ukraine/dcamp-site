@@ -1,0 +1,79 @@
+uuid: c49dbb6a-51d9-4d97-80f0-5806647f02e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sponsor_items
+    - paragraphs.paragraphs_type.sponsor_item
+    - paragraphs.paragraphs_type.sponsor_section
+  module:
+    - entity_reference_revisions
+id: paragraph.sponsor_section.field_sponsor_items
+field_name: field_sponsor_items
+entity_type: paragraph
+bundle: sponsor_section
+label: 'Sponsor Items'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      sponsor_item: sponsor_item
+    target_bundles_drag_drop:
+      sponsor_section:
+        weight: 18
+        enabled: false
+      camp_products:
+        weight: 19
+        enabled: false
+      contacts:
+        weight: 20
+        enabled: false
+      container:
+        weight: 21
+        enabled: false
+      cta_block:
+        weight: 22
+        enabled: false
+      hero_countdown:
+        weight: 23
+        enabled: false
+      html_widget:
+        weight: 24
+        enabled: false
+      icomoon_link:
+        weight: 25
+        enabled: false
+      menu_cta:
+        weight: 26
+        enabled: false
+      presentations:
+        weight: 27
+        enabled: false
+      presentations_cta:
+        weight: 28
+        enabled: false
+      social_links:
+        weight: 29
+        enabled: false
+      sponsor:
+        weight: 29
+        enabled: false
+      sponsor_item:
+        enabled: true
+        weight: 30
+      teaser:
+        weight: 32
+        enabled: false
+      wrapper_teasers:
+        weight: 33
+        enabled: false
+      wrapper_webform:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

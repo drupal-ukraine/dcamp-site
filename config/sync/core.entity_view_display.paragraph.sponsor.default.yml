@@ -1,0 +1,24 @@
+uuid: f4fed259-ff2c-43d4-80a5-2cd43aaae06c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sponsor.field_sponsor_section
+    - paragraphs.paragraphs_type.sponsor
+  module:
+    - entity_reference_revisions
+id: paragraph.sponsor.default
+targetEntityType: paragraph
+bundle: sponsor
+mode: default
+content:
+  field_sponsor_section:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: in_wrapper
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
