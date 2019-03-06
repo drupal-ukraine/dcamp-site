@@ -65,6 +65,7 @@
       color: $color-white;
       padding: 18px 18px 15px;
       font-size: 1.8rem;
+      cursor: pointer;
     }
 
   }
@@ -315,6 +316,31 @@
 
       .menu-level-1 {
 
+      }
+    }
+  }
+
+  .logo {
+    &_desktop {
+      display: none;
+      @include mq($bp1024) {
+        display: inline-block;
+      }
+    }
+    &_mobile {
+      display: inline-block;
+      @include mq($bp1024) {
+        display: none;
+      }
+    }
+  }
+
+  #block-sitebranding-mobile {
+    span {
+      color: $color-white;
+      &:last-child {
+        display: inline-block;
+        color: $color-fern;
       }
     }
   }
