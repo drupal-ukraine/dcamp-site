@@ -1,8 +1,9 @@
 .cart-form {
-  @include container;
 
   @include mq($bp1024) {
     max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .views-element-container {
@@ -87,6 +88,3 @@
   }
 }
 
-.cart-empty-page {
-  @include container;
-}

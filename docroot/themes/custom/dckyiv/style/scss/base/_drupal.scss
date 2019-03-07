@@ -4,7 +4,10 @@
   }
   li {
     display: block;
-    margin-right: 20px;
+
+    @include mq($bp1024) {
+      margin-right: 20px;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -28,8 +31,6 @@
 
 .region-content {
   .block-local-tasks-block {
-    @include container;
-
     ul {
       display: flex;
     }
@@ -39,8 +40,6 @@
   }
 
   .node--type-presentation {
-    @include container;
-
     .field {
       padding-bottom: 20px;
     }
@@ -100,5 +99,51 @@
   }
   &--status {
     border-left: 8px solid $color-fern;
+  }
+}
+
+.paragraph {
+  &--type--hero-countdown,
+  &--type--wrapper-teasers,
+  &--type--social-links,
+  &--type--contacts {
+    @include mq($bp1023max) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+}
+
+
+#block-dckyiv-local-actions {
+  & + #block-dckyiv-content {
+    padding-top: 40px;
+  }
+}
+
+
+table {
+  width: 100%;
+
+  @include mq($bp768) {
+    max-width: 750px;
+  }
+
+  @include mq($bp960) {
+    max-width: 970px;
+  }
+
+  @include mq($bp1280) {
+    max-width: 1240px;
+  }
+
+  thead,
+  tbody {
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid $color-gallery;
+    }
   }
 }

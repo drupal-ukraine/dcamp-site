@@ -49,6 +49,7 @@ main {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin: 0;
 }
 
 .page-content-wrapper {
@@ -64,6 +65,35 @@ main {
   }
 }
 
-.layout-container {
-  margin: 0;
+.region-content {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+
+  @include mq($bp768) {
+    max-width: 750px;
+  }
+
+  @include mq($bp960) {
+    max-width: 970px;
+  }
+
+  @include mq($bp1280) {
+    max-width: 1240px;
+  }
+
+  & > div {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .page-node-type-landing-page & {
+    max-width: none !important;
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
