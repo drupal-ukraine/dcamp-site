@@ -2,36 +2,53 @@
 
 .paragraph--type--sponsor-section {
   &.paragraph--view-mode--in-wrapper {
-    @include mq($bp1024) {
-      max-width: 476px;
-      margin: 7px 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    max-width: none;
+
+    .field--layout-grid & {
+      @include mq($bp1024) {
+        margin: 7px 14px;
+      }
     }
   }
 
   &--header {
+    display: flex;
+    justify-content: center;
     font-family: $font-proxima-nova-bold;
     font-size: 1.8rem;
     text-align: center;
     text-transform: uppercase;
     color: $color-white;
-    padding: 13px 0 16px;
+    padding: 8px 8px 10px;
     margin: 0;
+    height: 45px;
+    width: 100%;
   }
 
   &--content {
     border: 1px solid $color-black;
     border-top: 0;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: calc(100% - 45px);
   }
 
   .field--name-field-sponsor-items {
-    @include mq($bp1024) {
-      min-height: 131px;
-    }
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    > .field__item {
+      margin: 5px;
+
+      &:first-child {
+        margin-right: 0;
+      }
+    }
   }
 }

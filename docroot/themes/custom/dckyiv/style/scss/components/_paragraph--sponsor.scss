@@ -20,7 +20,7 @@
     }
   }
 
-  .field--name-field-sponsor-section {
+  .field--layout-grid.field--name-field-sponsor-section {
     @include mq($bp1024) {
       display: flex;
       flex-wrap: wrap;
