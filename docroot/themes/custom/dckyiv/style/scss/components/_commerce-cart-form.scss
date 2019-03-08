@@ -43,9 +43,6 @@
     max-width: 50px;
   }
 
-  .views-field-remove-button {
-    display: none;
-  }
   .views-field-total-price__number {
     @include mq($bp1024) {
       text-align: right;
