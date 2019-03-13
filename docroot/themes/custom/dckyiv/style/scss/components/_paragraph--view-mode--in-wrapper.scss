@@ -61,6 +61,11 @@
 
         P {
           color: $color-white;
+          padding: 0 15px;
+
+          @include mq($bp1024) {
+            padding: 0;
+          }
         }
       }
 
@@ -74,8 +79,13 @@
         }
 
         a {
-          font-size: 1.2rem;
+          font-size: 2rem;
           line-height: 1.5;
+
+          @include mq($bp1024) {
+            font-size: 1.2rem;
+          }
+
           &::after {
             content: '';
             padding-left: 0;
