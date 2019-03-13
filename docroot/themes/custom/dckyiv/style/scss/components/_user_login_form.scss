@@ -1,14 +1,3 @@
-// User login page and form
-
-body.user-login, body.user-pass, body.user-register, body.ifw_user-guest_register {
-  .layout-content {
-    padding: 0 25px;
-
-    @include mq($bp1024) {
-      padding: 25px;
-    }
-  }
-}
 // Custom blocks with links for login, register and lost password pages
 #block-loginformlinks, #block-registerlinks, #block-lostpasswordlinks {
   max-width: 340px;
