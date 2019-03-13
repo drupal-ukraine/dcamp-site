@@ -87,8 +87,11 @@
   }
 
   & > div {
-    padding: 10px 5px 10px 30px;
     font-size: 1.4rem;
+
+    @include mq($bp1024) {
+      padding: 10px 5px 10px 30px;
+    }
   }
 
   &--error {
@@ -113,14 +116,6 @@
     }
   }
 }
-
-
-#block-dckyiv-local-actions {
-  & + #block-dckyiv-content {
-    padding-top: 40px;
-  }
-}
-
 
 table {
   width: 100%;

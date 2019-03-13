@@ -68,8 +68,6 @@ main {
 .region-content {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
   width: 100%;
 
   @include mq($bp768) {
@@ -84,16 +82,34 @@ main {
     max-width: 1240px;
   }
 
-  & > div {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-
   .page-node-type-landing-page & {
     max-width: none !important;
     margin-right: 0;
     margin-left: 0;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+#block-dckyiv-content,
+#block-dckyiv-local-actions,
+#block-dckyiv-primary-local-tasks {
+  @include mq($bp1023max) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  .button {
+    @include mq($bp1023max) {
+      margin-top: 20px;
+      display: block;
+    }
+  }
+}
+
+#block-dckyiv-local-actions {
+  & + #block-dckyiv-content {
+    padding-top: 40px;
   }
 }

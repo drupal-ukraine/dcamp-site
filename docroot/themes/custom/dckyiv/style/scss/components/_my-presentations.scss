@@ -24,7 +24,8 @@
   }
 
   .dropbutton {
-    min-width: 47px;
+    position: relative;
+    overflow: visible !important;
   }
 }
 
