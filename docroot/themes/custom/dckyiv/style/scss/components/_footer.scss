@@ -1,10 +1,13 @@
 // DCKyiv Website footer styles
 
 footer.main-footer {
-  clear: both;
-  background-color: $color-tuna;
-  display: flex;
-  flex-direction: column;
+  background: $color-tuna;
+  margin-top: auto;
+  padding: 0 25px;
+
+  @include mq($bp1024) {
+    padding: 25px;
+  }
 
   .region-footer-top {
     @include clearfix;
@@ -40,7 +43,7 @@ footer.main-footer {
       }
     }
 
-    @include mq($bp1400) {
+    @include mq($bp1024) {
       margin: 0 auto;
       max-width: 1240px;
     }
@@ -48,10 +51,9 @@ footer.main-footer {
 
   .region-footer {
     @include clearfix;
-    margin: 10px 10px;
 
-    @include mq($bp1400) {
-      margin: 50px auto;
+    @include mq($bp1024) {
+      margin: 0 auto;
       max-width: 1240px;
     }
 
@@ -159,19 +161,28 @@ footer.main-footer {
     }
 
     #block-sitebranding-footer {
+      text-align: center;
+
+      @include mq($bp1024) {
+        text-align: left;
+      }
+
       a {
         display: inline-block;
         padding: 13px 0;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         font-family: $font-proxima-nova-bold;
+        text-align: center;
         @include mq($bp1024) {
           font-size: 1.6rem;
           padding: 0;
           height: auto;
         }
+
         span {
           color: $color-white;
         }
+
         span:last-child {
           display: inline-block;
           color: $color-fern;
@@ -182,6 +193,7 @@ footer.main-footer {
         &_desktop {
           display: inline-block;
         }
+
         &_mobile {
           display: none;
         }

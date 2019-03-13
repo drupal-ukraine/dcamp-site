@@ -1,8 +1,9 @@
 .cart-form {
-  @include container;
 
   @include mq($bp1024) {
     max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .views-element-container {
@@ -59,7 +60,6 @@
 }
 
 #drupal-modal {
-
   .field--name-body {
     text-align: center;
     font-weight: bold;
@@ -85,7 +85,6 @@
     .field--name-price {
       padding: 5px 0 5px 0;
     }
-
   }
-
 }
+

@@ -73,14 +73,22 @@
     </div>{# /.layout-content #}
   </main>
 
-    {% if page.footer %}
-      <footer role="contentinfo" class="main-footer">
-          {{ page.footer_top }}
-          {{ page.footer }}
-      </footer>
-      <footer class="bottom-footer">
-          {{ page.footer_bottom }}
-      </footer>
+  <footer role="contentinfo" class="main-footer">
+    {% if page.footer_top %}
+      <div class="footer-top">
+        {{ page.footer_top }}
+      </div>
     {% endif %}
+    {% if page.footer %}
+      <div class="footer-middle">
+        {{ page.footer }}
+      </div>
+    {% endif %}
+    {% if page.footer_bottom %}
+      <div class="footer-bottom">
+        {{ page.footer_bottom }}
+      </div>
+    {% endif %}
+  </footer>
 
 </div>{# /.layout-container #}

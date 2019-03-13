@@ -1,6 +1,8 @@
 // Style for dropdown element.
 
 #block-dckyiv-primary-local-tasks {
+  padding: 30px 0;
+
   @include mq($bp1023max) {
     width: 100%;
     z-index: 3;
@@ -9,7 +11,6 @@
     vertical-align: middle;
     display: inline-block;
     cursor: pointer;
-    padding: 0 15px;
     margin: 20px 0 30px;
     transition: opacity .25s ease-in-out;
 
@@ -68,6 +69,14 @@
         }
         &:last-child {
           margin-bottom: 10px;
+        }
+      }
+
+      & > li {
+        &:first-child {
+          &:after {
+            transform: rotate(180deg);
+          }
         }
       }
     }

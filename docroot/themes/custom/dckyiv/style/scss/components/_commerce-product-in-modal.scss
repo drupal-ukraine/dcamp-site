@@ -1,14 +1,31 @@
-.ui-dialog article {
-  & > * {
-    padding-bottom: 20px;
+.ui-dialog{
+  article {
+    & > * {
+      padding-bottom: 20px;
+    }
+
+    .field__label,
+    label {
+      font-size: 1.6rem;
+      color: $color-storm-gray;
+      font-family: $font-proxima-nova-bold;
+      padding-bottom: 5px;
+      margin: 0;
+    }
   }
 
-  .field__label,
-  label {
-    font-size: 1.6rem;
-    color: $color-storm-gray;
-    font-family: $font-proxima-nova-bold;
-    padding-bottom: 5px;
-    margin: 0;
+  .ui-dialog-buttonset {
+    float: none !important;
+
+    @include mq($bp1024) {
+      float: right !important;
+    }
+
+    button {
+      @include mq($bp1023max) {
+        width: 100% !important;
+        margin: .5em .4em !important;
+      }
+    }
   }
 }
