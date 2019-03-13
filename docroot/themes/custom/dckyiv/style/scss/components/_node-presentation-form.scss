@@ -1,5 +1,4 @@
 .node-presentation-form {
-  @include container;
 
   fieldset {
     @include mq($bp1024) {

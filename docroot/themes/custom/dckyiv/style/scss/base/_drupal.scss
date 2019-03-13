@@ -31,8 +31,6 @@
 
 .region-content {
   .block-local-tasks-block {
-    @include container;
-
     ul {
       display: flex;
     }
@@ -42,8 +40,6 @@
   }
 
   .node--type-presentation {
-    @include container;
-
     .field {
       padding-bottom: 20px;
     }
@@ -122,5 +118,32 @@
 #block-dckyiv-local-actions {
   & + #block-dckyiv-content {
     padding-top: 40px;
+  }
+}
+
+
+table {
+  width: 100%;
+
+  @include mq($bp768) {
+    max-width: 750px;
+  }
+
+  @include mq($bp960) {
+    max-width: 970px;
+  }
+
+  @include mq($bp1280) {
+    max-width: 1240px;
+  }
+
+  thead,
+  tbody {
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid $color-gallery;
+    }
   }
 }

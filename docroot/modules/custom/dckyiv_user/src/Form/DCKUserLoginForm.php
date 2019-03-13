@@ -73,13 +73,14 @@ class DCKUserLoginForm extends UserLoginForm {
     $referer = $request->server->get('HTTP_REFERER');
     $referer_uri = str_replace($baseUrl, '', $referer);
 
-    // Check that referer is valid.
-    $referer_url = NULL;
-    if (!empty($referer_uri) && (strpos($referer, $baseUrl) !== FALSE)) {
-      $referer_url = Url::fromUserInput($referer_uri);
+    if (!empty($request->query->get('destination'))) {
+      $return_path = Url::fromUserInput($request->query->get('destination'));
+    } else {
+      $return_path = Url::fromUserInput('/user');
     }
 
-    $url = $this->fbConnectLink->getUrl($referer_url);
+    $url = $this->fbConnectLink->getUrl($return_path);
+
     $form['fb_login'] = [
       '#type' => 'link',
       '#title' => $this->t('Login with Facebook'),
@@ -146,7 +147,7 @@ class DCKUserLoginForm extends UserLoginForm {
     $form['#validate'][] = '::validateFinal';
 
     if (!empty($referer_uri) && (strpos($referer, $baseUrl) !== FALSE)) {
-      $form['ifw_referer'] = [
+      $form['dck_referer'] = [
         '#type' => 'hidden',
         '#value' => $referer_uri,
       ];
@@ -171,6 +172,18 @@ class DCKUserLoginForm extends UserLoginForm {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $account = $this->userStorage->load($form_state->get('uid'));
+
+    // A destination was set, probably on an exception controller,
+    if (!$this->getRequest()->request->has('destination')) {
+      $form_state->setRedirect(
+        'entity.user.canonical',
+        ['user' => $account->id()]
+      );
+    }
+    else {
+      $this->getRequest()->query->set('destination', $this->getRequest()->request->get('destination'));
+    }
+
     user_login_finalize($account);
   }
 
