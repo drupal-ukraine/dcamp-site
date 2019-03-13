@@ -3,6 +3,11 @@
 footer.main-footer {
   background: $color-tuna;
   margin-top: auto;
+  padding: 10px 0;
+
+  @include mq($bp1024) {
+    padding: 50px 0;
+  }
 
   .region-footer-top {
     @include clearfix;
