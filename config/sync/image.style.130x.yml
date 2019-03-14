@@ -1,0 +1,15 @@
+uuid: fb8df7a5-81a3-4efb-826d-e1cd97ab8448
+langcode: en
+status: true
+dependencies: {  }
+name: 130x
+label: 130x
+effects:
+  eb89163a-1e9a-41b5-951e-c2950bb68ac8:
+    uuid: eb89163a-1e9a-41b5-951e-c2950bb68ac8
+    id: image_scale
+    weight: 1
+    data:
+      width: 130
+      height: null
+      upscale: false

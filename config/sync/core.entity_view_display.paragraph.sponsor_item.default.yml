@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.sponsor_item.field_sponsor_logo_image
     - field.field.paragraph.sponsor_item.field_sponsors_page_link
+    - image.style.130x
     - paragraphs.paragraphs_type.sponsor_item
   module:
     - link
+    - media
 id: paragraph.sponsor_item.default
 targetEntityType: paragraph
 bundle: sponsor_item
@@ -17,10 +19,10 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: raw
-      link: false
+      image_style: 130x
+      image_link: ''
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_sponsors_page_link:
     weight: 1
