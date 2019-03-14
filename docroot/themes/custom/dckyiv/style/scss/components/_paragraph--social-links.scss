@@ -26,9 +26,12 @@
       font-family: $font-proxima-nova-bold;
       font-size: 1.6rem;
       letter-spacing: 0.4px;
+      line-height: 1.8;
+      padding: 0 50px;
 
       @include mq($bp1024) {
         font-size: 3rem;
+        padding: 0;
       }
     }
     &--name-field-links {

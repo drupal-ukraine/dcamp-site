@@ -1,4 +1,23 @@
 // Sponsor item paragraph.
 
 .paragraph--type--sponsor-item {
+  img {
+    width: auto;
+    height: 50px;
+    margin: 0 10px 20px;
+  }
+}
+
+.field--name-field-sponsor-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: 100%;
+
+  @include mq($bp1024) {
+    max-width: 400px;
+  }
 }

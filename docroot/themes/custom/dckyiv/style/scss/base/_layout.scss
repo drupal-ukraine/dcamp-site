@@ -48,8 +48,12 @@ main {
 .layout-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 126px);
   margin: 0;
+
+  @include mq($bp1024) {
+    height: calc(100vh - 72px);
+  }
 }
 
 .page-content-wrapper {

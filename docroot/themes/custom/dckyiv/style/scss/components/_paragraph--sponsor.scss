@@ -1,12 +1,14 @@
 // Paragraph Sponsors
 .paragraph--type--sponsor {
   margin-bottom: 30px;
-  padding: 60px 0;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+
+  @include mq($bp1024) {
+    align-items: center;
+  }
 
   &.content {
     width: 100%;
@@ -14,23 +16,26 @@
 
   .wrap-content {
     @include mq($bp1024) {
-      max-width: 1012px;
+      max-width: 980px;
       padding-top: 0;
       width: 100%;
     }
   }
 
-  .field--layout-grid.field--name-field-sponsor-section {
-    @include mq($bp1024) {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
+  .field--name-field-sponsor-section {
+    display: flex;
+    flex-direction: column;
 
-      .field__item {
-        display: flex;
-        flex-basis: calc(50%);
-        justify-content: right;
-        flex-direction: column;
+    @include mq($bp1024) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    & > .field__item {
+      @include mq($bp1024) {
+        width: 100%;
+        max-width: 476px;
       }
     }
   }
