@@ -275,7 +275,7 @@ display:
           relationship: order_items
           group_type: group
           admin_label: ''
-          label: 'Tshirt size select field'
+          label: 'Розмір футболки'
           exclude: false
           alter:
             alter_text: false
