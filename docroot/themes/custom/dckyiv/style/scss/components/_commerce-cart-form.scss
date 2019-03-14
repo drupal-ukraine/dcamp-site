@@ -42,11 +42,37 @@
 
   .form-number {
     max-width: 50px;
+    text-align: center;
   }
 
-  .views-field-remove-button {
-    display: none;
+  .form-select {
+    background-color: $color-white;
+    max-width: 50px;
+    width: 100%;
+    padding: 1rem 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $color-mine-shaft;
+    border: 1px solid $color-nobel;
+    border-radius: 0 !important;
+    height: 43px;
   }
+
+  .delete-order-item {
+    color: $color-fern;
+    border-radius: 0;
+    text-align: center;
+    background: none;
+    border: 0;
+    font-size: 1.5rem;
+    padding: 0;
+
+    &:hover {
+      background: none;
+      text-decoration: underline;
+    }
+  }
+
   .views-field-total-price__number {
     @include mq($bp1024) {
       text-align: right;
