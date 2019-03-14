@@ -24,6 +24,10 @@
     align-items: center;
     justify-content: center;
 
+    @include mq($bp1700) {
+      padding-left: 25vw;
+    }
+
     & > .field {
       width: 300px;
       padding-left: 50px;

@@ -1,8 +1,9 @@
 .cart-form {
-  @include container;
 
   @include mq($bp1024) {
     max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .views-element-container {
@@ -52,11 +53,24 @@
   .form-actions {
     padding-top: 30px;
     text-align: center;
+
+    input {
+      @include mq($bp1023max) {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.form-wrapper__login-option {
+  @include mq($bp1023max) {
+    padding: 0;
   }
 }
 
 #drupal-modal {
-
   .field--name-body {
     text-align: center;
     font-weight: bold;
@@ -72,7 +86,7 @@
 
     .form-item-quantity-0-value {
       input {
-        width: 45px;
+        width: 60px;
       }
     }
 
@@ -82,7 +96,6 @@
     .field--name-price {
       padding: 5px 0 5px 0;
     }
-
   }
-
 }
+

@@ -1,5 +1,0 @@
-name: DCKYIV IconSet
-type: module
-description: Replace default icon for dckyiv theme.
-core: 8.x
-package: dckyiv

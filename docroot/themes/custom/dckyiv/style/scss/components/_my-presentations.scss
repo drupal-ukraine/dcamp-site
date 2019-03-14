@@ -1,5 +1,4 @@
 .my-presentations {
-  @include container;
   padding-bottom: 40px !important;
 
   table {
@@ -25,7 +24,8 @@
   }
 
   .dropbutton {
-    min-width: 47px;
+    position: relative;
+    overflow: visible !important;
   }
 }
 
