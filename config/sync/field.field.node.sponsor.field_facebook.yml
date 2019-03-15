@@ -1,0 +1,23 @@
+uuid: 826b30ac-dd46-4ad9-9e6b-0bde801441a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facebook
+    - node.type.sponsor
+  module:
+    - link
+id: node.sponsor.field_facebook
+field_name: field_facebook
+entity_type: node
+bundle: sponsor
+label: Facebook
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

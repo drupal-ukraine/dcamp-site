@@ -1,0 +1,9 @@
+uuid: 0a043523-81d7-406c-a25c-75bfbfd83c27
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Sponsor Type'
+vid: sponsor_type
+description: ''
+hierarchy: 0
+weight: 0
