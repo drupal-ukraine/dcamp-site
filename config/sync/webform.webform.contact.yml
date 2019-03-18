@@ -5,6 +5,8 @@ dependencies:
   enforced:
     module:
       - webform
+  module:
+    - webform_mailchimp
 _core:
   default_config_hash: XmVvfioCEWZuviJP_L885YzaG8QwS6hcTfgQU3cFyyk
 open: null
@@ -230,3 +232,17 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme_name: ''
+  mailchimp:
+    id: mailchimp
+    label: MailChimp
+    handler_id: mailchimp
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      list: DCKyiv
+      email: email
+      double_optin: true
+      mergevars: ''
+      interest_groups: {  }
+      control: ''
