@@ -62,6 +62,7 @@ module:
   link: 0
   link_attributes: 0
   locale: 0
+  mailchimp: 0
   mailsystem: 0
   media: 0
   media_entity_browser: 0
@@ -103,6 +104,7 @@ module:
   views_ui: 0
   viewsreference: 0
   webform: 0
+  webform_mailchimp: 0
   webform_ui: 0
   workflows: 0
   yoast_seo: 0
