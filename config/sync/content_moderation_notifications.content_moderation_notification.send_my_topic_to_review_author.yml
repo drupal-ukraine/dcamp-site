@@ -12,6 +12,6 @@ emails: ''
 recipient: false
 subject: 'Your Presentation is sent to review'
 body:
-  value: "<p>Hi.</p>\r\n\r\n<p>Your presentation <b>[node:title]</b> is sent to review. Our Editorial team will review it and ask you for additional changes if needed.</p>\r\n\r\n<p>Thank you for your request!</p>\r\n\r\n<hr />\r\n<p>Drupal Camp Kyiv org team.</p>\r\n\r\n<p>Please, don't forget to mark that you will attend our camp at the Facebook event: <a href=\"https://www.facebook.com/events/713182682365246/\">https://www.facebook.com/events/713182682365246/</a></p>\r\n"
+  value: "<p>Hi.</p>\r\n\r\n<p>Your presentation <b>[node:title]</b> is sent to review. Our Editorial team will review it and ask you for additional changes if needed.</p>\r\n\r\n<p>Thank you for your request!</p>\r\n\r\n<hr />\r\n<p>Org team of DrupalCampKyiv.</p>\r\n\r\n<p>Dont forget to tell your friends that you are attending <a href=\"https://www.facebook.com/events/713182682365246/\">DrupalCampKyiv2019</a>&nbsp;and like our pages on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
   format: full_html
 label: 'Send My Topic to Review Author'
