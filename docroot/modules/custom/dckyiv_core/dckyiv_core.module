@@ -34,8 +34,10 @@ function dckyiv_core_entity_type_alter(array &$entity_types) {
 function dckyiv_core_form_alter(&$form, &$form_state, $form_id) {
   // Override revision form in presentation form.
   if ($form_id === 'node_presentation_form') {
-    $form["revision_information"]["#title"] = t('Message to org team:');
-    $form["revision_log"]["widget"][0]['value']["#title"] = FALSE;
-    $form["revision_log"]["widget"][0]['value']["#description"] = t('If you have any comments to org team, write them here.');
+    $form['revision_information']['#title'] = t('Message to org team:');
+    $form['revision_log']['widget'][0]['value']['#title'] = FALSE;
+    $form['revision_log']['widget'][0]['value']['#description'] = t('If you have any comments to org team, write them here.');
+
+    $form['actions']['preview']['#access'] = FALSE;
   }
 }
