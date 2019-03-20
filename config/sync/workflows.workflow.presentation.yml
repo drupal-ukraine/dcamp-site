@@ -11,6 +11,11 @@ label: Presentation
 type: content_moderation
 type_settings:
   states:
+    approved_candidates:
+      published: false
+      default_revision: false
+      label: 'Approved Candidates'
+      weight: 2
     draft:
       label: Draft
       published: false
@@ -32,6 +37,13 @@ type_settings:
       label: 'Sent to Review'
       weight: -1
   transitions:
+    add_to_approved_candidates:
+      label: 'Add to Approved Candidates'
+      from:
+        - need_changes
+        - sent_to_review
+      to: approved_candidates
+      weight: 2
     create_new_draft:
       label: 'Save Draft'
       to: draft
@@ -49,6 +61,7 @@ type_settings:
       to: published
       weight: -1
       from:
+        - approved_candidates
         - draft
         - published
     send_my_topic_to_review:
