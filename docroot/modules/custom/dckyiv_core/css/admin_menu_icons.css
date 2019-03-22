@@ -1,0 +1,15 @@
+/* Bar styling (first row), currently unused. */
+.toolbar-bar .toolbar-icon-ifw-core-admin:before {
+    background-image: url("img/logo.png");
+}
+.toolbar-bar .toolbar-icon-ifw-core-admin:active:before {
+    background-image: url("img/logo.png");
+}
+
+/* Tray styling (second row) */
+.toolbar-tray .toolbar-icon.toolbar-icon-dckyiv-core-admin:before {
+    background-image: url("img/logo.png");
+}
+.toolbar-tray .toolbar-icon.toolbar-icon-dckyiv-core-admin:active:before {
+    background-image: url("img/logo.png");
+}
