@@ -15,17 +15,17 @@ type_settings:
       published: false
       default_revision: false
       label: 'Approved Candidates'
-      weight: 2
+      weight: 0
     draft:
       label: Draft
       published: false
       default_revision: false
-      weight: -2
+      weight: -3
     need_changes:
       published: false
       default_revision: false
       label: 'Need Changes'
-      weight: 0
+      weight: -1
     published:
       label: Published
       published: true
@@ -35,7 +35,7 @@ type_settings:
       published: false
       default_revision: false
       label: 'Sent to Review'
-      weight: -1
+      weight: -2
   transitions:
     add_to_approved_candidates:
       label: 'Add to Approved Candidates'
@@ -43,11 +43,11 @@ type_settings:
         - need_changes
         - sent_to_review
       to: approved_candidates
-      weight: 2
+      weight: 0
     create_new_draft:
       label: 'Save Draft'
       to: draft
-      weight: -2
+      weight: -3
       from:
         - draft
     need_changes:
@@ -55,11 +55,11 @@ type_settings:
       from:
         - sent_to_review
       to: need_changes
-      weight: 1
+      weight: -1
     publish:
       label: Publish
       to: published
-      weight: -1
+      weight: 1
       from:
         - approved_candidates
         - draft
@@ -70,7 +70,7 @@ type_settings:
         - draft
         - need_changes
       to: sent_to_review
-      weight: 0
+      weight: -2
   entity_types:
     node:
       - presentation
