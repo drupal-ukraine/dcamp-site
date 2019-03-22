@@ -7,13 +7,14 @@ dependencies:
     - node.type.sponsor
     - taxonomy.vocabulary.sponsor_type
   content:
-    - 'taxonomy_term:sponsor_type:2612fce2-be41-474a-bcac-c7f72f7319b9'
-    - 'taxonomy_term:sponsor_type:3a47f5fc-e0f4-47f5-91dd-b1373ad50c32'
-    - 'taxonomy_term:sponsor_type:65cb62d9-2485-4e50-bdba-3609f1858683'
-    - 'taxonomy_term:sponsor_type:83c09c6d-5d38-420a-8e0c-2d5d9574eef3'
-    - 'taxonomy_term:sponsor_type:e83e97aa-0919-4fe5-b968-04f052c668a4'
-    - 'taxonomy_term:sponsor_type:f3fc7e4c-f2f7-474c-bd2d-d11279c135cd'
-    - 'taxonomy_term:sponsor_type:fc1676f8-0fcb-4f7d-96af-22a37b8d7b3d'
+    - 'taxonomy_term:sponsor_type:1828f26b-f267-49da-bc36-6e7a1695bcab'
+    - 'taxonomy_term:sponsor_type:5897efbc-e50a-4bf3-8660-d9622ed45646'
+    - 'taxonomy_term:sponsor_type:69588fdf-dfc0-4863-b5f5-e036065d9b04'
+    - 'taxonomy_term:sponsor_type:96b7182e-36d9-4839-8e49-c117f5a54125'
+    - 'taxonomy_term:sponsor_type:c9cba07a-e3bf-4c9f-8b9f-aba9dfd2f01f'
+    - 'taxonomy_term:sponsor_type:cbc07115-b888-4571-836c-d422a5b3a6f6'
+    - 'taxonomy_term:sponsor_type:cec98393-b85b-4655-a2c1-78a6b176d89e'
+    - 'taxonomy_term:sponsor_type:f32fd791-257a-4ef0-9968-8044d9946127'
   module:
     - node
     - taxonomy
@@ -139,22 +140,23 @@ display:
           entity_field: type
           plugin_id: bundle
           group: 1
-        field_sponsor_type_target_id:
-          id: field_sponsor_type_target_id
-          table: node__field_sponsor_type
-          field: field_sponsor_type_target_id
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
           relationship: none
           group_type: group
           admin_label: ''
           operator: or
           value:
+            4: 4
+            5: 5
+            6: 6
+            7: 7
+            8: 8
             9: 9
             10: 10
-            5: 5
-            8: 8
-            4: 4
-            7: 7
-            6: 6
+            11: 11
           group: 1
           exposed: false
           expose:
@@ -182,7 +184,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: true
+          reduce_duplicates: false
           type: select
           limit: true
           vid: sponsor_type
@@ -190,8 +192,21 @@ display:
           error_message: true
           plugin_id: taxonomy_index_tid
       sorts: {  }
-      title: Sponsors
-      header: {  }
+      title: ''
+      header:
+        entity_taxonomy_term:
+          id: entity_taxonomy_term
+          table: views
+          field: entity_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: '{{ raw_arguments.field_sponsor_type_target_id }}'
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -208,7 +223,7 @@ display:
             value: all
             title_enable: false
             title: All
-          title_enable: true
+          title_enable: false
           title: ''
           default_argument_type: fixed
           default_argument_options:
@@ -249,10 +264,11 @@ display:
   sponsor_base:
     display_plugin: block
     id: sponsor_base
-    display_title: Block
+    display_title: 'Only Sponsor logo'
     position: 1
     display_options:
       display_extenders: {  }
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

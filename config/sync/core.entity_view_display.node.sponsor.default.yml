@@ -38,7 +38,7 @@ content:
     region: content
   field_email:
     weight: 9
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
@@ -82,7 +82,7 @@ content:
     region: content
   field_page_content:
     weight: 10
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -114,10 +114,10 @@ content:
     label: inline
     settings:
       trim_length: 80
-      url_only: false
+      url_only: true
+      target: _blank
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
     third_party_settings: {  }
     type: link
     region: content

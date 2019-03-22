@@ -53,6 +53,7 @@ hidden:
   field_email: true
   field_facebook: true
   field_linkedin: true
+  field_page_content: true
   field_sponsor_type: true
   field_twitter: true
   field_web_site: true
