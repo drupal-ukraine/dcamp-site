@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d26751c0a2d9d2f6875bd05a5c16a39b",
+    "content-hash": "9d34ba22060d455fd2ce53ea9cd7d53a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3430,6 +3430,58 @@
             }
         },
         {
+            "name": "drupal/content_planner",
+            "version": "1.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/content_planner",
+                "reference": "8.x-1.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/content_planner-8.x-1.0-beta6.zip",
+                "reference": "8.x-1.0-beta6",
+                "shasum": "7f28e7a45f7b7324dc61ee1b4b9d5af92b31f03c"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/scheduler": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta6",
+                    "datestamp": "1543346285",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "lukas.fischer",
+                    "homepage": "https://www.drupal.org/user/204430"
+                },
+                {
+                    "name": "martinpe",
+                    "homepage": "https://www.drupal.org/user/375964"
+                }
+            ],
+            "description": "Plan your content using a Dashboard, the Content Calendar and Content Kanban.",
+            "homepage": "https://www.drupal.org/project/content_planner",
+            "support": {
+                "source": "http://cgit.drupalcode.org/content_planner"
+            }
+        },
+        {
             "name": "drupal/contribute",
             "version": "5.0.0-beta3",
             "source": {
@@ -5401,6 +5453,74 @@
             "homepage": "https://www.drupal.org/project/restrict_ip",
             "support": {
                 "source": "http://cgit.drupalcode.org/restrict_ip"
+            }
+        },
+        {
+            "name": "drupal/scheduler",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/scheduler",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/scheduler-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "213025b64b417f459b73d260d7287ca1f916d587"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "require-dev": {
+                "drupal/devel_generate": "*",
+                "drupal/rules": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1510690385",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Eric Schaefer (Eric Schaefer)",
+                    "homepage": "https://www.drupal.org/u/eric-schaefer",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jonathan Smith (jonathan1055)",
+                    "homepage": "https://www.drupal.org/u/jonathan1055",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Pieter Frenssen (pfrenssen)",
+                    "homepage": "https://www.drupal.org/u/pfrenssen",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Rick Manelius (rickmanelius)",
+                    "homepage": "https://www.drupal.org/u/rickmanelius",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Automatically publish and unpublish content at specified dates and times.",
+            "homepage": "https://drupal.org/project/scheduler",
+            "support": {
+                "source": "http://cgit.drupalcode.org/scheduler",
+                "issues": "https://www.drupal.org/project/issues/scheduler"
             }
         },
         {
@@ -8992,7 +9112,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -11768,6 +11888,7 @@
         "drupal/captcha": 10,
         "drupal/conditional_fields": 15,
         "drupal/content_moderation_notifications": 5,
+        "drupal/content_planner": 10,
         "drupal/contribute": 10,
         "drupal/dropzonejs": 15,
         "drupal/email_registration": 5,

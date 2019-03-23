@@ -16,6 +16,7 @@
     "drupal/config_split": "^1.4",
     "drupal/console": "^1.0.2",
     "drupal/content_moderation_notifications": "^3.0@RC",
+    "drupal/content_planner": "^1.0@beta",
     "drupal/contribute": "^5.0@beta",
     "drupal/core": "^8.6.10",
     "drupal/devel": "^1.2",

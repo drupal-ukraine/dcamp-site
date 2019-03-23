@@ -1,0 +1,13 @@
+dckyiv_core.admin:
+  title: 'DCKyiv'
+  route_name: 'dckyiv_core.admin'
+  parent: 'system.admin'
+  description: 'Administer DCKYiv site'
+  weight: -9
+
+dckyiv_core.sessions:
+  title: 'Sessions Dashboard'
+  route_name: 'content_kanban.kanban'
+  parent: 'dckyiv_core.admin'
+  description: 'Sessions candidates dashboard'
+  weight: -9

@@ -41,3 +41,10 @@ function dckyiv_core_form_alter(&$form, &$form_state, $form_id) {
     $form['actions']['preview']['#access'] = FALSE;
   }
 }
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function dckyiv_core_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'dckyiv_core/admin_menu_icons';
+}
