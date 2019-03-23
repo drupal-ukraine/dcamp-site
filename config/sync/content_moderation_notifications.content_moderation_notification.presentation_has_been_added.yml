@@ -12,6 +12,6 @@ emails: ''
 recipient: false
 subject: 'Your Presentation has been saved ([node:title])'
 body:
-  value: "<p>Hi. This is note from DrupalCampKyiv Website</p>\r\n\r\n<p>You just saved your presentation, called: \"[node:title]\".</p>\r\n\r\n<p>This letter is informing you that your presentation has been saved at our website.</p>\r\n\r\n<p>You can change your presentation description at <a href=\"[site:url]/user\">your profile page</a>.</p>\r\n\r\n<hr />\r\n<p>Drupal Camp Kyiv org team.</p>\r\n\r\n<p>Please, don't forget to mark that you will attend our camp at the Facebook event: <a href=\"https://www.facebook.com/events/713182682365246/\">https://www.facebook.com/events/713182682365246/</a></p>\r\n"
+  value: "<p>Hi. This is note from DrupalCampKyiv Website</p>\r\n\r\n<p>You just saved your presentation, called: \"[node:title]\".</p>\r\n\r\n<p>This letter is informing you that your presentation has been saved at our website.</p>\r\n\r\n<p>You can change your presentation description at <a href=\"[site:url]/user\">your profile page</a>.</p>\r\n\r\n<hr />\r\n<p>Org team of DrupalCampKyiv.</p>\r\n\r\n<p>Dont forget to tell your friends that you are attending <a href=\"https://www.facebook.com/events/713182682365246/\">DrupalCampKyiv2019</a>&nbsp;and like our pages on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
   format: full_html
 label: 'Presentation has been added'

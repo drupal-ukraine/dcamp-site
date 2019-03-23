@@ -12,6 +12,6 @@ emails: ''
 recipient: false
 subject: 'Please update your information at [node:title] presentation.'
 body:
-  value: "<p>Hi!</p>\r\n\r\n<p>Our editorial team reviewed your presentation and is asking for changes.</p>\r\n\r\n<p><b>Message from our Editorial Team:</b></p>\r\n\r\n<p>[node:log]</p>\r\n"
+  value: "<p>Hi!</p>\r\n\r\n<p>Our editorial team reviewed your presentation and is asking for changes.</p>\r\n\r\n<p>Message from our Editorial Team:</p>\r\n\r\n<blockquote>\r\n<p><strong>[node:log]</strong></p>\r\n</blockquote>\r\n\r\n<p>Please, go to the website and update your presentation data according to the org team request.</p>\r\n\r\n<p><a href=\"https://drupalcampkyiv.org/node/[node:nid]/edit\">EDIT MY SESSION CONTENT</a></p>\r\n\r\n<hr />\r\n<p>Org team of DrupalCampKyiv.</p>\r\n\r\n<p>Dont forget to tell your friends that you are attending <a href=\"https://www.facebook.com/events/713182682365246/\">DrupalCampKyiv2019</a>&nbsp;and like our pages on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n"
   format: full_html
 label: 'Need Changes'
