@@ -3,7 +3,7 @@ langcode: uk
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.only_image
     - node.type.sponsor
     - taxonomy.vocabulary.sponsor_type
   content:
@@ -69,7 +69,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: only_image
       fields:
         title:
           id: title

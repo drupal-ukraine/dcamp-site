@@ -1,0 +1,76 @@
+
+.paragraph--type--sponsor-wrapper {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto 30px;
+
+  .field--name-field-sponsor-section {
+    display: flex;
+    flex-direction: column;
+
+    @include mq($bp1024){
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    & > .field__item {
+      border: 1px solid $color-black;
+      margin: 0 0 15px;
+
+      @include mq($bp1024){
+        width: calc(50% - 14px);
+      }
+    }
+  }
+}
+
+.paragraph--type--sponsors {
+  width: 100%;
+
+  .sponsor-type--item {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .field--name-name {
+      color: $color-white;
+      font-family: $font-proxima-nova-bold;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+  .platinum-sponsor {
+    background-image: linear-gradient(to top, #3a3a43, #737a7f);
+  }
+  .gold-sponsor {
+    background-image: linear-gradient(to top, #937050, #ecd67f);
+  }
+  .silver-sponsor {
+    background-image: linear-gradient(to top, #6b7077, #a8aeb2);
+  }
+  .bronze-sponsor {
+    background-image: linear-gradient(to top, #578f5b, #65bd6a);
+  }
+
+  .views-element-container {
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+
+      header {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .views-row {
+        width: 100%;
+        max-width: 130px;
+        margin: 20px 0;
+      }
+    }
+  }
+}
+

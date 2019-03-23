@@ -1,0 +1,9 @@
+uuid: 06bc85a4-0c30-4469-9d78-745d5c88bdd7
+langcode: en
+status: true
+dependencies: {  }
+id: sponsor_wrapper
+label: 'Sponsor Wrapper'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

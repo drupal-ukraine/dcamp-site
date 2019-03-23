@@ -21,6 +21,7 @@ dependencies:
     - link
     - paragraphs
     - path
+    - scheduler
     - svg_image
 id: node.sponsor.default
 targetEntityType: node
@@ -72,7 +73,7 @@ content:
             grouping: AND
             values_set: 3
             value: ''
-            values: "4\r\n5\r\n6\r\n7\r\n8\r\n10\r\n11"
+            values: "4\r\n5\r\n6\r\n7\r\n8\r\n9\r\n10\r\n11"
             value_form: {  }
             effect: show
             effect_options: {  }
@@ -124,7 +125,7 @@ content:
             grouping: AND
             values_set: 3
             value: ''
-            values: '9'
+            values: '4'
             value_form: {  }
             effect: show
             effect_options: {  }
@@ -182,6 +183,12 @@ content:
     weight: 5
     region: content
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -217,5 +224,11 @@ content:
       size: 60
       placeholder: ''
     region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: wrapper_teasers
-label: 'Wrapper Teasers'
+label: 'Teaser Wrapper '
 icon_uuid: null
 description: ''
 behavior_plugins: {  }
