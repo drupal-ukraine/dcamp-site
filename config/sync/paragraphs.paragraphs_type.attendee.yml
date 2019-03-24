@@ -1,0 +1,9 @@
+uuid: 85032031-c69b-46f9-afa4-19b20c36324b
+langcode: uk
+status: true
+dependencies: {  }
+id: attendee
+label: Attendee
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -6,7 +6,7 @@ dependencies:
     - field.field.media.image.field_media_image
     - media.type.image
   module:
-    - image
+    - svg_image
 _core:
   default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
 id: media.image.default
@@ -19,6 +19,10 @@ content:
     settings:
       image_style: ''
       image_link: file
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
     third_party_settings: {  }
     type: image
     weight: 1
