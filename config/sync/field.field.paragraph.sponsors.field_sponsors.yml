@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_sponsors
     - paragraphs.paragraphs_type.sponsors
+    - views.view.sponsors
   module:
     - viewsreference
 id: paragraph.sponsors.field_sponsors
@@ -15,7 +16,16 @@ label: Sponsors
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: sponsor_base
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 7a11d99a-1ab8-4e28-9672-951b4d1c77ff
 default_value_callback: ''
 settings:
   handler: 'default:view'

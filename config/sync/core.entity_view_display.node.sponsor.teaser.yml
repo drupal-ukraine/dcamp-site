@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.sponsor.body
     - field.field.node.sponsor.field_drupal_org
+    - field.field.node.sponsor.field_email
     - field.field.node.sponsor.field_facebook
     - field.field.node.sponsor.field_image
     - field.field.node.sponsor.field_linkedin
@@ -16,21 +16,12 @@ dependencies:
     - node.type.sponsor
   module:
     - svg_image
-    - text
     - user
 id: node.sponsor.teaser
 targetEntityType: node
 bundle: sponsor
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 2
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   field_image:
     type: image
     weight: 1
@@ -59,8 +50,10 @@ content:
     third_party_settings: {  }
 hidden:
   field_drupal_org: true
+  field_email: true
   field_facebook: true
   field_linkedin: true
+  field_page_content: true
   field_sponsor_type: true
   field_twitter: true
   field_web_site: true

@@ -1,0 +1,61 @@
+uuid: a5dd8d8c-68e5-4bde-a9b6-5a3f8a620a56
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.only_image
+    - field.field.node.sponsor.field_drupal_org
+    - field.field.node.sponsor.field_email
+    - field.field.node.sponsor.field_facebook
+    - field.field.node.sponsor.field_image
+    - field.field.node.sponsor.field_linkedin
+    - field.field.node.sponsor.field_page_content
+    - field.field.node.sponsor.field_person
+    - field.field.node.sponsor.field_sponsor_type
+    - field.field.node.sponsor.field_twitter
+    - field.field.node.sponsor.field_web_site
+    - node.type.sponsor
+  module:
+    - svg_image
+    - user
+id: node.sponsor.only_image
+targetEntityType: node
+bundle: sponsor
+mode: only_image
+content:
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_person:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_drupal_org: true
+  field_email: true
+  field_facebook: true
+  field_linkedin: true
+  field_page_content: true
+  field_sponsor_type: true
+  field_twitter: true
+  field_web_site: true
+  langcode: true
