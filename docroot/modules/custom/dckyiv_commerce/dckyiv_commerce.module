@@ -40,3 +40,75 @@ function dckyiv_commerce_views_data_alter(array &$data) {
     'id' => 'commerce_order_item_edit_tshirt_size',
   ];
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dckyiv_commerce_form_paragraph_attendee_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  // This alter allowed only for specific routes.
+  if (strpos($route_name, 'dckyiv_commerce.attendee') === FALSE) {
+    return;
+  }
+
+  $form['attende_info'] = [
+    '#type' => 'radios',
+    '#options' => [
+      'user' => t('User'),
+      'name' => t('Name'),
+      'email' => t('Email'),
+    ],
+    '#default_value' => 'user',
+    '#weight' => -1,
+  ];
+
+  $form['field_attendee_email']['#states'] = [
+    'visible' => [
+      ':input[name="attende_info"]' => ['value' => 'email'],
+    ],
+  ];
+
+  $form['field_site_user']['#states'] = [
+    'visible' => [
+      ':input[name="attende_info"]' => ['value' => 'user'],
+    ],
+  ];
+
+
+  $form['field_attendee_firstname']['#states'] = [
+    'visible' => [
+      ':input[name="attende_info"]' => ['value' => 'name'],
+    ],
+  ];
+
+
+  $form['field_attendee_secondname']['#states'] = [
+    'visible' => [
+      ':input[name="attende_info"]' => ['value' => 'name'],
+    ],
+  ];
+
+  $form['field_attendee_status']['#access'] = FALSE;
+  $form['actions']['submit']['#submit'][] = 'dckyiv_commerce_form_paragraph_attendee_form_submit';
+  $form_state->set('commerce_order_item', \Drupal::routeMatch()->getParameter('commerce_order_item'));
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dckyiv_commerce_form_paragraph_attendee_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $build_info = $form_state->getBuildInfo();
+  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+  $paragraph = $build_info['callback_object']->getEntity();
+  if (empty($paragraph->getParentEntity())) {
+    /** @var \Drupal\commerce_order\Entity\OrderItemInterface $commerce_order_item */
+    $commerce_order_item = $form_state->get('commerce_order_item');
+    $value = [
+      'target_id' => $paragraph->id(),
+      'target_revision_id' => $paragraph->getRevisionId(),
+    ];
+    $commerce_order_item->field_attendee[] = $value;
+    $commerce_order_item->save();
+  }
+}
+
