@@ -2,3 +2,4 @@ dckyiv_user.logout_link:
   route_name: user.logout
   base_route: entity.user.canonical
   title: 'Log out'
+  weight: 300

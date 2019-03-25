@@ -916,7 +916,20 @@ display:
           plugin_id: state_machine_state
       sorts: {  }
       title: Замовлення
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'Total orders: [view:total-rows]'
+            format: basic_html
+          plugin_id: text
       footer: {  }
       empty:
         area_text_custom:

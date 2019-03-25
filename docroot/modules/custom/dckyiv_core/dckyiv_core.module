@@ -15,3 +15,36 @@ function dckyiv_core_preprocess_html(&$variables) {
     ->getInstanceFromDefinition(PreprocessTransparentMenu::class)
     ->preprocessHtml($variables);
 }
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function dckyiv_core_entity_type_alter(array &$entity_types) {
+  foreach ($entity_types as $entity_type)
+  {
+    $constraints = $entity_type->getConstraints();
+    unset($constraints['EntityUntranslatableFields']);
+    $entity_type->setConstraints($constraints);
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function dckyiv_core_form_alter(&$form, &$form_state, $form_id) {
+  // Override revision form in presentation form.
+  if ($form_id === 'node_presentation_form') {
+    $form['revision_information']['#title'] = t('Message to org team:');
+    $form['revision_log']['widget'][0]['value']['#title'] = FALSE;
+    $form['revision_log']['widget'][0]['value']['#description'] = t('If you have any comments to org team, write them here.');
+
+    $form['actions']['preview']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function dckyiv_core_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'dckyiv_core/admin_menu_icons';
+}

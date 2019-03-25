@@ -1,8 +1,9 @@
 .cart-form {
-  @include container;
 
   @include mq($bp1024) {
     max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .views-element-container {
@@ -41,6 +42,35 @@
 
   .form-number {
     max-width: 50px;
+    text-align: center;
+  }
+
+  .form-select {
+    background-color: $color-white;
+    max-width: 50px;
+    width: 100%;
+    padding: 1rem 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $color-mine-shaft;
+    border: 1px solid $color-nobel;
+    border-radius: 0 !important;
+    height: 43px;
+  }
+
+  .delete-order-item {
+    color: $color-fern;
+    border-radius: 0;
+    text-align: center;
+    background: none;
+    border: 0;
+    font-size: 1.5rem;
+    padding: 0;
+
+    &:hover {
+      background: none;
+      text-decoration: underline;
+    }
   }
 
   .views-field-total-price__number {
@@ -52,11 +82,24 @@
   .form-actions {
     padding-top: 30px;
     text-align: center;
+
+    input {
+      @include mq($bp1023max) {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.form-wrapper__login-option {
+  @include mq($bp1023max) {
+    padding: 0;
   }
 }
 
 #drupal-modal {
-
   .field--name-body {
     text-align: center;
     font-weight: bold;
@@ -72,7 +115,7 @@
 
     .form-item-quantity-0-value {
       input {
-        width: 45px;
+        width: 60px;
       }
     }
 
@@ -82,7 +125,6 @@
     .field--name-price {
       padding: 5px 0 5px 0;
     }
-
   }
-
 }
+

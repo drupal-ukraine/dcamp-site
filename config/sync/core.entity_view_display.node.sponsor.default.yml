@@ -1,0 +1,138 @@
+uuid: 0d999357-7505-445a-91ed-46c2bc5fa42a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sponsor.field_drupal_org
+    - field.field.node.sponsor.field_email
+    - field.field.node.sponsor.field_facebook
+    - field.field.node.sponsor.field_image
+    - field.field.node.sponsor.field_linkedin
+    - field.field.node.sponsor.field_page_content
+    - field.field.node.sponsor.field_person
+    - field.field.node.sponsor.field_sponsor_type
+    - field.field.node.sponsor.field_twitter
+    - field.field.node.sponsor.field_web_site
+    - node.type.sponsor
+  module:
+    - entity_reference_revisions
+    - link
+    - svg_image
+    - user
+id: node.sponsor.default
+targetEntityType: node
+bundle: sponsor
+mode: default
+content:
+  field_drupal_org:
+    weight: 7
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_email:
+    weight: 8
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_facebook:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_linkedin:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_page_content:
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_person:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sponsor_type:
+    type: entity_reference_label
+    weight: 10
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_twitter:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_web_site:
+    weight: 3
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: true
+      target: _blank
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

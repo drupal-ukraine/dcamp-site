@@ -1,0 +1,35 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+      fields:
+        title:
+          label: Title
+        name:
+          label: Author
+        status:
+          settings:
+            format_custom_true: Published
+            format_custom_false: Unpublished
+      filters:
+        status:
+          group_info:
+            label: 'Published status'
+            group_items:
+              1:
+                title: Published
+              2:
+                title: Unpublished
+        title:
+          expose:
+            label: Title
+  overview:
+    display_options:
+      tab_options:
+        title: Content
+  user_page:
+    display_options:
+      tab_options:
+        title: Content
