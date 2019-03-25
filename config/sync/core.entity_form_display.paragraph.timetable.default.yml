@@ -1,0 +1,39 @@
+uuid: 41bd736d-ae9b-4702-8dc5-fca857eb8806
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timetable.field_timetable_slots
+    - field.field.paragraph.timetable.field_title
+    - paragraphs.paragraphs_type.timetable
+  module:
+    - paragraphs
+id: paragraph.timetable.default
+targetEntityType: paragraph
+bundle: timetable
+mode: default
+content:
+  field_timetable_slots:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: timetable_slot
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

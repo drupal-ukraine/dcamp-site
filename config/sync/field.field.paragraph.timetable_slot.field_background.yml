@@ -1,0 +1,22 @@
+uuid: 00d3132a-07e6-450e-8879-ef9f964be362
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background
+    - paragraphs.paragraphs_type.timetable_slot
+  module:
+    - color_field
+id: paragraph.timetable_slot.field_background
+field_name: field_background
+entity_type: paragraph
+bundle: timetable_slot
+label: Background
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

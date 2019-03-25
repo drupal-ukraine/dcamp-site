@@ -1,61 +1,56 @@
-uuid: dae6d578-c7f3-4d42-a0f2-a6df9049ebe0
+uuid: 8b5e9ed9-55bb-42ff-80bd-40d33e63014d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_page_content
-    - node.type.landing_page
-    - paragraphs.paragraphs_type.menu_cta
+    - field.storage.paragraph.field_timetable_slots
     - paragraphs.paragraphs_type.timetable
+    - paragraphs.paragraphs_type.timetable_slot
   module:
     - entity_reference_revisions
-id: node.landing_page.field_page_content
-field_name: field_page_content
-entity_type: node
-bundle: landing_page
-label: 'Page content'
+id: paragraph.timetable.field_timetable_slots
+field_name: field_timetable_slots
+entity_type: paragraph
+bundle: timetable
+label: 'Timetable Slots'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
+    negate: 0
     target_bundles:
-      menu_cta: menu_cta
-      timetable: timetable
+      timetable_slot: timetable_slot
     target_bundles_drag_drop:
-      container:
-        weight: 6
-        enabled: false
-      cta_block:
-        weight: 7
-        enabled: false
-      html_widget:
-        weight: 8
-        enabled: false
-      menu_cta:
-        enabled: true
-        weight: 9
-      teaser:
-        weight: 10
-        enabled: false
       timetable:
-        enabled: true
         weight: 20
+        enabled: false
       camp_products:
         weight: 21
         enabled: false
       contacts:
         weight: 22
         enabled: false
+      container:
+        weight: 23
+        enabled: false
+      cta_block:
+        weight: 24
+        enabled: false
       hero_countdown:
         weight: 25
         enabled: false
+      html_widget:
+        weight: 26
+        enabled: false
       icomoon_link:
         weight: 27
+        enabled: false
+      menu_cta:
+        weight: 28
         enabled: false
       presentations:
         weight: 29
@@ -72,12 +67,15 @@ settings:
       sponsors:
         weight: 33
         enabled: false
+      teaser:
+        weight: 34
+        enabled: false
       timetable_presentation:
         weight: 35
         enabled: false
       timetable_slot:
+        enabled: true
         weight: 36
-        enabled: false
       wrapper_teasers:
         weight: 37
         enabled: false
