@@ -1,8 +1,14 @@
+[dir='rtl'] body {
+  direction: rtl;
+}
+
 body {
   margin: 1em;
-  background-color: #fff;
-  font-family: sans-serif;
+
   color: black;
+  background-color: #FFFFFF;
+
+  font-family: sans-serif;
 }
 
 table {
@@ -11,56 +17,65 @@ table {
 
 th {
   text-align: left; /* LTR */
-  color: #006;
-  border-bottom: 1px solid #ccc;
+
+  color: #000066;
+  border-bottom: 1px solid #CCCCCC;
 }
-tr.odd {
-  background-color: #ddd;
+
+tr {
+  .odd {
+    background-color: #DDDDDD;
+  }
+
+  .even {
+    background-color: #FFFFFF;
+  }
+
+  &:nth-child(odd) {
+    background-color: #DDDDDD;
+  }
+
+  &:nth-child(even) {
+    background-color: #FFFFFF;
+  }
 }
-tr.even {
-  background-color: #fff;
+
+[dir='rtl'] th {
+  text-align: right;
 }
+
+th {
+  text-align: left; /* LTR */
+
+  color: #000066;
+  border-bottom: 1px solid #CCCCCC;
+}
+
 td {
   padding: 5px;
 }
+
 #menu {
   visibility: hidden;
 }
+
 #main {
   margin: 1em;
 }
-a:link {
-  color: #000;
-}
-a:visited {
-  color: #000;
-}
-a:hover {
-  color: #00f;
-}
-a:link img,
-a:visited img {
-  border: 0;
-}
 
+a {
+  &:link {
+    color: #000000;
+  }
+  &:visited {
+    color: #000000;
+  }
+  &:hover {
+    color: #0000FF;
+  }
 
-[dir="rtl"] body {
-  direction: rtl;
-}
-th {
-  text-align: left; /* LTR */
-  color: #006;
-  border-bottom: 1px solid #ccc;
-}
-[dir="rtl"] th {
-  text-align: right;
-}
-tr:nth-child(odd) {
-  background-color: #ddd;
-}
-tr:nth-child(even) {
-  background-color: #fff;
-}
-td {
-  padding: 5px;
+  &:link img,
+  &:visited img {
+    border: 0;
+  }
 }
