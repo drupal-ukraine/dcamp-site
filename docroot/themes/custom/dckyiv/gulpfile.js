@@ -13,6 +13,7 @@ var neat = require('bourbon-neat').includePaths;
 var bourbon = require('bourbon').includePaths;
 var sassLint = require('gulp-sass-lint');
 var autoprefixer = require('gulp-autoprefixer');
+var csscomb = require('gulp-csscomb');
 const icomoonBuilder = require('gulp-icomoon-builder');
 
 var paths = {
@@ -21,7 +22,7 @@ var paths = {
     '!js/**/*.min.js'
   ],
   sass: {
-    main: ['style/scss/styles.scss', 'style/scss/iframes.scss', 'style/scss/print.scss', 'style/scss/wysiwyg.scss'],
+    main: ['style/scss/styles.scss', 'style/scss/print.scss', 'style/scss/wysiwyg.scss'],
     watch: 'style/scss/**/*'
   },
   css: {
@@ -109,7 +110,14 @@ gulp.task('compress', function () {
     .pipe(gulp.dest('js/dist'));
 });
 
-gulp.task('sass', ['build-icomoon'], function () {
+gulp.task('csscomb', function () {
+  'use strict';
+  return gulp.src(['style/scss/styles.scss', 'style/scss/print.scss', 'style/scss/wysiwyg.scss', 'style/scss/**/*'], {base: './'})
+    .pipe(csscomb())
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('sass', ['build-icomoon', 'csscomb'], function () {
   'use strict';
   return gulp.src(paths.sass.main)
     .pipe(sassGlob())

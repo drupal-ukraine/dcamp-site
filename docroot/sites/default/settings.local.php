@@ -114,12 +114,7 @@ if ($env == 'dev') {
 
   $config['system.performance']['css']['preprocess'] = FALSE;
   $config['system.performance']['js']['preprocess'] = FALSE;
-
-  $config['system.mail']['interface']['default'] = 'devel_mail_log';
-  $config['mailsystem.settings']['defaults']['sender'] = 'devel_mail_log';
-  $config['mailsystem.settings']['modules']['swiftmailer']['none']['sender'] = 'devel_mail_log';
-  $config['mailsystem.settings']['modules']['user']['none']['sender'] = 'devel_mail_log';
-
+  
   $config['devel.settings']['debug_mail_directory'] = 'public://maildebug';
 }
 
