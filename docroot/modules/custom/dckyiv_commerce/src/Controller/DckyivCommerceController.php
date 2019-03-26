@@ -7,6 +7,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\user\UserInterface;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 /**
  * DckyivCommerceController.
@@ -19,7 +20,11 @@ class DckyivCommerceController extends ControllerBase {
    * @return array
    *   The attendee form.
    */
-  public function attendeeFormEdit(UserInterface $user, OrderItemInterface $commerce_order_item, $attendee_paragraph) {
+  public function attendeeFormEdit(UserInterface $user, OrderItemInterface $commerce_order_item, ParagraphInterface $attendee_paragraph) {
+    if ($commerce_order_item != $attendee_paragraph->getParentEntity()->id()
+      || $commerce_order_item->getOrder()->getCustomerId() != $user->id()) {
+      throw new AccessDeniedHttpException();
+    }
     $form = \Drupal::service('entity.form_builder')->getForm($attendee_paragraph, 'edit');
     return $form;
   }

@@ -5,9 +5,14 @@ dependencies:
   config:
     - commerce_order.commerce_order_type.drupal_camp_ticket
     - field.storage.commerce_order.order_items
+    - field.storage.commerce_order_item.field_attendee
+    - field.storage.commerce_order_item.field_t_shirt_size
   module:
     - commerce
     - commerce_order
+    - commerce_product
+    - dckyiv_commerce
+    - options
     - user
 id: my_camp_tickets
 label: 'My tickets'
@@ -25,8 +30,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'view drupal_camp_ticket commerce_order'
       cache:
         type: tag
         options: {  }
@@ -81,17 +87,141 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        order_number:
-          table: commerce_order
-          field: order_number
-          id: order_number
-          entity_type: null
-          entity_field: order_number
-          plugin_id: field
-          relationship: none
+        title_1:
+          id: title_1
+          table: commerce_product_field_data
+          field: title
+          relationship: product_id
           group_type: group
           admin_label: ''
-          label: ''
+          label: Квиток
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: h3
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: commerce_product
+          entity_field: title
+          plugin_id: field
+        field_t_shirt_size:
+          id: field_t_shirt_size
+          table: commerce_order_item__field_t_shirt_size
+          field: field_t_shirt_size
+          relationship: order_items
+          group_type: group
+          admin_label: ''
+          label: 'Розмір футболки'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: true
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        quantity:
+          id: quantity
+          table: commerce_order_item
+          field: quantity
+          relationship: order_items
+          group_type: group
+          admin_label: ''
+          label: 'Кількість учасників'
           exclude: false
           alter:
             alter_text: false
@@ -133,8 +263,12 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings: {  }
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+            decimal_separator: .
+            scale: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -145,6 +279,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: commerce_order_item
+          entity_field: quantity
+          plugin_id: field
         order_items:
           id: order_items
           table: commerce_order__order_items
@@ -153,7 +290,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -206,6 +343,69 @@ display:
           delta_first_last: false
           multi_type: separator
           separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_attendee:
+          id: field_attendee
+          table: commerce_order_item__field_attendee
+          field: field_attendee
+          relationship: order_items
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: paragraph_attendee
+          settings:
+            view_mode: default
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ''
           field_api_classes: false
           plugin_id: field
       filters:
@@ -279,6 +479,36 @@ display:
           entity_type: commerce_order
           entity_field: uid
           plugin_id: standard
+        order_items:
+          id: order_items
+          table: commerce_order__order_items
+          field: order_items
+          relationship: none
+          group_type: group
+          admin_label: 'order_items: Позиція замовлення'
+          required: false
+          plugin_id: standard
+        commerce_product_variation:
+          id: commerce_product_variation
+          table: commerce_order_item
+          field: commerce_product_variation
+          relationship: order_items
+          group_type: group
+          admin_label: 'Варіація товару'
+          required: false
+          entity_type: commerce_order_item
+          plugin_id: standard
+        product_id:
+          id: product_id
+          table: commerce_product_variation_field_data
+          field: product_id
+          relationship: commerce_product_variation
+          group_type: group
+          admin_label: Товар
+          required: false
+          entity_type: commerce_product_variation
+          entity_field: product_id
+          plugin_id: standard
       arguments:
         uid:
           id: uid
@@ -318,6 +548,8 @@ display:
           entity_field: uid
           plugin_id: user_uid
       display_extenders: {  }
+      title: 'Мої квитки'
+      css_class: 'wrap-content my-tickets'
     cache_metadata:
       max-age: -1
       contexts:
@@ -325,25 +557,20 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.permissions
       tags:
         - 'config:field.storage.commerce_order.order_items'
+        - 'config:field.storage.commerce_order_item.field_attendee'
+        - 'config:field.storage.commerce_order_item.field_t_shirt_size'
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Сторінка
+    display_title: 'Мої квитки'
     position: 1
     display_options:
       display_extenders: {  }
       path: user/%user/my-tickets
-      menu:
-        type: tab
-        title: 'My Tickets'
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -351,5 +578,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.permissions
       tags:
         - 'config:field.storage.commerce_order.order_items'
+        - 'config:field.storage.commerce_order_item.field_attendee'
+        - 'config:field.storage.commerce_order_item.field_t_shirt_size'

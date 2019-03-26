@@ -1,0 +1,13 @@
+.my-tickets {
+  .views-row {
+    margin: 40px 0;
+  }
+
+  .views-field-field-attendee {
+    margin-top: 20px;
+    .field-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

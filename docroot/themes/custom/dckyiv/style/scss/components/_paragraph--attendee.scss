@@ -1,0 +1,18 @@
+// Contact paragraph
+
+.attendee {
+  &--wrapper {
+    display: flex;
+    border: 1px solid $color-black;
+    width: 300px;
+    margin-right: 15px;
+  }
+
+  &--content, &--add-info {
+    margin: 15px;
+  }
+
+  &--qr-code {
+    margin-left: auto;
+  }
+}

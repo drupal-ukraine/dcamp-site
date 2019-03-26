@@ -42,18 +42,21 @@
   'paragraph',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ? 'paragraph--unpublished'
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'attendee--wrapper'
 ] %}
 {% set parentEntity = paragraph.getParentEntity() %}
 {% set parentEntity = paragraph.getParentEntity() %}
-{% set qrSrc =  "https://chart.googleapis.com/chart?chs=400x400&cht=qr&choe=UTF-8&chl=" ~ paragraph.id() ~ ':' ~ parentEntity.id() ~ ':' ~ parentEntity.getOrderId() %}
+{% set qrSrc =  "https://chart.googleapis.com/chart?chs=150x150&cht=qr&choe=UTF-8&chld=H|1&chl=" ~ paragraph.id() ~ ':' ~ parentEntity.id() ~ ':' ~ parentEntity.getOrderId() %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <div class="content">
+      <div class="content attendee--content">
         {{ content }}
       </div>
     {% endblock %}
-    <img src="{{ qrSrc }}" />
+    <div class="attendee--qr-code">
+        <img src="{{ qrSrc }}" />
+    </div>
   </div>
 {% endblock paragraph %}
