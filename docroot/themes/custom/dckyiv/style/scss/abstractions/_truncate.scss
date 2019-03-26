@@ -6,16 +6,21 @@
 
 @mixin truncate($line-height: 1.6667, $lines: 5, $font-size: rem(15)) {
   display: block; /* Fallback for non-webkit */
+  overflow: hidden;
+
+  height: $font-size * $lines * $line-height; /* Fallback for non-webkit */
+
   font-size: $font-size;
   line-height: $line-height;
-  height: $font-size * $lines * $line-height; /* Fallback for non-webkit */
-  overflow: hidden;
 
   @supports (-webkit-line-clamp: $lines) {
     display: -webkit-box;
-    -webkit-line-clamp: $lines;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
+
     height: auto;
+
+    text-overflow: ellipsis;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
   } // @supports (-webkit-line-clamp: $lines)
 } // @mixin truncate

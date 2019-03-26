@@ -1,19 +1,27 @@
 // Custom blocks with links for login, register and lost password pages
-#block-loginformlinks, #block-registerlinks, #block-lostpasswordlinks {
+#block-loginformlinks,
+#block-registerlinks,
+#block-lostpasswordlinks {
   max-width: 340px;
   margin: 0 auto;
   .lost-password {
     padding-bottom: 24px;
+
     text-align: right;
+
     border-bottom: 1px solid $color-storm-gray;
   }
   .terms-of-use {
     padding-bottom: 24px;
+
     text-align: left;
+
     border-bottom: 1px solid $color-storm-gray;
   }
-  .register, .login {
+  .register,
+  .login {
     padding: 24px 0;
+
     text-align: center;
   }
   .form-item-pass-pass2 {
@@ -22,12 +30,15 @@
   .password-suggestions {
     margin: 0;
     li {
-      margin: 0.5rem 0;
+      margin: .5rem 0;
     }
   }
 }
 // User login, password reset, register forms
-form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-reset {
+form.user-login-form,
+form.user-pass,
+form.user-register-form,
+form.user-pass-reset {
   max-width: 340px;
   margin: 56px auto 30px auto;
 
@@ -40,45 +51,59 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
 
   .fb-login {
     display: block;
-    padding: 12px;
-    text-align: center;
+
     width: 100%;
-    background-color: $color-chambray;
+    padding: 12px;
+
+    text-align: center;
+
+    color: $color-white;
     border-radius: 0;
+    background-color: $color-chambray;
+
     font-size: 1.6rem;
     font-weight: 500;
-    color: $color-white;
+
     @include icoMoon('facebook');
 
     &:before {
-      font-size: 2.4rem;
-      margin-right: 16px;
       position: relative;
       bottom: -4px;
+
+      margin-right: 16px;
+
+      font-size: 2.4rem;
     }
   }
 
   .separator {
-    text-align: center;
-    border-bottom: 1px solid $color-silver;
     height: 30px;
     margin-bottom: 30px;
 
+    text-align: center;
+
+    border-bottom: 1px solid $color-silver;
+
     span {
       position: relative;
-      color: $color-silver;
-      font-size: 1.4rem;
       bottom: -20px;
+
       padding: 0 10px;
+
+      color: $color-silver;
       background-color: $color-white;
+
+      font-size: 1.4rem;
     }
   }
 
   .separator_second {
-    text-align: center;
-    border-bottom: 1px solid $color-silver;
     height: 30px;
     margin-bottom: 10px;
+
+    text-align: center;
+
+    border-bottom: 1px solid $color-silver;
   }
 
   .user-register {
@@ -90,20 +115,27 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
   }
   .form-submit {
     width: 100%;
+
     @include icoMoon('login');
   }
   .lost-password {
     padding: 24px 0;
+
     text-align: right;
+
     border-bottom: 1px solid $color-storm-gray;
   }
   .terms-of-use {
     padding: 24px 0;
+
     text-align: left;
+
     border-bottom: 1px solid $color-storm-gray;
   }
-  .register, .login {
+  .register,
+  .login {
     padding: 24px 0;
+
     text-align: center;
   }
   .form-item-pass-pass2 {
@@ -112,7 +144,7 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
   .password-suggestions {
     margin: 0;
     li {
-      margin: 0.5rem 0;
+      margin: .5rem 0;
     }
   }
   .field--name-f-guest-name > .form-item {
@@ -121,15 +153,16 @@ form.user-login-form, form.user-pass, form.user-register-form, form.user-pass-re
 
   .display-name-description {
     margin-bottom: 25px;
+
     font-size: 1.4rem;
     line-height: 1.14;
   }
 }
 
 .user-form {
-  padding: 20px 0;
   max-width: 420px;
   margin: 0 auto;
+  padding: 20px 0;
   label {
     font-size: 1.6rem;
     font-weight: bold;

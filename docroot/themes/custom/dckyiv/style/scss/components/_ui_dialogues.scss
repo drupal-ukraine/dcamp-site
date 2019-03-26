@@ -1,45 +1,55 @@
 // Modal
 .ui-dialog {
-  padding: 0;
-  border: none !important;
-  border-radius: 0px;
-  max-width: 700px;
-  box-shadow: 0 12px 10px 0 rgba($color-black, 0.1);
   z-index: 100;
 
+  max-width: 700px;
+  padding: 0;
+
+  border: none !important;
+  border-radius: 0;
+  box-shadow: 0 12px 10px 0 rgba($color-black, .1);
+
   .ui-dialog-titlebar {
-    background-color: $color-white;
-    border: none;
     padding: 18px 25px;
+
+    border: none;
     border-radius: 6px;
+    background-color: $color-white;
 
     .ui-dialog-title {
+      white-space: normal;
+
       font-size: 2rem;
       font-weight: 600;
       line-height: 1.2;
-      white-space: normal;
     }
   }
   div.ui-dialog-content {
-    padding: 10px 25px 18px 25px;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    padding: 10px 25px 18px 25px;
   }
 
   .ui-dialog-titlebar-close {
-    text-indent: 0;
-    color: $color-black;
-    font-size: 0;
-    background: transparent;
-    border: none;
+    top: 25px;
     right: 25px;
+
     width: 30px;
     height: 30px;
-    top: 25px;
+
+    text-indent: 0;
+
+    color: $color-black;
+    border: none;
+    background: transparent;
+
+    font-size: 0;
+
+    @include icoMoon('x', 'before');
     @include mq($bp768) {
       top: 28px;
     }
-    @include icoMoon('x', 'before');
     &:before {
       font-size: 1.4rem;
       font-weight: 700;
@@ -62,8 +72,10 @@
 
 .ui-widget {
   &.ui-widget-content {
-    border: none;
     width: 300px !important;
+
+    border: none;
+
     @include mq($bp768) {
       width: 450px !important;
     }
@@ -77,50 +89,61 @@
   }
 
   .ui-dialog-titlebar-close {
-    right: 5px;
-    top: 15px;
     z-index: 10;
+    top: 15px;
+    right: 5px;
   }
 
   .ui-dialog-content {
     position: relative;
+
     padding: 68px 12px 0;
+
+    text-align: center;
+
     border: 0;
+
     font-family: $font-proxima-nova-regular;
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.6;
-    text-align: center;
 
     @include icoMoon('alert-circle', 'before');
     &:before {
       position: absolute;
       top: 18px;
       left: 50%;
+
       margin-left: -1.85rem;
+
       color: $color-fern;
+
       font-size: 3.7rem;
     }
   }
 
   .ui-dialog-buttonpane.ui-widget-content {
     padding: .3rem 1rem .3rem;
+
     border: none;
 
     .ui-dialog-buttonset {
-      float: none;
       display: flex;
-      margin: 0 auto;
+      float: none;
       flex-direction: row;
-      justify-content: space-between;
+
       max-width: 300px;
+      margin: 0 auto;
+
+      justify-content: space-between;
 
       button {
         float: none;
 
         &:nth-child(1) {
-          @include button('primary');
           margin-right: 20px;
+
+          @include button('primary');
         }
         &:nth-child(2) {
           @include button('secondary');
@@ -134,6 +157,6 @@
 }
 
 div.ui-widget-overlay {
-  background: $color-black;
   opacity: .8;
+  background: $color-black;
 }

@@ -1,10 +1,12 @@
 // Style for subtitle
 
 @mixin subtitle {
-  font-family: $font-proxima-nova-regular;
+  text-transform: uppercase;
+
   color: $color-storm-gray;
+
+  font-family: $font-proxima-nova-regular;
   font-size: 1.1rem;
   font-weight: bold;
   line-height: 1.36;
-  text-transform: uppercase;
 }

@@ -18,15 +18,19 @@
     }
 
     @if ($image) {
-      content: '';
-      display: block;
       position: absolute;
       top: 50%;
       left: 50%;
-      background-image: url($images-path + $image);
-      @include background-cover;
-      @include minimize-text;
+
+      display: block;
+
+      content: '';
       transform-origin: $origin;
+
+      background-image: url($images-path ) $image;
+
+      @include minimize-text;
+      @include background-cover;;
     }
 
     @if ($icon-transform) {

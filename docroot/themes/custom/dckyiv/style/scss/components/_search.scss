@@ -1,8 +1,9 @@
 //Search styles
 
 .paragraph--type--search-results {
-  @include clearfix;
   max-width: 82rem;
+
+  @include clearfix;
 
   form {
     display: none;
@@ -11,13 +12,16 @@
   .views-element-container {
     header {
       h1 {
-        color: $color-fern;
-        line-height: 1.42;
         margin-bottom: 2.0rem;
+
+        color: $color-fern;
+
+        line-height: 1.42;
       }
       p {
-        line-height: 1.63;
         margin-bottom: 4.0rem;
+
+        line-height: 1.63;
       }
     }
 
@@ -31,19 +35,22 @@
         }
       }
       h5 {
-        text-transform: uppercase;
         margin-bottom: 1.0rem;
+
+        text-transform: uppercase;
       }
       p {
-        line-height: 1.63;
         margin-bottom: 4.0rem;
+
+        line-height: 1.63;
       }
     }
   }
 
   nav.pager ul {
-    @include inline-list-items;
     display: flex;
+
+    @include inline-list-items;
     justify-content: center;
 
     li {
@@ -58,7 +65,10 @@
     }
 
     .pager__item {
-      &--first, &--previous, &--next, &--last {
+      &--first,
+      &--previous,
+      &--next,
+      &--last {
         display: none;
       }
     }

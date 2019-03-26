@@ -13,7 +13,6 @@
     margin-right: 0;
 
     @include mq($bp1280) {
-
       &:first-child {
         margin-right: 20px;
       }
@@ -38,10 +37,12 @@
 
   .fieldset-legend,
   .layout-region h3 {
-    font-size: 2rem;
-    font-family: $font-proxima-nova-bold;
-    color: $color-shark;
     text-transform: uppercase;
+
+    color: $color-shark;
+
+    font-family: $font-proxima-nova-bold;
+    font-size: 2rem;
   }
 
   label {
@@ -55,6 +56,7 @@
   .order-total-line {
     @include mq($bp1280) {
       padding-top: 10px;
+
       text-align: left;
     }
   }

@@ -9,14 +9,18 @@
 
   .field--name-field-title {
     margin-bottom: 20px;
-    font-size: 2.4rem;
-    font-family: $font-proxima-nova-bold;
+
     text-align: center;
-    color: $color-shark;
     text-transform: uppercase;
+
+    color: $color-shark;
+
+    font-family: $font-proxima-nova-bold;
+    font-size: 2.4rem;
 
     @include mq($bp1024) {
       margin-bottom: 30px;
+
       font-size: 3.6rem;
     }
   }
@@ -24,16 +28,19 @@
   form {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
 
+    width: 100%;
+
+    flex-wrap: wrap;
     @include mq($bp1024) {
       flex-direction: row;
-      flex-wrap: wrap;
+
       width: 644px;
       margin: 0 auto;
+
+      flex-wrap: wrap;
     }
+    justify-content: space-between;
   }
 
   .form-item {
@@ -60,18 +67,18 @@
 
     input,
     textarea {
-      background: $color-gallery;
-      border-color: $color-silver;
       color: $color-tuna;
+      border-color: $color-silver;
+      background: $color-gallery;
 
       &:focus {
-        background: $color-gallery;
         border-color: $color-storm-gray;
+        background: $color-gallery;
       }
 
       &:hover {
-        background: $color-gallery;
         border-color: $color-storm-gray;
+        background: $color-gallery;
       }
     }
   }
@@ -81,12 +88,11 @@
 
     .form-submit {
       appearance: none;
-
       @include mq($bp1024) {
         width: 350px;
+
         text-transform: uppercase;
       }
     }
   }
-
 }

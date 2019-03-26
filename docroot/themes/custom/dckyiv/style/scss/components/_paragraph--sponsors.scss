@@ -8,16 +8,18 @@
     display: flex;
     flex-direction: column;
 
-    @include mq($bp1024){
+    @include mq($bp1024) {
       flex-direction: row;
+
       justify-content: space-between;
     }
 
     & > .field__item {
-      border: 1px solid $color-black;
       margin: 0 0 15px;
 
-      @include mq($bp1024){
+      border: 1px solid $color-black;
+
+      @include mq($bp1024) {
         width: calc(50% - 14px);
       }
     }
@@ -28,37 +30,42 @@
   width: 100%;
 
   .sponsor-type--item {
-    height: 45px;
     display: flex;
-    justify-content: center;
+
+    height: 45px;
+
     align-items: center;
+    justify-content: center;
 
     .field--name-name {
+      text-align: center;
+      text-transform: uppercase;
+
       color: $color-white;
+
       font-family: $font-proxima-nova-bold;
       font-size: 18px;
-      text-transform: uppercase;
-      text-align: center;
     }
   }
   .platinum-sponsor {
-    background-image: linear-gradient(to top, #3a3a43, #737a7f);
+    background-image: linear-gradient(to top, #3A3A43, #737A7F);
   }
   .gold-sponsor {
-    background-image: linear-gradient(to top, #937050, #ecd67f);
+    background-image: linear-gradient(to top, #937050, #ECD67F);
   }
   .silver-sponsor {
-    background-image: linear-gradient(to top, #6b7077, #a8aeb2);
+    background-image: linear-gradient(to top, #6B7077, #A8AEB2);
   }
   .bronze-sponsor {
-    background-image: linear-gradient(to top, #578f5b, #65bd6a);
+    background-image: linear-gradient(to top, #578F5B, #65BD6A);
   }
 
   .views-element-container {
     & > div {
       display: flex;
-      flex-wrap: wrap;
       flex-direction: row;
+
+      flex-wrap: wrap;
       justify-content: space-around;
 
       header {
@@ -73,4 +80,3 @@
     }
   }
 }
-

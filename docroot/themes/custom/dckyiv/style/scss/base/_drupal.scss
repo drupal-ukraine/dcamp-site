@@ -23,7 +23,7 @@
 }
 
 .orange_link {
- color: $color-mango-tango;
+  color: $color-mango-tango;
   &:hover {
     color: rgba($color-mango-tango, .6);
   }
@@ -45,11 +45,14 @@
     }
 
     .field__label {
-      font-family: $font-proxima-nova-bold;
-      color: $color-silver;
       padding-bottom: 5px;
+
       text-transform: uppercase;
+
+      color: $color-silver;
       border-bottom: 1px solid $color-gallery;
+
+      font-family: $font-proxima-nova-bold;
     }
 
     .field__item {
@@ -63,10 +66,11 @@
   top: 13px !important;
 }
 .dropbutton-multiple.open .dropbutton-arrow {
+  top: 3px !important;
+
   height: auto !important;
   margin: 0 !important;
   padding: 0 !important;
-  top: 3px !important;
 }
 
 .dropbutton-toggle {
@@ -74,17 +78,17 @@
 }
 
 .messages {
-  @include container;
+  margin-top: 20px !important;
+  margin-bottom: 30px !important;
+  padding: 10px 0 10px 35px !important;
 
   background-position: 10px center !important;
   box-shadow: none;
-  padding: 10px 0 10px 35px !important;
-  margin-top: 20px !important;
-  margin-bottom: 30px !important;
 
   @include mq($bp1023max) {
     margin: 20px 15px 30px;
   }
+  @include container;
 
   & > div {
     font-size: 1.4rem;
@@ -111,8 +115,8 @@
   &--type--social-links,
   &--type--contacts {
     @include mq($bp1023max) {
-      margin-left: -15px;
       margin-right: -15px;
+      margin-left: -15px;
     }
   }
 }
@@ -120,16 +124,14 @@
 table {
   width: 100%;
 
-  @include mq($bp768) {
-    max-width: 750px;
+  @include mq($bp1280) {
+    max-width: 1240px;
   }
-
   @include mq($bp960) {
     max-width: 970px;
   }
-
-  @include mq($bp1280) {
-    max-width: 1240px;
+  @include mq($bp768) {
+    max-width: 750px;
   }
 
   thead,
@@ -137,7 +139,9 @@ table {
     th,
     td {
       padding: 10px;
+
       text-align: left;
+
       border: 1px solid $color-gallery;
     }
   }

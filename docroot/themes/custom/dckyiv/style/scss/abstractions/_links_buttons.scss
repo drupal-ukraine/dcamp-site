@@ -1,40 +1,48 @@
 // Default buttons
 
 @mixin button($type: 'primary', $inverse: false) {
-  color: $color-white;
   position: relative;
-  border-radius: 0;
-  text-align: center;
-  font-size: 1.8rem;
-  font-family: $font-proxima-nova-bold;
-  line-height: 1.5;
-  background: $color-fern;
-  border: solid 2px $color-fern;
+
   transition: all .1s;
+  text-align: center;
+
+  color: $color-white;
+  border: solid 2px $color-fern;
+  border-radius: 0;
+  background: $color-fern;
+
+  font-family: $font-proxima-nova-bold;
+  font-size: 1.8rem;
+  line-height: 1.5;
   @content;
 
 
   @if $type == 'secondary' {
     padding: 6px 24px;
-    font-size: 1.8rem;
-    border: solid 2px $color-fern;
+
     color: $color-fern;
+    border: solid 2px $color-fern;
     background: $color-white;
+
+    font-size: 1.8rem;
   }
   @else if $type == 'small' {
     padding: 5px 10px;
+
     font-size: 14px;
   }
   @else {
-    font-size: 1.8rem;
     padding: 10px 24px;
+
+    font-size: 1.8rem;
   }
 
   &:hover {
     cursor: pointer;
+
     color: $color-fern;
-    background-color: $color-white;
     border-color: $color-fern;
+    background-color: $color-white;
   }
   &:focus {
     outline: none;
@@ -42,24 +50,25 @@
 
   @if $inverse {
     color: $color-mine-shaft;
-    background-color: $color-white;
     border-color: $color-mine-shaft;
+    background-color: $color-white;
     &:hover {
-      background-color: $color-white;
-      border-color: $color-fern;
       color: $color-fern;
+      border-color: $color-fern;
+      background-color: $color-white;
     }
   }
 
   &[disabled=disabled] {
-    background-color: $color-silver;
-    border-color: $color-silver;
     color: $color-nobel;
+    border-color: $color-silver;
+    background-color: $color-silver;
     &:hover {
       cursor: not-allowed;
-      background-color: $color-silver;
-      border-color: $color-silver;
+
       color: $color-nobel;
+      border-color: $color-silver;
+      background-color: $color-silver;
     }
   }
 }

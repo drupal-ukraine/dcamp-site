@@ -2,24 +2,29 @@
 // --------------------------
 
 @mixin fa-icon {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: inline-block;
+
+  vertical-align: -.125em;
+
+  font-weight: normal;
   font-style: normal;
   font-variant: normal;
-  font-weight: normal;
   line-height: 1;
-  vertical-align: -.125em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin fa-icon-rotate($degrees, $rotation) {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})";
   transform: rotate($degrees);
+
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})';
 }
 
 @mixin fa-icon-flip($horiz, $vert, $rotation) {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)";
   transform: scale($horiz, $vert);
+
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)';
 }
 
 
@@ -28,14 +33,17 @@
 // See: http://a11yproject.com/posts/how-to-hide-content/
 
 @mixin sr-only {
-  border: 0;
+  position: absolute;
+
+  overflow: hidden;
   clip: rect(0, 0, 0, 0);
+
+  width: 1px;
   height: 1px;
   margin: -1px;
-  overflow: hidden;
   padding: 0;
-  position: absolute;
-  width: 1px;
+
+  border: 0;
 }
 
 // Use in conjunction with .sr-only to only display content when it's focused.
@@ -47,11 +55,13 @@
 @mixin sr-only-focusable {
   &:active,
   &:focus {
+    position: static;
+
+    overflow: visible;
     clip: auto;
+
+    width: auto;
     height: auto;
     margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
   }
 }

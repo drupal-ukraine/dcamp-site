@@ -2,10 +2,12 @@
 
 .paragraph--type--hero-countdown {
   display: flex;
-  align-items: center;
-  justify-content: center;
+
   height: 55vh;
   min-height: 510px;
+
+  align-items: center;
+  justify-content: center;
 
   .content {
     width: auto;
@@ -15,15 +17,19 @@
     &--name-field-heading,
     &--name-field-subheading {
       text-align: center;
+
       text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.3);
     }
 
     &--name-field-heading {
+      margin: 0 0 10px;
+
+      text-transform: uppercase;
+
+      color: $color-white;
+
       font-family: $font-proxima-nova-light;
       font-size: 9vw;
-      color: $color-white;
-      text-transform: uppercase;
-      margin: 0 0 10px;
 
       @include mq($bp1024) {
         font-size: 8rem;
@@ -34,9 +40,10 @@
       }
     }
     &--name-field-subheading {
+      color: $color-white;
+
       font-family: $font-proxima-nova-light;
       font-size: 5vw;
-      color: $color-white;
 
       @include mq($bp1024) {
         font-size: 4rem;
@@ -45,25 +52,27 @@
 
     &--name-field-cta-link {
       margin: 0 0 2vh;
+
       text-align: center;
 
       a {
-        @include button;
         box-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.1);
 
         @include mq($bp1024) {
           padding: 10px 120px;
         }
+        @include button;
       }
     }
   }
 
   #countdown-clock {
     display: flex;
-    align-items: center;
+
     height: 100%;
     margin: 5vh 0 5vh;
 
+    align-items: center;
     @include mq($bp1024) {
       margin: 8vh 0 6vh;
     }
@@ -71,13 +80,16 @@
     .time-item {
       display: flex;
       flex-direction: column;
+
       margin: 0 1vw;
 
       span {
-        font-family: $font-proxima-nova-light;
+        text-align: center;
+
         color: $color-white;
         text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
-        text-align: center;
+
+        font-family: $font-proxima-nova-light;
 
         &:first-child {
           font-size: 16vw;
@@ -98,11 +110,13 @@
     .time-dots {
       padding-bottom: 1.8vh;
       span {
-        font-size: 10vw;
-        font-family: $font-proxima-nova-light;
+        text-align: center;
+
         color: $color-white;
         text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .3);
-        text-align: center;
+
+        font-family: $font-proxima-nova-light;
+        font-size: 10vw;
 
         @include mq($bp1024) {
           font-size: 10rem;
@@ -114,7 +128,7 @@
 
 body.transparent-header .paragraph--type--hero-countdown {
   @include mq($bp1024) {
-    height:100vh;
+    height: 100vh;
     //min-height: 600px;
   }
 }

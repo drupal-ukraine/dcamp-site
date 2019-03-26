@@ -2,6 +2,6 @@
 // Displays background-size: cover and background-position: center as global styles for background images
 
 @mixin background-cover {
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 } // @mixin background-cover

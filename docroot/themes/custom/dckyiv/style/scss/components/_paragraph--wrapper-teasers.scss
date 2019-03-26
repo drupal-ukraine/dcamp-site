@@ -1,21 +1,21 @@
 // Paragraph Wrapper Teasers
 .paragraph--type--wrapper-teasers {
+  display: flex;
+  flex-direction: column;
+
   margin-bottom: 40px;
   padding: 30px 0;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-position: 50% 90%;
+  background-size: 130%;
+
   align-items: center;
-
-  background-size:130%;
-  background-position:50% 90%;
-
   @include mq($bp1024) {
-    padding: 0;
     height: 440px;
     margin-bottom: 80px;
+    padding: 0;
   }
+  justify-content: center;
 
   &.content {
     width: 100%;
@@ -23,18 +23,20 @@
 
   .wrap-content {
     @include mq($bp1024) {
-      padding-top: 0;
       width: 100%;
+      padding-top: 0;
     }
   }
 
   .field--name-field-teasers {
     display: flex;
     flex-direction: column;
+
     margin: 0 auto;
 
     @include mq($bp1024) {
-     flex-direction: row;
+      flex-direction: row;
+
       justify-content: space-around;
     }
   }

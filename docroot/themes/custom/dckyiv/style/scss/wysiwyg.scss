@@ -9,36 +9,41 @@
 @import 'base/*.scss';
 
 body.cke_editable {
-  padding: 0.5rem;
+  padding: .5rem;
 
 
   p {
     padding-bottom: 20px;
+
+    color: $color-shark;
+
     font-family: $font-proxima-nova-regular;
     font-size: 1.6rem;
     line-height: 1.4;
-    color: $color-shark;
   }
 
   h2 {
-    font-size: 3.6rem;
-    font-family: $font-proxima-nova-bold;
     color: $color-tuna;
+
+    font-family: $font-proxima-nova-bold;
+    font-size: 3.6rem;
     line-height: 1.2;
   }
 
   h3 {
-    font-size: 2.4rem;
-    font-family: $font-proxima-nova-bold;
     color: $color-tuna;
+
+    font-family: $font-proxima-nova-bold;
+    font-size: 2.4rem;
     line-height: 1.2;
   }
 
   blockquote {
+    max-width: 500px;
     margin-bottom: 20px;
     padding-left: 30px;
+
     border-left: 10px solid $color-fern;
-    max-width: 500px;
 
     p {
       padding-bottom: 0;
@@ -48,19 +53,25 @@ body.cke_editable {
   ol {
     display: flex;
     flex-direction: column;
-    padding: 30px 0 30px 30px;
-    counter-reset: item;
+
     max-width: 700px;
+    padding: 30px 0 30px 30px;
+
+    counter-reset: item;
 
     li {
       display: flex;
       flex-direction: row;
-      align-items: center;
+
+      padding: 20px 10px 20px 10px;
+
+      border-bottom: 1px solid $color-tuna;
+
       font-family: $font-proxima-nova-regular;
       font-size: 1.6rem;
       line-height: 1.4;
-      padding: 20px 10px 20px 10px;
-      border-bottom: 1px solid $color-tuna;
+
+      align-items: center;
 
       &:last-child {
         border-bottom: none;
@@ -68,12 +79,15 @@ body.cke_editable {
 
       &::before {
         padding-right: 20px;
-        font-size: 4.8rem;
-        font-family: $font-proxima-nova-bold;
-        text-align: center;
-        content: counter(item) " ";
+
+        content: counter(item) ' ';
         counter-increment: item;
+        text-align: center;
+
         color: $color-fern;
+
+        font-family: $font-proxima-nova-bold;
+        font-size: 4.8rem;
       }
     }
   }
@@ -81,18 +95,22 @@ body.cke_editable {
   ul {
     display: flex;
     flex-direction: column;
-    padding: 0 0 20px 60px;
+
     max-width: 700px;
+    padding: 0 0 20px 60px;
 
     li {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      padding-right: 10px;
+
       margin-bottom: 15px;
+      padding-right: 10px;
+
       font-family: $font-proxima-nova-regular;
       font-size: 1.6rem;
       line-height: 1.4;
+
+      align-items: center;
 
       &:last-child {
         margin-bottom: 0;
@@ -101,10 +119,13 @@ body.cke_editable {
       &::before {
         padding-top: 5px;
         padding-right: 30px;
-        font-size: 2.2rem;
-        font-family: $font-proxima-nova-bold;
-        content: "◼";
+
+        content: '◼';
+
         color: $color-fern;
+
+        font-family: $font-proxima-nova-bold;
+        font-size: 2.2rem;
       }
     }
   }
@@ -126,6 +147,7 @@ body.cke_editable {
   .table_week tbody {
     display: flex;
     flex-direction: column;
+
     padding: 10px 0 10px;
 
     @include mq($bp1024) {
@@ -135,10 +157,14 @@ body.cke_editable {
     tr {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      font-size: 1.6rem;
+
       padding: 20px 10px 20px 30px;
+
       border-bottom: 1px solid $color-tuna;
+
+      font-size: 1.6rem;
+
+      align-items: center;
 
       &:last-child {
         border-bottom: none;
@@ -147,15 +173,18 @@ body.cke_editable {
       td {
         &:first-child {
           padding-right: 20px;
-          font-size: 4.8rem;
-          font-family: $font-proxima-nova-bold;
+
           text-align: center;
+
           color: $color-fern;
+
+          font-family: $font-proxima-nova-bold;
+          font-size: 4.8rem;
         }
 
         &:last-child {
-          font-size: 2.4rem;
           font-family: $font-proxima-nova-bold;
+          font-size: 2.4rem;
         }
       }
     }

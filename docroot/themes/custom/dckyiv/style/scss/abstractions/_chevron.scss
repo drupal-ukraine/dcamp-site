@@ -4,11 +4,13 @@
 
 @mixin chevron($size: null, $thickness: null, $color: null, $direction: null) {
   display: inline-block;
-  height: $size;
+
   width: $size;
+  height: $size;
+
   border-width: $thickness 0 0 $thickness;
-  border-color: $color;
   border-style: solid;
+  border-color: $color;
 
   @if $direction == 'right' {
     @include vp-transform(rotate(135deg));

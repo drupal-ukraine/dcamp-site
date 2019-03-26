@@ -4,9 +4,9 @@
  * see @ https://jshakespeare.com/easy-icomoon-icons-with-sass
  */
 
-@import "icons";
+@import 'icons';
 
-@mixin icoMoon($icon, $position: "before", $replace: false) {
+@mixin icoMoon($icon, $position: 'before', $replace: false) {
   // If we're replacing the text, set font-size to 0
   @if $replace {
     font-size: 0;
@@ -14,20 +14,21 @@
   // Pseudo-element properties
   &:#{$position} {
     content: map-get($icons, $icon);
-    font-family: 'Icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
     text-transform: none;
+
+    font-family: 'Icomoon';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     line-height: 1;
+    /* Better Font Rendering =========== */
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
     @if $replace {
       font-size: 1rem;
     }
     @content;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 }

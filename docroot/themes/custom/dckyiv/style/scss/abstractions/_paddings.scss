@@ -2,7 +2,8 @@
 
 @mixin paddings {
   padding: 0 20px;
-  @include mq($bp768){
+
+  @include mq($bp768) {
     padding: 0 ;
   }
 }

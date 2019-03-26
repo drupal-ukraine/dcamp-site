@@ -2,24 +2,32 @@
 
 #mobile-navigation {
   position: fixed;
-  background-color: transparent;
-  height: 100%;
-  width: 100%;
   z-index: 12;
   top: 0;
   left: -100%;
+
+  width: 100%;
+  height: 100%;
+
   transition: left 0s ease .5s, background-color .5s ease-in-out;
+
+  background-color: transparent;
 
   .bottom-caption {
     display: none;
     &.mobile {
-      @include icoMoon('lock', 'before');
       display: block;
-      text-align: center;
-      color: $color-storm-gray;
+
       padding: 16px 0;
+
+      text-align: center;
       text-transform: uppercase;
+
+      color: $color-storm-gray;
+
       font-size: 1.1rem;
+
+      @include icoMoon('lock', 'before');
       &:before {
         margin-right: 1rem;
       }
@@ -28,28 +36,37 @@
 
   .slide-wrapper {
     position: relative;
-    box-shadow: 10px 0 32px rgba($color-black, 0.4);
+
     overflow: hidden;
     overflow-y: scroll;
+
+    width: 94%;
     height: 100%;
     margin-left: -94%;
-    width: 94%;
-    background-color: $color-silver;
+
     transition: all .5s ease-in-out;
 
+    background-color: $color-silver;
+    box-shadow: 10px 0 32px rgba($color-black, .4);
+
     .block-system-branding-block {
-      background-color: $color-main-header;
       text-align: center;
+
+      background-color: $color-main-header;
       a {
         display: inline-block;
+
         height: 57px;
         padding: 13px 0;
-        font-size: 2rem;
-        font-family: $font-proxima-nova-bold;
+
         color: $color-white;
+
+        font-family: $font-proxima-nova-bold;
+        font-size: 2rem;
+
         @include mq($bp1024) {
-          padding: 0;
           height: auto;
+          padding: 0;
         }
         span {
           color: $color-fern;
@@ -58,34 +75,42 @@
     }
 
     span.mobilenavtoggle {
-      @include icoMoon('x');
       position: absolute;
-      left: 0;
       top: 2px;
-      color: $color-white;
-      padding: 18px 18px 15px;
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
+      left: 0;
 
+      padding: 18px 18px 15px;
+
+      cursor: pointer;
+
+      color: $color-white;
+
+      font-size: 1.8rem;
+
+      @include icoMoon('x');
+    }
   }
   // opaque layer near menu to close it
   div.mobilenavtoggle {
     position: absolute;
-    cursor: pointer;
-    right: 0;
     top: 0;
+    right: 0;
+
     width: 6%;
     height: 100%;
     margin: 0;
     padding: 0;
+
+    cursor: pointer;
   }
 
   // Mobile nav open transition
   &.open {
     left: 0;
-    background-color: rgba($color-black, 0.6);
+
     transition: background-color .4s;
+
+    background-color: rgba($color-black, .6);
     .slide-wrapper {
       margin-left: 0;
     }
@@ -99,15 +124,16 @@
       }
 
       & > .link-container a {
-        color: $color-shark;
-        font-weight: 900;
         transition: color .3s;
+
+        color: $color-shark;
+
+        font-weight: 900;
         &:hover {
           color: rgba($color-shark, .6);
         }
       }
     }
-
   }
 
   // Mobile nav multilevel navigation
@@ -116,6 +142,7 @@
     transition: background-color .3s;
     &.open {
       height: 100%;
+
       background-color: $color-white;
     }
 
@@ -134,13 +161,16 @@
           // Menu CTA brick
           &.has-content {
             display: none;
+
             @include mq($bp1024) {
               display: block;
             }
           }
           a {
             display: block;
+
             padding: 15px 35px 15px 0;
+
             border-bottom: 1px solid rgba($color-black, .2);
           }
         }
@@ -148,6 +178,7 @@
           // Level 1 menu links
           li a {
             color: $color-shark;
+
             font-weight: normal;
             &:hover {
               color: rgba($color-shark, .6);
@@ -157,7 +188,8 @@
           .menu-dropdown {
             li a {
               color: $color-fern;
-              &:active, &:hover {
+              &:active,
+              &:hover {
                 color: rgba($color-fern, .6);
               }
             }
@@ -173,16 +205,21 @@
 
         // Submenu open chevron
         .subnav-toggle {
-          @include icoMoon('chevron-right');
           position: absolute;
-          right: 0;
           top: 0;
+          right: 0;
+
           padding: 20px 15px 20px 20px;
-          color: $color-fern;
+
           cursor: pointer;
+
+          color: $color-fern;
+
+          @include icoMoon('chevron-right');
           &:before {
-            transition: transform .3s;
             display: inline-block;
+
+            transition: transform .3s;
           }
         }
       }
@@ -197,8 +234,10 @@
         position: absolute;
         right: 0;
         bottom: 2rem;
-        font-size: 1.4rem;
+
         color: $color-storm-gray;
+
+        font-size: 1.4rem;
       }
     }
     /////////////////////////////
@@ -208,39 +247,48 @@
   // Mobile nav accordion styles and transitions
   //////////////////////////////////////////////
   .region-mobile-navigation {
-
     nav {
-      max-height: none;
       overflow: hidden;
-      opacity: 1;
+
+      max-height: none;
+
       transition: opacity .5s;
+
+      opacity: 1;
     }
 
     // Initial menu setup
     ul.menu-level-0 {
       & > li {
-        opacity: 1;
-        max-height: none;
         visibility: visible;
+
+        max-height: none;
+
+        opacity: 1;
       }
     }
 
     // Hiding all submenu items initially
     ul li {
       visibility: hidden;
+
       max-height: 0;
-      opacity: 0;
+
       transition: opacity .5s;
+
+      opacity: 0;
     }
 
     &.open {
       nav {
         visibility: hidden;
+
         max-height: 0;
       }
 
       nav.open {
         visibility: visible;
+
         max-height: none;
       }
     }
@@ -249,17 +297,24 @@
     nav.open {
       ul > li {
         visibility: hidden;
+
         max-height: 0;
+
         opacity: 0;
-        &.expanded, &.parent {
+        &.expanded,
+        &.parent {
           visibility: visible;
+
           max-height: none;
+
           opacity: 1;
 
           & > .menu_link_content {
             & > ul > li {
               visibility: visible;
+
               max-height: none;
+
               opacity: 1;
             }
           }
@@ -268,6 +323,7 @@
         &.parent {
           & > .link-container {
             visibility: hidden;
+
             max-height: 0;
           }
         }
@@ -279,13 +335,14 @@
 
           & > .link-container {
             a {
-              font-weight: 900;
               padding-left: 35px;
+
+              font-weight: 900;
             }
 
             .subnav-toggle {
-              left: -15px;
               right: auto;
+              left: -15px;
               &:before {
                 transform: scaleX(-1);
               }
@@ -293,7 +350,9 @@
           }
           .menu-item {
             visibility: visible;
+
             max-height: none;
+
             opacity: 1;
           }
         }
@@ -301,21 +360,20 @@
         &.parent {
           & > .menu_link_content > ul > li {
             visibility: hidden;
+
             max-height: 0;
+
             opacity: 0;
           }
 
           & > .menu_link_content > ul > li.expanded {
             visibility: visible;
+
             max-height: none;
+
             opacity: 1;
           }
         }
-
-      }
-
-      .menu-level-1 {
-
       }
     }
   }
@@ -323,12 +381,14 @@
   .logo {
     &_desktop {
       display: none;
+
       @include mq($bp1024) {
         display: inline-block;
       }
     }
     &_mobile {
       display: inline-block;
+
       @include mq($bp1024) {
         display: none;
       }
@@ -340,6 +400,7 @@
       color: $color-white;
       &:last-child {
         display: inline-block;
+
         color: $color-fern;
       }
     }

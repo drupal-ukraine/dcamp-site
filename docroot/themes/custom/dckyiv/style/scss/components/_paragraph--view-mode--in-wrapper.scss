@@ -1,25 +1,23 @@
 .paragraph--view-mode--in-wrapper {
-
   padding: 36px 0;
 
+  @include mq($bp1024) {
+    max-width: 300px;
+    padding: 0;
+  }
   @include mq($bp768) {
     max-width: 400px;
-  }
-
-  @include mq($bp1024) {
-    padding: 0;
-    max-width: 300px;
   }
 
   .content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 
+    align-items: center;
     @include mq($bp1024) {
       height: 285px;
     }
+    justify-content: space-between;
 
     .field--name-field {
       &-intro-image {
@@ -35,12 +33,15 @@
       }
 
       &-title {
-        font-size: 1.8rem;
-        font-family: $font-proxima-nova-bold;
-        text-transform: uppercase;
-        text-align: center;
-        color: $color-fern;
         padding: 0 0 16px;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $color-fern;
+
+        font-family: $font-proxima-nova-bold;
+        font-size: 1.8rem;
 
         @include mq($bp1024) {
           padding: 0 0 24px;
@@ -48,9 +49,11 @@
       }
 
       &-text {
-        padding: 0;
         width: 100%;
+        padding: 0;
+
         text-align: center;
+
         font-size: 1.6rem;
         line-height: 1.5;
 
@@ -59,9 +62,10 @@
           line-height: 1.4;
         }
 
-        P {
-          color: $color-white;
+        p {
           padding: 0 15px;
+
+          color: $color-white;
 
           @include mq($bp1024) {
             padding: 0;
@@ -72,6 +76,7 @@
       &-link {
         margin: auto 0 0;
         padding-top: 20px;
+
         text-transform: uppercase;
 
         @include mq($bp1024) {
@@ -87,10 +92,12 @@
           }
 
           &::after {
-            content: '';
-            padding-left: 0;
             position: relative;
             bottom: 0;
+
+            padding-left: 0;
+
+            content: '';
           }
 
           &:hover {
@@ -105,4 +112,3 @@
     }
   }
 }
-

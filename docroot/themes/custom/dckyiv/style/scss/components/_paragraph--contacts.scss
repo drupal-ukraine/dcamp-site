@@ -21,27 +21,29 @@
   .contacts-left {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
+    align-items: center;
     @include mq($bp1700) {
       padding-left: 25vw;
     }
+    justify-content: center;
 
     & > .field {
       width: 300px;
-      padding-left: 50px;
       margin-bottom: 22px;
+      padding-left: 50px;
 
       & > div {
         margin-bottom: 8px;
       }
 
       &--name-field-headline {
-        font-size: 3rem;
-        font-family: $font-proxima-nova-bold;
-        text-transform: uppercase;
         padding-top: 10px;
+
+        text-transform: uppercase;
+
+        font-family: $font-proxima-nova-bold;
+        font-size: 3rem;
 
         @include mq($bp1280) {
           padding-top: auto;
@@ -56,13 +58,11 @@
       &--name-field-email {
         .field__label {
           @include icoMoon('email');
-
         }
       }
       &--name-field-phone {
         .field__label {
           @include icoMoon('phone');
-
         }
       }
 
@@ -71,17 +71,22 @@
       &--name-field-phone {
         .field__label {
           position: relative;
-          font-family: $font-proxima-nova-bold;
-          font-size: 1.4rem;
+
           text-transform: uppercase;
+
           color: $color-nobel;
 
+          font-family: $font-proxima-nova-bold;
+          font-size: 1.4rem;
+
           &:before {
+            position: absolute;
             top: -8px;
             left: -50px;
-            font-size: 2.8rem;
-            position: absolute;
+
             color: $color-fern;
+
+            font-size: 2.8rem;
           }
         }
         .field__item {
@@ -95,9 +100,11 @@
   }
 
   .geolocation-google-map {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+    position: relative;
+
+    overflow: hidden;
+
+    height: 0;
+    padding-bottom: 56.25%;
   }
 }

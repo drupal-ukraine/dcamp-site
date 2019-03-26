@@ -1,9 +1,10 @@
 .heading {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   margin-top: 30px;
 
+  align-items: center;
   @include mq($bp768) {
     flex-direction: row;
   }
@@ -11,30 +12,33 @@
   .field {
     display: flex;
     flex-direction: row;
+
     align-items: center;
 
     &__label {
       padding-right: 10px;
 
       &:after {
-        content: ":";
+        content: ':';
       }
     }
   }
 
-  &--logo {}
-  &--person {}
+
+
   &--info {
     padding-top: 20px;
 
     @include mq($bp768) {
-      border-left: 2px $color-black solid;
       margin-left: 20px;
       padding: 10px 0 10px 20px;
+
+      border-left: 2px $color-black solid;
     }
   }
   &--type {
     padding-bottom: 20px;
+
     font-size: 26px;
   }
 }

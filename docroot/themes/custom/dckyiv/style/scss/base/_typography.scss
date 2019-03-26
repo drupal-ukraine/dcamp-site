@@ -1,66 +1,76 @@
-*, html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: $font-proxima-nova-regular;
+*,
+html {
   color: $color-shark;
+
+  font-family: $font-proxima-nova-regular;
+  font-size: 10px;
   font-weight: normal;
   line-height: 1.63;
-  font-size: 10px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
   font-size: 1.6rem;
 }
 h1 {
+  margin-bottom: 1.6rem;
+
   font-family: $font-proxima-nova-regular;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.41;
-  font-size: 2.4rem;
-  margin-bottom: 1.6rem;
 }
 h2 {
+  margin-bottom: 1.4rem;
+
   font-family: $font-proxima-nova-regular;
   font-size: 2.4rem;
-  line-height: 1.5;
   font-weight: 500;
-  margin-bottom: 1.4rem;
+  line-height: 1.5;
 }
 h3 {
+  margin-bottom: 1.2rem;
+
   font-family: $font-proxima-nova-regular;
   font-size: 2rem;
-  line-height: 1.5;
   font-weight: normal;
-  margin-bottom: 1.2rem;
+  line-height: 1.5;
 }
 h4 {
   font-family: $font-proxima-nova-regular;
-  line-height: 1.63;
   font-size: 1.6rem;
   font-weight: 900;
+  line-height: 1.63;
 }
 h5 {
   font-family: $font-proxima-nova-regular;
-  line-height: 1.36;
   font-size: 1.1rem;
   font-weight: 900;
+  line-height: 1.36;
 }
 i {
   font-weight: 400;
   font-style: italic;
 }
-b, strong {
+b,
+strong {
   font-weight: 600;
 }
 a {
-  font-family: $font-proxima-nova-regular;
-  line-height: 1.63;
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: $color-fern;
   transition: color .2s;
-  outline: none;
   text-decoration: none;
 
-  &:active, &:hover {
+  color: $color-fern;
+  outline: none;
+
+  font-family: $font-proxima-nova-regular;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.63;
+
+  &:active,
+  &:hover {
     color: rgba($color-fern, .6);
   }
 }
@@ -72,7 +82,6 @@ ul {
   padding-left: 1rem;
 
   li {
-
     &.menu-item {
       margin: 0;
     }

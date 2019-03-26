@@ -1,36 +1,45 @@
 // Default IFW buttons
 
 @mixin share-button($type: 'facebook') {
-  padding: 1.2rem 3rem 1.2rem 7rem;
-  display: inline-block;
-  text-align: left;
-  min-width: 20rem;
-  font-size: 16px;
-  line-height: 24px;
   position: relative;
-  border-radius: 6px;
-  font-weight: 500;
-  color: $color-white;
+
+  display: inline-block;
+
+  min-width: 20rem;
+  padding: 1.2rem 3rem 1.2rem 7rem;
+
   transition: all .1s;
+  text-align: left;
+
+  color: $color-white;
+  border-radius: 6px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
   @content;
 
   @if $type == 'facebook' {
     background-color: $color-chambray;
+
     @include icoMoon('facebook-square');
   }
   @if $type == 'twitter' {
     background-color: $color-dodger-blue;
+
     @include icoMoon('twitter-square');
   }
 
   &:before {
     position: absolute;
     left: 3.3rem;
+
     font-size: 2.4rem;
   }
   &:hover {
-    opacity: .9;
     cursor: pointer;
+
+    opacity: .9;
   }
   &:focus {
     outline: none;

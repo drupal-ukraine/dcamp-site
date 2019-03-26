@@ -4,8 +4,9 @@
 
 // Disable scroll
 body.no-scroll {
-  height: 100%;
   overflow: hidden;
+
+  height: 100%;
 }
 // responsive images
 img {
@@ -16,7 +17,7 @@ img {
 .block-page-title-block,
 .block-local-tasks-block,
 .block-system-branding-block,
-.block-system-breadcrumb-block{
+.block-system-breadcrumb-block {
   button.trigger.focusable,
   ul.contextual-links {
     display: none;

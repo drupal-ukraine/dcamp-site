@@ -5,13 +5,15 @@
 
   .field--name-field-container-bricks {
     margin: 0 -10px;
+
     @include mq($bp1024) {
       display: flex;
     }
 
     & > .field__item {
-      flex: 1 0 0;
       padding: 10px;
+
+      flex: 1 0 0;
     }
   }
 }

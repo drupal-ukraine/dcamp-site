@@ -2,26 +2,32 @@
 
 header.main-header {
   position: fixed;
-  width: 100%;
+  z-index: 5;
   top: 0;
   left: 0;
+
+  width: 100%;
+
   background-color: $color-main-header;
-  z-index: 5;
 
   .region-top-header {
     position: relative;
-    border-bottom: 1px solid rgba($color-white, 0.4);
-    @include clearfix;
+
+    border-bottom: 1px solid rgba($color-white, .4);
+
     @include wrapper;
+    @include clearfix;
   }
 
   .region-header {
     position: relative;
-    @include wrapper;
+
     @include clearfix;
+    @include wrapper;
 
     nav {
       display: none;
+
       @include mq($bp1024) {
         display: block;
       }
@@ -29,8 +35,9 @@ header.main-header {
   }
 
   #block-aboutdckyiv {
-    float: right;
     display: none;
+    float: right;
+
     @include mq($bp1024) {
       display: block;
     }
@@ -47,22 +54,27 @@ header.main-header {
 
         a {
           display: block;
+
           padding: 8px 20px;
+
+          transition: color .3s;
           text-transform: uppercase;
+
           color: $color-white;
+
           font-size: 1.1rem;
           line-height: 1.36;
-          transition: color .3s;
 
           &:hover {
             color: rgba($color-white, .6);
           }
 
           &.contact-us {
-            padding-left: 40px;
             padding-right: 40px;
-            background-color: $color-fern;
+            padding-left: 40px;
+
             color: $color-black;
+            background-color: $color-fern;
 
             &:hover {
               color: rgba($color-black, .6);
@@ -72,14 +84,17 @@ header.main-header {
           &.search-toggle {
             position: relative;
             &:after {
-              content: '';
               position: absolute;
               bottom: 0;
               left: 0;
+
               width: 100%;
               height: 5px;
-              background-color: transparent;
+
+              content: '';
               transition: background-color .3s;
+
+              background-color: transparent;
             }
             &.search-open:after {
               background-color: $color-white;
@@ -94,9 +109,11 @@ header.main-header {
   .opensearch,
   .user-login {
     position: absolute;
-    color: $color-white;
-    padding: 18px 18px 15px;
     top: -1px;
+
+    padding: 18px 18px 15px;
+
+    color: $color-white;
 
     &:hover {
       cursor: pointer;
@@ -105,63 +122,77 @@ header.main-header {
 
   .mobilenavtoggle {
     left: 0;
-    @include icoMoon('menu');
+
     @include mq($bp1024) {
       display: none;
     }
+    @include icoMoon('menu');
     &:before {
       font-size: 2.4rem;
     }
   }
   .opensearch {
     right: 0;
+
     transition: color .3s, background-color .3s;
+
     color: $color-white;
-    @include icoMoon('search');
+
     @include mq($bp1024) {
       display: none;
     }
+    @include icoMoon('search');
     &:before {
       font-size: 2.4rem;
     }
     &.search-open {
-      background-color: $color-white;
       color: $color-black;
+      background-color: $color-white;
     }
   }
 
   .user-login {
     right: 0;
     bottom: -8px;
+
     transition: color .3s, background-color .3s;
+
     color: $color-white;
-    @include icoMoon('user');
+
     @include mq($bp1024) {
       display: none;
     }
+    @include icoMoon('user');
     &:before {
       font-size: 2.4rem;
     }
   }
 
   #block-sitebranding {
-    text-align: center;
     padding-right: 60px;
 
+    text-align: center;
+
     @include mq($bp1024) {
-      text-align: left;
       float: left;
+
       padding: 21px 0 20px 0;
+
+      text-align: left;
     }
     a {
       display: inline-block;
+
       height: 57px;
       padding: 8px 0;
-      font-size: 2.5rem;
+
       font-family: $font-proxima-nova-bold;
+      font-size: 2.5rem;
+
       @include mq($bp1024) {
-        padding: 0;
         height: auto;
+        padding: 0;
+
         font-size: 2rem;
       }
       span {
@@ -169,6 +200,7 @@ header.main-header {
       }
       span:last-child {
         display: inline-block;
+
         color: $color-fern;
       }
     }
@@ -176,12 +208,14 @@ header.main-header {
     .logo {
       &_desktop {
         display: none;
+
         @include mq($bp1024) {
           display: inline-block;
         }
       }
       &_mobile {
         display: inline-block;
+
         @include mq($bp1024) {
           display: none;
         }
@@ -195,6 +229,7 @@ header.main-header {
   #block-cart {
     @include mq($bp1024) {
       float: right;
+
       padding: 24px 0 12px 20px;
     }
 
@@ -214,45 +249,55 @@ header.main-header {
 
   #block-cart {
     @include mq($bp1023max) {
-      width: 24px;
       position: absolute;
       top: 16px;
       right: 55px;
+
+      width: 24px;
     }
   }
 
   #block-languageswitcher {
     @include mq($bp1023max) {
-      width: 24px;
       position: absolute;
       top: 16px;
       right: 105px;
+
+      width: 24px;
     }
   }
 }
 
 .cart-status {
+  position: absolute;
+
   display: block;
+
   width: 10px;
   height: 10px;
-  background: red;
-  border-radius: 50%;
   margin-top: -25px;
   margin-left: 15px;
-  position: absolute;
+
+  border-radius: 50%;
+  background: red;
 }
 .cart-block--link__expand {
-  @include icoMoon('cart', 'before');
   width: 24px;
   height: 24px;
+
   color: rgba($color-white, .6);
+
+  @include icoMoon('cart', 'before');
 
   &::before {
     width: 24px;
     height: 24px;
-    font-size: 2.4rem;
+
     transition: color .3s, background-color .3s;
+
     color: inherit;
+
+    font-size: 2.4rem;
   }
 
   &:hover {
@@ -263,61 +308,77 @@ header.main-header {
 // Global search block
 .block-globalsearch-block {
   position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  transition: all .3s;
-  width: 100%;
-  left: 0;
   z-index: 1;
   top: 61px;
+  left: 0;
+
+  visibility: hidden;
+
+  width: 100%;
+
+  transition: all .3s;
+
+  opacity: 0;
+
   @include mq($bp1024) {
     top: 30px;
   }
 
   &.open {
     visibility: visible;
+
     opacity: 1;
   }
 
   & > .wrapper {
     max-width: 1440px;
+    margin: 0 auto;
+
+    @include clearfix;
     @include mq($bp1024) {
       padding: 0 100px;
     }
-    margin: 0 auto;
-    @include clearfix;
   }
   form {
     float: right;
-    padding: 20px 15px;
+
     width: 100%;
+    padding: 20px 15px;
+
     background-color: $color-white;
-    box-shadow: 0 2px 8px 0 rgba($color-black, 0.2);
+    box-shadow: 0 2px 8px 0 rgba($color-black, .2);
+
     @include mq($bp1024) {
       display: flex;
-      padding: 20px 20px 20px 22px;
+
       max-width: 435px;
+      padding: 20px 20px 20px 22px;
+
       box-shadow: none;
     }
 
     .form-item-search {
       margin-bottom: 10px;
+
       @include mq($bp1024) {
-        margin: 0 20px 0 0;
         max-width: 230px;
+        margin: 0 20px 0 0;
       }
     }
     .form-actions {
       width: 100%;
+
       @include mq($bp1024) {
         width: auto;
         margin-top: 26px;
       }
       input.form-submit {
+        width: 100%;
         margin: 0;
         padding: 8px 40px;
+
         line-height: 1;
-        width: 100%;
+
         @include mq($bp1024) {
           width: auto;
         }
@@ -354,7 +415,9 @@ body {
 
 .login_icon {
   transition: color .3s, background-color .3s;
+
   color: rgba($color-white, .6);
+
   @include icoMoon('user');
 
   &:before {
@@ -364,14 +427,16 @@ body {
 
 .search_icon {
   transition: color .3s, background-color .3s;
+
   color: rgba($color-white, .6);
+
   @include icoMoon('search');
 
   &:before {
     font-size: 2.4rem;
   }
   &.search-open {
-    background-color: $color-white;
     color: $color-black;
+    background-color: $color-white;
   }
 }

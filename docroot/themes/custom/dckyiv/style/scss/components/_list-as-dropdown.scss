@@ -4,66 +4,81 @@
   margin: 30px 0;
 
   @include mq($bp1023max) {
-    width: 100%;
     z-index: 3;
-    height: 45px;
-    line-height: 45px;
-    vertical-align: middle;
+
     display: inline-block;
-    cursor: pointer;
+
+    width: 100%;
+    height: 45px;
     margin: 20px 0 30px;
+
+    cursor: pointer;
     transition: opacity .25s ease-in-out;
+    vertical-align: middle;
+
+    line-height: 45px;
 
     & > ul {
-      height: 45px;
-      padding: 0 10px;
-      text-align: left;
-      border: 1px solid $color-silver;
-      background: $color-white;
-      display: block;
       position: relative;
 
+      display: block;
+
+      height: 45px;
+      padding: 0 10px;
+
+      text-align: left;
+
+      border: 1px solid $color-silver;
+      background: $color-white;
+
       & > li {
-        display: block;
         position: relative;
+
+        display: block;
         &:first-child {
+          @include icoMoon('arrow-down', 'after');
           &:first-child:before {
-            content: ' - User menu -';
             position: relative;
+
+            content: ' - User menu -';
+            text-transform: uppercase;
+
             font-size: 1.6rem;
             font-weight: 600;
-            text-transform: uppercase;
           }
-
-          @include icoMoon('arrow-down', 'after');
           &:after {
+            position: absolute;
             top: 15px;
             right: 0;
+
             font-size: 1.2rem;
-            position: absolute;
           }
         }
       }
     }
     & a {
       display: none;
-      font-size: 1.5rem;
+
       text-decoration: none;
       text-transform: uppercase;
 
+      font-size: 1.5rem;
+
       &.is-active {
-        background: rgba($color-fern, 0.1);
+        background: rgba($color-fern, .1);
       }
     }
 
     /* styles for the dropdown open */
     &.nav-is-visible ul {
       height: initial;
+
       background: $color-white;
       & li {
         & a {
-          padding: 10px 0 10px 10px;
           display: block;
+
+          padding: 10px 0 10px 10px;
         }
         &:last-child {
           margin-bottom: 10px;

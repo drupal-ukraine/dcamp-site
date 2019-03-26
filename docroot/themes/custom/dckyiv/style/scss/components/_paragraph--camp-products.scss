@@ -4,23 +4,25 @@
   .camp-tickets-list {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     @include mq($bp1024) {
       flex-direction: row;
+
       flex-wrap: wrap;
     }
+    justify-content: space-between;
   }
 
   .views-row {
     width: 100%;
-    padding: 15px;
     margin-bottom: 16px;
+    padding: 15px;
+
     border: 1px solid $color-tuna;
 
     @include mq($bp1024) {
-      margin-bottom: 0;
       max-width: 350px;
+      margin-bottom: 0;
 
       &:nth-child(n+4) {
         margin-top: 20px;
@@ -28,11 +30,13 @@
     }
 
     article {
-      min-height: 200px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+
+      min-height: 200px;
+
       align-items: center;
+      justify-content: space-between;
     }
   }
 
@@ -43,23 +47,29 @@
   }
 
   .views-field-title {
-    font-size: 2.4rem;
-    font-family: $font-proxima-nova-regular;
-    color: $color-tuna;
-    line-height: 1.2;
     padding: 0 10px 10px;
-    border-bottom: 2px solid $color-silver;
+
     text-align: center;
+
+    color: $color-tuna;
+    border-bottom: 2px solid $color-silver;
+
+    font-family: $font-proxima-nova-regular;
+    font-size: 2.4rem;
+    line-height: 1.2;
   }
 
   .views-field-body {
-    font-family: $font-proxima-nova-bold;
     padding: 20px 0;
+
     text-align: center;
+
+    font-family: $font-proxima-nova-bold;
   }
 
   .views-field-variations {
     padding: 0 0 10px;
+
     text-align: center;
 
     .field-content {
@@ -68,8 +78,9 @@
 
       & > div {
         padding-bottom: 20px;
-        font-size: 2rem;
+
         font-family: $font-proxima-nova-bold;
+        font-size: 2rem;
       }
 
       .field__label {
@@ -79,14 +90,16 @@
   }
 
   h2 {
-    font-size: 3.6rem;
     text-align: center;
     text-transform: uppercase;
+
     font-family: $font-proxima-nova-bold;
+    font-size: 3.6rem;
   }
 
   .button {
     text-transform: uppercase;
+
     appearance: none;
   }
 }

@@ -10,7 +10,9 @@
     th,
     td {
       padding: 10px;
+
       text-align: left;
+
       border: 1px solid $color-gallery;
     }
   }
@@ -25,6 +27,7 @@
 
   .dropbutton {
     position: relative;
+
     overflow: visible !important;
   }
 }
@@ -39,6 +42,7 @@
 .js td .dropbutton-widget {
   @include mq($bp767max) {
     position: relative;
+
     padding: 0;
   }
 }

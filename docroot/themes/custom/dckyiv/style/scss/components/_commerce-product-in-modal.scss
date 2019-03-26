@@ -1,4 +1,4 @@
-.ui-dialog{
+.ui-dialog {
   article {
     & > * {
       padding-bottom: 20px;
@@ -6,11 +6,13 @@
 
     .field__label,
     label {
-      font-size: 1.6rem;
-      color: $color-storm-gray;
-      font-family: $font-proxima-nova-bold;
-      padding-bottom: 5px;
       margin: 0;
+      padding-bottom: 5px;
+
+      color: $color-storm-gray;
+
+      font-family: $font-proxima-nova-bold;
+      font-size: 1.6rem;
     }
   }
 

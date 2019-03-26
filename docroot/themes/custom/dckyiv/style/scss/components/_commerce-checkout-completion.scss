@@ -1,8 +1,9 @@
 // Checkout complete.
 
 .checkout-complete {
-  margin: 0 auto;
   max-width: 500px;
+  margin: 0 auto;
+
   text-align: center;
 
   @include mq($bp1024) {
@@ -11,23 +12,26 @@
 
   &__message {
     padding-top: 220px;
+
     background-image: url('../../images/dckyiv_white_logo.png');
+    background-repeat: no-repeat;
     background-position: top center;
     background-size: 200px;
-    background-repeat: no-repeat;
   }
 
   &__heading {
-    font-size: 3rem;
     margin-bottom: 20px;
+
+    font-size: 3rem;
   }
 
   &__text {
     font-size: 1.6rem;
 
     p {
-      line-height: 1.4;
       padding-bottom: 10px;
+
+      line-height: 1.4;
     }
   }
 }

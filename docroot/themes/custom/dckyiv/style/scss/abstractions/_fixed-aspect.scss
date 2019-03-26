@@ -8,9 +8,11 @@
   position: relative;
 
   &::before {
-    content: '';
     display: block;
+
     padding-bottom: $height;
+
+    content: '';
   } // &::before
 
   @if $inner {
@@ -23,7 +25,6 @@
 // @mixin remove-fixed-aspect()
 // remove styles above
 @mixin remove-fixed-aspect($inner) {
-
   &::before {
     display: none;
   } // &::before

@@ -1,29 +1,35 @@
 .node-presentation-form {
-
+  $height: 43;
   fieldset {
     @include mq($bp1024) {
-      border-top: 2px solid $color-gallery;
       padding: 20px 0;
+
+      border-top: 2px solid $color-gallery;
     }
 
     legend {
-      padding: 20px 0;
       display: block;
+
       width: 100%;
+      padding: 20px 0;
+
       border-top: 2px solid $color-gallery;
 
       @include mq($bp1024) {
-        width: 20%;
         float: left;
-        border: 0;
+
+        width: 20%;
         padding: 0;
+
+        border: 0;
       }
     }
 
     .fieldset-wrapper {
       @include mq($bp1024) {
-        width: 80%;
         float: left;
+
+        width: 80%;
       }
     }
   }
@@ -31,15 +37,17 @@
   .fieldset-legend,
   .vertical-tabs__menu-item-title,
   summary {
-    font-size: 1.8rem;
+    letter-spacing: .1rem;
+
     font-family: $font-proxima-nova-regular;
+    font-size: 1.8rem;
     font-weight: 600;
-    letter-spacing: 0.1rem;
   }
 
   .js-form-type-vertical-tabs {
-    border-top: 2px solid $color-gallery;
     padding: 20px 0 0;
+
+    border-top: 2px solid $color-gallery;
   }
 
   label {
@@ -75,9 +83,11 @@
     padding-bottom: 30px;
 
     @include mq($bp1023max) {
-      text-align: right;
       display: flex;
       flex-direction: row;
+
+      text-align: right;
+
       justify-content: space-between;
 
       input {
@@ -85,21 +95,21 @@
       }
     }
   }
-
-  $height: 43;
   select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 0 30px 0 10px;
-    border-radius: 0;
-    line-height: $height + px;
-    height: $height + px;
-    background: $color-white;
     width: 100%;
+    height: $height + px;
     margin: 0 5px 5px 0;
-    font-size: 1.4rem;
+    padding: 0 30px 0 10px;
 
+    border-radius: 0;
+    background: $color-white;
+
+    font-size: 1.4rem;
+    line-height: $height + px;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     @include mq($bp1024) {
       width: 0;
       min-width: 208px;
@@ -109,13 +119,16 @@
   .js-form-type-select {
     label {
       position: relative;
+
       @include icoMoon('arrow-down', 'after');
       &:after {
-        font-size: .8rem;
-        color: $color-storm-gray;
         position: absolute;
-        right: 15px;
         top: 40px;
+        right: 15px;
+
+        color: $color-storm-gray;
+
+        font-size: .8rem;
 
         .presentation-info & {
           left: 15px;
@@ -127,6 +140,7 @@
   .field--widget-options-select {
     @include mq($bp1024) {
       float: left;
+
       width: 50%;
     }
   }
@@ -134,6 +148,7 @@
   .field--widget-link-default {
     @include mq($bp1024) {
       float: left;
+
       width: calc(50% - 10px);
 
       &:nth-child(1n) {
@@ -146,8 +161,8 @@
     label {
       &:after {
         @include mq($bp1024) {
-          left: 178px;
           right: 0;
+          left: 178px;
         }
       }
     }

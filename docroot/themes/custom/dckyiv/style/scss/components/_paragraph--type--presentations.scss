@@ -4,6 +4,7 @@
   & > .content {
     display: flex;
     flex-direction: column;
+
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -14,7 +15,6 @@
 }
 
 .field--name-field {
-
   &-presentations-list {
     //width: 100%;
   }
@@ -23,9 +23,9 @@
     width: 100%;
 
     @include mq($bp1024) {
-      margin: 0 auto;
       max-width: 450px;
       min-height: 280px;
+      margin: 0 auto;
     }
   }
 }

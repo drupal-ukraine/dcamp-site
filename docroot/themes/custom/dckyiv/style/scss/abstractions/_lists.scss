@@ -1,11 +1,12 @@
 @mixin no-bullet {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 @mixin inline-list-items($float: left) {
-  @include clearfix;
   @include no-bullet;
+  @include clearfix;
   li {
     float: $float;
   }
