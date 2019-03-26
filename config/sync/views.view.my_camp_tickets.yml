@@ -32,7 +32,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'view drupal_camp_ticket commerce_order'
+          perm: 'view own commerce_order'
       cache:
         type: tag
         options: {  }
@@ -571,6 +571,15 @@ display:
       display_extenders: {  }
       path: user/%user/my-tickets
       display_description: ''
+      menu:
+        type: tab
+        title: 'My Tickets'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
