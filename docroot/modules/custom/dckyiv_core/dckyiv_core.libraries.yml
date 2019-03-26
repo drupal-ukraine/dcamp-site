@@ -1,3 +1,9 @@
+admin_menu_icons:
+  version: VERSION
+  css:
+    theme:
+      css/admin_menu_icons.css: {}
+
 countdown-lib:
   js:
     /libraries/jQuery.countdown/jquery.countdown.min.js: {}

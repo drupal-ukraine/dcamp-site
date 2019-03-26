@@ -176,13 +176,13 @@ header.main-header {
     .logo {
       &_desktop {
         display: none;
-        @include mq($bp1280) {
+        @include mq($bp1024) {
           display: inline-block;
         }
       }
       &_mobile {
         display: inline-block;
-        @include mq($bp1280) {
+        @include mq($bp1024) {
           display: none;
         }
       }

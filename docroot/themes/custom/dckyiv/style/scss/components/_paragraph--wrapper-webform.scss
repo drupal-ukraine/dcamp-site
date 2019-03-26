@@ -1,7 +1,11 @@
 // Paragraph Wrapper WebForm
 
 .paragraph--type--wrapper-webform {
-  padding: 0 15px 30px;
+  padding: 0 0 30px;
+
+  @include mq($bp1024) {
+    padding: 0 0 40px;
+  }
 
   .field--name-field-title {
     margin-bottom: 20px;
@@ -15,10 +19,6 @@
       margin-bottom: 30px;
       font-size: 3.6rem;
     }
-  }
-
-  @include mq($bp1024) {
-    padding: 0 0 60px;
   }
 
   form {

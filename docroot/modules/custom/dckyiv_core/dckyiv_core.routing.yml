@@ -1,0 +1,7 @@
+dckyiv_core.admin:
+  path: '/admin/dck'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'DCKyiv'
+  requirements:
+    _permission: 'administer content'

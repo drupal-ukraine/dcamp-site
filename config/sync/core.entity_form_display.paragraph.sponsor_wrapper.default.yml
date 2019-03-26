@@ -1,0 +1,30 @@
+uuid: 5d7b682e-0871-41e3-80d0-6745a8f7e81e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sponsor_wrapper.field_sponsor_section
+    - paragraphs.paragraphs_type.sponsor_wrapper
+  module:
+    - paragraphs
+id: paragraph.sponsor_wrapper.default
+targetEntityType: paragraph
+bundle: sponsor_wrapper
+mode: default
+content:
+  field_sponsor_section:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
