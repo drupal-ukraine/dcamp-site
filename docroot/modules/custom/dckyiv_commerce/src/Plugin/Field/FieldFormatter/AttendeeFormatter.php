@@ -50,6 +50,19 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
           $items[$delta]->_attributes += array('resource' => $entity->toUrl()->toString());
         }
         $depth = 0;
+        $elements[$delta]['edit-attendee'] = [
+          '#type' => 'link',
+          '#title' => $this->t('Edit'),
+          '#url' => Url::fromRoute('dckyiv_commerce.attendee_edit', [
+            'user' => $commerce_order_item->getOrder()->getCustomerId(),
+            'commerce_order_item' => $commerce_order_item->id(),
+            'attendee_paragraph' => $entity->id(),
+          ], [
+            'query' => [
+              'destination' => \Drupal::service('path.current')->getPath(),
+            ]
+          ]),
+        ];
       }
       else {
         $elements[$delta] = [
@@ -57,9 +70,9 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
           '#attributes' => ['class' => ['attendee--wrapper']],
           'attendee' => [
             '#type' => 'link',
-            '#title' => 'Add attendee name',
+            '#title' => $this->t('Add attendee info'),
             '#url' => Url::fromRoute('dckyiv_commerce.attendee_add', [
-              'user' => 1,
+              'user' => $commerce_order_item->getOrder()->getCustomerId(),
               'commerce_order_item' => $commerce_order_item->id(),
             ], [
               'query' => [

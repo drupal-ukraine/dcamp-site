@@ -4,7 +4,6 @@ dckyiv_commerce.attendee_edit:
     _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::attendeeFormEdit'
     _title: 'Edit attendee'
   options:
-    _admin_route: TRUE
     parameters:
       user:
         type: entity:user
@@ -21,7 +20,6 @@ dckyiv_commerce.attendee_add:
     _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::attendeeFormAdd'
     _title: 'Add attendee info'
   options:
-    _admin_route: TRUE
     parameters:
       user:
         type: entity:user

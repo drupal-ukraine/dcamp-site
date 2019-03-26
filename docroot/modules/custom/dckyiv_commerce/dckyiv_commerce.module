@@ -42,9 +42,9 @@ function dckyiv_commerce_views_data_alter(array &$data) {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_form_BASE_FORM_ID_alter().
  */
-function dckyiv_commerce_form_paragraph_attendee_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+function dckyiv_commerce_form_paragraph_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $route_name = \Drupal::routeMatch()->getRouteName();
   // This alter allowed only for specific routes.
   if (strpos($route_name, 'dckyiv_commerce.attendee') === FALSE) {
@@ -89,17 +89,21 @@ function dckyiv_commerce_form_paragraph_attendee_form_alter(&$form, \Drupal\Core
   ];
 
   $form['field_attendee_status']['#access'] = FALSE;
-  $form['actions']['submit']['#submit'][] = 'dckyiv_commerce_form_paragraph_attendee_form_submit';
+  $form['actions']['submit']['#submit'][] = 'dckyiv_commerce_form_paragraph_form_submit';
   $form_state->set('commerce_order_item', \Drupal::routeMatch()->getParameter('commerce_order_item'));
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function dckyiv_commerce_form_paragraph_attendee_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+function dckyiv_commerce_form_paragraph_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $build_info = $form_state->getBuildInfo();
   /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
   $paragraph = $build_info['callback_object']->getEntity();
+  if ($paragraph->bundle() != 'attendee') {
+    return;
+  }
+
   if (empty($paragraph->getParentEntity())) {
     /** @var \Drupal\commerce_order\Entity\OrderItemInterface $commerce_order_item */
     $commerce_order_item = $form_state->get('commerce_order_item');

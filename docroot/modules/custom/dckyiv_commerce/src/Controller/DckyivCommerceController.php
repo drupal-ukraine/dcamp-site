@@ -21,7 +21,7 @@ class DckyivCommerceController extends ControllerBase {
    *   The attendee form.
    */
   public function attendeeFormEdit(UserInterface $user, OrderItemInterface $commerce_order_item, ParagraphInterface $attendee_paragraph) {
-    if ($commerce_order_item != $attendee_paragraph->getParentEntity()->id()
+    if ($commerce_order_item->id() != $attendee_paragraph->getParentEntity()->id()
       || $commerce_order_item->getOrder()->getCustomerId() != $user->id()) {
       throw new AccessDeniedHttpException();
     }
