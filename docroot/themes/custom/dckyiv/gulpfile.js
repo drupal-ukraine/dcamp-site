@@ -117,7 +117,7 @@ gulp.task('csscomb', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('sass', ['build-icomoon', 'csscomb'], function () {
+gulp.task('sass', ['build-icomoon'], function () {
   'use strict';
   return gulp.src(paths.sass.main)
     .pipe(sassGlob())
