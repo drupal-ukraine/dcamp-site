@@ -5,6 +5,7 @@ namespace Drupal\dckyiv_commerce\Plugin\Field\FieldFormatter;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Url;
 use Drupal\entity_reference_revisions\Plugin\Field\FieldFormatter\EntityReferenceRevisionsEntityFormatter;
+use Drupal\field\FieldConfigInterface;
 
 /**
  * Plugin implementation of the 'paragraph_summary' formatter.
@@ -50,9 +51,22 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
           $items[$delta]->_attributes += array('resource' => $entity->toUrl()->toString());
         }
         $depth = 0;
+
+        // Check if attendee info has been filled.
+        foreach ($entity->getFields() as $field) {
+          if (!$field->getFieldDefinition() instanceof FieldConfigInterface) {
+            continue;
+          }
+          $empty = $entity->get($field->getFieldDefinition()->getName())->isEmpty();
+          if (!$empty) {
+            break;
+          }
+        }
+
         $elements[$delta]['edit-attendee'] = [
           '#type' => 'link',
-          '#title' => $this->t('Edit'),
+          '#weight' => 10,
+          '#title' => $empty ? $this->t('Add info') : $this->t('Edit'),
           '#url' => Url::fromRoute('dckyiv_commerce.attendee_edit', [
             'user' => $commerce_order_item->getOrder()->getCustomerId(),
             'commerce_order_item' => $commerce_order_item->id(),

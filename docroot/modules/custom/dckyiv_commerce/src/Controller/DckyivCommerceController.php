@@ -25,7 +25,7 @@ class DckyivCommerceController extends ControllerBase {
       || $commerce_order_item->getOrder()->getCustomerId() != $user->id()) {
       throw new AccessDeniedHttpException();
     }
-    $form = \Drupal::service('entity.form_builder')->getForm($attendee_paragraph, 'edit');
+    $form = \Drupal::service('entity.form_builder')->getForm($attendee_paragraph, 'edit_attendee');
     return $form;
   }
 
