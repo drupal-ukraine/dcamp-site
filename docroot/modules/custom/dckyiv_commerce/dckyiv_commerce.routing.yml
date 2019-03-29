@@ -2,7 +2,7 @@ dckyiv_commerce.attendee_edit:
   path: '/user/{user}/my-tickets/{commerce_order_item}/attendee/{attendee_paragraph}'
   defaults:
     _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::attendeeFormEdit'
-    _title: 'Edit attendee'
+    _title: 'Iнформація про учасника'
   options:
     parameters:
       user:
@@ -11,19 +11,5 @@ dckyiv_commerce.attendee_edit:
         type: entity:commerce_order_item
       attendee_paragraph:
         type: entity:paragraph
-  requirements:
-    _permission: 'access content'
-
-dckyiv_commerce.attendee_add:
-  path: '/user/{user}/my-tickets/{commerce_order_item}/attendee/add'
-  defaults:
-    _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::attendeeFormAdd'
-    _title: 'Add attendee info'
-  options:
-    parameters:
-      user:
-        type: entity:user
-      commerce_order_item:
-        type: entity:commerce_order_item
   requirements:
     _permission: 'access content'

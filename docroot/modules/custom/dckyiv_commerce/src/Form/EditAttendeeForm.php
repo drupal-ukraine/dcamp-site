@@ -56,9 +56,9 @@ class EditAttendeeForm extends ContentEntityForm {
     $form = parent::form($form, $form_state);
     $build_info = $form_state->getBuildInfo();
     $paragraph = $build_info['callback_object']->getEntity();
-    $attendee_info_default = 'user';
-    if (!$paragraph->field_attendee_firstname->isEmpty() || !$paragraph->field_attendee_secondname->isEmpty()) {
-      $attendee_info_default = 'name';
+    $attendee_info_default = 'name';
+    if (!$paragraph->field_site_user->isEmpty()) {
+      $attendee_info_default = 'user';
     }
     if (!$paragraph->field_attendee_email->isEmpty()) {
       $attendee_info_default = 'email';
@@ -66,12 +66,14 @@ class EditAttendeeForm extends ContentEntityForm {
     $form['attende_info'] = [
       '#type' => 'radios',
       '#options' => [
-        'user' => t('User'),
         'name' => t('Name'),
+        'user' => t('User'),
         'email' => t('Email'),
       ],
       '#default_value' => $attendee_info_default,
       '#weight' => -1,
+      '#prefix' => '<div class="form-item--inline attendee-info-radio">',
+      '#suffix' => '</div>',
     ];
   
     $form['field_attendee_email']['#states'] = [

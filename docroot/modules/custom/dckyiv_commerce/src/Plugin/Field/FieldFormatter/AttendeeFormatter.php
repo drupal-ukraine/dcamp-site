@@ -66,7 +66,7 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
         $elements[$delta]['edit-attendee'] = [
           '#type' => 'link',
           '#weight' => 10,
-          '#title' => $empty ? $this->t('Add info') : $this->t('Edit'),
+          '#title' => $empty ? $this->t('Додати інфо') : $this->t('Редагувати'),
           '#url' => Url::fromRoute('dckyiv_commerce.attendee_edit', [
             'user' => $commerce_order_item->getOrder()->getCustomerId(),
             'commerce_order_item' => $commerce_order_item->id(),
@@ -74,7 +74,11 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
           ], [
             'query' => [
               'destination' => \Drupal::service('path.current')->getPath(),
-            ]
+            ],
+            'attributes' => [
+              'class' => ['use-ajax'],
+              'data-dialog-type'=> 'modal',
+            ],
           ]),
         ];
       }
@@ -84,14 +88,18 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
           '#attributes' => ['class' => ['attendee--wrapper']],
           'attendee' => [
             '#type' => 'link',
-            '#title' => $this->t('Add attendee info'),
+            '#title' => $this->t('Додати'),
             '#url' => Url::fromRoute('dckyiv_commerce.attendee_add', [
               'user' => $commerce_order_item->getOrder()->getCustomerId(),
               'commerce_order_item' => $commerce_order_item->id(),
             ], [
               'query' => [
                 'destination' => \Drupal::service('path.current')->getPath(),
-              ]
+              ],
+              'attributes' => [
+                'class' => ['use-ajax'],
+                'data-dialog-type'=> 'modal',
+              ],
             ]),
             '#attributes' => ['class' => ['attendee--add-info']],
           ]

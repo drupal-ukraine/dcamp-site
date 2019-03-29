@@ -9,7 +9,7 @@ id: paragraph.attendee.field_attendee_secondname
 field_name: field_attendee_secondname
 entity_type: paragraph
 bundle: attendee
-label: 'Second name'
+label: Прізвище
 description: ''
 required: false
 translatable: false

@@ -42,6 +42,12 @@ form *:focus {
     color: $color-chestnut-rose;
     @include invert-links;
   }
+
+  &--inline {
+    label {
+      display: inline-block;
+    }
+  }
 }
 .form-wrapper summary {
   padding-top: 24px;

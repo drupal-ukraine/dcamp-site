@@ -4,15 +4,43 @@ namespace Drupal\dckyiv_commerce\Controller;
 
 use Drupal\commerce_order\Entity\OrderItemInterface;
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Entity\EntityFormBuilderInterface;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\user\UserInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 /**
  * DckyivCommerceController.
  */
 class DckyivCommerceController extends ControllerBase {
+
+  /**
+   * The entity form builder.
+   *
+   * @var \Drupal\Core\Entity\EntityFormBuilderInterface
+   */
+  protected $entity_form_builder;
+
+  /**
+   * Constructs a DckyivCommerceController object.
+   *
+   * @param \Drupal\Core\Entity\EntityFormBuilderInterface $entity_form_builder
+   * The entity form builder.
+   */
+  public function __construct(EntityFormBuilderInterface $entity_form_builder) {
+    $this->entityFormBuilder = $entity_form_builder;
+
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('entity.form_builder')
+    );
+  }
 
   /**
    * Attende edit form callback page.
@@ -25,28 +53,7 @@ class DckyivCommerceController extends ControllerBase {
       || $commerce_order_item->getOrder()->getCustomerId() != $user->id()) {
       throw new AccessDeniedHttpException();
     }
-    $form = \Drupal::service('entity.form_builder')->getForm($attendee_paragraph, 'edit_attendee');
-    return $form;
-  }
-
-  /**
-   * Attende add form callback page.
-   *
-   * @param UserInterface $user
-   *   The user object.
-   * @param OrderItemInterface $commerce_order_item
-   *   The commerce order item object.
-   *
-   * @throws
-   *
-   * @return array
-   *   The attendee form.
-   */
-  public function attendeeFormAdd(UserInterface $user, OrderItemInterface $commerce_order_item) {
-    /** @var ParagraphInterface $attendee_paragraph */
-    $attendee_paragraph = Paragraph::create(['type' => 'attendee']);
-    $attendee_paragraph->isNew();
-    $form = \Drupal::service('entity.form_builder')->getForm($attendee_paragraph, 'default');
+    $form = $this->entityFormBuilder->getForm($attendee_paragraph, 'edit_attendee');
     return $form;
   }
 
