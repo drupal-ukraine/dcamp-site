@@ -54,7 +54,15 @@ class EditAttendeeForm extends ContentEntityForm {
    */
   public function form(array $form, FormStateInterface $form_state) {
     $form = parent::form($form, $form_state);
-  
+    $build_info = $form_state->getBuildInfo();
+    $paragraph = $build_info['callback_object']->getEntity();
+    $attendee_info_default = 'user';
+    if (!$paragraph->field_attendee_firstname->isEmpty() || !$paragraph->field_attendee_secondname->isEmpty()) {
+      $attendee_info_default = 'name';
+    }
+    if (!$paragraph->field_attendee_email->isEmpty()) {
+      $attendee_info_default = 'email';
+    }
     $form['attende_info'] = [
       '#type' => 'radios',
       '#options' => [
@@ -62,7 +70,7 @@ class EditAttendeeForm extends ContentEntityForm {
         'name' => t('Name'),
         'email' => t('Email'),
       ],
-      '#default_value' => 'user',
+      '#default_value' => $attendee_info_default,
       '#weight' => -1,
     ];
   
@@ -95,6 +103,33 @@ class EditAttendeeForm extends ContentEntityForm {
     $form['field_attendee_status']['#access'] = FALSE;
     $form_state->set('commerce_order_item', $this->routeMatch->getParameter('commerce_order_item'));
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $attende_info = $form_state->getValue('attende_info');
+    switch ($attende_info) {
+      case 'user':
+        $form_state->setValue(['field_attendee_email', '0'], NULL);
+        $form_state->setValue(['field_attendee_firstname', '0'], NULL);
+        $form_state->setValue(['field_attendee_secondname', '0'], NULL);
+        break;
+
+      case 'name':
+        $form_state->setValue(['field_attendee_email', '0'], NULL);
+        $form_state->setValue(['field_site_user', '0', 'target_id'], NULL);
+        break;
+
+      case 'email':
+        $form_state->setValue(['field_attendee_firstname', '0'], NULL);
+        $form_state->setValue(['field_attendee_secondname', '0'], NULL);
+        $form_state->setValue(['field_site_user', '0', 'target_id'], NULL);
+        break;
+    }
+
+    parent::submitForm($form, $form_state);
   }
 
 }
