@@ -9,6 +9,37 @@
 
     @include mq($bp1024) {
       flex-direction: row;
+      margin: 0 auto;
+      justify-content: center;
+    }
+  }
+
+  .views-row {
+    width: 100%;
+
+    @include mq($bp1024) {
+      max-width: 255px;
+      min-height: 280px;
+    }
+
+    .views-field {
+      &-uid {
+        max-height: 245px;
+
+        img {
+          max-height: 245px !important;
+        }
+      }
+      &-field-second-name {
+        .field-content {
+          padding: 12px 0 12px 25px;
+          background: $color-tuna;
+          font-size: 1.6rem;
+          text-align: left;
+          color: $color-white;
+        }
+      }
+      &-title {}
     }
   }
 }
@@ -23,9 +54,33 @@
     width: 100%;
 
     @include mq($bp1024) {
-      margin: 0 auto;
-      max-width: 450px;
+      margin: 0 0 0 30px;
+      max-width: 255px;
       min-height: 280px;
+    }
+  }
+
+  &-presentations-list {
+    width: 100%;
+
+    @include mq($bp1024) {
+      max-width: 825px;
+      min-height: 280px;
+    }
+
+    & > .views-element-container {
+      @include mq($bp1024) {
+        min-height: 280px;
+      }
+      & > div {
+        display: flex;
+        flex-direction: column;
+
+        @include mq($bp1024) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
     }
   }
 }

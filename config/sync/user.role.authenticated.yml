@@ -13,6 +13,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'access user profiles'
   - 'create presentation content'
   - 'edit own presentation content'
   - 'post comments'
