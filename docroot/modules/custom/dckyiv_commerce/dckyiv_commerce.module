@@ -61,15 +61,17 @@ function dckyiv_commerce_commerce_order_item_presave(OrderItemInterface $commerc
   }
   
   for ($delta = 0; $delta < $items; $delta++) {
-    $paragraph = Paragraph::create([
-      'type' => 'attendee',
-    ]);
-    $paragraph->is_new = TRUE;
-    $paragraph->save();
-    $commerce_order_item->field_attendee[$delta] = [
-      'target_id' => $paragraph->id(),
-      'target_revision_id' => $paragraph->getRevisionId(),
-    ];
+    if (empty($commerce_order_item->field_attendee[$delta])) {
+      $paragraph = Paragraph::create([
+        'type' => 'attendee',
+      ]);
+      $paragraph->is_new = TRUE;
+      $paragraph->save();
+      $commerce_order_item->field_attendee[$delta] = [
+        'target_id' => $paragraph->id(),
+        'target_revision_id' => $paragraph->getRevisionId(),
+      ];
+    }
     
     if ($delta >= $quantity) {
       $value = $commerce_order_item->field_attendee[$delta]->getValue();
