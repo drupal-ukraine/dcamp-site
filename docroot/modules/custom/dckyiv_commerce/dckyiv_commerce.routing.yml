@@ -2,7 +2,7 @@ dckyiv_commerce.attendee_edit:
   path: '/user/{user}/my-tickets/{commerce_order_item}/attendee/{attendee_paragraph}'
   defaults:
     _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::attendeeFormEdit'
-    _title: 'Iнформація про учасника'
+    _title: 'Attendee information'
   options:
     parameters:
       user:
