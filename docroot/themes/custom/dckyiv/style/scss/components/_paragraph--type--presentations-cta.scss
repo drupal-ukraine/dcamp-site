@@ -47,7 +47,7 @@
         text-align: center;
         text-transform: uppercase;
 
-        @include mq($bp1024) {
+        @include mq($bp1200) {
           max-width: 255px;
         }
       }
