@@ -19,20 +19,18 @@
     background-color: $color-gallery;
     margin-bottom: 30px;
 
-    @include mq($bp1024) {
-      max-width: 315px;
+    @include mq($bp768) {
+      width: calc(50% - 30px);
       min-height: 450px;
     }
 
     @include mq($bp1200) {
       width: calc(33.33% - 30px);
-      margin-bottom: 0;
-      margin-right: 30px;
     }
 
     .views-field {
       &-uid {
-        min-height: 470px;
+        min-height: 338px;
         background-image: url('../../images/icon-speaking-skills.png');
         background-size: contain;
         background-repeat: no-repeat;
@@ -100,6 +98,21 @@
       }
     }
   }
+
+  .pager {
+    text-align: center;
+    padding: 0 0 30px;
+
+    @include mq($bp1024) {
+      padding: 0;
+    }
+  }
+
+  .clearfix {
+    &:after {
+      display: none !important;
+    }
+  }
 }
 
 .field--name-field {
@@ -142,17 +155,18 @@
       @include mq($bp1200) {
         min-height: 280px;
       }
-      & > div {
+      .views-infinite-scroll-content-wrapper {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
 
-        @include mq($bp1024) {
+        @include mq($bp768) {
           flex-direction: row;
-          justify-content: space-around;
+          justify-content: space-between;
         }
         @include mq($bp1200) {
           justify-content: space-between;
+          margin-right: 30px;
         }
       }
     }
