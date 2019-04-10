@@ -3,9 +3,16 @@
 .attendee {
   &--wrapper {
     display: flex;
-    border: 1px solid $color-black;
-    width: 300px;
-    margin-right: 15px;
+    border: 1px solid $color-gallery;
+    margin-bottom: 15px;
+    width: 100%;
+
+    @include mq($bp1024) {
+      width: calc(50% - 8px);
+      &:nth-child(odd) {
+        margin-right: 15px;
+      }
+    }
   }
 
   &--content, &--add-info {

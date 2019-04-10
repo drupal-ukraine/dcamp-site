@@ -487,9 +487,9 @@ display:
       tags:
         - 'config:field.storage.commerce_order_item.field_attendee'
         - 'config:field.storage.commerce_order_item.field_t_shirt_size'
-  page_1:
+  my_tickets_page:
     display_plugin: page
-    id: page_1
+    id: my_tickets_page
     display_title: 'Мої квитки'
     position: 1
     display_options:
