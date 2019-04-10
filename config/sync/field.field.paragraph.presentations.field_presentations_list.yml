@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_presentations_list
     - paragraphs.paragraphs_type.presentations
+    - views.view.presentation_list
   module:
     - viewsreference
 id: paragraph.presentations.field_presentations_list
@@ -15,7 +16,16 @@ label: 'Presentations list'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: frontpage_presenter_list
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 31ce6525-ca4a-44c5-9b4a-8d538ae5b5f6
 default_value_callback: ''
 settings:
   handler: 'default:view'
@@ -27,8 +37,10 @@ settings:
     default: 0
     page: 0
     feed: 0
+    entity_browser: 0
     embed: 0
   preselect_views:
+    presentation_list: presentation_list
     block_content: 0
     camp_tickets: 0
     comment: 0
@@ -44,11 +56,16 @@ settings:
     commerce_user_orders: 0
     content: 0
     content_recent: 0
+    events: 0
     files: 0
     frontpage: 0
     media: 0
+    media_entity_browser: 0
     media_library: 0
+    my_presentations: 0
     profiles: 0
+    scheduler_scheduled_content: 0
+    sponsors: 0
     taxonomy_term: 0
     user_admin_people: 0
     watchdog: 0

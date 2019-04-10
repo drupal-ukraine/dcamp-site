@@ -7,8 +7,110 @@
     padding-top: 30px;
     padding-bottom: 30px;
 
-    @include mq($bp1024) {
+    @include mq($bp1200) {
       flex-direction: row;
+      margin: 0 auto;
+      justify-content: center;
+    }
+  }
+
+  .views-row {
+    width: 100%;
+    background-color: $color-gallery;
+    margin-bottom: 30px;
+
+    @include mq($bp768) {
+      width: calc(50% - 30px);
+      min-height: 450px;
+    }
+
+    @include mq($bp1200) {
+      width: calc(33.33% - 30px);
+    }
+
+    .views-field {
+      &-uid {
+        min-height: 338px;
+        background-image: url('../../images/icon-speaking-skills.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center 15px;
+
+        @include mq($bp1024) {
+          min-height: 309px;
+        }
+
+        @include mq($bp1200) {
+          min-height: 268px;
+        }
+
+        img {
+          user-select: none;
+          height: auto;
+          width: 100%;
+          vertical-align: middle;
+          object-fit: contain;
+          max-width: 100%;
+        }
+
+        .views-element-container {
+          user-select: none;
+          height: auto;
+          width: 100%;
+          vertical-align: middle;
+          object-fit: contain;
+          max-width: 100%;
+        }
+      }
+      &-field-second-name {
+        .field-content {
+          padding: 12px 0 12px 25px;
+          background: $color-tuna;
+          font-size: 2rem;
+          text-align: left;
+          color: $color-white;
+
+          @include mq($bp1024) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      &-title {
+        padding: 40px 25px;
+        line-height: normal;
+
+        @include mq($bp1024) {
+          padding: 20px 25px;
+        }
+
+        a {
+          font-size: 3rem;
+          color: $color-shark;
+
+          @include mq($bp1024) {
+            font-size: 1.6rem;
+          }
+
+          &:hover {
+            color: $color-fern;
+          }
+        }
+      }
+    }
+  }
+
+  .pager {
+    text-align: center;
+    padding: 0 0 30px;
+
+    @include mq($bp1024) {
+      padding: 0;
+    }
+  }
+
+  .clearfix {
+    &:after {
+      display: none !important;
     }
   }
 }
@@ -26,6 +128,47 @@
       margin: 0 auto;
       max-width: 450px;
       min-height: 280px;
+    }
+
+    @include mq($bp1200) {
+      margin: 0;
+      max-width: 255px;
+    }
+  }
+
+  &-presentations-list {
+    width: 100%;
+
+    @include mq($bp1024) {
+      min-height: 280px;
+    }
+
+    @include mq($bp1200) {
+      min-height: 280px;
+    }
+
+    & > .views-element-container {
+      @include mq($bp1024) {
+        min-height: 280px;
+      }
+
+      @include mq($bp1200) {
+        min-height: 280px;
+      }
+      .views-infinite-scroll-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @include mq($bp768) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        @include mq($bp1200) {
+          justify-content: space-between;
+          margin-right: 30px;
+        }
+      }
     }
   }
 }

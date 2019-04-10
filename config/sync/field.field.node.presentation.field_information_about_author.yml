@@ -13,7 +13,7 @@ entity_type: node
 bundle: presentation
 label: 'Information About Author'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
