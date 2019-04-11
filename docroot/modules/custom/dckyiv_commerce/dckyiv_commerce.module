@@ -45,46 +45,6 @@ function dckyiv_commerce_views_data_alter(array &$data) {
 }
 
 /**
- * Implements hook_ENTITY_TYPE_presave();
- */
-function dckyiv_commerce_commerce_order_item_presave(OrderItemInterface $commerce_order_item) {
-  if ($commerce_order_item->bundle() != 'drupal_camp_ticket') {
-    return;
-  }
-  
-  $quantity = (int) $commerce_order_item->getQuantity();
-  $items = $quantity;
-  $field_value = $commerce_order_item->get('field_attendee');
-  if (!empty($field_value)
-    && $field_value->count() > $quantity) {
-    $items = $field_value->count();
-  }
-  
-  for ($delta = 0; $delta < $items; $delta++) {
-    if (empty($commerce_order_item->field_attendee[$delta])) {
-      $paragraph = Paragraph::create([
-        'type' => 'attendee',
-      ]);
-      $paragraph->is_new = TRUE;
-      $paragraph->save();
-      $commerce_order_item->field_attendee[$delta] = [
-        'target_id' => $paragraph->id(),
-        'target_revision_id' => $paragraph->getRevisionId(),
-      ];
-    }
-    
-    if ($delta >= $quantity) {
-      $value = $commerce_order_item->field_attendee[$delta]->getValue();
-      $paragraph = empty($value['target_id']) ? NULL : Paragraph::load($value['target_id']);
-      if (!empty($paragraph)) {
-        $paragraph->delete();
-        $commerce_order_item->field_attendee[$delta] = NULL;
-      }
-    }
-  }
-}
-
-/**
  * Implements hook_theme().
  */
 function dckyiv_commerce_theme($existing, $type, $theme, $path) {
