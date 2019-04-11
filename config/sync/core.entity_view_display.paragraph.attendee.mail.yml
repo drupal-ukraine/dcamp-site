@@ -1,0 +1,50 @@
+uuid: 235534ef-f5dc-42c3-82ed-5c2b8a7afcc3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.mail
+    - field.field.paragraph.attendee.field_attendee_email
+    - field.field.paragraph.attendee.field_attendee_firstname
+    - field.field.paragraph.attendee.field_attendee_secondname
+    - field.field.paragraph.attendee.field_attendee_status
+    - field.field.paragraph.attendee.field_site_user
+    - paragraphs.paragraphs_type.attendee
+id: paragraph.attendee.mail
+targetEntityType: paragraph
+bundle: attendee
+mode: mail
+content:
+  field_attendee_email:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_attendee_firstname:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_attendee_secondname:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_site_user:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_attendee_status: true

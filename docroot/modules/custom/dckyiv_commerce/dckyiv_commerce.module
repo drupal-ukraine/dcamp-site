@@ -56,8 +56,8 @@ function dckyiv_commerce_theme($existing, $type, $theme, $path) {
         'shipping_information' => NULL,
         'payment_method' => NULL,
         'totals' => NULL,
+        'qr_codes' => NULL,
       ],
     ],
   ];
 }
-

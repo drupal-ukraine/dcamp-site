@@ -10,6 +10,7 @@ use Drupal\Core\Render\RenderContext;
 use Drupal\Core\Render\Renderer;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\state_machine\Event\WorkflowTransitionEvent;
+use Drupal\views\Views;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -116,10 +117,14 @@ class OrderConfirmationSubscriber implements EventSubscriberInterface {
       $params['headers']['Bcc'] = $receipt_bcc;
     }
 
+    $view = Views::getView('my_camp_tickets');
+    $view->setDisplay('mail_block');
+    $view->setArguments([$order->getCustomerId(), $order->id()]);
     $build = [
       '#theme' => 'dckyiv_commerce_order_confirmation',
       '#order_entity' => $order,
       '#totals' => $this->orderTotalSummary->buildTotals($order),
+      '#qr_codes' => $view->render(),
     ];
     if ($billing_profile = $order->getBillingProfile()) {
       $build['#billing_information'] = $this->profileViewBuilder->view($billing_profile);
