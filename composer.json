@@ -186,9 +186,6 @@
       },
       "drupal/conditional_fields": {
         "Error 'explode() expects parameter": "https://www.drupal.org/files/issues/2018-04-05/conditional_fields-explode_expects_string-2898893-11.patch"
-      },
-      "drupal/commerce_liqpay_gateway": {
-        "Fixed negative scenario for payments": "https://www.drupal.org/files/issues/2019-02-25/2983818-2.patch"
       }
     }
   },

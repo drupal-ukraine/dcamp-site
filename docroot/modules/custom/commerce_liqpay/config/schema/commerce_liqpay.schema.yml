@@ -1,0 +1,45 @@
+commerce_payment.commerce_payment.plugin.liq_payment_redirect:
+  type: commerce_payment_configuration
+  mapping:
+    version:
+      label: 'API version'
+      type: number
+    public_key:
+      label: 'Store public key'
+      type: string
+    private_key:
+      label: 'Store private key'
+      type: string
+    messages:
+      label: 'Messages'
+      type: string
+    description:
+      label: 'Description'
+      type: string
+    action:
+      label: 'Action'
+      type: string
+    action_url:
+      label: 'Action url'
+      type: string
+    message_success:
+      label: 'Success'
+      type: string
+    message_reversed:
+      label: 'Reversed'
+      type: string
+    message_sandbox:
+      label: 'Sandbox'
+      type: string
+    message_failure:
+      label: 'Failure'
+      type: string
+    message_error:
+      label: 'Error'
+      type: string
+    message_processing:
+      label: 'Processing'
+      type: string
+    message_cash_wait:
+      label: 'Cash wait'
+      type: string

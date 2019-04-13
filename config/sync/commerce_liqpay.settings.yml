@@ -1,5 +1,5 @@
-commerce_liqpay_gateway:
-  checkout_url: 'https://www.liqpay.com/api/3/checkout'
+commerce_liqpay:
+  checkout_url: 'https://www.liqpay.ua/api/3/checkout'
   version: 3
   action: pay
   api_url: 'https://www.liqpay.ua/api/'
