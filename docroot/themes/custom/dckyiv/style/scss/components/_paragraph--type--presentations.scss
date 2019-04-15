@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
 
-    @include mq($bp768) {
+    @include mq($bp580) {
       width: calc(50% - 30px);
       min-height: 450px;
     }
@@ -86,7 +86,7 @@
         }
 
         a {
-          font-size: 3rem;
+          font-size: 2rem;
           color: $color-shark;
 
           @include mq($bp1024) {
@@ -184,9 +184,6 @@
 
         @include mq($bp580) {
           flex-direction: row;
-          justify-content: space-between;
-        }
-        @include mq($bp1200) {
           justify-content: space-around;
         }
       }
