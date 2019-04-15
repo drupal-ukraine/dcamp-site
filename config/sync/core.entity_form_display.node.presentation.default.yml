@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.presentation.field_company
     - field.field.node.presentation.field_drupal_org
     - field.field.node.presentation.field_facebook
+    - field.field.node.presentation.field_image
     - field.field.node.presentation.field_information_about_author
     - field.field.node.presentation.field_language
     - field.field.node.presentation.field_level
@@ -16,12 +17,15 @@ dependencies:
     - field.field.node.presentation.field_second_name
     - field.field.node.presentation.field_twitter
     - field.field.node.presentation.field_yoast_seo
+    - image.style.thumbnail
     - node.type.presentation
   module:
     - content_moderation
     - field_group
     - link
     - path
+    - scheduler
+    - svg_image
     - text
 third_party_settings:
   field_group:
@@ -93,6 +97,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_image:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_information_about_author:
     weight: 14
@@ -181,6 +193,12 @@ content:
     weight: 6
     region: content
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -211,6 +229,12 @@ content:
       size: 60
       placeholder: ''
     region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   field_meta_tags: true

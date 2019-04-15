@@ -3,11 +3,17 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.storage.node.field_image
+    - field.storage.node.field_language
+    - field.storage.node.field_level
     - field.storage.node.field_name
     - field.storage.node.field_second_name
+    - image.style.public_speaker_images
     - node.type.presentation
   module:
     - node
+    - options
+    - svg_image
     - user
     - views_infinite_scroll
 id: presentation_list
@@ -130,10 +136,10 @@ display:
           absolute: true
           entity_type: node
           plugin_id: entity_link
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+        field_image:
+          id: field_image
+          table: node__field_image
+          field: field_image
           relationship: none
           group_type: group
           admin_label: 'User Photo'
@@ -146,7 +152,7 @@ display:
             path: '{{ view_node }}'
             absolute: false
             external: false
-            replace_spaces: true
+            replace_spaces: false
             path_case: none
             trim_whitespace: false
             alt: ''
@@ -174,15 +180,20 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: '<img src="http://lorempixel.com/480/471/abstract" typeof="foaf:Image">'
+          empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
+          hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_entity_view
+          type: image
           settings:
-            view_mode: only_avatar
-          group_column: target_id
+            image_style: public_speaker_images
+            image_link: ''
+            svg_render_as_image: 1
+            svg_attributes:
+              width: ''
+              height: ''
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -192,8 +203,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: uid
           plugin_id: field
         field_name:
           id: field_name
@@ -386,6 +395,130 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+        field_language:
+          id: field_language
+          table: node__field_language
+          field: field_language
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: 'Lang:  <span>{{ field_language__value }}</span>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_level:
+          id: field_level
+          table: node__field_level
+          field: field_level
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: 'Level: <span>{{ field_level__value }}</span>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -445,6 +578,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_language'
+        - 'config:field.storage.node.field_level'
         - 'config:field.storage.node.field_name'
         - 'config:field.storage.node.field_second_name'
   frontpage_presenter_list:
@@ -463,5 +599,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_language'
+        - 'config:field.storage.node.field_level'
         - 'config:field.storage.node.field_name'
         - 'config:field.storage.node.field_second_name'
