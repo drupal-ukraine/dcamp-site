@@ -18,6 +18,8 @@
     width: 100%;
     background-color: $color-gallery;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 
     @include mq($bp768) {
       width: calc(50% - 30px);
@@ -29,7 +31,7 @@
     }
 
     .views-field {
-      &-uid {
+      &-field-image {
         min-height: 338px;
         background-image: url('../../images/icon-speaking-skills.png');
         background-size: contain;
@@ -96,6 +98,26 @@
           }
         }
       }
+      &-field-level,
+      &-field-language {
+        text-align: right;
+        padding: 0 25px;
+        font-size: 1.6rem;
+
+        @include mq($bp1024) {
+          font-size: 1.4rem;
+        }
+
+        span {
+          text-transform: capitalize;
+        }
+      }
+      &-field-language {
+        margin-top: auto;
+      }
+      &-field-level {
+        padding: 5px 25px 10px;
+      }
     }
   }
 
@@ -131,7 +153,7 @@
     }
 
     @include mq($bp1200) {
-      margin: 0;
+      margin: 0 0 0 30px;
       max-width: 255px;
     }
   }
@@ -160,13 +182,12 @@
         flex-direction: column;
         flex-wrap: wrap;
 
-        @include mq($bp768) {
+        @include mq($bp580) {
           flex-direction: row;
           justify-content: space-between;
         }
         @include mq($bp1200) {
-          justify-content: space-between;
-          margin-right: 30px;
+          justify-content: space-around;
         }
       }
     }
