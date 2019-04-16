@@ -1,8 +1,7 @@
 
 .paragraph--type--sponsor-wrapper {
-  width: 100%;
-  max-width: 980px;
-  margin: 0 auto 30px;
+  @include container;
+  margin: 30px auto;
 
   .field--name-field-sponsor-section {
     display: flex;
@@ -15,10 +14,15 @@
 
     & > .field__item {
       border: 1px solid $color-black;
-      margin: 0 0 15px;
+      margin: 0 0 30px;
 
-      @include mq($bp1024){
-        width: calc(50% - 14px);
+      &:last-child {
+        margin: 0;
+      }
+
+      @include mq($bp1024) {
+        margin: 0;
+        width: calc(50% - 22.5px);
       }
     }
   }

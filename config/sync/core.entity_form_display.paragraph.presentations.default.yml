@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.presentations.field_link_go_to
     - field.field.paragraph.presentations.field_presentations_cta
     - field.field.paragraph.presentations.field_presentations_list
+    - field.field.paragraph.presentations.field_title
     - paragraphs.paragraphs_type.presentations
   module:
     - link
@@ -17,7 +18,7 @@ bundle: presentations
 mode: default
 content:
   field_link_go_to:
-    weight: 2
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -26,7 +27,7 @@ content:
     region: content
   field_presentations_cta:
     type: entity_reference_paragraphs
-    weight: 1
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -37,13 +38,21 @@ content:
     third_party_settings: {  }
     region: content
   field_presentations_list:
-    weight: 0
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: '60'
       placeholder: ''
     third_party_settings: {  }
     type: viewsreference_autocomplete
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true

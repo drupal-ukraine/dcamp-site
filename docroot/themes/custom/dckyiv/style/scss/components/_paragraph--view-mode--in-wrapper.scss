@@ -8,7 +8,7 @@
 
   @include mq($bp1024) {
     padding: 0;
-    max-width: 300px;
+    max-width: 350px;
   }
 
   .content {
@@ -18,7 +18,7 @@
     align-items: center;
 
     @include mq($bp1024) {
-      height: 285px;
+      height: 265px;
     }
 
     .field--name-field {
@@ -50,13 +50,12 @@
       &-text {
         padding: 0;
         width: 100%;
-        text-align: center;
+        text-align: justify;
         font-size: 1.6rem;
         line-height: 1.5;
 
         @include mq($bp1024) {
           font-size: 1.4rem;
-          line-height: 1.4;
         }
 
         P {

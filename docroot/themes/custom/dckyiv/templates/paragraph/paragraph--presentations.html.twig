@@ -47,8 +47,9 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      <h2>{{ content.field_title }}</h2>
       <div class="wrap-content content">
-        {{ content }}
+        {{ content|without('field_title') }}
       </div>
     {% endblock %}
   </div>

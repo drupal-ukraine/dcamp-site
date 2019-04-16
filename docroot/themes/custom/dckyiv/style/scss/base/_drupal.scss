@@ -115,6 +115,16 @@
       margin-right: -15px;
     }
   }
+
+  h2 {
+    font-size: 3.6rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: $font-proxima-nova-bold;
+    line-height: 1;
+    @include container;
+    padding-bottom: 20px !important;
+  }
 }
 
 table {

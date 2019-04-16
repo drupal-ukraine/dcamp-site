@@ -47,8 +47,11 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      {% if content.field_title|render|striptags|trim %}
+        <h2>{{ content.field_title }}</h2>
+      {% endif %}
       <div class="content">
-        {{ content }}
+        {{ content|without('field_title') }}
       </div>
     {% endblock %}
   </div>
