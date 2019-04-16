@@ -1,18 +1,18 @@
-uuid: 063c1213-3615-492f-b05d-c40f9081aeb8
+uuid: d21a3617-6ad1-4c85-a128-59e1045230a6
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.event
-id: node.event.metatag
-field_name: metatag
+id: node.event.unpublish_on
+field_name: unpublish_on
 entity_type: node
 bundle: event
-label: Metatags
-description: 'The meta tags for the entity.'
+label: 'Unpublish on'
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: map
+field_type: timestamp

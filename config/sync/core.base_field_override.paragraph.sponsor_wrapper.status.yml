@@ -1,14 +1,14 @@
-uuid: ed279a2d-e771-4e2d-a77f-35d674a852b1
+uuid: b904e6b4-4251-4882-b63a-cd8a1fcc0199
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.sponsor
-id: node.sponsor.status
+    - paragraphs.paragraphs_type.sponsor_wrapper
+id: paragraph.sponsor_wrapper.status
 field_name: status
-entity_type: node
-bundle: sponsor
-label: Опубліковано
+entity_type: paragraph
+bundle: sponsor_wrapper
+label: Published
 description: ''
 required: false
 translatable: false

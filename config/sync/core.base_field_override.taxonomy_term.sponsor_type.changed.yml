@@ -1,0 +1,18 @@
+uuid: 9674cca6-e664-4599-a4eb-e2290730ed92
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sponsor_type
+id: taxonomy_term.sponsor_type.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: sponsor_type
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

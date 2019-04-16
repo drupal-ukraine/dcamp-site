@@ -1,20 +1,20 @@
-uuid: ed279a2d-e771-4e2d-a77f-35d674a852b1
+uuid: 25b0c2c0-d133-4f37-88b6-f331b161ada1
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.sponsor
-id: node.sponsor.status
-field_name: status
+id: node.sponsor.sticky
+field_name: sticky
 entity_type: node
 bundle: sponsor
-label: Опубліковано
+label: 'Sticky at top of lists'
 description: ''
 required: false
 translatable: false
 default_value:
   -
-    value: 1
+    value: 0
 default_value_callback: ''
 settings:
   on_label: 'On'

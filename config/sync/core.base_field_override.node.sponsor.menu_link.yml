@@ -1,17 +1,17 @@
-uuid: e18b9aa9-5750-4cd2-9c90-85fc6e2ede2f
+uuid: 6a3d93f0-2b55-4ac5-8d65-1686b969fbc6
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.event
-id: node.event.menu_link
+    - node.type.sponsor
+id: node.sponsor.menu_link
 field_name: menu_link
 entity_type: node
-bundle: event
+bundle: sponsor
 label: 'Menu link'
 description: 'Computed menu link for the node (only available during node saving).'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

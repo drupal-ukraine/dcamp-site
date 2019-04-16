@@ -15,7 +15,7 @@ bundle: sponsors
 label: Sponsors
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     options:
