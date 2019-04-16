@@ -1,0 +1,21 @@
+uuid: 9fa2d2c5-92d5-43ac-9ae3-e23a9e67b285
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.sponsor_wrapper
+id: paragraph.sponsor_wrapper.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: sponsor_wrapper
+label: Title
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: СПОНСОРИ
+default_value_callback: ''
+settings: {  }
+field_type: string

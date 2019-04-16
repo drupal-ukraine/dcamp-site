@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.presentations.field_link_go_to
     - field.field.paragraph.presentations.field_presentations_cta
     - field.field.paragraph.presentations.field_presentations_list
+    - field.field.paragraph.presentations.field_title
     - paragraphs.paragraphs_type.presentations
   module:
     - entity_reference_revisions
@@ -17,7 +18,7 @@ bundle: presentations
 mode: default
 content:
   field_link_go_to:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       trim_length: 80
@@ -30,7 +31,7 @@ content:
     region: content
   field_presentations_cta:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       view_mode: default
@@ -38,12 +39,20 @@ content:
     third_party_settings: {  }
     region: content
   field_presentations_list:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       plugin_types:
         - block
     third_party_settings: {  }
     type: viewsreference_formatter
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden: {  }

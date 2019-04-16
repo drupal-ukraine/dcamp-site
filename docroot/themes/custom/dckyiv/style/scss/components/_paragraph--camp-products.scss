@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include mq($bp1024) {
+    @include mq($bp768) {
       flex-direction: row;
       flex-wrap: wrap;
     }
@@ -18,12 +18,25 @@
     margin-bottom: 16px;
     border: 1px solid $color-tuna;
 
+    @include mq($bp768) {
+      margin-bottom: 0;
+      width: calc(50% - 15px);
+
+      &:nth-child(n+3) {
+        margin-top: 30px;
+      }
+    }
+
     @include mq($bp1024) {
       margin-bottom: 0;
-      max-width: 350px;
+      width: calc(33.33% - 15px);
+
+      &:nth-child(n+3) {
+        margin-top: 0;
+      }
 
       &:nth-child(n+4) {
-        margin-top: 20px;
+        margin-top: 30px;
       }
     }
 
@@ -78,15 +91,12 @@
     }
   }
 
-  h2 {
-    font-size: 3.6rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: $font-proxima-nova-bold;
-  }
-
   .button {
     text-transform: uppercase;
     appearance: none;
+  }
+
+  .field--type-text-long {
+    margin-bottom: 0;
   }
 }

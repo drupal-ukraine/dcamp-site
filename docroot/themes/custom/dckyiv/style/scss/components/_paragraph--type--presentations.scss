@@ -4,7 +4,7 @@
   & > .content {
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 30px;
 
     @include mq($bp1200) {
@@ -22,12 +22,12 @@
     flex-direction: column;
 
     @include mq($bp580) {
-      width: calc(50% - 30px);
+      width: calc(50% - 15px);
       min-height: 450px;
     }
 
     @include mq($bp1200) {
-      width: calc(33.33% - 30px);
+      width: calc(33.33% - 15px);
     }
 
     .views-field {
@@ -184,7 +184,7 @@
 
         @include mq($bp580) {
           flex-direction: row;
-          justify-content: space-around;
+          justify-content: space-between;
         }
       }
     }
