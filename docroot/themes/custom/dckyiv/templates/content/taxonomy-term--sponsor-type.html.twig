@@ -25,10 +25,11 @@
 #}
 {%
   set classes = [
-  url|split('/')[1],
+  "sponsor-" ~ term.id,
   "sponsor-type--item"
 ]
 %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if not page %}
