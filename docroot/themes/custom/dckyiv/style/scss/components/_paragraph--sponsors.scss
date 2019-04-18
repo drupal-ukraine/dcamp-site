@@ -36,6 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to top, #6b7077, #a8aeb2);
 
     .field--name-name {
       color: $color-white;
@@ -45,16 +46,17 @@
       text-align: center;
     }
   }
-  .platinum-sponsor {
+
+  .sponsor-9 {
     background-image: linear-gradient(to top, #3a3a43, #737a7f);
   }
-  .gold-sponsor {
+  .sponsor-7 {
     background-image: linear-gradient(to top, #937050, #ecd67f);
   }
-  .silver-sponsor {
+  .sponsor-11 {
     background-image: linear-gradient(to top, #6b7077, #a8aeb2);
   }
-  .bronze-sponsor {
+  .sponsor-6 {
     background-image: linear-gradient(to top, #578f5b, #65bd6a);
   }
 
