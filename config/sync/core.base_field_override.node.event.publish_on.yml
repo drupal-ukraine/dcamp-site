@@ -1,18 +1,18 @@
-uuid: 063c1213-3615-492f-b05d-c40f9081aeb8
+uuid: 5806894a-e5b3-41ad-9c66-7d4a71bca9a3
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.event
-id: node.event.metatag
-field_name: metatag
+id: node.event.publish_on
+field_name: publish_on
 entity_type: node
 bundle: event
-label: Metatags
-description: 'The meta tags for the entity.'
+label: 'Publish on'
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: map
+field_type: timestamp

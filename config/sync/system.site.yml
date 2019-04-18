@@ -5,7 +5,7 @@ slogan: '<span class="logo_desktop">DRUPALCAMP</span> <span class="logo_mobile">
 page:
   403: ''
   404: ''
-  front: /node/4
+  front: /node/112
 admin_compact_mode: false
 weight_select_max: 100
 langcode: uk

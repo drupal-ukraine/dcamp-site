@@ -11,7 +11,7 @@ _core:
 id: dckyiv_primary_local_tasks
 theme: dckyiv
 region: content
-weight: -8
+weight: -9
 provider: null
 plugin: local_tasks_block
 settings:

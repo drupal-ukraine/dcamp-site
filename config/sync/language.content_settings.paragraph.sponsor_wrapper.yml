@@ -1,9 +1,9 @@
-uuid: 8cbce955-b875-4d95-b925-9fcbf44c4f29
+uuid: 204d0e1f-d2cc-4109-b4a4-bef2ba5316d7
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.sponsor_type
+    - paragraphs.paragraphs_type.sponsor_wrapper
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.sponsor_type
-target_entity_type_id: taxonomy_term
-target_bundle: sponsor_type
+id: paragraph.sponsor_wrapper
+target_entity_type_id: paragraph
+target_bundle: sponsor_wrapper
 default_langcode: site_default
 language_alterable: true

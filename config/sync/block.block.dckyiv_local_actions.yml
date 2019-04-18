@@ -9,7 +9,7 @@ _core:
 id: dckyiv_local_actions
 theme: dckyiv
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: local_actions_block
 settings:
