@@ -1,30 +1,37 @@
 
-.paragraph--type--sponsor-wrapper {
-  @include container;
-  margin: 30px auto;
+.paragraph--type {
+  &--sponsor-wrapper {
+    @include container;
+    margin: 30px auto;
 
-  .field--name-field-sponsor-section {
-    display: flex;
-    flex-direction: column;
-
-    @include mq($bp1024){
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    & > .field__item {
-      border: 1px solid $color-black;
-      margin: 0 0 30px;
-
-      &:last-child {
-        margin: 0;
-      }
+    .field--name-field-sponsor-section {
+      display: flex;
+      flex-direction: column;
 
       @include mq($bp1024) {
-        margin: 0;
-        width: calc(50% - 22.5px);
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      & > .field__item {
+        border: 1px solid $color-black;
+        margin: 0 0 30px;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        @include mq($bp1024) {
+          margin: 0;
+          width: calc(50% - 22.5px);
+        }
       }
     }
+  }
+
+  &--sponsor-wrapper-full {
+    @include container;
+    margin: 30px auto;
   }
 }
 
@@ -36,7 +43,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top, #6b7077, #a8aeb2);
+    background-image: linear-gradient(to top, #578f5b, #73a782);
 
     .field--name-name {
       color: $color-white;
