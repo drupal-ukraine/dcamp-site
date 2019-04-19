@@ -1,0 +1,9 @@
+uuid: 5b108adf-b628-4461-94c1-af99b641ae0f
+langcode: en
+status: true
+dependencies: {  }
+id: sponsor_wrapper_full
+label: 'Sponsor wrapper (Full)'
+icon_uuid: null
+description: 'Full-width Sponsor Wrapper Brick'
+behavior_plugins: {  }
