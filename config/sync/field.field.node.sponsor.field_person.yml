@@ -1,4 +1,4 @@
-uuid: b1a00ad7-0608-4ac8-983d-8f1276d17554
+uuid: fe6d344d-6699-4089-8ffe-a790be6f69c8
 langcode: en
 status: true
 dependencies:
@@ -9,20 +9,15 @@ id: node.sponsor.field_person
 field_name: field_person
 entity_type: node
 bundle: sponsor
-label: Person
-description: ''
+label: 'Individual sponsor'
+description: 'Select the checkbox if it individual sponsor'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 0
 default_value_callback: ''
 settings:
-  handler: 'default:user'
-  handler_settings:
-    include_anonymous: true
-    filter:
-      type: _none
-    target_bundles: null
-    sort:
-      field: _none
-    auto_create: false
-field_type: entity_reference
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

@@ -84,15 +84,18 @@
 <div{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('node__content') }}>
 
-    {% if content.field_image.0 %}
+    {% if content.field_person.0['#markup'] %}
+      <div class="sponsor--person">
+        <a href="{{ url }}">
+          <figure>
+            {{ content.field_image }}
+            <figcaption>{{ label }}</figcaption>
+          </figure>
+        </a>
+      </div>
+    {% else %}
       <div class="sponsor--logo">
         <a href="{{ url }}">{{ content.field_image }}</a>
-      </div>
-    {% endif %}
-
-    {% if content.field_person.0 %}
-      <div class="sponsor--person">
-        <a href="{{ url }}">{{ content.field_person }}</a>
       </div>
     {% endif %}
 

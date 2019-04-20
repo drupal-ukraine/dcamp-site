@@ -59,7 +59,7 @@ content:
     type: link_default
     region: content
   field_image:
-    weight: 12
+    weight: 11
     settings:
       preview_image_style: media_entity_browser_thumbnail
       progress_indicator: throbber
@@ -110,29 +110,11 @@ content:
     type: paragraphs
     region: content
   field_person:
-    weight: 11
+    weight: 12
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings:
-      conditional_fields:
-        911bca6b-a856-4bf3-81ea-9b3fd84038ce:
-          dependee: field_sponsor_type
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 3
-            value: ''
-            values: '4'
-            value_form: {  }
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: node
-          bundle: sponsor
-    type: entity_reference_autocomplete
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_sponsor_type:
     weight: 10
@@ -185,7 +167,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -227,7 +209,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }

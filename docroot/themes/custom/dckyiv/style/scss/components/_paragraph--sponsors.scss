@@ -67,6 +67,12 @@
     background-image: linear-gradient(to top, #578f5b, #65bd6a);
   }
 
+  .sponsor--person {
+    figure img {
+      border-radius: 50%;
+    }
+  }
+
   .views-element-container {
     & > div {
       display: flex;
@@ -83,6 +89,13 @@
         max-width: 130px;
         margin: 20px 0;
       }
+    }
+  }
+
+  figcaption {
+    span {
+      display: block;
+      text-align: center;
     }
   }
 }
