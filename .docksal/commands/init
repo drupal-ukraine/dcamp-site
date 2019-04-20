@@ -59,6 +59,9 @@ cd $DOCROOT_PATH
 fin drush updb -y
 fin drush cim -y
 fin drush cr
+fin drush en stage_file_proxy -y
+fin drush config-set stage_file_proxy.settings origin "https://drupalcampkyiv.org"
+fin drush uli
 echo-green "Done.\n"
 
 # Removing package-lock.json.

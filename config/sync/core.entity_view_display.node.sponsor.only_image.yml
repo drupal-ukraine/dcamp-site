@@ -37,13 +37,15 @@ content:
     type: image
     region: content
   field_person:
+    type: boolean
     weight: 2
+    region: content
     label: hidden
     settings:
-      link: true
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   links:
     weight: 0
     region: content

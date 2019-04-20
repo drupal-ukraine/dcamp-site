@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.sponsor.field_facebook
     - field.field.node.sponsor.field_image
     - field.field.node.sponsor.field_linkedin
-    - field.field.node.sponsor.field_person
+    - field.field.node.sponsor.field_page_content
     - field.field.node.sponsor.field_sponsor_type
     - field.field.node.sponsor.field_twitter
     - field.field.node.sponsor.field_web_site
@@ -34,14 +34,6 @@ content:
       svg_render_as_image: true
       image_style: ''
       image_link: ''
-    third_party_settings: {  }
-  field_person:
-    type: entity_reference_label
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      link: true
     third_party_settings: {  }
   links:
     weight: 3
