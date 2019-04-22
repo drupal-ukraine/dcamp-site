@@ -1,0 +1,58 @@
+uuid: 376c8828-40e5-4b66-b2b4-45fd64b90209
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timetable_slot.field_background
+    - field.field.paragraph.timetable_slot.field_content
+    - field.field.paragraph.timetable_slot.field_presentations
+    - field.field.paragraph.timetable_slot.field_time_slot
+    - paragraphs.paragraphs_type.timetable_slot
+  module:
+    - color_field
+    - paragraphs
+    - text
+id: paragraph.timetable_slot.default
+targetEntityType: paragraph
+bundle: timetable_slot
+mode: default
+content:
+  field_background:
+    weight: 1
+    settings:
+      default_colors: '#CC5447,#CCA81A,#65A3BD,#A365BD,#EBEBEB,#65BD6A,#C7B299'
+    third_party_settings: {  }
+    type: color_field_widget_box
+    region: content
+  field_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_presentations:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_time_slot:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

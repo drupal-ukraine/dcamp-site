@@ -1,0 +1,82 @@
+uuid: 3d47907f-6973-4782-b205-9fca8694adc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_presentations
+    - paragraphs.paragraphs_type.timetable_presentation
+    - paragraphs.paragraphs_type.timetable_slot
+  module:
+    - entity_reference_revisions
+id: paragraph.timetable_slot.field_presentations
+field_name: field_presentations
+entity_type: paragraph
+bundle: timetable_slot
+label: Presentations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      timetable_presentation: timetable_presentation
+    target_bundles_drag_drop:
+      timetable_slot:
+        weight: 19
+        enabled: false
+      camp_products:
+        weight: 20
+        enabled: false
+      contacts:
+        weight: 21
+        enabled: false
+      container:
+        weight: 22
+        enabled: false
+      cta_block:
+        weight: 23
+        enabled: false
+      hero_countdown:
+        weight: 24
+        enabled: false
+      html_widget:
+        weight: 25
+        enabled: false
+      icomoon_link:
+        weight: 26
+        enabled: false
+      menu_cta:
+        weight: 27
+        enabled: false
+      presentations:
+        weight: 28
+        enabled: false
+      presentations_cta:
+        weight: 29
+        enabled: false
+      social_links:
+        weight: 30
+        enabled: false
+      sponsors:
+        weight: 31
+        enabled: false
+      sponsor_wrapper:
+        weight: 32
+        enabled: false
+      teaser:
+        weight: 33
+        enabled: false
+      timetable_presentation:
+        enabled: true
+        weight: 34
+      wrapper_teasers:
+        weight: 35
+        enabled: false
+      wrapper_webform:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

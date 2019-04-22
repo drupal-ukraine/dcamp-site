@@ -1,0 +1,45 @@
+uuid: d347cba5-fb0f-4441-b465-ff19c62ad0cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timetable_presentation.field_background
+    - field.field.paragraph.timetable_presentation.field_place
+    - field.field.paragraph.timetable_presentation.field_presentation_ref
+    - paragraphs.paragraphs_type.timetable_presentation
+  module:
+    - color_field
+    - text
+id: paragraph.timetable_presentation.default
+targetEntityType: paragraph
+bundle: timetable_presentation
+mode: default
+content:
+  field_background:
+    weight: 0
+    settings:
+      default_colors: '#CC5447,#CCA81A,#65A3BD,#A365BD,#EBEBEB,#65BD6A,#C7B299'
+    third_party_settings: {  }
+    type: color_field_widget_box
+    region: content
+  field_place:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_presentation_ref:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

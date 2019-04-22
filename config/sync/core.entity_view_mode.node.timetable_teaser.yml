@@ -1,0 +1,10 @@
+uuid: 109fd4a2-987b-4f39-b9c6-8535aae18cc7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.timetable_teaser
+label: 'Timetable Teaser'
+targetEntityType: node
+cache: true

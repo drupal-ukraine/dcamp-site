@@ -1,0 +1,21 @@
+uuid: 1cb6ce59-b230-4b1e-8f1f-bd489c929259
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_place
+    - paragraphs.paragraphs_type.timetable_presentation
+  module:
+    - text
+id: paragraph.timetable_presentation.field_place
+field_name: field_place
+entity_type: paragraph
+bundle: timetable_presentation
+label: Place
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
