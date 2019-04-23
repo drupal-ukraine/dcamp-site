@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_page_content
     - node.type.landing_page
     - paragraphs.paragraphs_type.menu_cta
-    - paragraphs.paragraphs_type.timetable
   module:
     - entity_reference_revisions
 id: node.landing_page.field_page_content
@@ -25,7 +24,6 @@ settings:
     negate: 1
     target_bundles:
       menu_cta: menu_cta
-      timetable: timetable
     target_bundles_drag_drop:
       container:
         weight: 6
@@ -43,8 +41,8 @@ settings:
         weight: 10
         enabled: false
       timetable:
-        enabled: true
         weight: 20
+        enabled: false
       camp_products:
         weight: 21
         enabled: false
@@ -70,6 +68,9 @@ settings:
         weight: 32
         enabled: false
       sponsors:
+        weight: 33
+        enabled: false
+      sponsor_wrapper_full:
         weight: 33
         enabled: false
       timetable_presentation:

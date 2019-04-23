@@ -46,6 +46,7 @@ hidden:
   field_company: true
   field_drupal_org: true
   field_facebook: true
+  field_image: true
   field_information_about_author: true
   field_language: true
   field_level: true

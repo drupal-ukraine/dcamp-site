@@ -7,11 +7,12 @@ dependencies:
     - field.field.paragraph.timetable_slot.field_content
     - field.field.paragraph.timetable_slot.field_presentations
     - field.field.paragraph.timetable_slot.field_time_slot
+    - field.field.paragraph.timetable_slot.field_time_slot_start_end
     - paragraphs.paragraphs_type.timetable_slot
   module:
     - color_field
+    - datetime_range
     - entity_reference_revisions
-    - text
 id: paragraph.timetable_slot.default
 targetEntityType: paragraph
 bundle: timetable_slot
@@ -25,13 +26,6 @@ content:
       opacity: '1'
     third_party_settings: {  }
     type: color_field_formatter_text
-    region: content
-  field_content:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_presentations:
     type: entity_reference_revisions_entity_view
@@ -50,4 +44,15 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+  field_time_slot_start_end:
+    weight: 4
+    label: hidden
+    settings:
+      timezone_override: Europe/Kiev
+      date_format: 'H:i'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+hidden:
+  field_content: true

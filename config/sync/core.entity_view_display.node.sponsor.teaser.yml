@@ -46,6 +46,7 @@ hidden:
   field_facebook: true
   field_linkedin: true
   field_page_content: true
+  field_person: true
   field_sponsor_type: true
   field_twitter: true
   field_web_site: true

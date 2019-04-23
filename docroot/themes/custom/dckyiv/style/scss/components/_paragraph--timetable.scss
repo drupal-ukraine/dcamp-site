@@ -1,0 +1,137 @@
+.paragraph--type--timetable {
+  @include container;
+
+  @include mq($bp1024) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+  }
+
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $color-shark;
+  }
+
+  h3,
+  .presentation_place {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 17px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $color-tuna;
+
+    span {
+      padding: 0 30px 0 0;
+    }
+  }
+
+  h3 {
+    margin: 0 0 8px;
+  }
+
+  .presentation_place {
+    text-align: center;
+  }
+
+  .presentation_content {
+    padding-bottom: 20px;
+  }
+}
+
+.paragraph--type--timetable-slot {
+  margin: 0 0 8px;
+
+  .field__items {
+    display: flex;
+    flex-direction: column;
+
+    @include mq($bp768) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .field__item {
+    background-color: $color-gallery;
+    width: 100%;
+    margin: 0 0 8px;
+
+    @include mq($bp768) {
+
+      /* one item */
+      &:first-child:nth-last-child(1) {
+        /* -or- li:only-child { */
+        max-width: calc(100%);
+      }
+
+      /* two items */
+      &:first-child:nth-last-child(2),
+      &:first-child:nth-last-child(2) ~ .field__item {
+        max-width: calc(50% - 8px);
+      }
+
+      /* three items */
+      &:first-child:nth-last-child(3),
+      &:first-child:nth-last-child(3) ~ .field__item {
+        max-width: calc(33.3333% - 8px);
+      }
+    }
+
+    /* four items */
+    &:first-child:nth-last-child(4),
+    &:first-child:nth-last-child(4) ~ .field__item {
+
+      @include mq($bp768) {
+        max-width: calc(50% - 8px);
+      }
+
+      @include mq($bp1024) {
+        max-width: calc(25% - 8px);
+      }
+    }
+  }
+}
+
+.paragraph--type--timetable-presentation {
+
+  .field--name-field {
+    &-presentation-ref {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  a {
+    padding: 20px 25px 50px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $color-shark;
+  }
+
+  .presentation_author {
+    padding: 0 20px;
+    text-align: right;
+
+    & > div {
+      display: inline;
+      font-size: 14px;
+      font-style: italic;
+      color: $color-shark;
+    }
+  }
+}

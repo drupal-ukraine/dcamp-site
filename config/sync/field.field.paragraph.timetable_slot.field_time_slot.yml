@@ -10,7 +10,7 @@ field_name: field_time_slot
 entity_type: paragraph
 bundle: timetable_slot
 label: 'Time Slot'
-description: ''
+description: 'This is the name of a time slot (Ex.: Open Drupal Camp Kyiv)'
 required: false
 translatable: false
 default_value: {  }
