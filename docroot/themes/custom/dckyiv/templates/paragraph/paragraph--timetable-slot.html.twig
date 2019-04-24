@@ -48,8 +48,6 @@
 {% set field_bg_color = 'background-color:' ~ content.field_background|render|striptags|trim ~ ';' %}
 {% set bg_color = field_bg_color ? 'style=' ~  field_bg_color : '' %}
 
-{{ devel_breakpoint() }}
-
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
