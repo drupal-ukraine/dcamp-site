@@ -39,6 +39,7 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   dckyiv_commerce: 0
   dckyiv_core: 0

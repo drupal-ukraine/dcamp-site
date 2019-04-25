@@ -1,0 +1,19 @@
+uuid: be608ae1-7dd5-48ef-903e-34eae4fb92d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_time_slot
+    - paragraphs.paragraphs_type.timetable_slot
+id: paragraph.timetable_slot.field_time_slot
+field_name: field_time_slot
+entity_type: paragraph
+bundle: timetable_slot
+label: 'Time Slot'
+description: 'This is the name of a time slot (Ex.: Open Drupal Camp Kyiv)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

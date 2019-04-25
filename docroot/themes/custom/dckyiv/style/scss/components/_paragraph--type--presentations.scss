@@ -26,7 +26,7 @@
       min-height: 450px;
     }
 
-    @include mq($bp1200) {
+    @include mq($bp768) {
       width: calc(33.33% - 15px);
     }
 
@@ -37,6 +37,10 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center 15px;
+
+        @include mq($bp768) {
+          min-height: auto;
+        }
 
         @include mq($bp1024) {
           min-height: 309px;
