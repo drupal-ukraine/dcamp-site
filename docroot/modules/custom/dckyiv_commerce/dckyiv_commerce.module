@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\commerce_order\Entity\OrderItemInterface;
+use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * Implements hook_help().
@@ -28,6 +30,7 @@ function dckyiv_commerce_help($route_name, RouteMatchInterface $route_match) {
  */
 function dckyiv_commerce_entity_type_build(array &$entity_types) {
   $entity_types['commerce_order_item']->setFormClass('add_to_cart', '\Drupal\dckyiv_commerce\Form\AddToCartForm');
+  $entity_types['paragraph']->setFormClass('edit_attendee', '\Drupal\dckyiv_commerce\Form\EditAttendeeForm');
 }
 
 /**
@@ -38,5 +41,23 @@ function dckyiv_commerce_views_data_alter(array &$data) {
     'title' => t('Tshirt size select field'),
     'help' => t('Adds a select field for editing the tshirt size.'),
     'id' => 'commerce_order_item_edit_tshirt_size',
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dckyiv_commerce_theme($existing, $type, $theme, $path) {
+  return [
+    'dckyiv_commerce_order_confirmation' => [
+      'variables' => [
+        'order_entity' => NULL,
+        'billing_information' => NULL,
+        'shipping_information' => NULL,
+        'payment_method' => NULL,
+        'totals' => NULL,
+        'qr_codes' => NULL,
+      ],
+    ],
   ];
 }

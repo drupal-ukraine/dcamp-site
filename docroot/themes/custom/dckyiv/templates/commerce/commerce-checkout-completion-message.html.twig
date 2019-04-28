@@ -20,6 +20,12 @@
         {{ 'You just payed for your DrupalCampKyiv ticket.'|t }}
       </p>
       <p>
+        {{ 'Go to "<a href=":url">:text</a>" page and check your tickets. Add information about other attendees you just registered.' | t({
+          ':url' : '/user/' ~ order_entity.getCustomerId() ~ '/my-tickets',
+          ':text' : 'My tickets' | t
+        })}}
+      </p>
+      <p>
         {{ 'Please, reserve 25-26 of May at your calendar. You will have a lot of Drupal in your life at that date.'|t }}
       </p>
       <p>

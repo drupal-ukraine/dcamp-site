@@ -5,6 +5,7 @@ dependencies:
   config:
     - commerce_order.commerce_order_item_type.drupal_camp_ticket
     - core.entity_form_mode.commerce_order_item.add_to_cart
+    - field.field.commerce_order_item.drupal_camp_ticket.field_attendee
     - field.field.commerce_order_item.drupal_camp_ticket.field_t_shirt_size
   module:
     - commerce_order
@@ -36,4 +37,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_attendee: true
   unit_price: true

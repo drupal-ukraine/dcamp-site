@@ -1,0 +1,19 @@
+uuid: bb516e0c-f9d7-43b2-bf88-96c8c2ec505b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attendee_firstname
+    - paragraphs.paragraphs_type.attendee
+id: paragraph.attendee.field_attendee_firstname
+field_name: field_attendee_firstname
+entity_type: paragraph
+bundle: attendee
+label: 'Ім''я'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
