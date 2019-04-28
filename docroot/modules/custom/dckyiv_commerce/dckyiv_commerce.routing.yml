@@ -13,3 +13,11 @@ dckyiv_commerce.attendee_edit:
         type: entity:paragraph
   requirements:
     _permission: 'access content'
+
+dckyiv_commerce.attendees_report:
+  path: '/admin/dkc/attendees_report'
+  defaults:
+    _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::attendeesReport'
+    _title: 'Attendees Report'
+  requirements:
+    _permission: 'view commerce_order'

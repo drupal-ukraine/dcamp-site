@@ -1,0 +1,5 @@
+dckyiv_commerce.attendees_report:
+  title: 'Attendees report'
+  route_name: 'dckyiv_commerce.attendees_report'
+  parent: 'dckyiv_core.admin'
+  description: 'Report of DrupalCamp attendees'
