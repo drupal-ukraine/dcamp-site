@@ -769,3 +769,4 @@ if (file_exists($app_root . '/' . $site_path . '/prod.settings.php')) {
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   include __DIR__ . "/settings.pantheon.php";
 }
+$settings['install_profile'] = 'standard';

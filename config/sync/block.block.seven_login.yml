@@ -1,5 +1,5 @@
-uuid: e4f155ee-7eb3-411b-a948-24b9e8e3e3a9
-langcode: uk
+uuid: ff41e2d7-4c66-48db-8ba2-6e24662591ed
+langcode: en
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: user_login_block
 settings:
   id: user_login_block
-  label: Вхід
+  label: 'User login'
   provider: user
   label_display: visible
 visibility: {  }

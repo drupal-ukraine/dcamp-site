@@ -1,14 +1,12 @@
-uuid: 4726cad5-8be0-4e0d-b7c7-610e8e1662d4
-langcode: uk
+uuid: b8557ede-fa4d-44e3-94c1-edaac48ba8a5
+langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.commerce_remote_id
-    - field.field.user.user.field_company
     - field.field.user.user.user_picture
-    - image.style.large
+    - image.style.thumbnail
   module:
-    - svg_image
+    - image
     - user
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -18,31 +16,23 @@ bundle: user
 mode: default
 content:
   account:
+    weight: -10
+    region: content
+  contact:
+    weight: 5
+    region: content
+  language:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_company:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+  timezone:
+    weight: 6
     region: content
   user_picture:
     type: image_image
-    weight: 2
-    region: content
     settings:
-      preview_image_style: large
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-hidden:
-  commerce_remote_id: true
-  contact: true
-  google_analytics: true
-  langcode: true
-  language: true
-  path: true
-  timezone: true
+    weight: -1
+    region: content
+hidden: {  }

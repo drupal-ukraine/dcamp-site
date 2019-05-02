@@ -1,9 +1,0 @@
-uuid: 8ec2c6d2-9455-4caa-92bd-c968a6daf9e7
-langcode: en
-status: true
-dependencies: {  }
-id: contacts
-label: Contacts
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

@@ -1,5 +1,5 @@
-uuid: dabe3243-e958-4814-8dd8-4a4c564eabb7
-langcode: uk
+uuid: 012fc64d-4235-45af-8cd7-0976870f4d71
+langcode: en
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
-  label: 'Повідомлення про стан'
+  label: 'Status messages'
   provider: system
   label_display: '0'
 visibility: {  }

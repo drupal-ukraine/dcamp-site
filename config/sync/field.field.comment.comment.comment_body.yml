@@ -1,5 +1,5 @@
-uuid: 0acad787-3cc0-41e0-89d9-8d278a51e921
-langcode: uk
+uuid: 09ede933-63a6-4ab0-8993-2a1536ad81e6
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ bundle: comment
 label: Comment
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

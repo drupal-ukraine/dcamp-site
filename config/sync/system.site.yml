@@ -1,15 +1,14 @@
-uuid: e82bc47a-6c84-449b-a44f-b863b75a6753
-name: 'DRUPALCAMP KYIV''19'
-mail: info@drupalcampkyiv.org
-slogan: '<span class="logo_desktop">DRUPALCAMP</span> <span class="logo_mobile">DC</span> <span>KYIV''19</span>'
+uuid: 46c09141-b91a-40a5-b277-d4677d671932
+name: 'DrupalCamp {YourCity} Home Page | DRUPALCAMP {YourCity} {Year}'
+mail: admin@example.com
+slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/112
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: uk
-default_langcode: uk
+langcode: en
+default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
-mail_notification: ''

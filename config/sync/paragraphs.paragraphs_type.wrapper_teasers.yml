@@ -1,9 +1,0 @@
-uuid: 470349e3-445f-4ecf-848b-f059d4a38682
-langcode: en
-status: true
-dependencies: {  }
-id: wrapper_teasers
-label: 'Teaser Wrapper '
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

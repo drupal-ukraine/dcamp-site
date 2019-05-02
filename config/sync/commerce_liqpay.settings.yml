@@ -1,8 +1,0 @@
-commerce_liqpay:
-  checkout_url: 'https://www.liqpay.ua/api/3/checkout'
-  version: 3
-  action: pay
-  api_url: 'https://www.liqpay.ua/api/'
-_core:
-  default_config_hash: f9dGqHjCv-XqZN2JgbxaRqz4W1ljqh8LPhBr7zs-rTs
-langcode: uk

@@ -1,9 +1,0 @@
-uuid: b2d8a97e-3949-4536-bdbd-9099f322105c
-langcode: en
-status: true
-dependencies: {  }
-id: container
-label: Container
-icon_uuid: null
-description: 'Container brick is used to stack in a row up to 4 other bricks automatically aligning them by grid'
-behavior_plugins: {  }

@@ -1,7 +1,0 @@
-uuid: 00d955f5-ade5-4067-bff7-ad54a1be48b7
-langcode: en
-status: true
-dependencies: {  }
-formId: dckyiv_user_public_form
-captchaType: recaptcha/reCAPTCHA
-label: dckyiv_user_public_form

@@ -1,9 +1,0 @@
-uuid: 8727db34-e5d5-4353-8c9b-a34ba55d5938
-langcode: en
-status: true
-dependencies: {  }
-id: timetable
-label: Timetable
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

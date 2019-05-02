@@ -1,9 +1,0 @@
-tips:
-  search-api-index-status:
-    label: Стан
-  search-api-index-tracker:
-    label: Відстежувач
-  search-api-index-server:
-    label: Сервер
-  search-api-index-clear:
-    label: 'Очистити всі індексовані дані'

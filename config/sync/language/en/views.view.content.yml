@@ -1,6 +1,0 @@
-display:
-  default:
-    display_options:
-      empty:
-        area_text_custom:
-          content: 'Матеріали відсутні.'

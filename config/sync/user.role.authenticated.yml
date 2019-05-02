@@ -1,5 +1,5 @@
-uuid: 6f998dc4-f2ec-4a76-b8b5-9264cd9385e7
-langcode: uk
+uuid: 03afcb21-1187-4110-a7f8-aab433e351cd
+langcode: en
 status: true
 dependencies: {  }
 _core:
@@ -9,21 +9,11 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access checkout'
   - 'access comments'
   - 'access content'
+  - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'access user profiles'
-  - 'create presentation content'
-  - 'edit own presentation content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
-  - 'use presentation transition create_new_draft'
-  - 'use presentation transition send_my_topic_to_review'
   - 'use text format basic_html'
-  - 'view commerce_product'
-  - 'view media'
-  - 'view own commerce_order'
-  - 'view own unpublished content'
-  - 'view presentation revisions'
