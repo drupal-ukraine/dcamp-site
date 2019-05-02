@@ -1,9 +1,0 @@
-uuid: 8078f742-f6e3-4bde-9234-35d715d39413
-langcode: en
-status: true
-dependencies: {  }
-id: hero_countdown
-label: 'Hero Countdown'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

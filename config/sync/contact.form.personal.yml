@@ -1,11 +1,11 @@
-uuid: a569f638-ac89-471e-af1e-29c3242d3258
-langcode: uk
+uuid: 39a0ec7e-5424-4b3a-ba26-9064744366ce
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
 id: personal
-label: 'Персональна контактна форма'
+label: 'Personal contact form'
 recipients: {  }
 reply: ''
 weight: 0

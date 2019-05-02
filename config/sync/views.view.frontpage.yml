@@ -1,5 +1,5 @@
-uuid: 203ead2d-b057-4846-913f-b213c9d9b909
-langcode: uk
+uuid: 4428a975-9630-4499-bed5-2373e6eb5d65
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,9 +11,9 @@ dependencies:
 _core:
   default_config_hash: ezK5Dw8P_4bqJdDQIiecSAJak9p1Wf1yDwHzTutGFuQ
 id: frontpage
-label: 'Головна сторінка'
+label: Frontpage
 module: node
-description: 'Всі матеріали винесені на головну сторінку.'
+description: 'All content promoted to the front page.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -61,7 +61,7 @@ display:
           admin_label: ''
           label: ''
           empty: true
-          title: 'Ласкаво просимо на сайт [site:name]'
+          title: 'Welcome to [site:name]'
           plugin_id: title
       exposed_form:
         type: basic
@@ -179,8 +179,8 @@ display:
             offset: false
             offset_label: Offset
           tags:
-            previous: '‹ Попередня'
-            next: 'Наступна ›'
+            previous: '‹ Previous'
+            next: 'Next ›'
             first: '« First'
             last: 'Last »'
           quantity: 9
@@ -255,7 +255,7 @@ display:
   feed_1:
     display_plugin: feed
     id: feed_1
-    display_title: Потік
+    display_title: Feed
     position: 2
     display_options:
       sitename_title: true
@@ -292,7 +292,7 @@ display:
       path: node
       display_extenders: {  }
     display_plugin: page
-    display_title: Сторінка
+    display_title: Page
     id: page_1
     position: 1
     cache_metadata:

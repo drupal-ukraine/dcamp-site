@@ -1,9 +1,0 @@
-uuid: f8b95926-9c03-439d-9d99-78000d110e0c
-langcode: en
-status: true
-dependencies: {  }
-id: sponsors
-label: Sponsors
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

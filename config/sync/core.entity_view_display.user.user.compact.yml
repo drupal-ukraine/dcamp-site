@@ -1,15 +1,13 @@
-uuid: 8f95abfb-3e84-4b07-a24c-0ed03fc9bced
-langcode: uk
+uuid: 0f389ee2-01c1-4580-a7c7-b8f786f4b493
+langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.commerce_remote_id
-    - field.field.user.user.field_company
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
-    - svg_image
+    - image
     - user
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
@@ -28,8 +26,4 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
-  commerce_remote_id: true
-  field_company: true
-  langcode: true
   member_for: true
-  profile_customer: true

@@ -1,9 +1,0 @@
-uuid: 9a872de1-f3d1-451c-b6fb-23d0515d3ef9
-langcode: en
-status: true
-dependencies: {  }
-id: timetable_presentation
-label: 'Timetable Presentation'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

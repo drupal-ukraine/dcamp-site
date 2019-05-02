@@ -1,9 +1,0 @@
-uuid: 1cfd2d2c-a98c-4f4a-a88d-a2ad3117e923
-langcode: en
-status: true
-dependencies: {  }
-id: timetable_slot
-label: 'Timetable Slot'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

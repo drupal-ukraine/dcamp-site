@@ -1,14 +1,12 @@
-uuid: 26b2762a-c337-4110-86d7-4218e62416bb
-langcode: uk
+uuid: 2b157840-8f37-4ff6-bc0f-7c593c9acaad
+langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.commerce_remote_id
-    - field.field.user.user.field_company
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
-    - svg_image
+    - image
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -17,13 +15,8 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  field_company:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+  member_for:
+    weight: 5
     region: content
   user_picture:
     type: image
@@ -31,15 +24,7 @@ content:
     region: content
     settings:
       image_style: thumbnail
-      image_link: ''
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: 0
+      image_link: content
     third_party_settings: {  }
-    label: above
-hidden:
-  commerce_remote_id: true
-  langcode: true
-  member_for: true
-  profile_customer: true
+    label: hidden
+hidden: {  }

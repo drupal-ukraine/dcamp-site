@@ -1,5 +1,5 @@
-uuid: bb9b44c8-2037-474e-9085-dd55ffa43a6d
-langcode: uk
+uuid: 7b209169-8292-4dde-97d2-a305b7da5267
+langcode: en
 status: true
 dependencies:
   config:
@@ -21,5 +21,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  langcode: true
+hidden: {  }

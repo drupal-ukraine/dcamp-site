@@ -1,5 +1,5 @@
-uuid: a4e2ea28-3143-4910-93fc-5d2e817b5655
-langcode: uk
+uuid: d99b7ace-28aa-46fa-bc60-66e5f4d7a234
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: c-HMyZwgeP8H6AITDcq4hznePkd7azpe8xl_WTnx2O0
 id: views-ui
-label: 'Сторінка редагування виду'
+label: 'View edit page'
 module: views_ui
 routes:
   -
@@ -18,22 +18,22 @@ tips:
   views-main:
     id: views-main
     plugin: text
-    label: 'Керувати налаштуваннями виду'
-    body: 'Перегляд або редагування конфігурації.'
+    label: 'Manage view settings'
+    body: 'View or edit the configuration.'
     weight: 1
   views-ui-displays:
     id: views-ui-displays
     plugin: text
-    label: 'Відображення в цьому виді'
-    body: 'Відображення — це спосіб виведення результатів, наприклад, у вигляді сторінки або блоку. Вид може містити декілька відображень, які перелічені тут. Активне відображення підсвічене.'
+    label: 'Displays in this view'
+    body: 'A display is a way of outputting the results, e.g., as a page or a block. A view can contain multiple displays, which are listed here. The active display is highlighted.'
     weight: 2
     attributes:
       data-id: views-display-top
   views-ui-view-admin:
     id: views-ui-view-admin
     plugin: text
-    label: 'Адміністрування видів'
-    body: 'Виконання адміністративних задач, куди входять додавання опису і створення копії. Доступні варіанти можна побачити натиснувши на кнопку.'
+    label: 'View administration'
+    body: 'Perform administrative tasks, including adding a description and creating a clone. Click the drop-down button to view the available options.'
     weight: 3
     location: left
     attributes:
@@ -41,48 +41,48 @@ tips:
   views-ui-format:
     id: views-ui-format
     plugin: text
-    label: 'Вихідний формат'
-    body: 'Виберіть спосіб виведення результатів. Наприклад, оберіть <em>Вміст</em>, для виведення кожного елементу повністю, використовуючи налаштовані параметри відображення. Або виберіть <em>Поля</em>, за допомогою яких можна виводити лише певні поля кожного відібраного вмісту. Якщо встановити модулі і <em>розширити</em> основний функціонал Друпалу, можуть з''явитися додаткові формати.'
+    label: 'Output format'
+    body: 'Choose how to output results. E.g., choose <em>Content</em> to output each item completely, using your configured display settings. Or choose <em>Fields</em>, which allows you to output only specific fields for each result. Additional formats can be added by installing modules to <em>extend</em> Drupal''s base functionality.'
     weight: 4
     attributes:
       data-class: views-ui-display-tab-bucket.format
   views-ui-fields:
     id: views-ui-fields
     plugin: text
-    label: Поля
-    body: 'Якщо цей вид використовує поля, вони будуть перелічені тут. Щоб налаштувати поле, натисніть на ньому.'
+    label: Fields
+    body: 'If this view uses fields, they are listed here. You can click on a field to configure it.'
     weight: 5
     attributes:
       data-class: views-ui-display-tab-bucket.field
   views-ui-filter:
     id: views-ui-filter
     plugin: text
-    label: 'Фільтрація виду'
-    body: 'Для обмеження виведення результатів, додайте фільтри. Наприклад, для показу лише <em>опублікованого</em> вмісту, необхідно додати фільтр <em>Опубліковано</em> і вибрати <em>Так</em>.'
+    label: 'Filter your view'
+    body: 'Add filters to limit the results in the output. E.g., to only show content that is <em>published</em>, you would add a filter for <em>Published</em> and select <em>Yes</em>.'
     weight: 6
     attributes:
       data-class: views-ui-display-tab-bucket.filter
   views-ui-filter-operations:
     id: views-ui-filter-operations
     plugin: text
-    label: 'Дії з фільтрами'
-    body: 'Додавання, перевпорядкування або вилучення фільтрів.'
+    label: 'Filter actions'
+    body: 'Add, rearrange or remove filters.'
     weight: 7
     attributes:
       data-class: 'views-ui-display-tab-bucket.filter .dropbutton-widget'
   views-ui-sorts:
     id: views-ui-sorts
     plugin: text
-    label: 'Критерій впорядкування'
-    body: 'Керуйте послідовністю виведення результатів. Натисніть на активному правилові впорядкування і налаштуйте його.'
+    label: 'Sort Criteria'
+    body: 'Control the order in which the results are output. Click on an active sort rule to configure it.'
     weight: 8
     attributes:
       data-class: views-ui-display-tab-bucket.sort
   views-ui-sorts-operations:
     id: views-ui-sorts-operations
     plugin: text
-    label: 'Дії з впорядкуванням'
-    body: 'Додавання, переміщення та вилучення правил впорядкування.'
+    label: 'Sort actions'
+    body: 'Add, rearrange or remove sorting rules.'
     weight: 9
     attributes:
       data-class: 'views-ui-display-tab-bucket.sort .dropbutton-widget'
@@ -90,7 +90,7 @@ tips:
     id: views-ui-preview
     plugin: text
     label: Preview
-    body: 'Показати попередній перегляд виведення виду.'
+    body: 'Show a preview of the view output.'
     weight: 10
     location: left
     attributes:

@@ -1,5 +1,5 @@
-uuid: 0f89c23d-22f7-43d3-8c8b-8935fe21368c
-langcode: uk
+uuid: 1c1cbf40-c099-4c6d-b99b-f33acb7bbd2e
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: t43OqwzP3CTbcAagSsWKNy6KwMm_zShXo3c4-So6rQg
 id: node_delete_action
-label: 'Видалити матеріал'
+label: 'Delete content'
 type: node
 plugin: 'entity:delete_action:node'
 configuration: {  }

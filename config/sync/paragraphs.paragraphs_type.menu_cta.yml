@@ -1,9 +1,0 @@
-uuid: eb4d381c-3211-404a-93e7-6e617ae390e7
-langcode: en
-status: true
-dependencies: {  }
-id: menu_cta
-label: 'Menu CTA'
-icon_uuid: null
-description: 'CTA block with background color, title and subtitle for main menu. '
-behavior_plugins: {  }

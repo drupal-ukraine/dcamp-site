@@ -1,5 +1,5 @@
-uuid: 588babe6-e5ee-4dce-bb4a-3cf2338ef100
-langcode: uk
+uuid: 141d4a23-a1aa-40af-9b5c-ca43a93517aa
+langcode: en
 status: true
 dependencies:
   config:
@@ -24,13 +24,6 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
     third_party_settings: {  }
   subject:
     type: string_textfield

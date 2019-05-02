@@ -1,5 +1,5 @@
-uuid: 2265763e-25f9-41ca-9566-18f8f53223d3
-langcode: uk
+uuid: 2161e62b-c0b8-4da6-945a-e225b85161a7
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: 71CSAr_LNPcgu6D6jI4INl1KATkahmeyUFBETAWya8g
 id: user.compact
-label: Компактний
+label: Compact
 targetEntityType: user
 cache: true

@@ -1,9 +1,0 @@
-uuid: 55399f0c-f713-4b39-9f4e-55c18f67466a
-langcode: en
-status: true
-dependencies: {  }
-id: camp_products
-label: 'Camp Products'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

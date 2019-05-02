@@ -1,5 +1,5 @@
-uuid: bb4c887e-1fd5-42cb-98ca-d6105bb8afbd
-langcode: uk
+uuid: 09607e4b-2ed2-477c-8dd6-e98de2fbf6fc
+langcode: en
 status: true
 dependencies:
   theme:
@@ -14,7 +14,7 @@ provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Другорядні вкладки'
+  label: 'Secondary tabs'
   provider: core
   label_display: '0'
   primary: false

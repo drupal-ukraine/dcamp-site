@@ -1,5 +1,5 @@
-uuid: fd798792-2162-4c68-ac53-1f9bd063b944
-langcode: uk
+uuid: 2e4e5c60-3a9d-472b-a7ca-a4128d288c72
+langcode: en
 status: true
 dependencies: {  }
 _core:
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - anpolimus@gmail.com
+  - admin@example.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

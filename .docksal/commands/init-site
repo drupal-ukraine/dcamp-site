@@ -46,6 +46,7 @@ init_settings ()
 {
 	# Copy from settings templates
 	copy_settings_file "${SITEDIR_PATH}/default.settings.local.php" "${SITEDIR_PATH}/settings.local.php"
+	echo 'dev' >> "${SITEDIR_PATH}/.env"
 }
 
 # Fix file/folder permissions
@@ -64,7 +65,7 @@ site_install ()
 	# Credit: https://www.drupal.org/project/phpconfig/issues/1826652#comment-12071700
 	drush site-install standard -y \
 		install_configure_form.enable_update_status_module=NULL \
-		--site-name='My Drupal 8 Site'
+		--site-name='DrupalCamp {YourCity} Home Page | DRUPALCAMP {YourCity} {Year}'
 }
 
 #-------------------------- END: Functions --------------------------------
@@ -72,6 +73,7 @@ site_install ()
 #-------------------------- Execution --------------------------------
 
 # Project initialization steps
+composer install
 fix_permissions
 init_settings
 time site_install

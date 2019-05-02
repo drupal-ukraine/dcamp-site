@@ -1,19 +1,16 @@
-uuid: bc43e777-5c63-4e2c-a39c-78b506fa2dba
-langcode: uk
+uuid: 23b3b431-65e3-4278-875e-a1f5f53b55ab
+langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.field_yoast_seo
   module:
     - node
     - user
-    - yoast_seo
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: content
-label: Вміст
+label: Content
 module: node
-description: 'Пошук матеріалів і керування ними.'
+description: 'Find and manage content.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -32,7 +29,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Фільтр
+          submit_button: Filter
           reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -44,8 +41,8 @@ display:
         options:
           items_per_page: 50
           tags:
-            previous: '‹ Попередня'
-            next: 'Наступна ›'
+            previous: '‹ Previous'
+            next: 'Next ›'
             first: '« First'
             last: 'Last »'
       style:
@@ -164,7 +161,7 @@ display:
           id: title
           table: node_field_data
           field: title
-          label: Заголовок
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -187,7 +184,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Тип матеріалів'
+          label: 'Content type'
           exclude: false
           alter:
             alter_text: false
@@ -250,7 +247,7 @@ display:
           table: users_field_data
           field: name
           relationship: uid
-          label: Автор
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -281,8 +278,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Опубліковано
-            format_custom_false: Неопубліковано
+            format_custom_true: Published
+            format_custom_false: Unpublished
           plugin_id: field
           entity_type: node
           entity_field: status
@@ -290,7 +287,7 @@ display:
           id: changed
           table: node_field_data
           field: changed
-          label: Оновлено
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -358,12 +355,6 @@ display:
           hide_alter_empty: true
           destination: true
           plugin_id: entity_operations
-        field_yoast_seo:
-          id: field_yoast_seo
-          table: node__field_yoast_seo
-          field: field_yoast_seo
-          type: yoastseo_formatter
-          plugin_id: field
       filters:
         title:
           id: title
@@ -378,7 +369,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Заголовок
+            label: Title
             description: ''
             use_operator: false
             operator: title_op
@@ -418,7 +409,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Тип матеріалів'
+            label: 'Content type'
             description: ''
             use_operator: false
             operator: type_op
@@ -471,7 +462,7 @@ display:
               authenticated: authenticated
           is_grouped: true
           group_info:
-            label: 'Стан публікації'
+            label: 'Published status'
             description: ''
             identifier: status
             optional: true
@@ -482,11 +473,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Опубліковано
+                title: Published
                 operator: '='
                 value: '1'
               2:
-                title: Неопубліковано
+                title: Unpublished
                 operator: '='
                 value: '0'
           plugin_id: boolean
@@ -543,14 +534,14 @@ display:
           group: 1
           entity_type: node
       sorts: {  }
-      title: Вміст
+      title: Content
       empty:
         area_text_custom:
           id: area_text_custom
           table: views
           field: area_text_custom
           empty: true
-          content: 'Матеріали відсутні.'
+          content: 'No content available.'
           plugin_id: text_custom
       arguments: {  }
       relationships:
@@ -581,27 +572,26 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
-      tags:
-        - 'config:field.storage.node.field_yoast_seo'
+      tags: {  }
   page_1:
     display_options:
       path: admin/content/node
       menu:
         type: 'default tab'
-        title: Вміст
+        title: Content
         description: ''
         menu_name: admin
         weight: -10
         context: ''
       tab_options:
         type: normal
-        title: Вміст
-        description: 'Пошук матеріалів та керування ними'
+        title: Content
+        description: 'Find and manage content'
         menu_name: admin
         weight: -10
       display_extenders: {  }
     display_plugin: page
-    display_title: Сторінка
+    display_title: Page
     id: page_1
     position: 1
     cache_metadata:
@@ -614,5 +604,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
-      tags:
-        - 'config:field.storage.node.field_yoast_seo'
+      tags: {  }

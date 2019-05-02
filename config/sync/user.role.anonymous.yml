@@ -1,5 +1,5 @@
-uuid: fe846bb5-0195-4924-9b02-e39a44fefafd
-langcode: uk
+uuid: 2dfcd9c2-a046-4d16-8885-ad36fd24a112
+langcode: en
 status: true
 dependencies: {  }
 _core:
@@ -9,12 +9,8 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access checkout'
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'access user profiles'
   - 'search content'
   - 'use text format restricted_html'
-  - 'view commerce_product'
-  - 'view media'
