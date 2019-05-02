@@ -1,0 +1,5 @@
+# Schema for the configuration files of the drupalcamp_v2 theme.
+
+drupalcamp_v2.settings:
+  type: theme_settings
+  label: 'drupalcamp_v2 settings'
