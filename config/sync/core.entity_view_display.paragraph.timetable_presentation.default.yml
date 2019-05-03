@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.timetable_presentation
   module:
     - color_field
+    - dckyiv_core
     - text
 id: paragraph.timetable_presentation.default
 targetEntityType: paragraph
@@ -38,6 +39,6 @@ content:
       view_mode: timetable_teaser
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: entity_reference_entity_view_timetable_prepentation
     region: content
 hidden: {  }
