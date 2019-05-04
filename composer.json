@@ -54,7 +54,7 @@
     "drupal/webform": "^5.0@RC",
     "drupal/workflow": "^1.1",
     "drupal/yoast_seo": "^1.3",
-    "drush/drush": "~8.0|^9.0.0-beta8",
+    "drush/drush": "~8",
     "enyo/dropzone": "^5.5",
     "hilios/jQuery.countdown": "^2.2",
     "hussainweb/drupal-composer-helper": "^1.0",

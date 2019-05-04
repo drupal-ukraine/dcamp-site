@@ -48,6 +48,7 @@ echo
 # Running Drush commands
 echo-yellow "Running drush cim, drush updb, drush cr"
 cd $DOCROOT_PATH
+fin drush cr
 fin drush updb -y
 fin drush cim -y
 fin drush cr

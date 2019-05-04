@@ -84,9 +84,12 @@ class DckyivCommerceController extends ControllerBase {
     }
     $build = [];
     $allowed_values = $bundle_fields['field_t_shirt_size']->getSetting('allowed_values');
+
+    $total = 0;
+
     foreach ($allowed_values as $key => $value) {
       $args = [$key];
-      $view = Views::getView('attendees_overview');
+      $view = Views::getView('attenders_overview');
       $view->setArguments($args);
       $view->setDisplay('default');
       $view->preExecute();
@@ -94,16 +97,29 @@ class DckyivCommerceController extends ControllerBase {
       if (empty($view->result)) {
         continue;
       }
+
+      $count = count($view->result);
+
       $build['report_' . $key] = [
         '#type' => 'details',
         '#title' => $this->t('Tshirt size "@size": @count', [
             '@size' => $value,
-            '@count' => count($view->result),
+            '@count' => $count,
           ]),
-        '#open' => TRUE,
+        '#open' => FALSE,
         'table' => $view->render(),
       ];
+
+      $total +=$count;
     }
+
+    $build['total'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'div',
+      '#value' => 'Total tickets:' . $total,
+
+    ];
+
     return $build;
   }
 
