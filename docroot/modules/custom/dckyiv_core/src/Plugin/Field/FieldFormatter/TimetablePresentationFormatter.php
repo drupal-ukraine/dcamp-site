@@ -5,20 +5,51 @@ namespace Drupal\dckyiv_core\Plugin\Field\FieldFormatter;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceEntityFormatter;
 use Drupal\Core\Link;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Plugin implementation of formatter with add to calendar link.
  *
  * @FieldFormatter(
- *   id = "entity_reference_entity_view_timetable_prepentation",
- *   label = @Translation("Timetable presentation rendered entity"),
+ *   id = "entity_reference_entity_view_timetable_presentation",
+ *   label = @Translation("Timetable presentation with calendar link"),
  *   field_types = {
  *     "entity_reference"
  *   }
  * )
  */
 class TimetablePresentationFormatter extends EntityReferenceEntityFormatter {
+
+  use StringTranslationTrait;
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function defaultSettings() {
+    return [
+        'address' => 'Mercure Kyiv Congress Hall, м.Київ, вул. Вадима Гетьмана, 6',
+      ] + parent::defaultSettings();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function settingsForm(array $form, FormStateInterface $form_state) {
+
+    $elements = parent::settingsForm($form, $form_state);
+
+    $elements['address'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Address'),
+      '#default_value' => $this->getSetting('address'),
+      '#required' => TRUE,
+    ];
+
+    return $elements;
+
+  }
 
   /**
    * {@inheritdoc}
@@ -40,19 +71,21 @@ class TimetablePresentationFormatter extends EntityReferenceEntityFormatter {
 
     $elements = parent::viewElements($items, $langcode);
     $google_url = Link::fromTextAndUrl(
-      $this->t('Add to calendar'),
+      $this->t('Add to My calendar'),
       Url::fromUri('http://www.google.com/calendar/event', [
         'attributes' => [
           'target' => '_blank',
-          'class' => ['add-to-calendar'],
+          'class' => [
+            'add-to-calendar',
+            ''
+          ],
         ],
         'query' => [
           'action' => 'TEMPLATE',
           'text' => $this->t('Session @title', ['@title' => strip_tags($title['value'])]),
           'dates' => $rfc_dates['both'],
           'sprop' => 'website:' . $_SERVER['HTTP_HOST'],
-          // @TODO Move to formatter config.
-          'location' => 'Mercure Kyiv Congress Hall, м.Київ, вул. Вадима Гетьмана, 6',
+          'location' => $this->getSetting('address'),
           'details' => $this->t("@place \n@description", [
             '@place' => strip_tags($place['value']),
             '@description' => strip_tags($description['value']),
@@ -62,7 +95,10 @@ class TimetablePresentationFormatter extends EntityReferenceEntityFormatter {
       ])
     )->toString();
 
-    $elements[] = ['#markup' => $google_url];
+    $elements[] = [
+      '#markup' => $google_url
+    ];
+
     return $elements;
   }
 
