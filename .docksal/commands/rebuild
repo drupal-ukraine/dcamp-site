@@ -63,8 +63,10 @@ echo-green "Done."
 echo
 
 # Building theme.
-echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
-fin gulp build
+echo-yellow "Running compile theme ${MAIN_THEME}"
+cd MAIN_THEME_PATH
+fin exec "npm install"
+fin exec "npm run dev"
 
 echo-green " <<<<<<< Rebuild is complete >>>>>>> "
 echo
