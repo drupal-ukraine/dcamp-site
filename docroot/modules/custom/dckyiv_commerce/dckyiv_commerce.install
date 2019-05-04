@@ -1,0 +1,89 @@
+<?php
+
+use Drupal\commerce_order\Entity\Order;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Mass update of attendee information
+ */
+function dckyiv_commerce_update_8002(&$sandbox) {
+
+
+  if (!isset($sandbox['total'])) {
+
+    $entityQuery = \Drupal::service('entity_type.manager')
+      ->getStorage('commerce_order')
+      ->getQuery()
+      ->accessCheck(FALSE)
+      ->condition('type', 'drupal_camp_ticket')
+      ->condition('state', 'completed');
+
+    $entityIds = $entityQuery->execute();
+    $sandbox['total'] = count($entityIds);
+    $sandbox['current'] = 0;
+    $sandbox['ids'] = array_values($entityIds);
+
+  }
+
+  $items_per_batch = 20;
+
+  for ($i = 0; $i < $items_per_batch; $i++) {
+    $order_id = $sandbox['ids'][$sandbox['current']];
+
+    if (!empty($sandbox['ids'][$sandbox['current']])) {
+
+      $order = Order::load($order_id);
+      $profile = $order->getBillingProfile();
+
+      foreach ($order->getItems() as $commerce_order_item)  {
+        $quantity = (int) $commerce_order_item->getQuantity();
+        $items = $quantity;
+        $field_value = $commerce_order_item->get('field_attendee');
+        if (!empty($field_value)
+          && $field_value->count() > $quantity) {
+          $items = $field_value->count();
+        }
+
+        for ($delta = 0; $delta < $items; $delta++) {
+          if (empty($commerce_order_item->field_attendee[$delta])) {
+            $default_values = [
+              'type' => 'attendee',
+            ];
+            if ($delta == 0 && !empty($profile->address[0])) {
+              /** @var AddressItem $address */
+              $address = $profile->address[0];
+              $default_values['field_attendee_firstname'] = $address->getGivenName();
+              $default_values['field_attendee_secondname'] = $address->getFamilyName();
+            }
+            $paragraph = Paragraph::create($default_values);
+            $paragraph->is_new = TRUE;
+            $paragraph->save();
+            $commerce_order_item->field_attendee[$delta] = [
+              'target_id' => $paragraph->id(),
+              'target_revision_id' => $paragraph->getRevisionId(),
+            ];
+          }
+
+          if ($delta >= $quantity) {
+            $value = $commerce_order_item->field_attendee[$delta]->getValue();
+            $paragraph = empty($value['target_id']) ? NULL : Paragraph::load($value['target_id']);
+            if (!empty($paragraph)) {
+              $paragraph->delete();
+              $commerce_order_item->field_attendee[$delta] = NULL;
+            }
+          }
+
+          $commerce_order_item->save();
+        }
+      }
+      $sandbox['current']++;
+    }
+  }
+
+  if ($sandbox['total'] == 0) {
+    $sandbox['#finished'] = 1;
+  } else {
+    $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
+  }
+
+}
