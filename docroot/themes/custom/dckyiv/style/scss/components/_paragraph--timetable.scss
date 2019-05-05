@@ -110,14 +110,21 @@
 
   .field--name-field {
     &-presentation-ref {
-      display: flex;
-      flex-direction: column;
-      min-height: 132px;
+      &:first-child {
+        min-height: 132px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &:last-child {
+        text-align: right;
+        margin: 20px 20px 0;
+      }
     }
   }
 
-  a {
-    padding: 20px 25px 0;
+  .presentation_title {
+    padding: 20px 20px 0;
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
@@ -125,6 +132,32 @@
     letter-spacing: normal;
     text-align: left;
     color: $color-shark;
+  }
+
+  .add-to-calendar {
+    font-size: 12px;
+    font-weight: normal;
+    color: $color-white;
+    text-transform: uppercase;
+    padding: 5px 10px 4px 30px;
+    background-color: $color-fern;
+    border: 1px solid $color-fern;
+    position: relative;
+
+    @include icoMoon('calendar', 'before');
+
+    &:before {
+      position: absolute;
+      top: 4px;
+      left: 10px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: $color-white;
+      border-color: $color-fern;
+      color: $color-fern;
+    }
   }
 
   .presentation_author {

@@ -30,6 +30,10 @@
       width: calc(33.33% - 15px);
     }
 
+    @include mq($bp1200) {
+      width: calc(25% - 15px);
+    }
+
     .views-field {
       &-field-image {
         min-height: 338px;
