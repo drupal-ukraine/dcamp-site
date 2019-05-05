@@ -71,7 +71,7 @@ class TimetablePresentationFormatter extends EntityReferenceEntityFormatter {
 
     $elements = parent::viewElements($items, $langcode);
     $google_url = Link::fromTextAndUrl(
-      $this->t('Add to My calendar'),
+      $this->t('Add to My Google calendar'),
       Url::fromUri('http://www.google.com/calendar/event', [
         'attributes' => [
           'target' => '_blank',
