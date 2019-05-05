@@ -141,6 +141,7 @@
     text-transform: uppercase;
     padding: 5px 10px 4px 30px;
     background-color: $color-fern;
+    border: 1px solid $color-fern;
     position: relative;
 
     @include icoMoon('calendar', 'before');
@@ -153,7 +154,9 @@
     }
 
     &:hover {
-      background-color: rgba($color-fern, .6);
+      background-color: $color-white;
+      border-color: $color-fern;
+      color: $color-fern;
     }
   }
 
