@@ -63,6 +63,10 @@ rm -f $MAIN_THEME_PATH/package-lock.json
 echo-green "Done."
 echo
 
+# revert node to version 8
+fin exec nvm install 8.11.3
+fin exec nvm alias default 8.11.3
+
 # Building theme.
 echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
 fin gulp build
