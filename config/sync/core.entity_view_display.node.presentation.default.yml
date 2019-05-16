@@ -32,20 +32,20 @@ bundle: presentation
 mode: default
 content:
   content_moderation_control:
-    weight: -20
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_company:
-    weight: 104
-    label: above
+    weight: 11
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_drupal_org:
-    weight: 111
+    weight: 7
     label: hidden
     settings:
       trim_length: 80
@@ -54,10 +54,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_facebook:
-    weight: 108
+    weight: 4
     label: hidden
     settings:
       trim_length: 80
@@ -66,11 +66,11 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_image:
-    weight: 114
-    label: above
+    weight: 0
+    label: hidden
     settings:
       svg_attributes:
         width: ''
@@ -82,28 +82,28 @@ content:
     type: image
     region: content
   field_information_about_author:
-    weight: 107
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_language:
-    weight: 106
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_level:
-    weight: 105
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_linkedin:
-    weight: 109
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -112,17 +112,17 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_meta_tags:
-    weight: 112
-    label: above
+    weight: 14
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_name:
-    weight: 102
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -130,14 +130,14 @@ content:
     type: string
     region: content
   field_presentation_description:
-    weight: 101
+    weight: 10
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_second_name:
-    weight: 103
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -145,7 +145,7 @@ content:
     type: string
     region: content
   field_twitter:
-    weight: 110
+    weight: 6
     label: hidden
     settings:
       trim_length: 80
@@ -154,17 +154,17 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_yoast_seo:
-    weight: 113
-    label: above
+    weight: 15
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: yoastseo_formatter
     region: content
   links:
-    weight: 100
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
