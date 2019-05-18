@@ -160,7 +160,7 @@
     }
   }
 
-  .presentation_author {
+  .presentation_level {
     padding: 0 20px;
     text-align: right;
     margin-top: auto;
@@ -169,6 +169,32 @@
       display: inline;
       font-size: 14px;
       font-style: italic;
+      color: $color-shark;
+    }
+  }
+  .presentation_language {
+    padding: 0 20px;
+    text-align: right;
+    margin-top: auto;
+
+    & > div {
+      display: inline;
+      font-size: 14px;
+      font-style: italic;
+      color: $color-shark;
+    }
+  }
+  .presentation_author {
+    padding: 0 20px;
+    text-align: right;
+    margin-top: auto;
+
+
+    & > div {
+      display: inline;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: bold;
       color: $color-shark;
     }
   }
