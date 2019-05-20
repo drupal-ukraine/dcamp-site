@@ -19,3 +19,11 @@ global-menu:
   dependencies:
   - core/drupal
   - core/jquery.once
+
+swiper:
+  js:
+    assets/swiper/dist/js/swiper.min.js: {minified: true}
+    js/dist/swiper.min.js: {minified: true}
+  css:
+    theme:
+      assets/swiper/dist/css/swiper.min.css: {minified: true}

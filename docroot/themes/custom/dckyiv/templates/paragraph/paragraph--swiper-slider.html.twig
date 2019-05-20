@@ -1,0 +1,113 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set classes = [
+  'paragraph',
+  'swiper-container',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'paragraph--width--' ~ content.field_swiper_slider_width|render|striptags|trim,
+] %}
+
+{% if content.field_swiper_direction|render|striptags|trim %}
+  {% set attributes = attributes.setAttribute('data-direction', content.field_swiper_direction|render|striptags|trim) %}
+{% endif %}
+{% if content.field_swiper_speed|render|striptags|trim %}
+  {% set attributes = attributes.setAttribute('data-speed', content.field_swiper_speed|render|striptags|trim) %}
+{% endif %}
+{% if content.field_swiper_autoplay|render|striptags|trim %}
+  {% set attributes = attributes.setAttribute('data-autoplay', content.field_swiper_autoplay|render|striptags|trim) %}
+{% endif %}
+{% if content.field_swiper_loop|render|striptags|trim %}
+  {% set attributes = attributes.setAttribute('data-loop', content.field_swiper_loop|render|striptags|trim) %}
+{% endif %}
+{% if content.field_swiper_effect|render|striptags|trim %}
+  {% set attributes = attributes.setAttribute('data-effect', content.field_swiper_effect|render|striptags|trim) %}
+{% endif %}
+{% if content.field_swiper_grab|render|striptags|trim %}
+  {% set attributes = attributes.setAttribute('data-grab', content.field_swiper_grab|render|striptags|trim) %}
+{% endif %}
+{% if content.field_swiper_video_autoplay|render|striptags|trim %}
+  {% set attributes = attributes.setAttribute('data-video-autoplay', content.field_swiper_video_autoplay|render|striptags|trim) %}
+{% endif %}
+{% if content.field_swiper_height|render|striptags|trim %}
+  {% set cssHeight = 'height:'~content.field_swiper_height|render|striptags|trim~'px' %}
+  {% set attributes = attributes.setAttribute('style',cssHeight) %}
+{% endif %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+
+    {% if content.field_title %}
+      <h2>{{ content.field_title }}</h2>
+    {% endif %}
+
+    {% block content %}
+      <div class="swiper-wrapper">
+        {% if content.field_swiper_images['#items'] %}
+          {% for slider in content.field_swiper_images['#items'] %}
+            {% set slide_class = 'swiper-slide' %}
+            {% if slider.class %}
+              {% set slide_class = slide_class~' '~slider.class %}
+            {% endif %}
+            <div class="{{ slide_class }}">
+              <img src="{{ file_url(slider.entity.uri.value) }}" alt="{{ slider.alt }}" title="{{ slider.title }}">
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+      {% if content.field_swiper_pagination|render|striptags|trim %}
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      {% endif %}
+      {% if content.field_swiper_buttons|render|striptags|trim %}
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      {% endif %}
+      {% if content.field_swiper_scrollbar|render|striptags|trim %}
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      {% endif %}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

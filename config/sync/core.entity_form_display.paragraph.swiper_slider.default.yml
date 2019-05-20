@@ -1,0 +1,158 @@
+uuid: 11657cda-d663-4fc7-83dd-d114d7fcde99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.swiper_slider.field_swiper_autoplay
+    - field.field.paragraph.swiper_slider.field_swiper_buttons
+    - field.field.paragraph.swiper_slider.field_swiper_class
+    - field.field.paragraph.swiper_slider.field_swiper_direction
+    - field.field.paragraph.swiper_slider.field_swiper_effect
+    - field.field.paragraph.swiper_slider.field_swiper_grab
+    - field.field.paragraph.swiper_slider.field_swiper_height
+    - field.field.paragraph.swiper_slider.field_swiper_images
+    - field.field.paragraph.swiper_slider.field_swiper_loop
+    - field.field.paragraph.swiper_slider.field_swiper_pagination
+    - field.field.paragraph.swiper_slider.field_swiper_scrollbar
+    - field.field.paragraph.swiper_slider.field_swiper_slider_width
+    - field.field.paragraph.swiper_slider.field_swiper_speed
+    - field.field.paragraph.swiper_slider.field_swiper_video_autoplay
+    - field.field.paragraph.swiper_slider.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.swiper_slider
+  module:
+    - field_group
+    - svg_image
+third_party_settings:
+  field_group:
+    group_swiper_settings:
+      children:
+        - field_swiper_direction
+        - field_swiper_loop
+        - field_swiper_autoplay
+        - field_swiper_speed
+        - field_swiper_effect
+        - field_swiper_grab
+        - field_swiper_video_autoplay
+        - field_swiper_height
+        - field_swiper_pagination
+        - field_swiper_scrollbar
+        - field_swiper_buttons
+        - field_swiper_class
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Settings
+id: paragraph.swiper_slider.default
+targetEntityType: paragraph
+bundle: swiper_slider
+mode: default
+content:
+  field_swiper_autoplay:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_swiper_buttons:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_swiper_class:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_swiper_direction:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_swiper_effect:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_swiper_grab:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_swiper_height:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_swiper_images:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_swiper_loop:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_swiper_pagination:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_swiper_scrollbar:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_swiper_slider_width:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_swiper_speed:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_swiper_video_autoplay:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

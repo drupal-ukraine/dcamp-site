@@ -1,0 +1,23 @@
+uuid: 130d2065-4a38-410c-a1c7-ff121fe94050
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_swiper_buttons
+    - paragraphs.paragraphs_type.swiper_slider
+  module:
+    - options
+id: paragraph.swiper_slider.field_swiper_buttons
+field_name: field_swiper_buttons
+entity_type: paragraph
+bundle: swiper_slider
+label: Buttons
+description: 'Enable/Disable Prev/Next buttons.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'true'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

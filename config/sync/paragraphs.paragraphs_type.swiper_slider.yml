@@ -1,0 +1,9 @@
+uuid: 0f9ad5ea-457a-43f0-be55-33c576c05b29
+langcode: en
+status: true
+dependencies: {  }
+id: swiper_slider
+label: 'Swiper Slider'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

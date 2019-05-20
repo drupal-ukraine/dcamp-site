@@ -18,7 +18,7 @@
     "drupal/content_moderation_notifications": "^3.0@RC",
     "drupal/content_planner": "^1.0@beta",
     "drupal/contribute": "^5.0@beta",
-    "drupal/core": "^8.6.10",
+    "drupal/core": "^8.6.16",
     "drupal/devel": "^1.2",
     "drupal/dropzonejs": "^2.0@alpha",
     "drupal/email_registration": "^1.0@RC",

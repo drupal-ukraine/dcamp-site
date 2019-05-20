@@ -9,6 +9,7 @@ libraries:
 - dckyiv/global-header
 - dckyiv/global-menu
 - dckyiv/global-scripts
+- dckyiv/swiper
 
 ckeditor_stylesheets:
 - style/css/wysiwyg.css
