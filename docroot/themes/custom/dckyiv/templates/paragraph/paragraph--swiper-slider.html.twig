@@ -48,29 +48,29 @@
   'paragraph--width--' ~ content.field_swiper_slider_width|render|striptags|trim,
 ] %}
 
-{% if content.field_swiper_direction|render|striptags|trim %}
-  {% set attributes = attributes.setAttribute('data-direction', content.field_swiper_direction|render|striptags|trim) %}
+{% if content.field_swiper_direction|field_raw('value') %}
+  {% set attributes = attributes.setAttribute('data-direction', content.field_swiper_direction|field_raw('value')) %}
 {% endif %}
-{% if content.field_swiper_speed|render|striptags|trim %}
-  {% set attributes = attributes.setAttribute('data-speed', content.field_swiper_speed|render|striptags|trim) %}
+{% if content.field_swiper_speed|field_raw('value') %}
+  {% set attributes = attributes.setAttribute('data-speed', content.field_swiper_speed|field_raw('value')) %}
 {% endif %}
-{% if content.field_swiper_autoplay|render|striptags|trim %}
-  {% set attributes = attributes.setAttribute('data-autoplay', content.field_swiper_autoplay|render|striptags|trim) %}
+{% if content.field_swiper_autoplay|field_raw('value') %}
+  {% set attributes = attributes.setAttribute('data-autoplay', content.field_swiper_autoplay|field_raw('value')) %}
 {% endif %}
-{% if content.field_swiper_loop|render|striptags|trim %}
-  {% set attributes = attributes.setAttribute('data-loop', content.field_swiper_loop|render|striptags|trim) %}
+{% if content.field_swiper_loop|field_raw('value') %}
+  {% set attributes = attributes.setAttribute('data-loop', content.field_swiper_loop|field_raw('value')) %}
 {% endif %}
-{% if content.field_swiper_effect|render|striptags|trim %}
-  {% set attributes = attributes.setAttribute('data-effect', content.field_swiper_effect|render|striptags|trim) %}
+{% if content.field_swiper_effect|field_raw('value') %}
+  {% set attributes = attributes.setAttribute('data-effect', content.field_swiper_effect|field_raw('value')) %}
 {% endif %}
-{% if content.field_swiper_grab|render|striptags|trim %}
-  {% set attributes = attributes.setAttribute('data-grab', content.field_swiper_grab|render|striptags|trim) %}
+{% if content.field_swiper_grab|field_raw('value') %}
+  {% set attributes = attributes.setAttribute('data-grab', content.field_swiper_grab|field_raw('value')) %}
 {% endif %}
-{% if content.field_swiper_video_autoplay|render|striptags|trim %}
-  {% set attributes = attributes.setAttribute('data-video-autoplay', content.field_swiper_video_autoplay|render|striptags|trim) %}
+{% if content.field_swiper_video_autoplay|field_raw('value') %}
+  {% set attributes = attributes.setAttribute('data-video-autoplay', content.field_swiper_video_autoplay|field_raw('value')) %}
 {% endif %}
-{% if content.field_swiper_height|render|striptags|trim %}
-  {% set cssHeight = 'height:'~content.field_swiper_height|render|striptags|trim~'px' %}
+{% if content.field_swiper_height|field_raw('value') %}
+  {% set cssHeight = 'height:'~content.field_swiper_height|field_raw('value')~'px' %}
   {% set attributes = attributes.setAttribute('style',cssHeight) %}
 {% endif %}
 
@@ -95,16 +95,16 @@
           {% endfor %}
         {% endif %}
       </div>
-      {% if content.field_swiper_pagination|render|striptags|trim %}
+      {% if content.field_swiper_pagination|field_raw('value') %}
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
       {% endif %}
-      {% if content.field_swiper_buttons|render|striptags|trim %}
+      {% if content.field_swiper_buttons|field_raw('value') %}
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       {% endif %}
-      {% if content.field_swiper_scrollbar|render|striptags|trim %}
+      {% if content.field_swiper_scrollbar|field_raw('value') %}
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
       {% endif %}
