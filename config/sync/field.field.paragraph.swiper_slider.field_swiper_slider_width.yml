@@ -1,0 +1,23 @@
+uuid: 8c72a4b5-b940-471b-9f67-d9b12d36cf71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_swiper_slider_width
+    - paragraphs.paragraphs_type.swiper_slider
+  module:
+    - options
+id: paragraph.swiper_slider.field_swiper_slider_width
+field_name: field_swiper_slider_width
+entity_type: paragraph
+bundle: swiper_slider
+label: 'Slider width'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

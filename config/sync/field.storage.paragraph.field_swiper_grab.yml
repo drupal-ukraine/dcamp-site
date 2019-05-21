@@ -1,0 +1,27 @@
+uuid: 28d32b33-6bd5-4c4b-a159-8b4f18261bb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_swiper_grab
+field_name: field_swiper_grab
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'true'
+      label: Enable
+    -
+      value: 'false'
+      label: Disable
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

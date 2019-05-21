@@ -125,6 +125,21 @@
     @include container;
     margin-bottom: 2rem !important;
   }
+
+  &--width--normal {
+    @include container;
+  }
+
+  &--width--full {
+    @include mq($bp1023max) {
+      margin-left: -15px !important;
+      margin-right: -15px !important;
+
+      h2 {
+        @include container;
+      }
+    }
+  }
 }
 
 table {
