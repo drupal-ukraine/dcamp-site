@@ -77,6 +77,14 @@
 {{ title_suffix }}
 
 <div class="presentation_author">
-  {{ content }}
-  {{ content_extra }}
+    {{ content|without('field_level', 'field_language') }}
+    {{ content_extra }}
+</div>
+
+<div class="presentation_language">
+    {{ content.field_language }}
+</div>
+
+<div class="presentation_level">
+    {{ content.field_level }}
 </div>
