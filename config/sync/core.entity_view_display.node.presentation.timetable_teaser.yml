@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.presentation.field_company
     - field.field.node.presentation.field_drupal_org
     - field.field.node.presentation.field_facebook
+    - field.field.node.presentation.field_image
     - field.field.node.presentation.field_information_about_author
     - field.field.node.presentation.field_language
     - field.field.node.presentation.field_level
@@ -19,14 +20,29 @@ dependencies:
     - field.field.node.presentation.field_yoast_seo
     - node.type.presentation
   module:
+    - options
     - user
 id: node.presentation.timetable_teaser
 targetEntityType: node
 bundle: presentation
 mode: timetable_teaser
 content:
-  field_name:
+  field_language:
+    type: list_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_level:
+    type: list_default
     weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_name:
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -34,7 +50,7 @@ content:
     type: string
     region: content
   field_second_name:
-    weight: 1
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
@@ -48,8 +64,6 @@ hidden:
   field_facebook: true
   field_image: true
   field_information_about_author: true
-  field_language: true
-  field_level: true
   field_linkedin: true
   field_meta_tags: true
   field_presentation_description: true

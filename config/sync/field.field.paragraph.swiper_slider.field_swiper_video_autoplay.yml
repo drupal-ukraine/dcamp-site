@@ -1,0 +1,23 @@
+uuid: 8f9ab7ce-7f75-44b8-a4b4-e1400e11d5fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_swiper_video_autoplay
+    - paragraphs.paragraphs_type.swiper_slider
+  module:
+    - options
+id: paragraph.swiper_slider.field_swiper_video_autoplay
+field_name: field_swiper_video_autoplay
+entity_type: paragraph
+bundle: swiper_slider
+label: 'Video Autoplay'
+description: 'Enable/Disable Video Autoplay.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'false'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

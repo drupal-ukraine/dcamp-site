@@ -1,0 +1,20 @@
+uuid: 7c6cb95b-9300-457b-a605-f82929b30130
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_swiper_autoplay
+field_name: field_swiper_autoplay
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

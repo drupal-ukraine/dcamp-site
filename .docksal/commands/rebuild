@@ -37,7 +37,7 @@ cat "${PROJECT_ROOT}/.docksal/assets/ascii.txt"
 # Running composer
 echo-yellow "Running composer install"
 cd $PROJECT_ROOT
-fin composer install
+fin composer install --no-ansi --no-dev --no-interaction --optimize-autoloader --no-progress --prefer-dist --ignore-platform-reqs
 echo-green "Done.\n"
 
 # Database import
@@ -62,6 +62,10 @@ echo-yellow "Removing package-lock.json..."
 rm -f $MAIN_THEME_PATH/package-lock.json
 echo-green "Done."
 echo
+
+# revert node to version 8
+fin exec nvm install 8.11.3
+fin exec nvm alias default 8.11.3
 
 # Building theme.
 echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"

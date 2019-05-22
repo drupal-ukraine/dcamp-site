@@ -1,0 +1,23 @@
+uuid: 03ed09fd-d82f-44bf-99d5-f0759b73e6c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_swiper_height
+    - paragraphs.paragraphs_type.swiper_slider
+id: paragraph.swiper_slider.field_swiper_height
+field_name: field_swiper_height
+entity_type: paragraph
+bundle: swiper_slider
+label: Height
+description: 'Height of the slide.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

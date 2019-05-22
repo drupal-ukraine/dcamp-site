@@ -1,0 +1,149 @@
+uuid: 8c223c14-592f-4cb1-9640-313c9b5491c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.swiper_slider.field_swiper_autoplay
+    - field.field.paragraph.swiper_slider.field_swiper_buttons
+    - field.field.paragraph.swiper_slider.field_swiper_class
+    - field.field.paragraph.swiper_slider.field_swiper_direction
+    - field.field.paragraph.swiper_slider.field_swiper_effect
+    - field.field.paragraph.swiper_slider.field_swiper_grab
+    - field.field.paragraph.swiper_slider.field_swiper_height
+    - field.field.paragraph.swiper_slider.field_swiper_images
+    - field.field.paragraph.swiper_slider.field_swiper_loop
+    - field.field.paragraph.swiper_slider.field_swiper_pagination
+    - field.field.paragraph.swiper_slider.field_swiper_scrollbar
+    - field.field.paragraph.swiper_slider.field_swiper_slider_width
+    - field.field.paragraph.swiper_slider.field_swiper_speed
+    - field.field.paragraph.swiper_slider.field_swiper_video_autoplay
+    - field.field.paragraph.swiper_slider.field_title
+    - paragraphs.paragraphs_type.swiper_slider
+  module:
+    - options
+    - svg_image
+id: paragraph.swiper_slider.default
+targetEntityType: paragraph
+bundle: swiper_slider
+mode: default
+content:
+  field_swiper_autoplay:
+    weight: 4
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: false
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_swiper_buttons:
+    weight: 13
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_swiper_class:
+    weight: 14
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_swiper_direction:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_swiper_effect:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_swiper_grab:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_swiper_height:
+    weight: 10
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: false
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_swiper_images:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: ''
+        height: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_swiper_loop:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_swiper_pagination:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_swiper_scrollbar:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_swiper_slider_width:
+    weight: 16
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_swiper_speed:
+    weight: 5
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: false
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_swiper_video_autoplay:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_title:
+    weight: 15
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

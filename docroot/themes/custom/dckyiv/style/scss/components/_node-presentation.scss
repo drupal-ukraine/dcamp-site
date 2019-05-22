@@ -1,0 +1,84 @@
+.page-node-type-presentation {
+  .field {
+    &--name-field-image {
+      img {
+        border-radius: 1%;
+
+        @include mq($bp768) {
+          max-width: 260px;
+        }
+      }
+    }
+
+    &--name-field-name{
+      margin-right: 10px;
+    }
+    &--name-field-company{
+      padding-top: 0 !important;
+      padding-left: 8px;
+      font-weight: bold;
+    }
+    &--name-field-information-about-author,
+    &--name-field-presentation-description {
+      @include typography;
+    }
+    &--type-link {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  .node--type-presentation .field--name-field-information-about-author {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .speaker {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    @include mq($bp768) {
+      flex-direction: row;
+    }
+
+    &_heading {
+      font-family: $font-proxima-nova-bold;
+      color: $color-shark;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      border-bottom: 1px solid $color-gallery;
+      text-align: left;
+    }
+
+    &_image {
+      @include mq($bp768) {
+        margin-right: 36px
+      }
+    }
+
+    &_name {
+      display: flex;
+      flex-direction: row;
+      font-size: 3rem;
+    }
+
+    &_company {
+      display: flex;
+      flex-direction: row;
+      font-size: 1.8rem;
+      justify-items: flex-start;
+    }
+  }
+
+  .presentation {
+    &_heading {
+      font-family: $font-proxima-nova-bold;
+      color: $color-shark;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      border-bottom: 1px solid $color-gallery;
+      margin-bottom: 20px;
+    }
+  }
+}

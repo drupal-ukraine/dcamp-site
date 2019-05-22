@@ -70,21 +70,74 @@
  *   in different view modes.
  */
 #}
-{{ title_prefix }}
- {% if not page %}
-   <a class="presentation_title" href="{{ url }}" rel="bookmark">{{ label }}</a>
- {% endif %}
-{{ title_suffix }}
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
 
-<div class="presentation_author">
-    {{ content|without('field_level', 'field_language') }}
-    {{ content_extra }}
-</div>
+<article{{ attributes.addClass(classes) }}>
 
-<div class="presentation_language">
-    {{ content.field_language }}
-</div>
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
 
-<div class="presentation_level">
-    {{ content.field_level }}
-</div>
+  <div{{ content_attributes.addClass('node__content') }}>
+
+    <div class="speaker_heading">{{ 'Speaker'|t }}</div>
+
+    <div class="speaker">
+      <div class="speaker_image">
+        {{ content.field_image }}
+      </div>
+      <div class="speaker_info">
+        <div class="speaker_name">
+          {{ content.field_name }} {{ content.field_second_name }}
+        </div>
+        {% if content.field_company|render|striptags|trim %}
+          <div class="speaker_company">
+            {{ 'Company:'|t }}{{ content.field_company }}
+          </div>
+        {% endif %}
+        <div class="speaker_description">
+          {{ content.field_information_about_author }}
+          {{ content.field_drupal_org }}
+          {{ content.field_facebook }}
+          {{ content.field_twitter }}
+        </div>
+      </div>
+    </div>
+
+    <div class="presentation_section">
+      <div class="presentation_heading">{{ 'Presentation Description'|t }}</div>
+
+      <div class="presentation_info">
+        {{ content.field_level }}
+        {{ content.field_language }}
+      </div>
+
+      {{ content.field_presentation_description }}
+    </div>
+
+  </div>
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+</article>

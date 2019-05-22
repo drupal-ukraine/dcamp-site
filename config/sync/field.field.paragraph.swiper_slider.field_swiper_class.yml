@@ -1,0 +1,19 @@
+uuid: 94dd314e-5dad-4591-8e21-4ce64590f28b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_swiper_class
+    - paragraphs.paragraphs_type.swiper_slider
+id: paragraph.swiper_slider.field_swiper_class
+field_name: field_swiper_class
+entity_type: paragraph
+bundle: swiper_slider
+label: Class
+description: 'The css class for the slider'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

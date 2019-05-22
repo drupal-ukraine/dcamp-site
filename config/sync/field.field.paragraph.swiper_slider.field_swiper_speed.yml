@@ -1,0 +1,25 @@
+uuid: 6b4bc802-6b0c-44fc-987e-6d7234daea62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_swiper_speed
+    - paragraphs.paragraphs_type.swiper_slider
+id: paragraph.swiper_slider.field_swiper_speed
+field_name: field_swiper_speed
+entity_type: paragraph
+bundle: swiper_slider
+label: Speed
+description: 'Speed of the slide Animation in milliseconds. Eg. 500'
+required: true
+translatable: false
+default_value:
+  -
+    value: 500
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

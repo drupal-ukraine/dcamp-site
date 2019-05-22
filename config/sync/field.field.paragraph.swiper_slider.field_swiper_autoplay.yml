@@ -1,0 +1,25 @@
+uuid: f319f707-db1b-4eb3-8351-cb53dc02b10f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_swiper_autoplay
+    - paragraphs.paragraphs_type.swiper_slider
+id: paragraph.swiper_slider.field_swiper_autoplay
+field_name: field_swiper_autoplay
+entity_type: paragraph
+bundle: swiper_slider
+label: Autoplay
+description: 'Pause Time between Slide''s Autoplay Transition in milliseconds. Eg. 1000'
+required: false
+translatable: false
+default_value:
+  -
+    value: 2000
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
