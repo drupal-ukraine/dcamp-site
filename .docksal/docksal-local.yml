@@ -1,0 +1,6 @@
+# In .docksal/docksal-local.yml
+version: "2.1"
+services:
+  cli:
+    ports:
+      - "8000:8000"

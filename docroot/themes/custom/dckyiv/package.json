@@ -11,8 +11,9 @@
     "node": "4.4.4"
   },
   "dependencies": {
+    "font-proxima-nova-scss": "^1.0.1",
+    "instascan": "^1.0.0",
     "swiper": "^4.4.1",
-    "font-proxima-nova-scss": "^1.0.1"
   },
   "devDependencies": {
     "bourbon": "^4.3.4",

@@ -19,3 +19,4 @@ global-menu:
   dependencies:
   - core/drupal
   - core/jquery.once
+
