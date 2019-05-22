@@ -22,6 +22,14 @@ dckyiv_commerce.attendees_report:
   requirements:
     _permission: 'view commerce_order'
 
+dckyiv_commerce.tshirts_report:
+  path: '/admin/dc/tshirts_report'
+  defaults:
+    _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::tshirtsReport'
+    _title: 'Tshirts Report'
+  requirements:
+    _permission: 'view commerce_order'
+
 dckyiv_commerce.attenders-tickets-scanner:
   path: '/admin/dc/attenders-tickets-scanner'
   defaults:

@@ -15,13 +15,6 @@ targetEntityType: paragraph
 bundle: attendee
 mode: default
 content:
-  field_attended:
-    weight: 5
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_attendee_email:
     weight: 4
     settings:
@@ -63,5 +56,6 @@ content:
     region: content
 hidden:
   created: true
+  field_attended: true
   status: true
   uid: true

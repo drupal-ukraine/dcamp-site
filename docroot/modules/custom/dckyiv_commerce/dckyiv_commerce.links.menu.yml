@@ -3,3 +3,9 @@ dckyiv_commerce.attendees_report:
   route_name: 'dckyiv_commerce.attendees_report'
   parent: 'dckyiv_core.admin'
   description: 'Report of DrupalCamp attendees'
+
+dckyiv_commerce.tshirts_report:
+  title: 'Tshirts report'
+  route_name: 'dckyiv_commerce.tshirts_report'
+  parent: 'dckyiv_core.admin'
+  description: 'Report of DrupalCamp tshirts'

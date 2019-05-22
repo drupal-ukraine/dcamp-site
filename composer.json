@@ -23,6 +23,7 @@
     "drupal/dropzonejs": "^2.0@alpha",
     "drupal/email_registration": "^1.0@RC",
     "drupal/entity_browser": "^2.0",
+    "drupal/field_defaults": "^1.0",
     "drupal/field_group": "^1.0",
     "drupal/geolocation": "^1.11",
     "drupal/google_analytics": "^3.0",
@@ -186,6 +187,9 @@
       },
       "drupal/conditional_fields": {
         "Error 'explode() expects parameter": "https://www.drupal.org/files/issues/2018-04-05/conditional_fields-explode_expects_string-2898893-11.patch"
+      },
+      "drupal/field_defaults": {
+        "3040924 -  Undefined property $batch_field_defaults": "https://www.drupal.org/files/issues/2019-03-18/notice-undefined-property-batch-field-defaults-2.patch"
       }
     }
   },

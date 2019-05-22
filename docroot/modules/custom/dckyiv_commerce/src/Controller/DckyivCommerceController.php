@@ -71,12 +71,12 @@ class DckyivCommerceController extends ControllerBase {
   }
 
   /**
-   * Attendees report.
+   * Tshirts report.
    *
    * @return array
    *   The reports build array.
    */
-  public function attendeesReport() {
+  public function tshirtsReport() {
     $bundle_fields = $this->entityFieldManager->getFieldDefinitions('commerce_order_item', 'drupal_camp_ticket');
     if (empty($bundle_fields['field_t_shirt_size'])
     || empty($bundle_fields['field_t_shirt_size']->getFieldStorageDefinition()->getSetting('allowed_values'))) {
@@ -91,7 +91,7 @@ class DckyivCommerceController extends ControllerBase {
       $args = [$key];
       $view = Views::getView('attenders_overview');
       $view->setArguments($args);
-      $view->setDisplay('default');
+      $view->setDisplay('tshirts_overview');
       $view->preExecute();
       $view->execute();
       if (empty($view->result)) {
@@ -106,6 +106,53 @@ class DckyivCommerceController extends ControllerBase {
             '@size' => $value,
             '@count' => $count,
           ]),
+        '#open' => FALSE,
+        'table' => $view->render(),
+      ];
+
+      $total +=$count;
+    }
+
+    $build['total'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'div',
+      '#value' => 'Total tickets:' . $total,
+
+    ];
+
+    return $build;
+  }
+
+  /**
+   * Attendees report.
+   *
+   * @return array
+   *   The reports build array.
+   */
+  public function attendeesReport() {
+    $keys = ['1', '0'];
+
+    $total = 0;
+
+    foreach ($keys as $key) {
+      $args = [$key];
+      $view = Views::getView('attenders_overview');
+      $view->setArguments($args);
+      $view->setDisplay('attendees_overview');
+      $view->preExecute();
+      $view->execute();
+      if (empty($view->result)) {
+        continue;
+      }
+
+      $count = count($view->result);
+
+      $build['report_' . $key] = [
+        '#type' => 'details',
+        '#title' => $this->t('@title: @count', [
+          '@title' => $key ? $this->t('Attended') : $this->t('Not Attended'),
+          '@count' => $count,
+        ]),
         '#open' => FALSE,
         'table' => $view->render(),
       ];
