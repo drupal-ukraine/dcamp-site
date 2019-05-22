@@ -3,6 +3,7 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.field.paragraph.attendee.field_attended
     - field.field.paragraph.attendee.field_attendee_email
     - field.field.paragraph.attendee.field_attendee_firstname
     - field.field.paragraph.attendee.field_attendee_secondname
@@ -14,6 +15,16 @@ targetEntityType: paragraph
 bundle: attendee
 mode: default
 content:
+  field_attended:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_attendee_email:
     weight: 3
     label: hidden
