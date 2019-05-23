@@ -27,4 +27,5 @@ gulp build
 
 echo "Building QR app"
 cd $HOME/docroot/modules/custom/dckyiv_commerce/dckyiv-qr-scanner
+npm install
 npm run build
