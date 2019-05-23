@@ -3,6 +3,7 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.field.paragraph.attendee.field_attended
     - field.field.paragraph.attendee.field_attendee_email
     - field.field.paragraph.attendee.field_attendee_firstname
     - field.field.paragraph.attendee.field_attendee_secondname
@@ -55,5 +56,6 @@ content:
     region: content
 hidden:
   created: true
+  field_attended: true
   status: true
   uid: true

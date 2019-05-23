@@ -15,9 +15,53 @@ dckyiv_commerce.attendee_edit:
     _permission: 'access content'
 
 dckyiv_commerce.attendees_report:
-  path: '/admin/dkc/attendees_report'
+  path: '/admin/dc/attendees_report'
   defaults:
     _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::attendeesReport'
     _title: 'Attendees Report'
   requirements:
     _permission: 'view commerce_order'
+
+dckyiv_commerce.tshirts_report:
+  path: '/admin/dc/tshirts_report'
+  defaults:
+    _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::tshirtsReport'
+    _title: 'Tshirts Report'
+  requirements:
+    _permission: 'view commerce_order'
+
+dckyiv_commerce.attenders-tickets-scanner:
+  path: '/admin/dc/attenders-tickets-scanner'
+  defaults:
+    _controller: '\Drupal\dckyiv_commerce\Controller\AttendersTicketsScanner::attendersScanner'
+    _title: ''
+  requirements:
+    _permission: 'administer content'
+
+dckyiv_commerce.attendee-data:
+  path: '/admin/dc/attendee-data/{paragraph}/{order_item}/{order}'
+  defaults:
+    _controller: '\Drupal\dckyiv_commerce\Controller\AttendeeData::getAttendeeData'
+    _title: 'Attendee information'
+  options:
+    parameters:
+      paragraph:
+        type: entity:paragraph
+      order_item:
+        type: entity:commerce_order_item
+      order:
+        type: entity:commerce_order
+  requirements:
+    _permission: 'administer content'
+
+dckyiv_commerce.attendee-data-update:
+  path: '/admin/dc/attendee-data-update/{paragraph}'
+  defaults:
+    _controller: '\Drupal\dckyiv_commerce\Controller\AttendeeData::updateAttendeeStatus'
+    _title: 'Attendee information status update'
+  options:
+    parameters:
+      paragraph:
+        type: entity:paragraph
+  requirements:
+    _permission: 'administer content'

@@ -1,0 +1,23 @@
+uuid: 398b9896-8f63-4395-83f2-47aad6b526a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attended
+    - paragraphs.paragraphs_type.attendee
+id: paragraph.attendee.field_attended
+field_name: field_attended
+entity_type: paragraph
+bundle: attendee
+label: Attended
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Attended
+  off_label: 'Not Attended'
+field_type: boolean

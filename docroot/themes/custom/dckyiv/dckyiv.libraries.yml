@@ -27,3 +27,4 @@ swiper:
   css:
     theme:
       assets/swiper/dist/css/swiper.min.css: {minified: true}
+

@@ -24,3 +24,6 @@ echo "Building theme"
 cd $HOME/docroot/themes/custom/dckyiv
 npm install
 gulp build
+
+cd $HOME/docroot/modules/custom/dckyiv_commerce/dckyiv-qr-scanner
+npm run build
