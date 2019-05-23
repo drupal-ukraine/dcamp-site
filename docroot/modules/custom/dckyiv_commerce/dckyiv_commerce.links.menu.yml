@@ -9,3 +9,10 @@ dckyiv_commerce.tshirts_report:
   route_name: 'dckyiv_commerce.tshirts_report'
   parent: 'dckyiv_core.admin'
   description: 'Report of DrupalCamp tshirts'
+
+
+dckyiv_commerce.qr-scanner:
+  title: 'QR-Scanner'
+  route_name: 'dckyiv_commerce.attenders-tickets-scanner'
+  parent: 'dckyiv_core.admin'
+  description: 'Report of DrupalCamp tshirts'

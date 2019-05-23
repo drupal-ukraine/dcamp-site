@@ -59,7 +59,8 @@ class AttendersTicketsScanner extends ControllerBase {
       '#attributes' => [
         'src' => '/' . $module_path . '/dckyiv-qr-scanner/dist/index.html',
         'width' => '100%',
-        'height' => '500px'
+        'height' => '500px',
+        'border' => 0,
         ],
     ];
   }

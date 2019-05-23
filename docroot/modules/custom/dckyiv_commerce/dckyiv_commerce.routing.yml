@@ -34,9 +34,9 @@ dckyiv_commerce.attenders-tickets-scanner:
   path: '/admin/dc/attenders-tickets-scanner'
   defaults:
     _controller: '\Drupal\dckyiv_commerce\Controller\AttendersTicketsScanner::attendersScanner'
-    _title: 'Attenders Tickets Scanner'
+    _title: ''
   requirements:
-    _permission: 'access content'
+    _permission: 'administer content'
 
 dckyiv_commerce.attendee-data:
   path: '/admin/dc/attendee-data/{paragraph}/{order_item}/{order}'
@@ -52,4 +52,16 @@ dckyiv_commerce.attendee-data:
       order:
         type: entity:commerce_order
   requirements:
-    _permission: 'access content'
+    _permission: 'administer content'
+
+dckyiv_commerce.attendee-data-update:
+  path: '/admin/dc/attendee-data-update/{paragraph}'
+  defaults:
+    _controller: '\Drupal\dckyiv_commerce\Controller\AttendeeData::updateAttendeeStatus'
+    _title: 'Attendee information status update'
+  options:
+    parameters:
+      paragraph:
+        type: entity:paragraph
+  requirements:
+    _permission: 'administer content'
