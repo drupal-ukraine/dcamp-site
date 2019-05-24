@@ -130,11 +130,19 @@ class DckyivCommerceController extends ControllerBase {
    *   The reports build array.
    */
   public function attendeesReport() {
-    $keys = ['1', '0'];
+    $field_name = 'field_attendee_status';
+    $bundle_fields = $this->entityFieldManager->getFieldDefinitions('paragraph', 'attendee');
+    if (empty($bundle_fields[$field_name])
+      || empty($bundle_fields[$field_name]->getSetting('allowed_values'))) {
+      return ['#markup' => 'No attendees in this list'];
+    }
+    $build = [];
+    $allowed_values = $bundle_fields[$field_name]->getSetting('allowed_values');
+
 
     $total = 0;
 
-    foreach ($keys as $key) {
+    foreach ($allowed_values as $key => $value) {
       $args = [$key];
       $view = Views::getView('attenders_overview');
       $view->setArguments($args);
@@ -150,7 +158,7 @@ class DckyivCommerceController extends ControllerBase {
       $build['report_' . $key] = [
         '#type' => 'details',
         '#title' => $this->t('@title: @count', [
-          '@title' => $key ? $this->t('Attended') : $this->t('Not Attended'),
+          '@title' => $value,
           '@count' => $count,
         ]),
         '#open' => FALSE,
