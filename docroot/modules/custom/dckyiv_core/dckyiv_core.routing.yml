@@ -5,3 +5,12 @@ dckyiv_core.admin:
     _title: 'DCKyiv'
   requirements:
     _permission: 'administer content'
+
+dckyiv_core.ical:
+  path: '/add-icalendar/{paragraph}/{node}'
+  defaults:
+    _controller: '\Drupal\dckyiv_core\Controller\IcalController::iCalendar'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,4 @@
+services:
+  dckyive_core.timetable:
+    class: Drupal\dckyiv_core\TimetableService
+    arguments: ['@entity_type.manager', '@request_stack']
