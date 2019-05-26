@@ -17,27 +17,87 @@ dependencies:
     - metatag
     - paragraphs
     - path
+    - scheduler
     - yoast_seo
 third_party_settings:
   field_group:
     group_header:
       children:
         - field_header
+        - field_transparent_header
       parent_name: ''
-      weight: 3
+      weight: 1
       format_type: html_element
       format_settings:
-        label: Header
         element: div
         show_label: false
         label_element: h3
+        label_element_classes: ''
         attributes: ''
-        effect: collapsible
+        effect: none
         speed: fast
         id: ''
         classes: ''
         required_fields: false
       label: Header
+      region: content
+    group_page_content:
+      children:
+        - field_page_content
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Page content'
+      region: content
+    group_right_sidebar:
+      children:
+        - field_right_sidebar
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: false
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Right Sidebar'
+      region: content
+    group_footer:
+      children:
+        - field_footer
+      parent_name: ''
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: false
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Footer
+      region: content
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -45,7 +105,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -57,7 +117,7 @@ content:
     region: content
   field_footer:
     type: paragraphs
-    weight: 5
+    weight: 6
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -76,7 +136,7 @@ content:
     region: content
   field_header:
     type: paragraphs
-    weight: 3
+    weight: 0
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -94,14 +154,14 @@ content:
     third_party_settings: {  }
     region: content
   field_meta_tags:
-    weight: 26
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_page_content:
     type: paragraphs
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -120,7 +180,7 @@ content:
     region: content
   field_right_sidebar:
     type: paragraphs
-    weight: 4
+    weight: 5
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -144,7 +204,7 @@ content:
     type: boolean_checkbox
     region: content
   field_yoast_seo:
-    weight: 27
+    weight: 17
     settings:
       body: body
     third_party_settings: {  }
@@ -152,20 +212,20 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 6
+    weight: 7
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 12
+    weight: 14
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -173,12 +233,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -186,14 +246,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 15
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
@@ -205,13 +265,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 8
     settings:
       match_operator: CONTAINS
       size: 60
@@ -220,7 +280,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
