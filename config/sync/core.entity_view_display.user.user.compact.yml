@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.user.compact
     - field.field.user.user.commerce_remote_id
     - field.field.user.user.field_company
+    - field.field.user.user.field_user_first_name
+    - field.field.user.user.field_user_last_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -30,6 +32,8 @@ content:
 hidden:
   commerce_remote_id: true
   field_company: true
+  field_user_first_name: true
+  field_user_last_name: true
   langcode: true
   member_for: true
   profile_customer: true
