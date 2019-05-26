@@ -32,3 +32,22 @@ function dckyiv_user_mail_alter(&$message) {
     $message['headers']['Content-Type'] = 'text/html';
   }
 }
+
+/*function dckyiv_user_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  kint($form_id);
+}*/
+
+/**
+ * Implements HOOK_form_form_id_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function dckyiv_form_webform_submission_contact_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  //$form['elements']['first_and_last_name']['#autocomplete_route_name'] = 'dckyiv_user.autocomplete';
+  //$form['elements']['first_and_last_name']['#autocomplete_route_parameters'] = ['field_name' => 'name', 'count' => 10];
+/*kint($form['elements']['first_and_last_name']);
+kint($form['elements']['autocomplete']);
+  $form['elements']['autocomplete']['#autocomplete_route_name'] = 'dckyiv_user.autocomplete';
+  $form['elements']['autocomplete']['#autocomplete_route_parameters'] = ['field_user_first_name' => 'name', 'count' => 10];*/
+}

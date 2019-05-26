@@ -1,0 +1,7 @@
+dckyiv_user.autocomplete:
+  path: '/dckyiv_user_autocomplete/{field_name}/{count}'
+  defaults:
+    _controller: '\Drupal\dckyiv_user\Controller\AutocompleteController::handleAutocomplete'
+    _format: json
+  requirements:
+    _access: 'TRUE'
