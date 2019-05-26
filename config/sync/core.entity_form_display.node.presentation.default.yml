@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.presentation.field_yoast_seo
     - image.style.thumbnail
     - node.type.presentation
+    - workflows.workflow.presentation
   module:
     - content_moderation
     - field_group
@@ -44,6 +45,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Presentation Info'
+      region: content
     group_author_information:
       children:
         - field_name
@@ -63,6 +65,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Author Information'
+      region: content
 id: node.presentation.default
 targetEntityType: node
 bundle: presentation
@@ -99,7 +102,7 @@ content:
     type: link_default
     region: content
   field_image:
-    weight: 31
+    weight: 13
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -195,7 +198,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -223,9 +226,9 @@ content:
     third_party_settings: {  }
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 4
@@ -237,7 +240,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

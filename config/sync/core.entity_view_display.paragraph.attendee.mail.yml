@@ -47,4 +47,5 @@ content:
     type: entity_reference_label
     region: content
 hidden:
+  field_attended: true
   field_attendee_status: true
