@@ -1,0 +1,29 @@
+uuid: d09931b5-4273-4e33-91f0-38083a08637a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_iframe_source
+    - paragraphs.paragraphs_type.iframe
+  module:
+    - iframe
+id: paragraph.iframe.field_iframe_source
+field_name: field_iframe_source
+entity_type: paragraph
+bundle: iframe
+label: 'Iframe Source'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  class: iframe_field
+  frameborder: '0'
+  scrolling: auto
+  transparency: '1'
+  tokensupport: '2'
+  title: ''
+  height: ''
+  width: ''
+field_type: iframe

@@ -1,0 +1,23 @@
+uuid: 4a9c88da-15f3-42b6-acf7-7bd28a0d7b98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wide_screen
+    - paragraphs.paragraphs_type.iframe
+id: paragraph.iframe.field_wide_screen
+field_name: field_wide_screen
+entity_type: paragraph
+bundle: iframe
+label: 'Wide screen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
