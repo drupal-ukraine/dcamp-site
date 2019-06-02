@@ -1,0 +1,113 @@
+uuid: 85fe8e86-cdfd-4b66-805c-1c3230337ea8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_content
+    - node.type.presentation
+    - paragraphs.paragraphs_type.attendee
+    - paragraphs.paragraphs_type.camp_products
+    - paragraphs.paragraphs_type.contacts
+    - paragraphs.paragraphs_type.hero_countdown
+    - paragraphs.paragraphs_type.icomoon_link
+    - paragraphs.paragraphs_type.menu_cta
+    - paragraphs.paragraphs_type.timetable
+    - paragraphs.paragraphs_type.timetable_presentation
+    - paragraphs.paragraphs_type.timetable_slot
+  module:
+    - entity_reference_revisions
+id: node.presentation.field_page_content
+field_name: field_page_content
+entity_type: node
+bundle: presentation
+label: 'Page content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles:
+      attendee: attendee
+      camp_products: camp_products
+      contacts: contacts
+      hero_countdown: hero_countdown
+      icomoon_link: icomoon_link
+      menu_cta: menu_cta
+      timetable: timetable
+      timetable_presentation: timetable_presentation
+      timetable_slot: timetable_slot
+    target_bundles_drag_drop:
+      video:
+        weight: 24
+        enabled: false
+      attendee:
+        enabled: true
+        weight: 25
+      camp_products:
+        enabled: true
+        weight: 26
+      contacts:
+        enabled: true
+        weight: 27
+      container:
+        weight: 28
+        enabled: false
+      cta_block:
+        weight: 29
+        enabled: false
+      hero_countdown:
+        enabled: true
+        weight: 30
+      html_widget:
+        weight: 31
+        enabled: false
+      icomoon_link:
+        enabled: true
+        weight: 32
+      menu_cta:
+        enabled: true
+        weight: 33
+      presentations:
+        weight: 34
+        enabled: false
+      presentations_cta:
+        weight: 35
+        enabled: false
+      social_links:
+        weight: 36
+        enabled: false
+      sponsor_wrapper:
+        weight: 37
+        enabled: false
+      sponsor_wrapper_full:
+        weight: 38
+        enabled: false
+      sponsors:
+        weight: 39
+        enabled: false
+      swiper_slider:
+        weight: 40
+        enabled: false
+      teaser:
+        weight: 41
+        enabled: false
+      timetable:
+        enabled: true
+        weight: 42
+      timetable_presentation:
+        enabled: true
+        weight: 43
+      timetable_slot:
+        enabled: true
+        weight: 44
+      wrapper_teasers:
+        weight: 45
+        enabled: false
+      wrapper_webform:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

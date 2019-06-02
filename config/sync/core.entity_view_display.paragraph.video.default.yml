@@ -1,0 +1,33 @@
+uuid: 1a42eec1-24e1-41ca-bc1a-4b6504bdd923
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_remote_video
+    - field.field.paragraph.video.field_wide_screen
+    - paragraphs.paragraphs_type.video
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_remote_video:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_wide_screen:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden: {  }

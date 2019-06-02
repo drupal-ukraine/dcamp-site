@@ -1,0 +1,33 @@
+uuid: 6a6f85ba-dbdb-4f18-a789-8dec546de099
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_remote_video
+    - field.field.paragraph.video.field_wide_screen
+    - paragraphs.paragraphs_type.video
+  module:
+    - media_library
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_remote_video:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_wide_screen:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

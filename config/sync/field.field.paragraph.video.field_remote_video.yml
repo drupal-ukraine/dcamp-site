@@ -1,0 +1,28 @@
+uuid: a8a89be7-3b64-425b-829a-45d3d81e9ecd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_remote_video
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.video
+id: paragraph.video.field_remote_video
+field_name: field_remote_video
+entity_type: paragraph
+bundle: video
+label: 'Remote video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
