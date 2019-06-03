@@ -133,7 +133,7 @@ content:
     region: content
   field_page_content:
     weight: 16
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''

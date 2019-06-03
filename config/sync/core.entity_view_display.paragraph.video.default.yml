@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.video.field_remote_video
+    - field.field.paragraph.video.field_title
     - field.field.paragraph.video.field_wide_screen
     - paragraphs.paragraphs_type.video
 id: paragraph.video.default
@@ -13,20 +14,28 @@ mode: default
 content:
   field_remote_video:
     type: entity_reference_entity_view
-    weight: 1
-    label: above
+    weight: 2
+    label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: content
-  field_wide_screen:
+  field_title:
     weight: 0
-    label: above
+    label: hidden
     settings:
-      format: default
-      format_custom_false: ''
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_wide_screen:
+    weight: 1
+    label: hidden
+    settings:
+      format: boolean
       format_custom_true: ''
+      format_custom_false: ''
     third_party_settings: {  }
     type: boolean
     region: content
