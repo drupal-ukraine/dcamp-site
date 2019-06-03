@@ -1,0 +1,14 @@
+// Remote video paragraph
+
+.paragraph--type--video {
+  margin: 30px auto;
+
+  .field--name-field-title {
+    @include container;
+
+    @include mq($bp1023max) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
