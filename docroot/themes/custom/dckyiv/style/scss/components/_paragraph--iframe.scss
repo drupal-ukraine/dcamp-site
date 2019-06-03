@@ -1,0 +1,14 @@
+// Contact paragraph
+
+.paragraph--type--iframe {
+  margin: 30px auto;
+
+  .iframe_title {
+    @include container;
+
+    @include mq($bp1023max) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
