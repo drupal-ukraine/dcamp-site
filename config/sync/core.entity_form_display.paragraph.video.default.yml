@@ -8,17 +8,26 @@ dependencies:
     - field.field.paragraph.video.field_wide_screen
     - paragraphs.paragraphs_type.video
   module:
-    - media_library
+    - inline_entity_form
 id: paragraph.video.default
 targetEntityType: paragraph
 bundle: video
 mode: default
 content:
   field_remote_video:
-    type: media_library_widget
+    type: inline_entity_form_complex
     weight: 2
     settings:
-      media_types: {  }
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
     third_party_settings: {  }
     region: content
   field_title:
