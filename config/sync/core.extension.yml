@@ -62,6 +62,7 @@ module:
   google_analytics: 0
   help: 0
   history: 0
+  iframe: 0
   image: 0
   inline_entity_form: 0
   language: 0

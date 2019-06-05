@@ -27,6 +27,7 @@
     "drupal/field_group": "^3.0",
     "drupal/geolocation": "^1.11",
     "drupal/google_analytics": "^3.0",
+    "drupal/iframe": "^1.9",
     "drupal/link_attributes": "^1.5",
     "drupal/media_entity": "^2",
     "drupal/media_entity_browser": "^2.0",

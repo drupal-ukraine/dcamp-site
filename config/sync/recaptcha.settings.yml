@@ -10,3 +10,4 @@ _core:
   default_config_hash: ZKQ03ePk4sH2zESRw4tdZYw__nG2YN4Ru5roPL23g3A
 verify_hostname: false
 use_globally: false
+langcode: uk

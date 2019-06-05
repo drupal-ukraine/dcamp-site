@@ -137,6 +137,11 @@
 
       h2 {
         @include container;
+
+        @include mq($bp1023max) {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
       }
     }
   }
