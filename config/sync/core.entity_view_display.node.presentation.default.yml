@@ -13,12 +13,14 @@ dependencies:
     - field.field.node.presentation.field_linkedin
     - field.field.node.presentation.field_meta_tags
     - field.field.node.presentation.field_name
+    - field.field.node.presentation.field_page_content
     - field.field.node.presentation.field_presentation_description
     - field.field.node.presentation.field_second_name
     - field.field.node.presentation.field_twitter
     - field.field.node.presentation.field_yoast_seo
     - node.type.presentation
   module:
+    - entity_reference_revisions
     - link
     - metatag
     - options
@@ -128,6 +130,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_page_content:
+    weight: 16
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_presentation_description:
     weight: 10

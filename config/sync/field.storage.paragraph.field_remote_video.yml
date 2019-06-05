@@ -1,14 +1,16 @@
-uuid: 4dfeb4e2-7ac1-4714-954a-f8254068fa75
+uuid: f2c43cea-0897-448d-aabb-363894c02693
 langcode: en
 status: true
 dependencies:
   module:
+    - media
     - paragraphs
-id: paragraph.field_wide_screen
-field_name: field_wide_screen
+id: paragraph.field_remote_video
+field_name: field_remote_video
 entity_type: paragraph
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: media
 module: core
 locked: false
 cardinality: 1

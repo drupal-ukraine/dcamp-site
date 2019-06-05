@@ -1,0 +1,51 @@
+uuid: 6a6f85ba-dbdb-4f18-a789-8dec546de099
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_remote_video
+    - field.field.paragraph.video.field_title
+    - field.field.paragraph.video.field_wide_screen
+    - paragraphs.paragraphs_type.video
+  module:
+    - inline_entity_form
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_remote_video:
+    type: inline_entity_form_complex
+    weight: 2
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_wide_screen:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

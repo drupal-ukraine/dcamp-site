@@ -1,0 +1,65 @@
+// Remote video paragraph
+
+.paragraph--type--video {
+  margin: 30px auto;
+
+  .field--name-field-title {
+    @include container;
+
+    @include mq($bp1023max) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .field--name-field {
+    &-title {
+      @extend h3;
+    }
+
+    &-media-oembed-video {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+
+      &::before {
+        display: block;
+        content: "";
+        padding-top: 56.25%;
+      }
+
+      // TODO: Add select list to select video format.
+      .media-oembed-video-21by9::before {
+        padding-top: 42.857143%;
+      }
+
+      .media-oembed-video-16by9::before {
+        padding-top: 56.25%;
+      }
+
+      .media-oembed-video-4by3::before {
+        padding-top: 75%;
+      }
+
+      .media-oembed-video-1by1::before {
+        padding-top: 100%;
+      }
+
+      & .media-oembed-content,
+      & iframe,
+      & embed,
+      & object,
+      & video {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    }
+  }
+}

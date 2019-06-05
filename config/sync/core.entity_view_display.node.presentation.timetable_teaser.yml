@@ -66,6 +66,7 @@ hidden:
   field_information_about_author: true
   field_linkedin: true
   field_meta_tags: true
+  field_page_content: true
   field_presentation_description: true
   field_twitter: true
   field_yoast_seo: true
