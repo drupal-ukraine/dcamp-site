@@ -11,7 +11,7 @@ field_name: field_media_oembed_video
 entity_type: media
 type: string
 settings:
-  max_length: 255
+  max_length: 1200
   is_ascii: false
   case_sensitive: false
 module: core

@@ -1,0 +1,9 @@
+uuid: a7c7ae7f-004e-427d-aeaa-b43fe6996fdb
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+icon_uuid: null
+description: 'Section with remote video.'
+behavior_plugins: {  }
