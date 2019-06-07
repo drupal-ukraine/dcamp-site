@@ -34,14 +34,26 @@ $grays: map-merge(
     $grays
 );
 
-$blue:    #007bff !default;
+// Rainbow
+$color-bali-hai: #93A6B9;
+$color-fountain-blue: #65A3BD;
+$color-chambray: #3B5998;
+$color-cerulean-blue: #285DAC;
+$color-fern: #65BD6A;
+$color-chestnut-rose: #CC5447;
+$color-rodeo-dust: #C7B299;
+$color-golden-grass: #CCA81A;
+$color-mango-tango: #E28000;
+$color-wisteria: #A365BD;
+
+$blue:    $color-cerulean-blue !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
+$red:     $color-chestnut-rose !default;
+$orange:  $color-mango-tango !default;
+$yellow:  $color-golden-grass !default;
+$green:   $color-fern !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
@@ -137,7 +149,9 @@ $spacers: map-merge(
       2: ($spacer * .5),
       3: $spacer,
       4: ($spacer * 1.5),
-      5: ($spacer * 3)
+      5: ($spacer * 2),
+      6: ($spacer * 2.5),
+      7: ($spacer * 3)
     ),
     $spacers
 );

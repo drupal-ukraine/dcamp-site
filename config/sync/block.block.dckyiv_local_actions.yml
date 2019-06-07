@@ -8,8 +8,8 @@ _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: dckyiv_local_actions
 theme: dckyiv
-region: content
-weight: -20
+region: header
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:

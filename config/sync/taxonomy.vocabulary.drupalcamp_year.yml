@@ -1,0 +1,8 @@
+uuid: eca1a27f-46c2-4388-8fd1-194779ca846c
+langcode: en
+status: true
+dependencies: {  }
+name: 'DrupalCamp Year'
+vid: drupalcamp_year
+description: 'Year when Drupal Camp passed or will be.'
+weight: 0

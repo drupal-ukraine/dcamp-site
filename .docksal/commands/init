@@ -40,7 +40,7 @@ sleep 10
 # Importing Database
 if [[ "$1" != "new" ]]; then
     echo -e "${green_bg} Step 2 ${NC}${green} Importing Database...${NC}"
-    #fin pull db -y
+    fin db import $PROJECT_ROOT/db/database.sql --db=default --db-user=user --db-password=user
 fi
 
 # Site initialization

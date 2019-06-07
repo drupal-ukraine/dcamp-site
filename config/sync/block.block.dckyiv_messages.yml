@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: dckyiv_messages
 theme: dckyiv
-region: navbar_branding
-weight: 0
+region: header
+weight: -1
 provider: null
 plugin: system_messages_block
 settings:

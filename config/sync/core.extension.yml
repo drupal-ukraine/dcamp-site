@@ -17,11 +17,16 @@ module:
   components: 0
   config: 0
   contact: 0
+  content_calendar: 0
+  content_kanban: 0
+  content_moderation: 0
+  content_planner: 0
   contextual: 0
   ctools: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  dckyiv_core: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
@@ -69,6 +74,7 @@ module:
   radix_layouts: 0
   rdf: 0
   responsive_image: 0
+  scheduler: 0
   search: 0
   shortcut: 0
   svg_formatter: 0
@@ -94,6 +100,7 @@ module:
   webform_ui: 0
   widget_engine: 0
   widget_engine_entity_form: 0
+  workflows: 0
   yoast_seo: 0
   contribute: 1
   menu_link_content: 1

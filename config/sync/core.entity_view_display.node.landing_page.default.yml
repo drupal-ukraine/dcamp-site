@@ -1,0 +1,40 @@
+uuid: 34ae5a65-b4b1-4c4f-a949-c7f4d3f2a33f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.field_drupalcamp_year
+    - field.field.node.landing_page.field_transparent_header
+    - field.field.node.landing_page.field_widgets
+    - node.type.landing_page
+  module:
+    - user
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  field_drupalcamp_year:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_widgets:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_transparent_header: true
+  langcode: true

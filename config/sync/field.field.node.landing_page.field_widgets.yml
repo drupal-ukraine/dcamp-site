@@ -1,0 +1,21 @@
+uuid: 1559834e-b20d-4e00-8566-1f36f9146116
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_widgets
+    - node.type.landing_page
+id: node.landing_page.field_widgets
+field_name: field_widgets
+entity_type: node
+bundle: landing_page
+label: 'Content Sections'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:widget'
+  handler_settings: {  }
+field_type: entity_reference

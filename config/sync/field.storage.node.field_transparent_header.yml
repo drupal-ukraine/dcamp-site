@@ -1,0 +1,18 @@
+uuid: 490b2aa2-f3a3-4185-9d00-8ebbdd804d83
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_transparent_header
+field_name: field_transparent_header
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

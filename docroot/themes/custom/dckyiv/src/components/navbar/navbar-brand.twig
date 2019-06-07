@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Template for Navbar brand component.
+ *
+ * Available config:
+ * - text: the text to use for the brand.
+ * - path: the path for the link. Leave blank for no link.
+ * - image:
+ *   - src: The source of the image
+ *   - width: The width of the image
+ *   - height: The height of the image
+ * - utility_classes: An array of utility classes.
+ */
+#}
+{% import _self as navbar_brand %}
+{% set utility_classes = utility_classes|join(' ') %}
+
+{% if path %}
+  <a href="{{ path }}" class="navbar-brand text-uppercase d-flex align-items-center {{ utility_classes }}">
+    {{ text }}
+  </a>
+{% else %}
+  <span class="navbar-brand text-uppercase h1 mb-0 {{ utility_classes }}">
+    {{ text }}
+  </span>
+{% endif %}
+
+{% macro image(src, width, height) %}
+  <img src="{{ src }}" width="{{ width|default(30) }}" height="{{ height|default('auto') }}" class="mr-2" />
+{% endmacro %}

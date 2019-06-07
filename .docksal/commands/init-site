@@ -26,7 +26,7 @@ echo-yellow () { echo -e "${yellow}$1${NC}"; }
 # PROJECT_ROOT and DOCROOT are set as env variables in cli
 SITE_DIRECTORY="default"
 DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
-THEME_PATH="${DOCROOT_PATH}/themes/custom/${THEME_NAME}/"
+THEME_PATH="${DOCROOT_PATH}/themes/custom/dckyiv/"
 SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
 
 #-------------------------- END: Settings --------------------------------
@@ -90,6 +90,7 @@ composer_install ()
 # Import configs and run update
 import_configs ()
 {
+    echo -e "${green} Import configs and run updates...${NC}"
     cd $DOCROOT_PATH
     drush en stage_file_proxy -y
     drush cr
@@ -109,9 +110,13 @@ theme_install ()
 # Post install commands
 post_install ()
 {
-    echo -e "${yellow}http://${VIRTUAL_HOST}/user${NC}"
-    echo -e "User:${green} admin ${NC}"
-    echo -e "Pass:${green} admin ${NC}"
+    if [ "$1" == "new" ]; then
+        echo -e "${yellow}http://${VIRTUAL_HOST}/user${NC}"
+        echo -e "User:${green} admin ${NC}"
+        echo -e "Pass:${green} admin ${NC}"
+    else
+        drush uli
+    fi
 }
 #-------------------------- END: Functions --------------------------------
 
@@ -127,5 +132,6 @@ else
     import_configs
 	theme_install
 fi
+
 post_install
 #-------------------------- END: Execution --------------------------------
