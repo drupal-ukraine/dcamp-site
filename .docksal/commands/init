@@ -24,7 +24,7 @@ echo-yellow () { echo -e "${yellow}$1${NC}"; }
 #-------------------------- Execution --------------------------------
 #Show some art
 clear
-cat "${PROJECT_ROOT}/.docksal/assets/dс-logo.txt"
+cat "${PROJECT_ROOT}/.docksal/assets/dc-logo.txt"
 
 # Stack initialization
 echo -e "${green_bg} Step 1 ${NC}${green} Initializing stack...${NC}"
@@ -38,8 +38,7 @@ echo "Waiting 10s for MySQL to initialize...";
 sleep 10
 
 # Importing Database
-if [[ "$1" != "new" ]]
-then
+if [[ "$1" != "new" ]]; then
     echo -e "${green_bg} Step 2 ${NC}${green} Importing Database...${NC}"
     #fin pull db -y
 fi
@@ -50,6 +49,6 @@ echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 fin init-site $1
 
 echo -en "${green_bg} DONE! ${NC} "
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
+echo -e " Welcome to: ${yellow}http://${VIRTUAL_HOST}${NC}"
 
 #-------------------------- END: Execution --------------------------------

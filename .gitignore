@@ -11,6 +11,7 @@ pantheon.upstream.yml
 # Place local settings in settings.local.php
 /docroot/sites/*/settings.local.php
 /docroot/sites/*/prod.settings.php
+/docroot/sites/*/setting.stage_file_proxy.php
 /docroot/sites/*/.env
 
 # Note that services.local.yml is not loaded by default. If you would like

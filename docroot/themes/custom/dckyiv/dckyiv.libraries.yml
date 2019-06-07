@@ -1,0 +1,10 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/dckyiv.style.css: {}
+  js:
+    assets/js/dckyiv.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

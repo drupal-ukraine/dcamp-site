@@ -41,3 +41,4 @@ $settings['file_scan_ignore_directories'] = [
   'node_modules',
   'bower_components',
 ];
+$settings['install_profile'] = 'standard';
