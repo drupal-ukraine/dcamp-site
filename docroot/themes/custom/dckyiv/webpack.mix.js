@@ -7,7 +7,6 @@
  | for your application. See https://github.com/JeffreyWay/laravel-mix.
  |
  */
-const proxy = 'http://drupal.local';
 const mix = require('laravel-mix');
 
 /*
@@ -22,16 +21,8 @@ mix
     processCssUrls: false
   });
 
-/*
- |--------------------------------------------------------------------------
- | Browsersync
- |--------------------------------------------------------------------------
- */
-mix.browserSync({
-  proxy: proxy,
-  files: ['assets/js/**/*.js', 'assets/css/**/*.css'],
-  stream: true,
-});
+mix.copy('node_modules/font-proxima-nova-scss/*', 'src/sass/fonts/');
+mix.copy('node_modules/font-proxima-nova-scss/fonts/*', 'assets/css/fonts/');
 
 /*
  |--------------------------------------------------------------------------
@@ -46,3 +37,4 @@ mix.sass('src/sass/dckyiv.style.scss', 'css');
  |--------------------------------------------------------------------------
  */
 mix.js('src/js/dckyiv.script.js', 'js');
+

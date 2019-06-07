@@ -57,7 +57,7 @@ class PreprocessTransparentMenu implements ContainerInjectionInterface {
       && ($node->hasField('field_transparent_header'))
       && ($node->field_transparent_header->value)
     ) {
-      $variables['attributes']['class'][] = 'transparent-header';
+      $variables['attributes']['class'][] = 'transparent_header';
     }
   }
 

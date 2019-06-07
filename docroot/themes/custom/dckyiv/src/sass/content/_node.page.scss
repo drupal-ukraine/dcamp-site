@@ -1,2 +1,10 @@
 // Page
 // -----------------------------------------------------------------------------
+
+.page {
+  & > .navbar {
+    .transparent_header & {
+      background-color: rgba($black,0.7);
+    }
+  }
+}
