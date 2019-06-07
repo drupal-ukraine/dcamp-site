@@ -1,5 +1,5 @@
-uuid: 46c09141-b91a-40a5-b277-d4677d671932
-name: 'DrupalCamp {YourCity} Home Page | DRUPALCAMP {YourCity} {Year}'
+uuid: 582aa3cc-7418-4648-ba13-1b8a9267808c
+name: 'Drupal Camp Ukraine'
 mail: admin@example.com
 slogan: ''
 page:
@@ -11,4 +11,4 @@ weight_select_max: 100
 langcode: en
 default_langcode: en
 _core:
-  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

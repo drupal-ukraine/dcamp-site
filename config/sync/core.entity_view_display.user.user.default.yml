@@ -1,4 +1,4 @@
-uuid: 2b157840-8f37-4ff6-bc0f-7c593c9acaad
+uuid: 277d34d4-e8a8-46f0-9115-09307f5c2905
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
-    - image
+    - svg_image
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -27,4 +27,5 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-hidden: {  }
+hidden:
+  langcode: true

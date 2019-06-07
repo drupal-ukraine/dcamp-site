@@ -1,27 +1,39 @@
-name: DCKyiv theme
+name: DrupalCamp Kyiv
+description: A theme based on Radix.
+screenshot: screenshot.png
+# core: 8.x
+# version: VERSION
+engine: twig
 type: theme
-description: Drupal CAMP Kyiv website main theme
-package: DCKyiv
-core: 8.x
-base theme: stable
-libraries:
-- dckyiv/styles
-- dckyiv/global-header
-- dckyiv/global-menu
-- dckyiv/global-scripts
+base theme: radix
 
-ckeditor_stylesheets:
-- style/css/wysiwyg.css
 
 regions:
-  site_alert: 'Site alert'
-  top_header: 'Top header'
-  header: 'Header'
-  mobile_navigation: 'Mobile navigation'
-  breadcrumb: 'Breadcrumb'
-  help: 'Help'
-  content: 'Content'
-  footer_top: 'Footer Top'
-  footer: 'Footer'
-  footer_bottom: 'Footer Bottom'
-  hidden: 'Hidden Region'
+  navbar_branding: Navbar branding
+  navbar_left:  Navbar left
+  navbar_right: Navbar right
+  header: Header
+  content: Content
+  page_bottom: Page bottom
+  footer: Footer
+
+libraries:
+  - radix/style
+  - dckyiv/style
+
+libraries-override:
+  radix/bootstrap: false
+
+ckeditor_stylesheets:
+  - assets/css/dckyiv.style.css
+
+component-libraries:
+  dckyiv:
+    paths:
+      - ./src/components
+
+# Information added by Drupal.org packaging script on 2019-05-04
+version: '8.x-4.3'
+core: '8.x'
+project: 'radix'
+datestamp: 1556995394

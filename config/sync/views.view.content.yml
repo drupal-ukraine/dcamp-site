@@ -1,10 +1,13 @@
-uuid: 23b3b431-65e3-4278-875e-a1f5f53b55ab
+uuid: 292a0903-9deb-4aef-af3d-31176f85d68e
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
   module:
     - node
     - user
+    - yoast_seo
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: content
@@ -355,6 +358,12 @@ display:
           hide_alter_empty: true
           destination: true
           plugin_id: entity_operations
+        field_yoast_seo:
+          id: field_yoast_seo
+          table: node__field_yoast_seo
+          field: field_yoast_seo
+          type: yoastseo_formatter
+          plugin_id: field
       filters:
         title:
           id: title
@@ -572,7 +581,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_yoast_seo'
   page_1:
     display_options:
       path: admin/content/node
@@ -604,4 +614,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_yoast_seo'

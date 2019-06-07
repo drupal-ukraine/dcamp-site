@@ -1,0 +1,17 @@
+uuid: f10274ea-ec8d-44bb-a868-330d832175e6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2FbOhE1Qu6XcXvTQAhz5O6ii9pg7udXYRPYUhInUnXo
+name: widget_preview
+label: 'Widget preview'
+effects:
+  738faeb8-06f7-4840-be56-eeed7f79f659:
+    uuid: 738faeb8-06f7-4840-be56-eeed7f79f659
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: 250
+      upscale: false

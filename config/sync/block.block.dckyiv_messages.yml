@@ -1,0 +1,22 @@
+uuid: 69dc2573-3d09-4add-8a33-c6f638b71bf9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dckyiv
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: dckyiv_messages
+theme: dckyiv
+region: navbar_branding
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

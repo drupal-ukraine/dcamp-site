@@ -1,21 +1,10 @@
-styles:
+style:
+  version: VERSION
   css:
     theme:
-      style/css/styles.css: {}
-      'https://fonts.googleapis.com/css?family=Lato|Montserrat': { type: external }
-
-global-header:
+      assets/css/dckyiv.style.css: {}
   js:
-    js/dist/global-header.min.js: {minified: true}
-    js/dist/list-as-dropdown.min.js: {minified: true}
+    assets/js/dckyiv.script.js: {}
   dependencies:
-  - core/drupal
-  - core/jquery.once
-  - core/underscore
-
-global-menu:
-  js:
-    js/dist/global-menu.min.js: {minified: true}
-  dependencies:
-  - core/drupal
-  - core/jquery.once
+    - core/jquery
+    - core/drupal

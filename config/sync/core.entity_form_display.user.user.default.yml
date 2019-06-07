@@ -1,4 +1,4 @@
-uuid: b8557ede-fa4d-44e3-94c1-edaac48ba8a5
+uuid: 2241a6c1-6c9e-426a-818a-09487c111952
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,8 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
-    - image
+    - path
+    - svg_image
     - user
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -21,9 +22,20 @@ content:
   contact:
     weight: 5
     region: content
+  google_analytics:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   language:
     weight: 0
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   timezone:
     weight: 6
     region: content
@@ -35,4 +47,5 @@ content:
     third_party_settings: {  }
     weight: -1
     region: content
-hidden: {  }
+hidden:
+  langcode: true

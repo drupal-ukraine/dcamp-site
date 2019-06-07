@@ -1,43 +1,25 @@
 {
   "name": "dckyiv",
-  "version": "1.0.0",
-  "description": "AD-CO theme dependencies.",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "main": "gulpfile.js",
-  "engines": {
-    "node": "4.4.4"
-  },
-  "dependencies": {
-    "swiper": "^4.4.1",
-    "font-proxima-nova-scss": "^1.0.1"
+  "description": "A theme based on Radix.",
+  "private": true,
+  "scripts": {
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete",
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "bourbon": "^4.3.4",
-    "bourbon-neat": "^2.1",
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-eslint": "^2.0.0",
-    "gulp-icomoon-builder": "^1.0.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-npm-dist": "^1.0.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.1",
-    "gulp-sass-glob": "^1.0.6",
-    "gulp-sass-lint": "^1.2.0",
-    "sass-autoprefixer": "^1.0.1",
-    "gulp-sourcemaps": "^2.1.1",
-    "gulp-uglify": "^1.5.3",
-    "reset-css": "^4.0.1",
-    "support-for": "^1.0.6"
-  },
-  "assets": [
-    "formstone/dist/**/*"
-  ],
-  "author": "Anton Trokhymenko",
-  "license": "UNLICENSED"
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "cross-env": "^5.1",
+    "jquery": "^3.3.1",
+    "laravel-mix": "^4.0.15",
+    "popper.js": "^1.14.7",
+    "resolve-url-loader": "2.3.1",
+    "sass": "^1.17.3",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
+  }
 }

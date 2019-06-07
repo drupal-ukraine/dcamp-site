@@ -2,7 +2,7 @@
 
 ## DOOR3 Docksal package, v1.0
 ##
-## Run Gulp in the theme folder
+## Run Code Sniffer in the project folder
 ##
 ## Usage: fin phpcs <settings and path>
 

@@ -1,4 +1,4 @@
-uuid: e688df6a-012a-43f5-9a4d-b29cbb55f723
+uuid: 97c58253-0d03-4ee1-bbd5-5102596f871e
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_tags
+    - field.field.node.article.field_yoast_seo
     - node.type.article
   module:
     - user
@@ -25,4 +27,7 @@ hidden:
   body: true
   comment: true
   field_image: true
+  field_meta_tags: true
   field_tags: true
+  field_yoast_seo: true
+  langcode: true

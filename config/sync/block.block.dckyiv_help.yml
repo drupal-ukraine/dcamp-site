@@ -1,0 +1,22 @@
+uuid: 80bb5cb6-7cff-4ed0-9c52-d54d4652ade4
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - dckyiv
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: dckyiv_help
+theme: dckyiv
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

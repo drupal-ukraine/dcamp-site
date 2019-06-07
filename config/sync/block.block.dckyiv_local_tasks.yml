@@ -1,0 +1,22 @@
+uuid: 1c5a82a6-54da-4414-8b12-86834f328df8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dckyiv
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: dckyiv_local_tasks
+theme: dckyiv
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

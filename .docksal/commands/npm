@@ -1,0 +1,16 @@
+#!/bin/bash
+
+## DOOR3 Docksal package, v1.0
+##
+## Run npm run <command> in the theme folder
+##
+## Usage: fin npm <type>
+## dev - compile scss for the project
+## watch - compile scss and watch changes
+## production - compile scss to min css for the project
+
+THEME_PATH_INSIDE_CONTAINER="/var/www/${DOCROOT}/themes/custom/${THEME_NAME}"
+
+echo "Running npm task in theme ${THEME_PATH_INSIDE_CONTAINER}"
+
+fin exec "cd ${THEME_PATH_INSIDE_CONTAINER}; npm run $1"
