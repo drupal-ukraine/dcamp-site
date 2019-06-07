@@ -1,0 +1,23 @@
+uuid: 34a955c7-2428-4c98-bb5a-50196cc253a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_widgets
+    - node.type.custom_page
+_core:
+  default_config_hash: Lv1QdiPLs4La9cRcszMsqIEZikcuxGWfnZEjU0t0IYg
+id: node.custom_page.field_widgets
+field_name: field_widgets
+entity_type: node
+bundle: custom_page
+label: Widgets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:widget'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 32ece0e9-6715-41c2-8339-fc06eff5bef0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: n7z2k1RMASikLnh1_vbY2kODu4Dy5KeDSB7k0K6Dsq0
+name: 'Custom page'
+type: custom_page
+description: 'This is a custom page content type with widget system.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

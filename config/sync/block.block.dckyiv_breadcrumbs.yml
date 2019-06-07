@@ -1,0 +1,22 @@
+uuid: 5414e23b-492d-41f5-8238-89f1466fe3f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dckyiv
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: dckyiv_breadcrumbs
+theme: dckyiv
+region: navbar_branding
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

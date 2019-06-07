@@ -1,0 +1,20 @@
+uuid: 6ceb951b-2b2e-4d7c-b0c6-4d4bbd26bbeb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dckyiv
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: dckyiv_page_title
+theme: dckyiv
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

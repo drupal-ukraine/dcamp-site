@@ -1,0 +1,38 @@
+uuid: 196f26b3-dcc8-4ece-b5b6-7c6abed170a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.custom_page.body
+    - field.field.node.custom_page.field_widgets
+    - node.type.custom_page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: 9wNe35uzY3VT0bO4m473R8kbOYs3RAgmRuC6HlZGvYM
+id: node.custom_page.default
+targetEntityType: node
+bundle: custom_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_widgets:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
