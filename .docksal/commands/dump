@@ -20,7 +20,7 @@ echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
 #Show some art
 clear
-cat "${PROJECT_ROOT}/.docksal/assets/ascii.txt"
+cat "${PROJECT_ROOT}/.docksal/assets/dc-logo.txt"
 
 echo-yellow "Dump dbs..."
 fin db dump --db=default --db-user=user --db-password=user $PROJECT_ROOT/db/database.sql

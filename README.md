@@ -1,9 +1,18 @@
-# DCKyiv project
-Purpose of this project - website development for DrupalCampKyiv conference.
+# DC Ukraine project
+Purpose of this project - website development for Drupal Camp Ukraine conference.
 If you want to help us - feel free to take a ticket that you like from the project board (https://github.com/drupal-ukraine/dcamp-site/projects/1) and propose your changes using Pull Request here.
 
 
 ## Get Started
+
+Please read before start:
+
+[Project License >>>](./docs/LICENSE) 
+
+[Citizen Code of Conduct >>>](./docs/CODE_OF_CONDUCT.md)
+
+[Contributing >>>](./docs/CONTRIBUTING.md)
+
 
 ### Development stack
 
@@ -14,7 +23,7 @@ If you want to help us - feel free to take a ticket that you like from the proje
 `DOCKSAL_NFS_PATH` variable in `~/.Docksal/docksal.env` configuration file
 * Your docksal projects should be under docksal NFS path.
 
-### We use:
+### In the Project we use:
 - Drupal 8
 - Docksal (for develepment)
 - VirtualBox (you need if you work on WIndows or MacOS)
@@ -44,7 +53,7 @@ curl -fsSL https://get.docksal.io | bash
 fin project start
 
 # Rebuild your local instance with last content and changes.
-fin rebuild
+fin init
 
 # Wait till finish. First time it takes 10-15 minutes for downloading of the database. 
 ```
@@ -62,8 +71,8 @@ We use stage_file_proxy to proxy files from staging to local.
 **Examples:**
  
 * Cache Rebuild -         `$ fin drush cr`
-* Configuration export -  `$ fin drush cex` 
-* Configuration import -  `$ fin drush cim`
+* Configuration export -  `$ fin drush cex -y` 
+* Configuration import -  `$ fin drush cim -y`
 
 ### Gulp usage
 
@@ -73,12 +82,12 @@ We use stage_file_proxy to proxy files from staging to local.
 
 **Examples:**
  
-* Build scss -         `$ fin gulp build`
-* Run watch -          `$ fin gulp watch` 
+* Build scss -         `$ fin npm dev`
+* Run watch -          `$ fin npm watch` 
 
 # How to develop?
 
-After you run the "fin rebuild" and have your environment ready you need to do few things.
+After you run the "fin init" and have your environment ready you need to do few things.
 
 - Create a fork of [https://github.com/drupal-ukraine/dcamp-site](https://github.com/drupal-ukraine/dcamp-site).
 - In project folder edit `.git/config` file. Replace repo URL (remote origin) to your newly created fork.

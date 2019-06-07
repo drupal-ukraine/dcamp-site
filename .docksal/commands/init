@@ -4,9 +4,8 @@
 ##
 ## Usage: fin init
 
-# Paths and environment settings
-DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
-MAIN_THEME_PATH="${DOCROOT_PATH}/themes/custom/drupalcamp_v2"
+# Abort if anything fails
+set -e
 
 #-------------------------- Helper functions --------------------------------
 
@@ -23,6 +22,9 @@ echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
 echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
 #-------------------------- Execution --------------------------------
+#Show some art
+clear
+cat "${PROJECT_ROOT}/.docksal/assets/dс-logo.txt"
 
 # Stack initialization
 echo -e "${green_bg} Step 1 ${NC}${green} Initializing stack...${NC}"
@@ -31,50 +33,21 @@ if [[ $DOCKER_RUNNING == "true" ]]; then
 else
 	fin up
 fi
+
 echo "Waiting 10s for MySQL to initialize...";
 sleep 10
+
+# Importing Database
+if [[ "$1" != "new" ]]
+then
+    echo -e "${green_bg} Step 2 ${NC}${green} Importing Database...${NC}"
+    #fin pull db -y
+fi
 
 # Site initialization
 echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # This runs inside cli using http://docs.docksal.io/en/v1.4.0/fin/custom-commands/#executing-commands-inside-cli
-
-# Abort if anything fails
-set -e
-
-# Database import
-echo-yellow "Importing..."
-#
-fin db import $PROJECT_ROOT/db/database.sql --db=default --db-user=user --db-password=user
-echo
-
-# Running composer
-echo-yellow "Running composer install"
-cd $PROJECT_ROOT
-fin exec composer install
-echo-green "Done.\n"
-
-# Running Drush commands
-echo-yellow "Running drush cim, drush updb, drush cr"
-cd $DOCROOT_PATH
-fin drush updb -y
-fin drush cim -y
-fin drush cr
-fin drush en stage_file_proxy -y
-fin drush config-set stage_file_proxy.settings origin "https://drupalcampkyiv.org" -y
-fin drush uli
-echo-green "Done.\n"
-
-# Removing package-lock.json.
-echo-yellow "Removing package-lock.json..."
-rm -f $MAIN_THEME_PATH/package-lock.json
-echo-green "Done."
-echo
-
-# Building theme.
-echo-yellow "Running compile theme ${MAIN_THEME}"
-cd MAIN_THEME_PATH
-fin exec "npm install"
-fin exec "npm run dev"
+fin init-site $1
 
 echo -en "${green_bg} DONE! ${NC} "
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
