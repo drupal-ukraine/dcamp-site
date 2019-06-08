@@ -17,9 +17,9 @@ jobs:
       - checkout
       # Run other commands
       - run:
-          name: Other1 commands
+          name: Check memory
           command: |
-            build-exec 'pwd && cd ../../ && pwd'
+            TERM=xterm source build-env
             build-exec 'free -m'
       # Launch a sandbox on the sandbox server
       - run:
@@ -30,6 +30,7 @@ jobs:
           name: Other2 commands
           command: |
             DEBUG=1 source build-env
+            TERM=xterm source build-env
             build-exec 'fin drush status'
 
 workflows:
