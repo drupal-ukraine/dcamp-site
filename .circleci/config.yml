@@ -19,9 +19,8 @@ jobs:
       - run:
           name: Other1 commands
           command: |
-            build-exec 'pwd'
-            build-exec 'cd ../../'
-            build-exec 'pwd'
+            build-exec 'pwd && cd ../../ && pwd'
+            build-exec 'free -m'
       # Launch a sandbox on the sandbox server
       - run:
           name: Build sandbox
