@@ -20,6 +20,8 @@ jobs:
           name: Other1 commands
           command: |
             build-exec 'pwd'
+            build-exec 'cd ../../'
+            build-exec 'pwd'
       # Launch a sandbox on the sandbox server
       - run:
           name: Build sandbox
