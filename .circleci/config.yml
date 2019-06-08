@@ -20,7 +20,7 @@ jobs:
           name: Check memory
           command: |
             build-exec 'free -m'
-            build-exec 'cd ../ && rm -rf ./* && pwd && ls -ls'
+            build-exec 'cd ../ && ls -la'
       # Launch a sandbox on the sandbox server
       - run:
           name: Build sandbox
