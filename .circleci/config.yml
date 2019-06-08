@@ -15,13 +15,19 @@ jobs:
           command: echo 'source build-env' > $BASH_ENV
       # Code checkout in the build agent
       - checkout
+      -
+      # Run other commands
+      - run:
+          name: Other1 commands
+          command: |
+            build-exec 'pwd'
       # Launch a sandbox on the sandbox server
       - run:
           name: Build sandbox
           command: sandbox-init
       # Run other commands
       - run:
-          name: Other commands
+          name: Other2 commands
           command: |
             DEBUG=1 source build-env
             build-exec 'fin drush status'
