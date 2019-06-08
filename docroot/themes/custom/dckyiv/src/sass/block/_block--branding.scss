@@ -3,6 +3,8 @@
   .navbar-brand {
     color: $green;
     @extend .h5;
+    @extend .mb-0;
+    @extend .p-0;
     font-weight: 900;
 
     &:hover {
@@ -13,14 +15,14 @@
   .dc_logo {
     &--desktop {
       color: $white;
-      @extend .d-md-none;
-      @extend .d-lg-block;
+      @extend .d-none;
+      @extend .d-md-block;
       @extend .pr-1;
     }
     &--mobile {
       color: $white;
-      @extend .d-md-block;
-      @extend .d-lg-none;
+      @extend .d-block;
+      @extend .d-md-none;
       @extend .pr-1;
     }
   }

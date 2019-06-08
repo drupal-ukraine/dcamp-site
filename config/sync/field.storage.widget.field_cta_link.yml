@@ -1,0 +1,19 @@
+uuid: 79a9ef7e-cfd2-4868-8433-f0b6a8ea8326
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - widget_engine
+id: widget.field_cta_link
+field_name: field_cta_link
+entity_type: widget
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

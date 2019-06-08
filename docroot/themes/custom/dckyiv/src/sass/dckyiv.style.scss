@@ -42,6 +42,7 @@
 @import "base/functions";
 @import "base/helpers";
 @import "base/elements";
+@import "base/typography";
 
 // Layout
 // -----------------------------------------------------------------------------
@@ -60,3 +61,8 @@
 @import "block/block--branding";
 @import "content/node.page";
 @import "content/node.article";
+
+// Widget
+// -----------------------------------------------------------------------------
+@import "widget/hero-countdown";
+

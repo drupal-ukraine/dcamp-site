@@ -1,0 +1,26 @@
+uuid: 7115162f-86a8-4cd7-a2e8-ba4995918e53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.widget.html_widget.field_content
+    - widget_engine.widget_type.html_widget
+  module:
+    - text
+id: widget.html_widget.default
+targetEntityType: widget
+bundle: html_widget
+mode: default
+content:
+  field_content:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true
+  widget_preview: true

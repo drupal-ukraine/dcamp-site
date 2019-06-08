@@ -1,0 +1,19 @@
+uuid: bde69215-8812-4f8c-a1f7-61102b1bb6c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - widget_engine
+id: widget.field_content
+field_name: field_content
+entity_type: widget
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

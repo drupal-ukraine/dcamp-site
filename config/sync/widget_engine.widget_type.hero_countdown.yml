@@ -1,0 +1,6 @@
+uuid: a0823a39-38e9-406f-9a50-7ea84565866a
+langcode: en
+status: true
+dependencies: {  }
+id: hero_countdown
+label: 'Hero countdown'

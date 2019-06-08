@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "abb014e4ebff59dd7d0f2c4d04299c0c",
+    "content-hash": "83ead1da2be0bc95a0d798ba25606ea8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6684,6 +6684,11 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Doesn't work with entity_browser": "https://www.drupal.org/files/issues/2019-05-22/get_entity_browser_entity_from_form_state.patch",
+                    "Remove layout changes in admin": "https://www.drupal.org/files/issues/2019-06-08/3060383-remove-layout-changes-in-admin-3.patch",
+                    "Make widget edit form title more clear": "https://www.drupal.org/files/issues/2018-10-04/widget_engine-widget-entity-form-improvement-3004371-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

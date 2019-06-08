@@ -1,0 +1,6 @@
+uuid: d53943ac-d11f-46f6-a38e-ebe44bef7529
+langcode: en
+status: true
+dependencies: {  }
+id: html_widget
+label: 'HTML Widget'

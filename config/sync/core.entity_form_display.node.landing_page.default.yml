@@ -10,6 +10,7 @@ dependencies:
   module:
     - path
     - scheduler
+    - widget_engine
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -37,11 +38,18 @@ content:
   field_widgets:
     weight: 3
     settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      allow_duplicate: '1'
+      override_labels: false
+      collapsible: 0
+      collapsed: 0
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: widget_reference_ief_complex
     region: content
   langcode:
     type: language_select

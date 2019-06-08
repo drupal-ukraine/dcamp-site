@@ -1,0 +1,20 @@
+uuid: b1b8e2e8-cc5b-4266-8616-823f6367ff17
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - widget_engine
+id: widget.field_bg_countdown_image
+field_name: field_bg_countdown_image
+entity_type: widget
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

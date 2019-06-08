@@ -1,0 +1,76 @@
+uuid: fee83a1c-a627-454f-8915-5cdbfdeb6474
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.widget.hero_countdown.field_bg_countdown_image
+    - field.field.widget.hero_countdown.field_cta_link
+    - field.field.widget.hero_countdown.field_drupalcamp_date
+    - field.field.widget.hero_countdown.field_heading
+    - field.field.widget.hero_countdown.field_sub_heading
+    - widget_engine.widget_type.hero_countdown
+  module:
+    - datetime
+    - link
+    - media_library
+    - text
+id: widget.hero_countdown.default
+targetEntityType: widget
+bundle: hero_countdown
+mode: default
+content:
+  field_bg_countdown_image:
+    type: media_library_widget
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_cta_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_drupalcamp_date:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_sub_heading:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 6
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true
+  widget_preview: true

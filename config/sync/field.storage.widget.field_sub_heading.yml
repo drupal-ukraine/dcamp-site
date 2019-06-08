@@ -1,0 +1,20 @@
+uuid: 1da9f5c4-e2e0-4ad0-ae55-73afb34507f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - widget_engine
+id: widget.field_sub_heading
+field_name: field_sub_heading
+entity_type: widget
+type: text
+settings:
+  max_length: 1000
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

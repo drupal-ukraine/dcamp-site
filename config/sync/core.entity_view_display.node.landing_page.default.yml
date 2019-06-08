@@ -20,15 +20,16 @@ content:
     region: content
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_widgets:
     weight: 1
     label: hidden
     settings:
-      link: true
+      link: false
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   links:
     weight: 0

@@ -249,6 +249,11 @@
       },
       "drupal/conditional_fields": {
         "Error 'explode() expects parameter": "https://www.drupal.org/files/issues/2018-04-05/conditional_fields-explode_expects_string-2898893-11.patch"
+      },
+      "drupal/widget_engine": {
+        "Doesn't work with entity_browser": "https://www.drupal.org/files/issues/2019-05-22/get_entity_browser_entity_from_form_state.patch",
+        "Remove layout changes in admin": "https://www.drupal.org/files/issues/2019-06-08/3060383-remove-layout-changes-in-admin-3.patch",
+        "Make widget edit form title more clear": "https://www.drupal.org/files/issues/2018-10-04/widget_engine-widget-entity-form-improvement-3004371-3.patch"
       }
     }
   }

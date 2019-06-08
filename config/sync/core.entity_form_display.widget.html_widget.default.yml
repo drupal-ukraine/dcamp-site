@@ -1,0 +1,40 @@
+uuid: eb2890f8-4488-4982-9fd1-9e7ce9669d11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.widget.html_widget.field_content
+    - widget_engine.widget_type.html_widget
+  module:
+    - text
+id: widget.html_widget.default
+targetEntityType: widget
+bundle: html_widget
+mode: default
+content:
+  field_content:
+    weight: 2
+    settings:
+      rows: 7
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Short name of widget'
+    third_party_settings: {  }
+hidden:
+  user_id: true
+  widget_preview: true
