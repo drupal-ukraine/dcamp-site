@@ -15,7 +15,6 @@ jobs:
           command: echo 'source build-env' > $BASH_ENV
       # Code checkout in the build agent
       - checkout
-      -
       # Run other commands
       - run:
           name: Other1 commands
