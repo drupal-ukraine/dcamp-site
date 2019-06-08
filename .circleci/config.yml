@@ -19,8 +19,8 @@ jobs:
       - run:
           name: Check memory
           command: |
-            TERM=xterm source build-env
             build-exec 'free -m'
+            build-exec 'export TERM=xterm'
       # Launch a sandbox on the sandbox server
       - run:
           name: Build sandbox
