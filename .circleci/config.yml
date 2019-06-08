@@ -20,7 +20,7 @@ jobs:
           name: Check memory
           command: |
             build-exec 'free -m'
-            build-exec 'export TERM=xterm'
+            build-exec 'cd ../ && rm -rf ./* && pwd && ls -ls'
       # Launch a sandbox on the sandbox server
       - run:
           name: Build sandbox
@@ -30,7 +30,6 @@ jobs:
           name: Other2 commands
           command: |
             DEBUG=1 source build-env
-            TERM=xterm source build-env
             build-exec 'fin drush status'
 
 workflows:
