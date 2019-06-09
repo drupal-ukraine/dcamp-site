@@ -4,20 +4,6 @@
   justify-content: center;
   height: 55vh;
   min-height: 510px;
-  margin-top: -4.5rem;
-  padding-top: 5.4rem;
-
-  @include media-breakpoint-up(sm) {
-    padding-top: 6.75rem;
-  }
-
-  @include media-breakpoint-up(lg) {
-    padding-top: 4rem;
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding-top: 5rem;
-  }
 
   .transparent_header & {
     height: 100vh;

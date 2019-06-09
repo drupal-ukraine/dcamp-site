@@ -10467,23 +10467,6 @@ a:hover {
   justify-content: center;
   height: 55vh;
   min-height: 510px;
-  margin-top: -4.5rem;
-  padding-top: 5.4rem;
-}
-@media (min-width: 576px) {
-  .widget__countdown {
-    padding-top: 6.75rem;
-  }
-}
-@media (min-width: 992px) {
-  .widget__countdown {
-    padding-top: 4rem;
-  }
-}
-@media (min-width: 1200px) {
-  .widget__countdown {
-    padding-top: 5rem;
-  }
 }
 .transparent_header .widget__countdown {
   height: 100vh;
