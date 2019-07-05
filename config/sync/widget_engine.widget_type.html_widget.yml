@@ -3,4 +3,4 @@ langcode: en
 status: true
 dependencies: {  }
 id: html_widget
-label: 'HTML Widget'
+label: 'HTML Widget Block'

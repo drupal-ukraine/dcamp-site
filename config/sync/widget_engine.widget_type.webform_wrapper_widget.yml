@@ -1,0 +1,6 @@
+uuid: bc2afa07-a856-4d5d-b57d-d66290c93e14
+langcode: en
+status: true
+dependencies: {  }
+id: webform_wrapper_widget
+label: 'WebForm Wrapper Block'

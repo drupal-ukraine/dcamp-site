@@ -3,4 +3,4 @@ langcode: en
 status: true
 dependencies: {  }
 id: hero_countdown
-label: 'Hero countdown'
+label: 'Hero Countdown Block'

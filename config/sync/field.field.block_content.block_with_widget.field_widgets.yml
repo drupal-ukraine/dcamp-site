@@ -1,0 +1,30 @@
+uuid: f313bad9-1436-400b-b250-7f9fe5b8bb06
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_widget
+    - field.storage.block_content.field_widgets
+    - widget_engine.widget_type.html_widget
+    - widget_engine.widget_type.webform_wrapper_widget
+id: block_content.block_with_widget.field_widgets
+field_name: field_widgets
+entity_type: block_content
+bundle: block_with_widget
+label: Widgets
+description: 'Please select a widget'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:widget'
+  handler_settings:
+    target_bundles:
+      html_widget: html_widget
+      webform_wrapper_widget: webform_wrapper_widget
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: html_widget
+field_type: entity_reference

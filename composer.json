@@ -128,6 +128,7 @@
     "drupal/better_social_sharing_buttons": "^1.4",
     "drupal/captcha": "^1.0@beta",
     "drupal/chosen": "^2.7",
+    "drupal/ckwordcount": "^1.0",
     "drupal/color_field": "^2.0",
     "drupal/commerce": "2.11",
     "drupal/commerce_liqpay_gateway": "^1.0",
@@ -189,6 +190,7 @@
     "league/commonmark": "^0.11",
     "oomphinc/composer-installers-extender": "^1.1",
     "vlucas/phpdotenv": "^2.4",
+    "w8tcha/ckeditor-wordcount-plugin": "^1.17",
     "webflo/drupal-core-require-dev": "~8.7.0",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3",
@@ -220,6 +222,7 @@
         "type:drupal-core"
       ],
       "docroot/libraries/{$name}": [
+        "w8tcha/ckeditor-wordcount-plugin",
         "type:drupal-library",
         "type:bower-asset"
       ],
@@ -246,6 +249,10 @@
       },
       "drupal/content_moderation_notifications": {
         "Fixed To sending": "https://www.drupal.org/files/issues/2018-10-29/show-emails-3010067-1.patch"
+      },
+      "drupal/better_social_sharing_buttons": {
+        "Export settings to yml": "https://www.drupal.org/files/issues/2019-03-07/export_settings_to_yml-3031046-5.patch",
+        "After click screen jump to bottom": "https://www.drupal.org/files/issues/2019-06-04/3059376-after-click-screen-jump-to-bottom-2.patch"
       },
       "drupal/conditional_fields": {
         "Error 'explode() expects parameter": "https://www.drupal.org/files/issues/2018-04-05/conditional_fields-explode_expects_string-2898893-11.patch"

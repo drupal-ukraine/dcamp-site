@@ -48,7 +48,15 @@ echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
 # This runs inside cli using http://docs.docksal.io/en/v1.4.0/fin/custom-commands/#executing-commands-inside-cli
 fin init-site $1
 
+
+echo-yellow "Reset admin password ..."
+cd docroot && fin drush upwd --password="admin" "admin"
+
 echo -en "${green_bg} DONE! ${NC} "
-echo -e " Welcome to: ${yellow}http://${VIRTUAL_HOST}${NC}"
+echo -e " Welcome to: ${green}http://${VIRTUAL_HOST}${NC}"
+
+echo -e "Open ${yellow}http://${VIRTUAL_HOST}/user/login${NC} in your browser and login."
+echo -e "User:${yellow} admin ${NC}"
+echo -e "Pass:${yellow} admin ${NC}"
 
 #-------------------------- END: Execution --------------------------------

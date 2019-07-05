@@ -1,0 +1,31 @@
+uuid: ef8418d8-2e1c-4a67-b510-9552a32764f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - widget_engine.widget_type.teaser_wrapper_widget
+  module:
+    - user
+id: widget.teaser_wrapper_widget.default
+targetEntityType: widget
+bundle: teaser_wrapper_widget
+mode: default
+content:
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  widget_preview: true

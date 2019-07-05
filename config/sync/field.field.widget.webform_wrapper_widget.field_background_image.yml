@@ -1,0 +1,28 @@
+uuid: dabf18a4-b06d-45df-9936-875370743f17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.widget.field_background_image
+    - media.type.image
+    - widget_engine.widget_type.webform_wrapper_widget
+id: widget.webform_wrapper_widget.field_background_image
+field_name: field_background_image
+entity_type: widget
+bundle: webform_wrapper_widget
+label: 'Background Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

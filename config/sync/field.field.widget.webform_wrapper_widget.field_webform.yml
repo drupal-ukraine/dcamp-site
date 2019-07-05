@@ -1,0 +1,25 @@
+uuid: ab325163-a995-4e48-b22e-7a2a5eeb750e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.widget.field_webform
+    - widget_engine.widget_type.webform_wrapper_widget
+  module:
+    - webform
+id: widget.webform_wrapper_widget.field_webform
+field_name: field_webform
+entity_type: widget
+bundle: webform_wrapper_widget
+label: WebForm
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

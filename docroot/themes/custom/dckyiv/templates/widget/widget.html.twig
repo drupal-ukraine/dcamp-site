@@ -1,0 +1,32 @@
+{#
+/**
+ * @file widget.html.twig
+ * Default theme implementation to present Widget data.
+ *
+ * This template is used when viewing Widget pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_widget()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set classes = [
+  'widget',
+  content["field_content"]["#bundle"] ? 'widget--' ~ content["field_content"]["#bundle"]|clean_class,
+]|merge(utility_classes ? utility_classes : []) %}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="container">
+
+    {{ title_suffix }}
+    {% if content %}
+      {{- content -}}
+    {% endif %}
+
+  </div>
+</div>

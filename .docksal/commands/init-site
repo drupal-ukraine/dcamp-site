@@ -84,7 +84,7 @@ composer_install ()
 {
     echo -e "${green} Installing composer...${NC}"
 	cd $PROJECT_ROOT
-	php -d memory_limit=256M /usr/local/bin/composer install --no-ansi --no-dev --no-interaction --optimize-autoloader --no-progress --prefer-dist --ignore-platform-reqs
+	php -d memory_limit=-1 /usr/local/bin/composer update drupal/allowed_formats --no-ansi --no-dev --no-interaction --optimize-autoloader --no-progress --prefer-dist --ignore-platform-reqs
 }
 
 # Import configs and run update
@@ -133,5 +133,5 @@ else
 	theme_install
 fi
 
-post_install
+#post_install
 #-------------------------- END: Execution --------------------------------

@@ -1,0 +1,37 @@
+uuid: 4aafb5b4-6464-4797-b070-df1b5f2dc0f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - widget_engine.widget_type.teaser_wrapper_widget
+id: widget.teaser_wrapper_widget.default
+targetEntityType: widget
+bundle: teaser_wrapper_widget
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  widget_preview: true
