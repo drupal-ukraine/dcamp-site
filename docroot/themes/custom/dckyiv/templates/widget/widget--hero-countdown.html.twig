@@ -1,0 +1,35 @@
+{#
+/**
+ * @file widget.html.twig
+ * Default theme implementation to present Widget data.
+ *
+ * This template is used when viewing Widget pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_widget()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('dckyiv_core/countdown-widget') }}
+
+{% set bg_img = content.field_bg_countdown_image ? 'background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(' ~ file_url(content.field_bg_countdown_image|field_target_entity.field_media_image.entity.uri.value) ~ ');background-size:cover;' : '' %}
+{% set style = 'style=' ~ bg_img %}
+
+<div{{ attributes.addClass(['widget__countdown', 'jumbotron']) }} {{ style }}>
+  {{ title_suffix }}
+  {% if content %}
+    <div class="container text-center">
+      {{- content.field_heading|raw -}}
+      {{- content.field_sub_heading|raw -}}
+      <input type="hidden" id="countdown-clock-value" value="{{- content.field_drupalcamp_date|field_value -}}">
+      <div id="countdown-clock"></div>
+      {{- content.field_cta_link -}}
+    </div>
+  {% endif %}
+</div>

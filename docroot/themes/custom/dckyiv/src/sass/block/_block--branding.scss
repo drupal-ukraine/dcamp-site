@@ -1,0 +1,29 @@
+.block--dckyiv-branding {
+
+  .navbar-brand {
+    color: $green;
+    @extend .h5;
+    @extend .mb-0;
+    @extend .p-0;
+    font-weight: 900;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  .dc_logo {
+    &--desktop {
+      color: $white;
+      @extend .d-none;
+      @extend .d-md-block;
+      @extend .pr-1;
+    }
+    &--mobile {
+      color: $white;
+      @extend .d-block;
+      @extend .d-md-none;
+      @extend .pr-1;
+    }
+  }
+}

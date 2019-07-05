@@ -1,0 +1,69 @@
+uuid: 3f81d76d-102b-430d-8cec-8204fec5da43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.widget.hero_countdown.field_bg_countdown_image
+    - field.field.widget.hero_countdown.field_cta_link
+    - field.field.widget.hero_countdown.field_drupalcamp_date
+    - field.field.widget.hero_countdown.field_heading
+    - field.field.widget.hero_countdown.field_sub_heading
+    - widget_engine.widget_type.hero_countdown
+  module:
+    - datetime
+    - link
+    - text
+id: widget.hero_countdown.default
+targetEntityType: widget
+bundle: hero_countdown
+mode: default
+content:
+  field_bg_countdown_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_cta_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_drupalcamp_date:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: Europe/Kiev
+      date_format: 'Y/m/d H:i:s'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_heading:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sub_heading:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true
+  widget_preview: true

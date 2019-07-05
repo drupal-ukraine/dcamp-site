@@ -1,0 +1,23 @@
+uuid: dad7b2c2-3e7b-4697-b508-da9a7ae182d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_widget
+    - field.field.block_content.block_with_widget.field_widgets
+id: block_content.block_with_widget.default
+targetEntityType: block_content
+bundle: block_with_widget
+mode: default
+content:
+  field_widgets:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  langcode: true

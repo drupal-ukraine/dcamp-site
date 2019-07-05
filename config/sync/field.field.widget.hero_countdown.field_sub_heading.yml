@@ -1,0 +1,21 @@
+uuid: 5a5779b9-01ed-488e-9826-69565216017d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.widget.field_sub_heading
+    - widget_engine.widget_type.hero_countdown
+  module:
+    - text
+id: widget.hero_countdown.field_sub_heading
+field_name: field_sub_heading
+entity_type: widget
+bundle: hero_countdown
+label: 'Sub Heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,11 @@
+uuid: beef0b89-0985-4385-8968-c2ed24eff570
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.drupalcamp_year
+id: taxonomy_term.drupalcamp_year
+target_entity_type_id: taxonomy_term
+target_bundle: drupalcamp_year
+default_langcode: site_default
+language_alterable: false

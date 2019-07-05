@@ -34,14 +34,37 @@ $grays: map-merge(
     $grays
 );
 
-$blue:    #007bff !default;
+// Greyscale
+$color-gallery: #EBEBEB;
+$color-silver: #CCCCCC;
+$color-nobel: #B7B7B7;
+$color-storm-gray: #787A83;
+$color-tuna: #3A3A44;
+$color-mine-shaft: #222222;
+$color-ebony-clay: #1E2530;
+$color-shark: #1E2228;
+
+
+// Rainbow
+$color-bali-hai: #93A6B9;
+$color-fountain-blue: #65A3BD;
+$color-chambray: #3B5998;
+$color-cerulean-blue: #285DAC;
+$color-fern: #65BD6A;
+$color-chestnut-rose: #CC5447;
+$color-rodeo-dust: #C7B299;
+$color-golden-grass: #CCA81A;
+$color-mango-tango: #E28000;
+$color-wisteria: #A365BD;
+
+$blue:    $color-cerulean-blue !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
+$red:     $color-chestnut-rose !default;
+$orange:  $color-mango-tango !default;
+$yellow:  $color-golden-grass !default;
+$green:   $color-fern !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
@@ -107,7 +130,7 @@ $yiq-text-light:            $white !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                                true !default;
-$enable-rounded:                              true !default;
+$enable-rounded:                              false !default;
 $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
@@ -137,7 +160,9 @@ $spacers: map-merge(
       2: ($spacer * .5),
       3: $spacer,
       4: ($spacer * 1.5),
-      5: ($spacer * 3)
+      5: ($spacer * 2),
+      6: ($spacer * 2.5),
+      7: ($spacer * 3)
     ),
     $spacers
 );
@@ -272,7 +297,9 @@ $embed-responsive-aspect-ratios: join(
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-base:            $font-proxima-nova-regular !default;
+$font-family-bold:            $font-proxima-nova-bold !default;
+$font-family-light:           $font-proxima-nova-light !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
@@ -301,10 +328,13 @@ $headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
-$display1-size:               6rem !default;
-$display2-size:               5.5rem !default;
-$display3-size:               4.5rem !default;
-$display4-size:               3.5rem !default;
+$display1-size:               8rem !default;
+$display2-size:               7rem !default;
+$display3-size:               5.5rem !default;
+$display4-size:               5rem !default;
+$display5-size:               4.5rem !default;
+$display6-size:               4rem !default;
+$display7-size:               3.5rem !default;
 
 $display1-weight:             300 !default;
 $display2-weight:             300 !default;

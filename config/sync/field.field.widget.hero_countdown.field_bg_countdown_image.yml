@@ -1,0 +1,29 @@
+uuid: a8135d59-bca5-4ea9-ae3b-103a05ea9646
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.widget.field_bg_countdown_image
+    - media.type.image
+    - widget_engine.widget_type.hero_countdown
+id: widget.hero_countdown.field_bg_countdown_image
+field_name: field_bg_countdown_image
+entity_type: widget
+bundle: hero_countdown
+label: 'BG Countdown Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: mid
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

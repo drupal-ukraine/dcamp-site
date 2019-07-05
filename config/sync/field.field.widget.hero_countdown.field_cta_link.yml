@@ -1,0 +1,23 @@
+uuid: 346ab494-d8ef-446e-be7e-39de137e19aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.widget.field_cta_link
+    - widget_engine.widget_type.hero_countdown
+  module:
+    - link
+id: widget.hero_countdown.field_cta_link
+field_name: field_cta_link
+entity_type: widget
+bundle: hero_countdown
+label: 'CTA Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

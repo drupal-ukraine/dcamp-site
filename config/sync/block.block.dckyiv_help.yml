@@ -10,8 +10,8 @@ _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: dckyiv_help
 theme: dckyiv
-region: content
-weight: -30
+region: header
+weight: -6
 provider: null
 plugin: help_block
 settings:

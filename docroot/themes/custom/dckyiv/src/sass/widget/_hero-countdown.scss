@@ -1,0 +1,152 @@
+.widget__countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+  min-height: 510px;
+
+  .transparent_header & {
+    height: 100vh;
+  }
+}
+
+.hero-countdown {
+  &__field-heading,
+  &__field-sub-heading {
+    @extend .text-center;
+    @extend .font-weight-light;
+    text-shadow: -1px -1px 1px rgba($white, .1), 1px 1px 1px rgba($black, .3);
+  }
+
+  &__field-heading {
+    @include font-size($h2-font-size);
+    @extend .text-uppercase;
+    @extend .text-white;
+    @extend .pb-4;
+
+    span {
+      @extend .text-success;
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include font-size($display7-size);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font-size($display4-size);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font-size($display3-size);
+    }
+  }
+
+  &__field-sub-heading {
+    @extend .h3;
+    @extend .text-white;
+    @extend .pb-4;
+
+    @include media-breakpoint-up(sm) {
+      @include font-size($h1-font-size);
+      padding-bottom: 3rem !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 2rem !important;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 3rem !important;
+    }
+  }
+
+  &__field-cta-link {
+    @extend .text-center;
+
+    a {
+      @extend .btn;
+      @extend .btn-success;
+      @extend .btn-lg;
+      @extend .text-white;
+      @extend .pt-2;
+      @extend .pb-2;
+      @extend .pl-6;
+      @extend .pr-6;
+      @include font-size($font-size-sm);
+
+      box-shadow: -1px -1px 1px rgba($white, .1), 1px 1px 1px rgba($black, .1);
+
+      @include media-breakpoint-up(sm) {
+        @include font-size($font-size-lg);
+      }
+    }
+  }
+}
+
+#countdown-clock {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .pb-6;
+
+  & > div {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+
+    span {
+      @include font-size($h1-font-size);
+      @extend .text-white;
+      @extend .font-weight-light;
+      text-shadow: -1px -1px 1px rgba($white, .1), 1px 1px 1px rgba($black, .3);
+
+      @include media-breakpoint-up(sm) {
+        @include font-size($display5-size);
+      }
+
+      @include media-breakpoint-up(md) {
+        @include font-size($display3-size);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include font-size($display1-size);
+      }
+
+      &:last-child {
+        @include font-size($h6-font-size);
+
+        @include media-breakpoint-up(sm) {
+          @include font-size($h3-font-size);
+        }
+      }
+    }
+  }
+
+  & > .time-dots span {
+    &:last-child {
+      @include font-size($h4-font-size);
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      padding-bottom: 1.75rem !important;
+
+      @include media-breakpoint-up(sm) {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        padding-bottom: 2.5rem !important;
+        @include font-size($display6-size);
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        padding-bottom: 2.8rem !important;
+        @include font-size($display4-size);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include font-size($display2-size);
+        padding-bottom: 3rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+uuid: 703606c4-acf5-429e-95da-f95c1cb442d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.widget.field_content
+    - widget_engine.widget_type.html_widget
+  module:
+    - text
+id: widget.html_widget.field_content
+field_name: field_content
+entity_type: widget
+bundle: html_widget
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

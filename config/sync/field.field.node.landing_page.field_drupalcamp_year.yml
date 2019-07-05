@@ -1,0 +1,29 @@
+uuid: bb7ca569-1d3b-4f2a-a2fe-399b29ffff8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_drupalcamp_year
+    - node.type.landing_page
+    - taxonomy.vocabulary.drupalcamp_year
+id: node.landing_page.field_drupalcamp_year
+field_name: field_drupalcamp_year
+entity_type: node
+bundle: landing_page
+label: 'DrupalCamp Year'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      drupalcamp_year: drupalcamp_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

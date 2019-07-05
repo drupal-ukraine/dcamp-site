@@ -1,6 +1,7 @@
 # Ignore paths that contain user-generated content.
 /docroot/sites/*/files
 /docroot/sites/*/private
+/docroot/themes/custom/*/assets/css/fonts
 files/*
 
 # Avoid accidental modification of pantheon.upstream.yml in sites

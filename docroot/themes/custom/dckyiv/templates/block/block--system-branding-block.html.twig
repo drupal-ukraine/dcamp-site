@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Template for the branding block.
+ */
+#}
+{% embed '@radix/block/block.twig' with {
+  html_tag: 'div',
+} %}
+
+  {% block content %}
+    {% include '@dckyiv/navbar/navbar-brand.twig' with {
+      text: site_slogan,
+      path: path('<front>'),
+    } %}
+  {% endblock %}
+
+{% endembed %}

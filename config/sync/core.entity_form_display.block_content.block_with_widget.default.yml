@@ -1,0 +1,39 @@
+uuid: 4540446a-bee9-4a48-96bb-3808311298d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_widget
+    - field.field.block_content.block_with_widget.field_widgets
+  module:
+    - widget_engine
+id: block_content.block_with_widget.default
+targetEntityType: block_content
+bundle: block_with_widget
+mode: default
+content:
+  field_widgets:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: widget_reference_ief_complex
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  info: true

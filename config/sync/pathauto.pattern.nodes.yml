@@ -1,0 +1,25 @@
+uuid: 9726c1d8-d768-4188-86fe-b379dff574fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: nodes
+label: Nodes
+type: 'canonical_entities:node'
+pattern: '[node:field_drupalcamp_year]/[node:title]'
+selection_criteria:
+  2a72956e-f6ed-4119-afef-1a6ca5e8777f:
+    id: node_type
+    bundles:
+      article: article
+      custom_page: custom_page
+      landing_page: landing_page
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2a72956e-f6ed-4119-afef-1a6ca5e8777f
+selection_logic: and
+weight: -5
+relationships: {  }

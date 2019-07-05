@@ -1,0 +1,48 @@
+uuid: 3da5ff17-b039-432b-bd56-214a1875ceed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.widget.webform_wrapper_widget.field_background_image
+    - field.field.widget.webform_wrapper_widget.field_webform
+    - widget_engine.widget_type.webform_wrapper_widget
+  module:
+    - media_library
+    - webform
+id: widget.webform_wrapper_widget.default
+targetEntityType: widget
+bundle: webform_wrapper_widget
+mode: default
+content:
+  field_background_image:
+    type: media_library_widget
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_webform:
+    weight: 2
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true
+  widget_preview: true

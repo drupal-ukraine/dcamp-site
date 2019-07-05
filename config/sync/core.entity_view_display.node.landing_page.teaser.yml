@@ -1,0 +1,25 @@
+uuid: 838ffaed-1322-40ab-8ca1-c51345f23c40
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.field_drupalcamp_year
+    - field.field.node.landing_page.field_widgets
+    - node.type.landing_page
+  module:
+    - user
+id: node.landing_page.teaser
+targetEntityType: node
+bundle: landing_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_drupalcamp_year: true
+  field_widgets: true
+  langcode: true

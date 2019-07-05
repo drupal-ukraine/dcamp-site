@@ -1,0 +1,6 @@
+uuid: e3a355e1-4ccc-4260-8ec8-2bf7a5ef5de3
+langcode: en
+status: true
+dependencies: {  }
+id: teaser_wrapper_widget
+label: 'Teaser Wrapper Block'

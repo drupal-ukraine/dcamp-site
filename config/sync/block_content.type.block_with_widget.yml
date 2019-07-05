@@ -1,0 +1,8 @@
+uuid: d8567ae4-67fd-425b-badc-6ae1affb57cd
+langcode: en
+status: true
+dependencies: {  }
+id: block_with_widget
+label: 'Block with WIdget'
+revision: 1
+description: 'This block includes Widget blocks and items.'

@@ -1,0 +1,20 @@
+uuid: 7929c520-0720-4796-aefd-893be81420f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - widget_engine
+id: block_content.field_widgets
+field_name: field_widgets
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: widget
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 67a5cb2a-be52-4575-9c74-f3eb118141ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: vocabularies
+label: Vocabularies
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:name]'
+selection_criteria:
+  bab11ffa-e092-4219-8d0b-ea1ed408b1c0:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      drupalcamp_year: drupalcamp_year
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: bab11ffa-e092-4219-8d0b-ea1ed408b1c0
+selection_logic: and
+weight: -5
+relationships: {  }

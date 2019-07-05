@@ -13,9 +13,13 @@ p {
 // Links
 // -----------------------------------------------------------------------------
 a {
+  color: $color-fern;
+  transition: color .2s;
+  outline: none;
+  text-decoration: none;
 
   @include hover {
-
+    color: darken( $color-fern, 10% );
   }
 }
 
@@ -53,4 +57,8 @@ strong {
 
 small {
 
+}
+
+.bg-tuna {
+  background-color: $color-tuna;
 }

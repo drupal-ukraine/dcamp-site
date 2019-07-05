@@ -1,0 +1,23 @@
+uuid: c9412f70-2e29-44ae-ae59-ddcd4f8d4e34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_transparent_header
+    - node.type.landing_page
+id: node.landing_page.field_transparent_header
+field_name: field_transparent_header
+entity_type: node
+bundle: landing_page
+label: 'Transparent header'
+description: 'If it checked the header section will be transparent.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

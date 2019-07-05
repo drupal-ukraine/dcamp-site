@@ -1,0 +1,8 @@
+uuid: 90ab1848-7eeb-40a0-801b-dfe8456854e6
+langcode: en
+status: true
+dependencies: {  }
+id: eu_short
+label: 'EU Short'
+locked: false
+pattern: d/m/Y
