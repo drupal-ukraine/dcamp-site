@@ -3,3 +3,5 @@ type: module
 description: Main functionality.
 core: 8.x
 package: dckyiv
+dependencies:
+  - drupal:content_moderation

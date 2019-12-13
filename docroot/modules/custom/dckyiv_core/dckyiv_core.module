@@ -6,6 +6,10 @@
  */
 
 use Drupal\dckyiv_core\PreprocessTransparentMenu;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+use Drupal\dckyiv_core\Event\NodePresentationSaveEvent;
+use Drupal\content_moderation\Entity\ContentModerationState;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -30,15 +34,13 @@ function dckyiv_core_entity_type_alter(array &$entity_types) {
 
 /**
  * Implements hook_form_alter().
+ *
+ * Create alter form by form_id.
  */
 function dckyiv_core_form_alter(&$form, &$form_state, $form_id) {
-  // Override revision form in presentation form.
-  if ($form_id === 'node_presentation_form') {
-    $form['revision_information']['#title'] = t('Message to org team:');
-    $form['revision_log']['widget'][0]['value']['#title'] = FALSE;
-    $form['revision_log']['widget'][0]['value']['#description'] = t('If you have any comments to org team, write them here.');
-
-    $form['actions']['preview']['#access'] = FALSE;
+  $function = __FUNCTION__ . "__{$form_id}";
+  if (function_exists($function)) {
+    $function($form, $form_state, $form_id);
   }
 }
 
@@ -47,4 +49,91 @@ function dckyiv_core_form_alter(&$form, &$form_state, $form_id) {
  */
 function dckyiv_core_toolbar_alter(&$items) {
   $items['administration']['#attached']['library'][] = 'dckyiv_core/admin_menu_icons';
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function dckyiv_core_form_alter__node_presentation_form(&$form, &$form_state, $form_id) {
+  $form['revision_information']['#title'] = t('Message to org team:');
+  $form['revision_log']['widget'][0]['value']['#title'] = FALSE;
+  $form['revision_log']['widget'][0]['value']['#description'] = t('If you have any comments to org team, write them here.');
+
+  $form['actions']['sent_to_review'] = $form['actions']['submit'];
+  $form['actions']['submit']['#submit'][] = 'node_presentation_save_as_draft';
+  $form['actions']['submit']['#value'] = t('Save as Draft');
+  $form['actions']['sent_to_review']['#submit'][] = 'node_presentation_sent_to_review';
+  $form['actions']['sent_to_review']['#value'] = t('Sent to Review');
+}
+
+/**
+ * Form submission handler for content moderation state create.
+ *
+ * @param array $form
+ *   An associative array containing the structure of the form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The current state of the form.
+ */
+function node_presentation_sent_to_review(&$form, FormStateInterface $form_state) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $form_state->getFormObject()->getEntity();
+  create_content_moderation_state($node, 'sent_to_review');
+}
+
+/**
+ * Form submission handler for content moderation state create.
+ *
+ * @param array $form
+ *   An associative array containing the structure of the form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The current state of the form.
+ */
+function node_presentation_save_as_draft(&$form, FormStateInterface $form_state) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $form_state->getFormObject()->getEntity();
+  create_content_moderation_state($node, 'draft');
+}
+
+/**
+ * Constructs a new 'ContentModerationState' entity object and saving it.
+ *
+ * @param \Drupal\node\NodeInterface $node
+ *   The current node presentation object.
+ * @param string $moderation_state_id
+ *   The moderation state ID.
+ */
+function create_content_moderation_state(NodeInterface $node, string $moderation_state_id) {
+  /** @var \Drupal\content_moderation\StateTransitionValidationInterface $validator */
+  $validator = \Drupal::service('content_moderation.state_transition_validation');
+  $current_user = \Drupal::currentUser();
+  $transitions = $validator->getValidTransitions($node, $current_user);
+
+  $list = [];
+  foreach ($transitions as $transition) {
+    $list[] = $transition->to()->id();
+  }
+
+  if (!in_array($moderation_state_id, $list)) {
+    return;
+  }
+
+  /** @var \Drupal\content_moderation\ModerationInformationInterface $content_moderation_info */
+  $content_moderation_info = \Drupal::service('content_moderation.moderation_information');
+  $workflow = $content_moderation_info->getWorkflowForEntity($node);
+
+  $entity = ContentModerationState::create([
+    'uid' => $current_user->id(),
+    'workflow' => $workflow,
+    'moderation_state' => $moderation_state_id,
+    'content_entity_type_id' => $node->getEntityTypeId(),
+    'content_entity_id' => $node->id(),
+    'content_entity_revision_id' => $node->getRevisionId(),
+  ]);
+
+  try {
+    $entity->save();
+  }
+  catch (Exception $e) {
+    Drupal::logger('node_presentation_save')->error($e->getMessage());
+  }
 }

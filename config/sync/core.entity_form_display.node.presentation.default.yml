@@ -20,9 +20,7 @@ dependencies:
     - field.field.node.presentation.field_yoast_seo
     - image.style.thumbnail
     - node.type.presentation
-    - workflows.workflow.presentation
   module:
-    - content_moderation
     - field_group
     - link
     - paragraphs
@@ -72,7 +70,7 @@ third_party_settings:
       children:
         - field_page_content
       parent_name: ''
-      weight: 14
+      weight: 13
       format_type: html_element
       format_settings:
         id: ''
@@ -94,7 +92,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -123,7 +121,7 @@ content:
     type: link_default
     region: content
   field_image:
-    weight: 13
+    weight: 12
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -212,20 +210,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 3
+    weight: 2
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 2
-    settings: {  }
-    region: content
-    third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -233,12 +225,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 5
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -246,14 +238,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -265,13 +257,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -280,10 +272,11 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_meta_tags: true
   field_yoast_seo: true
+  moderation_state: true
