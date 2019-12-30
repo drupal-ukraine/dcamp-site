@@ -512,6 +512,7 @@ display:
           entity_field: order_id
           plugin_id: numeric
       display_extenders: {  }
+      css_class: commerce-cart-form
     cache_metadata:
       max-age: -1
       contexts:

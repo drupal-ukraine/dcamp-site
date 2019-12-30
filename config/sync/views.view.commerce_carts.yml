@@ -745,6 +745,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: false
+      css_class: commerce-carts
     cache_metadata:
       contexts:
         - 'languages:language_content'
