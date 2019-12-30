@@ -1,15 +1,15 @@
 .paragraph--type--camp-products {
   padding: 0 0 30px;
+}
 
-  .camp-tickets-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.camp-tickets-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    @include mq($bp768) {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+  @include mq($bp768) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .views-row {
@@ -49,7 +49,7 @@
     }
   }
 
-  .contextual-region .views-row:nth-child(4) {
+  &.contextual-region .views-row:nth-child(4) {
     @include mq($bp1024) {
       margin-top: 0;
     }
