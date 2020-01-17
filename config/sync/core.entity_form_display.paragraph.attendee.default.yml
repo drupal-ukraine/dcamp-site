@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.attendee.field_attended
     - field.field.paragraph.attendee.field_attendee_email
+    - field.field.paragraph.attendee.field_attendee_email_sent
     - field.field.paragraph.attendee.field_attendee_firstname
     - field.field.paragraph.attendee.field_attendee_secondname
     - field.field.paragraph.attendee.field_attendee_status
@@ -22,6 +23,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: email_default
+    region: content
+  field_attendee_email_sent:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_timestamp
     region: content
   field_attendee_firstname:
     weight: 1

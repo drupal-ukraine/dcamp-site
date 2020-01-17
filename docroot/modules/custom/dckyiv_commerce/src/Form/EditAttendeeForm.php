@@ -14,7 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Form controller for profile forms.
  */
 class EditAttendeeForm extends ContentEntityForm {
-  
+
   /**
    * Constructs a ContentEntityForm object.
    *
@@ -35,8 +35,8 @@ class EditAttendeeForm extends ContentEntityForm {
     parent::__construct($entity_repository, $entity_type_bundle_info, $time);
     $this->routeMatch = $route_match;
   }
-  
-  
+
+
   /**
    * {@inheritdoc}
    */
@@ -48,7 +48,7 @@ class EditAttendeeForm extends ContentEntityForm {
       $container->get('datetime.time')
     );
   }
-  
+
   /**
    * {@inheritdoc}
    */
@@ -63,7 +63,7 @@ class EditAttendeeForm extends ContentEntityForm {
     if (!$paragraph->field_attendee_email->isEmpty()) {
       $attendee_info_default = 'email';
     }
-    $form['attende_info'] = [
+/*    $form['attende_info'] = [
       '#type' => 'radios',
       '#options' => [
         'name' => t('Name'),
@@ -75,33 +75,33 @@ class EditAttendeeForm extends ContentEntityForm {
       '#prefix' => '<div class="form-item--inline attendee-info-radio">',
       '#suffix' => '</div>',
     ];
-  
     $form['field_attendee_email']['#states'] = [
       'visible' => [
         ':input[name="attende_info"]' => ['value' => 'email'],
       ],
     ];
-  
+
     $form['field_site_user']['#states'] = [
       'visible' => [
         ':input[name="attende_info"]' => ['value' => 'user'],
       ],
     ];
-  
-  
+
+
     $form['field_attendee_firstname']['#states'] = [
       'visible' => [
         ':input[name="attende_info"]' => ['value' => 'name'],
       ],
     ];
-  
-  
+
+
     $form['field_attendee_secondname']['#states'] = [
       'visible' => [
         ':input[name="attende_info"]' => ['value' => 'name'],
       ],
     ];
-  
+  */
+
     $form['field_attendee_status']['#access'] = FALSE;
     $form_state->set('commerce_order_item', $this->routeMatch->getParameter('commerce_order_item'));
     return $form;

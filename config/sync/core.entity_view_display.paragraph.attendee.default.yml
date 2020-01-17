@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.attendee.field_attended
     - field.field.paragraph.attendee.field_attendee_email
+    - field.field.paragraph.attendee.field_attendee_email_sent
     - field.field.paragraph.attendee.field_attendee_firstname
     - field.field.paragraph.attendee.field_attendee_secondname
     - field.field.paragraph.attendee.field_attendee_status
@@ -48,4 +49,5 @@ content:
     region: content
 hidden:
   field_attended: true
+  field_attendee_email_sent: true
   field_attendee_status: true

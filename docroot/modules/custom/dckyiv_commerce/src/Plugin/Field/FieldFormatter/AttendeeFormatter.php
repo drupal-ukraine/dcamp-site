@@ -64,23 +64,63 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
         }
 
         $elements[$delta]['edit-attendee'] = [
-          '#type' => 'link',
+          '#type' => 'container',
           '#weight' => 10,
-          '#title' => $empty ? $this->t('Add info') : $this->t('edit'),
-          '#url' => Url::fromRoute('dckyiv_commerce.attendee_edit', [
-            'user' => $commerce_order_item->getOrder()->getCustomerId(),
-            'commerce_order_item' => $commerce_order_item->id(),
-            'attendee_paragraph' => $entity->id(),
-          ], [
-            'query' => [
-              'destination' => \Drupal::service('path.current')->getPath(),
-            ],
-            'attributes' => [
-              'class' => ['use-ajax'],
-              'data-dialog-type'=> 'modal',
-            ],
-          ]),
+          'link' => [
+            '#type' => 'link',
+            '#weight' => 10,
+            '#title' => $empty ? $this->t('Add info') : $this->t('edit'),
+            '#url' => Url::fromRoute('dckyiv_commerce.attendee_edit', [
+              'user' => $commerce_order_item->getOrder()->getCustomerId(),
+              'commerce_order_item' => $commerce_order_item->id(),
+              'attendee_paragraph' => $entity->id(),
+            ], [
+              'query' => [
+                'destination' => \Drupal::service('path.current')->getPath(),
+              ],
+              'attributes' => [
+                'class' => ['use-ajax'],
+                'data-dialog-type'=> 'modal',
+              ],
+            ]),
+          ],
         ];
+
+        if (!$entity->get('field_attendee_email')->isEmpty()) {
+          $elements[$delta]['send-email-attendee'] = [
+            '#type' => 'container',
+            '#weight' => 10,
+          ];
+          if (!$entity->get('field_attendee_email_sent')->isEmpty()
+          && $ticket_sent = $entity->get('field_attendee_email_sent')->value) {
+            $elements[$delta]['send-email-attendee']['sent-info'] = [
+              '#type' => 'container',
+              'markup' => [
+                '#markup' => $this->t('Ticket sent @time', [
+                  '@time' => \Drupal::service('date.formatter')->format($ticket_sent, 'short'),
+                ]),
+              ],
+            ];
+          }
+          $elements[$delta]['send-email-attendee']['link'] = [
+            '#type' => 'link',
+            '#weight' => 10,
+            '#title' => isset($ticket_sent) ? $this->t('resend ticket') : $this->t('send ticket'),
+            '#url' => Url::fromRoute('dckyiv_commerce.attendee_send_ticket', [
+              'user' => $commerce_order_item->getOrder()->getCustomerId(),
+              'commerce_order_item' => $commerce_order_item->id(),
+              'attendee_paragraph' => $entity->id(),
+            ], [
+              'query' => [
+                'destination' => \Drupal::service('path.current')->getPath(),
+              ],
+              'attributes' => [
+                'class' => ['use-ajax'],
+                'data-dialog-type'=> 'modal',
+              ],
+            ]),
+          ];
+        }
       }
     }
 

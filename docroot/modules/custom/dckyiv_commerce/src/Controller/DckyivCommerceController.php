@@ -6,6 +6,9 @@ use Drupal\commerce_order\Entity\OrderItemInterface;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityFormBuilderInterface;
+use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Core\Render\RenderContext;
+use Drupal\Core\Render\Renderer;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\user\UserInterface;
 use Drupal\views\Views;
@@ -32,17 +35,34 @@ class DckyivCommerceController extends ControllerBase {
   protected $entityFieldManager;
 
   /**
+   * The mail manager service.
+   *
+   * @var \Drupal\Core\Mail\MailManagerInterface
+   */
+  protected $mailManager;
+
+  /**
+   * The renderer.
+   *
+   * @var \Drupal\Core\Render\RendererInterface
+   */
+  protected $renderer;
+
+  /**
    * Constructs a DckyivCommerceController object.
    *
    * @param \Drupal\Core\Entity\EntityFormBuilderInterface $entity_form_builder
    * The entity form builder.
    * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
    * The entity field manager.
+   * @param \Drupal\Core\Mail\MailManagerInterface $mail_manager
+   * The mail manager service.
    */
-  public function __construct(EntityFormBuilderInterface $entity_form_builder, EntityFieldManagerInterface $entity_field_manager) {
+  public function __construct(EntityFormBuilderInterface $entity_form_builder, EntityFieldManagerInterface $entity_field_manager, MailManagerInterface $mail_manager, Renderer $renderer) {
     $this->entityFormBuilder = $entity_form_builder;
     $this->entityFieldManager = $entity_field_manager;
-
+    $this->mailManager = $mail_manager;
+    $this->renderer = $renderer;
   }
 
   /**
@@ -51,7 +71,9 @@ class DckyivCommerceController extends ControllerBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('entity.form_builder'),
-      $container->get('entity_field.manager')
+      $container->get('entity_field.manager'),
+      $container->get('plugin.manager.mail'),
+      $container->get('renderer')
     );
   }
 
@@ -176,6 +198,55 @@ class DckyivCommerceController extends ControllerBase {
     ];
 
     return $build;
+  }
+
+  /**
+   * Attendee send ticket callback page.
+   *
+   * @param UserInterface $user
+   * @param OrderItemInterface $commerce_order_item
+   * @param ParagraphInterface $attendee_paragraph
+   *
+   * @return array
+   */
+  public function sendTicket(UserInterface $user, OrderItemInterface $commerce_order_item, ParagraphInterface $attendee_paragraph) {
+    $to = $attendee_paragraph->get('field_attendee_email')->value;
+    if (empty($to)) {
+      // @TODO show order info
+      $message = $this->t('Mail was not sent to attendee. Empty recipient address');
+      $this->getLogger('dckyiv_commerce')->warning($message);
+      $this->messenger()->addWarning($message);
+      return [
+        '#markup' => $message,
+      ];
+    }
+    $order = $commerce_order_item->getOrder();
+    $params = [
+      'headers' => [
+        'Content-Type' => 'text/html; charset=UTF-8;',
+        'Content-Transfer-Encoding' => '8Bit',
+      ],
+      'from' => $order->getStore()->getEmail(),
+      'subject' => 'Ticket info',
+      'attendee_paragraph' => $attendee_paragraph,
+    ];
+
+    $viewBuilder = $this->entityTypeManager()->getViewBuilder('paragraph');
+    $build = $viewBuilder->view($attendee_paragraph, 'mail');
+    $params['body'] = \Drupal::service('renderer')->executeInRenderContext(new RenderContext(), function () use ($build) {
+      return $this->renderer->render($build);
+    });
+    $langcode = $this->languageManager()->getDefaultLanguage()->getId();
+
+    $result = $this->mailManager->mail('commerce_order', 'receipt', $to, $langcode, $params);
+    if ($result['send']) {
+      $attendee_paragraph->set('field_attendee_email_sent', time());
+      $attendee_paragraph->save();
+    }
+    // @TODO redirect with message.
+    return [
+      '#markup' => $this->t('Ticket has been sent'),
+    ];
   }
 
 }
