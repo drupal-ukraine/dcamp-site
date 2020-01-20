@@ -1,0 +1,27 @@
+uuid: af7fbb29-ff45-45e3-b84f-bca334c4fe22
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - options
+id: commerce_order_item.field_t_shirt_type
+field_name: field_t_shirt_type
+entity_type: commerce_order_item
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: male
+      label: Male
+    -
+      value: female
+      label: Female
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

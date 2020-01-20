@@ -1,0 +1,39 @@
+uuid: 7e78eca8-8dc1-43b0-b36b-2160a7f405db
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_t_shirt_size
+field_name: field_t_shirt_size
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: xs
+      label: XS
+    -
+      value: s
+      label: S
+    -
+      value: m
+      label: M
+    -
+      value: l
+      label: L
+    -
+      value: xl
+      label: XL
+    -
+      value: xxl
+      label: XXL
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

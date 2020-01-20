@@ -16,7 +16,7 @@ bundle: drupal_camp_ticket
 mode: ticket
 content:
   field_attendee:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       view_mode: default

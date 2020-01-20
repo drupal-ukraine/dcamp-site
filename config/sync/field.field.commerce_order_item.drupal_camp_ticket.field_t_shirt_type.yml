@@ -1,0 +1,21 @@
+uuid: 1c0b4326-b874-4eb4-b78b-3d588fa62662
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.drupal_camp_ticket
+    - field.storage.commerce_order_item.field_t_shirt_type
+  module:
+    - options
+id: commerce_order_item.drupal_camp_ticket.field_t_shirt_type
+field_name: field_t_shirt_type
+entity_type: commerce_order_item
+bundle: drupal_camp_ticket
+label: 'T-shirt type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

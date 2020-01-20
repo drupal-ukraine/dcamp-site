@@ -13,19 +13,19 @@ dependencies:
     - field.field.node.presentation.field_linkedin
     - field.field.node.presentation.field_meta_tags
     - field.field.node.presentation.field_name
-    - field.field.node.presentation.field_page_content
     - field.field.node.presentation.field_presentation_description
     - field.field.node.presentation.field_second_name
+    - field.field.node.presentation.field_sex
+    - field.field.node.presentation.field_t_shirt_size
     - field.field.node.presentation.field_twitter
     - field.field.node.presentation.field_yoast_seo
     - image.style.thumbnail
     - node.type.presentation
     - workflows.workflow.presentation
   module:
-    - content_moderation
     - field_group
     - link
-    - paragraphs
+    - moderation_state_buttons_widget
     - path
     - scheduler
     - svg_image
@@ -68,24 +68,19 @@ third_party_settings:
         required_fields: true
       label: 'Author Information'
       region: content
-    group_page_content:
+    group_t_shirt_info:
       children:
-        - field_page_content
+        - field_sex
+        - field_t_shirt_size
       parent_name: ''
-      weight: 14
-      format_type: html_element
+      weight: 2
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
+        description: ''
         required_fields: true
-        attributes: ''
-        effect: none
-        speed: fast
-      label: 'Page content'
+      label: 'T-shirt info'
       region: content
 id: node.presentation.default
 targetEntityType: node
@@ -94,7 +89,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -123,7 +118,7 @@ content:
     type: link_default
     region: content
   field_image:
-    weight: 13
+    weight: 14
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -166,25 +161,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_page_content:
-    weight: 15
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-      features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
-        add_above: '0'
-    third_party_settings: {  }
-    type: paragraphs
-    region: content
   field_presentation_description:
     weight: 2
     settings:
@@ -202,6 +178,18 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_sex:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_t_shirt_size:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_twitter:
     weight: 18
     settings:
@@ -212,20 +200,21 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 3
+    weight: 4
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
-    type: moderation_state_default
-    weight: 2
-    settings: {  }
+    type: moderation_state_buttons
+    weight: 3
+    settings:
+      show_forbidden_transitions: false
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -233,12 +222,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 7
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -246,14 +235,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 8
     region: content
     third_party_settings: {  }
   title:
@@ -265,13 +254,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -280,7 +269,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }

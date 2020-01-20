@@ -1,0 +1,21 @@
+uuid: 0c900b52-76cb-4733-b51e-dc35a9e34b51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_t_shirt_size
+    - node.type.presentation
+  module:
+    - options
+id: node.presentation.field_t_shirt_size
+field_name: field_t_shirt_size
+entity_type: node
+bundle: presentation
+label: 'T-shirt size'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

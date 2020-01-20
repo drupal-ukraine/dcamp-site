@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "edeeb90b85c040c30b2b531bfab84927",
+    "content-hash": "d1599ab04a0ba3fbd621196afdca09de",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -127,9 +127,7 @@
             "version": "1.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/bgrins/spectrum/archive/1.8.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/bgrins/spectrum/archive/1.8.0.zip"
             },
             "type": "drupal-library"
         },
@@ -2048,6 +2046,165 @@
             }
         },
         {
+            "name": "drupal/commerce_cart",
+            "version": "2.11.0",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/commerce_order": "*",
+                "drupal/commerce_product": "*",
+                "drupal/core": "~8.0"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.11",
+                    "datestamp": "1550007780",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Implements the shopping cart system and add to cart features.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_cart_api",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_cart_api.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_cart_api-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "4cb4e82d48873a1dc67301eb739c5482ef0f5631"
+            },
+            "require": {
+                "drupal/commerce": "^2.0",
+                "drupal/commerce_cart": "*",
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1554734281",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                }
+            ],
+            "description": "Provides a RESTful interface to interact with carts in Drupal Commerce via a lightweight public API.",
+            "homepage": "https://www.drupal.org/project/commerce_cart_api",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce_cart_api",
+                "issues": "https://www.drupal.org/project/issues/commerce_cart_api"
+            }
+        },
+        {
+            "name": "drupal/commerce_cart_flyout",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_cart_flyout.git",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_cart_flyout-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "4da6705cad094a7475ae0d14c070ccc28b6d65e0"
+            },
+            "require": {
+                "drupal/commerce": "^2.0",
+                "drupal/commerce_cart": "*",
+                "drupal/commerce_cart_api": "^1.0",
+                "drupal/commerce_product": "*",
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.7",
+                    "datestamp": "1555562286",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                }
+            ],
+            "description": "WIP",
+            "homepage": "https://www.drupal.org/project/commerce_cart_flyout",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce_cart_flyout",
+                "issues": "https://www.drupal.org/project/issues/commerce_cart_flyout"
+            }
+        },
+        {
             "name": "drupal/commerce_liqpay_gateway",
             "version": "1.0.0",
             "source": {
@@ -2245,6 +2402,57 @@
                 }
             ],
             "description": "Defines the Currency entity.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_product",
+            "version": "2.11.0",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/commerce_price": "*",
+                "drupal/commerce_store": "*",
+                "drupal/core": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.11",
+                    "datestamp": "1550007780",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Defines the Product entity and associated features.",
             "homepage": "https://www.drupal.org/project/commerce",
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce"
@@ -4006,17 +4214,17 @@
         },
         {
             "name": "drupal/iframe",
-            "version": "1.11.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/iframe.git",
-                "reference": "8.x-1.11"
+                "reference": "8.x-1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/iframe-8.x-1.11.zip",
-                "reference": "8.x-1.11",
-                "shasum": "6f5a94349799d981063bf492ccd6e408efeef2d4"
+                "url": "https://ftp.drupal.org/files/projects/iframe-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "de6c3761d95edc6bec68842780f310692ef59fc2"
             },
             "require": {
                 "drupal/core": "*"
@@ -4027,8 +4235,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.11",
-                    "datestamp": "1576447089",
+                    "version": "8.x-1.10",
+                    "datestamp": "1575446881",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4538,6 +4746,57 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/metatag",
                 "issues": "http://drupal.org/project/issues/metatag"
+            }
+        },
+        {
+            "name": "drupal/moderation_state_buttons_widget",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/moderation_state_buttons_widget.git",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/moderation_state_buttons_widget-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "14c308fb076e1e2b45b8eaa68477886713869cf6"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1550846285",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "blazey",
+                    "homepage": "https://www.drupal.org/user/353861"
+                }
+            ],
+            "description": "Provides a widget for moderation states that shows them as buttons.",
+            "homepage": "https://www.drupal.org/project/moderation_state_buttons_widget",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/moderation_state_buttons_widget",
+                "issues": "https://www.drupal.org/project/issues/moderation_state_buttons_widget"
             }
         },
         {
@@ -6510,9 +6769,7 @@
             "version": "v5.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/enyo/dropzone/archive/v5.5.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/enyo/dropzone/archive/v5.5.0.zip"
             },
             "type": "drupal-library"
         },
@@ -6816,9 +7073,7 @@
             "version": "v2.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/hilios/jQuery.countdown/releases/download/2.2.0/jquery.countdown-2.2.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/hilios/jQuery.countdown/releases/download/2.2.0/jquery.countdown-2.2.0.zip"
             },
             "type": "drupal-library"
         },
@@ -11506,6 +11761,7 @@
         "drupal/contribute": 10,
         "drupal/dropzonejs": 15,
         "drupal/email_registration": 5,
+        "drupal/moderation_state_buttons_widget": 15,
         "drupal/rabbit_hole": 10,
         "drupal/restrict_by_ip": 20,
         "drupal/stage_file_proxy": 15,
