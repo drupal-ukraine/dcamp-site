@@ -6,6 +6,7 @@ dependencies:
     - commerce_order.commerce_order_item_type.drupal_camp_ticket
     - field.field.commerce_order_item.drupal_camp_ticket.field_attendee
     - field.field.commerce_order_item.drupal_camp_ticket.field_t_shirt_size
+    - field.field.commerce_order_item.drupal_camp_ticket.field_t_shirt_type
   module:
     - entity_reference_revisions
     - options
@@ -25,6 +26,13 @@ content:
     region: content
   field_t_shirt_size:
     weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_t_shirt_type:
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }

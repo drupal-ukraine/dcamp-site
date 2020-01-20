@@ -1,0 +1,21 @@
+uuid: 6902dedd-2de7-4e51-aa78-fff8c10a03a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sex
+    - node.type.presentation
+  module:
+    - options
+id: node.presentation.field_sex
+field_name: field_sex
+entity_type: node
+bundle: presentation
+label: Sex
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

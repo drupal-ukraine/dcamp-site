@@ -9,7 +9,6 @@ dependencies:
     - field.field.commerce_product.default.variations
   module:
     - commerce
-    - commerce_product
     - path
     - text
 _core:
@@ -71,6 +70,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 4
@@ -80,10 +84,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  variations:
-    type: commerce_product_single_variation
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  variations: true

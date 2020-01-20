@@ -6,6 +6,7 @@ dependencies:
     - commerce_order.commerce_order_item_type.drupal_camp_ticket
     - field.field.commerce_order_item.drupal_camp_ticket.field_attendee
     - field.field.commerce_order_item.drupal_camp_ticket.field_t_shirt_size
+    - field.field.commerce_order_item.drupal_camp_ticket.field_t_shirt_type
   module:
     - commerce_order
     - paragraphs
@@ -16,7 +17,7 @@ mode: default
 content:
   field_attendee:
     type: paragraphs
-    weight: 4
+    weight: 5
     region: content
     settings:
       title: Абзац
@@ -35,6 +36,12 @@ content:
     third_party_settings: {  }
   field_t_shirt_size:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_t_shirt_type:
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select

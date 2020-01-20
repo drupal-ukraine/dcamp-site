@@ -1,0 +1,30 @@
+uuid: 161b2b17-cbff-4023-b1ab-9922fff049a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.camp_tickets
+  module:
+    - system
+    - views
+  theme:
+    - dckyiv
+id: views_block__camp_tickets_block_1
+theme: dckyiv
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:camp_tickets-block_1'
+settings:
+  id: 'views_block:camp_tickets-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /cart
+    negate: false
+    context_mapping: {  }

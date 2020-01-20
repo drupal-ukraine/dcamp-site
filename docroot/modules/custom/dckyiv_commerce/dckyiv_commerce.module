@@ -37,11 +37,18 @@ function dckyiv_commerce_entity_type_build(array &$entity_types) {
  * Implements hook_views_data_alter().
  */
 function dckyiv_commerce_views_data_alter(array &$data) {
+
   $data['commerce_order_item']['edit_tshirt_size']['field'] = [
     'title' => t('Tshirt size select field'),
     'help' => t('Adds a select field for editing the tshirt size.'),
     'id' => 'commerce_order_item_edit_tshirt_size',
   ];
+  $data['commerce_order_item']['edit_tshirt_type']['field'] = [
+    'title' => t('Tshirt type select field'),
+    'help' => t('Adds a select field for editing the tshirt type.'),
+    'id' => 'commerce_order_item_edit_tshirt_type',
+  ];
+
 }
 
 /**
