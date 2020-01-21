@@ -10,8 +10,8 @@ roles: {  }
 author: true
 emails: ''
 recipient: false
-subject: 'Your Presentation is sent to review'
+subject: 'Your Session has been sent to review'
 body:
-  value: "<p>Hi.</p>\r\n\r\n<p>Your presentation <b>[node:title]</b> is sent to review. Our Editorial team will review it and ask you for additional changes if needed.</p>\r\n\r\n<p>Thank you for your request!</p>\r\n\r\n<hr />\r\n<p>Org team of DrupalCampKyiv.</p>\r\n\r\n<p>Dont forget to tell your friends that you are attending <a href=\"https://www.facebook.com/events/713182682365246/\">DrupalCampKyiv2019</a>&nbsp;and like our pages on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  value: "<p>Hello,&nbsp;</p>\r\n\r\n<p>Your session <b>[node:title]</b>&nbsp;has been sent for review.</p>\r\n\r\n<p>Our Team will review it as soon as possible and reach back to you if any additional information will be needed.</p>\r\n\r\n<p>Thank you for the submittion,</p>\r\n\r\n<hr />\r\n<p>Org team, DrupalCamp Kyiv</p>\r\n\r\n<p>Let your friends know you're attending&nbsp;<a href=\"https://www.facebook.com/events/430619964428491/\">DrupalCamp Kyiv 2020</a>&nbsp;, follow us on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
   format: full_html
 label: 'Send My Topic to Review Author'
