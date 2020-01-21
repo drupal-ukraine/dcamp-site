@@ -14,6 +14,22 @@ dckyiv_commerce.attendee_edit:
   requirements:
     _permission: 'access content'
 
+dckyiv_commerce.attendee_send_ticket:
+  path: '/user/{user}/my-tickets/{commerce_order_item}/attendee/{attendee_paragraph}/send-ticket'
+  defaults:
+    _controller: '\Drupal\dckyiv_commerce\Controller\DckyivCommerceController::sendTicket'
+    _title: 'Attendee information'
+  options:
+    parameters:
+      user:
+        type: entity:user
+      commerce_order_item:
+        type: entity:commerce_order_item
+      attendee_paragraph:
+        type: entity:paragraph
+  requirements:
+    _permission: 'access content'
+
 dckyiv_commerce.attendees_report:
   path: '/admin/dc/attendees_report'
   defaults:

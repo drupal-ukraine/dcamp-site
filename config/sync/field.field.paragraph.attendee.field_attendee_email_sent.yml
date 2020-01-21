@@ -1,0 +1,19 @@
+uuid: 2261c366-a02e-4ebe-bbce-a0ffcedc6a79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attendee_email_sent
+    - paragraphs.paragraphs_type.attendee
+id: paragraph.attendee.field_attendee_email_sent
+field_name: field_attendee_email_sent
+entity_type: paragraph
+bundle: attendee
+label: 'Attendee email sent'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp
