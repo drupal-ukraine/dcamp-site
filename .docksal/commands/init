@@ -65,13 +65,15 @@ fin drush uli
 echo-green "Done.\n"
 
 # Removing package-lock.json.
-echo-yellow "Removing package-lock.json..."
-rm -f $MAIN_THEME_PATH/package-lock.json
+echo-yellow "Removing yarn.lock..."
+rm -f $MAIN_THEME_PATH/yarn.lock
 echo-green "Done."
 echo
 
 # Building theme.
 echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
+fin exec nvm install 8.11.3
+fin exec nvm alias default 8.11.3
 fin gulp build
 
 echo -en "${green_bg} DONE! ${NC} "
