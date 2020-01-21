@@ -233,7 +233,7 @@ class DckyivCommerceController extends ControllerBase {
 
     $viewBuilder = $this->entityTypeManager()->getViewBuilder('paragraph');
     $build = $viewBuilder->view($attendee_paragraph, 'mail');
-    $params['body'] = \Drupal::service('renderer')->executeInRenderContext(new RenderContext(), function () use ($build) {
+    $params['body'] =$this->renderer->executeInRenderContext(new RenderContext(), function () use ($build) {
       return $this->renderer->render($build);
     });
     $langcode = $this->languageManager()->getDefaultLanguage()->getId();
