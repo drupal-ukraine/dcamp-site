@@ -57,6 +57,7 @@ echo-green "Done.\n"
 echo-yellow "Running drush cim, drush updb, drush cr"
 cd $DOCROOT_PATH
 fin drush updb -y
+fin drush en moderation_state_buttons_widget -y
 fin drush cim -y
 fin drush cr
 fin drush en stage_file_proxy -y
@@ -65,13 +66,15 @@ fin drush uli
 echo-green "Done.\n"
 
 # Removing package-lock.json.
-echo-yellow "Removing package-lock.json..."
-rm -f $MAIN_THEME_PATH/package-lock.json
+echo-yellow "Removing yarn.lock..."
+rm -f $MAIN_THEME_PATH/yarn.lock
 echo-green "Done."
 echo
 
 # Building theme.
 echo-yellow "Running gulp tasks in theme ${MAIN_THEME}"
+fin exec nvm install 8.11.3
+fin exec nvm alias default 8.11.3
 fin gulp build
 
 echo -en "${green_bg} DONE! ${NC} "
