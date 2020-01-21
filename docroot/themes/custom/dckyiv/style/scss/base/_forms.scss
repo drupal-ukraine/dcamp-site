@@ -79,6 +79,7 @@ input[type="email"],
 input[type="number"],
 input[type="search"],
 textarea,
+.form-select,
 .field--type-text-long textarea.text-full {
   width: 100%;
   padding: 1rem 1.6rem;
@@ -110,6 +111,9 @@ textarea,
     -webkit-appearance: none;
     margin: 0;
   }
+}
+.form-select {
+  -webkit-appearance: none;
 }
 textarea {
   resize: vertical;

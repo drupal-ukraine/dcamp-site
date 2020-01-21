@@ -78,6 +78,7 @@ module:
   metatag_open_graph: 0
   metatag_open_graph_products: 0
   metatag_verification: 0
+  moderation_state_buttons_widget: 0
   node: 0
   options: 0
   page_cache: 0
