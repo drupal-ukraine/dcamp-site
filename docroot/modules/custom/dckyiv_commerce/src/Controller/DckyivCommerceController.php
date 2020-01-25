@@ -9,10 +9,12 @@ use Drupal\Core\Entity\EntityFormBuilderInterface;
 use Drupal\Core\Mail\MailManagerInterface;
 use Drupal\Core\Render\RenderContext;
 use Drupal\Core\Render\Renderer;
+use Drupal\Core\Url;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\user\UserInterface;
 use Drupal\views\Views;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 /**
@@ -207,46 +209,48 @@ class DckyivCommerceController extends ControllerBase {
    * @param OrderItemInterface $commerce_order_item
    * @param ParagraphInterface $attendee_paragraph
    *
-   * @return array
+   * @return array|RedirectResponse
    */
   public function sendTicket(UserInterface $user, OrderItemInterface $commerce_order_item, ParagraphInterface $attendee_paragraph) {
     $to = $attendee_paragraph->get('field_attendee_email')->value;
     if (empty($to)) {
-      // @TODO show order info
-      $message = $this->t('Mail was not sent to attendee. Empty recipient address');
+      $message = $this->t('Mail was not sent to attendee from order :order_id. Empty recipient address.', [
+        ':order_id' => $commerce_order_item->getOrderId(),
+      ]);
       $this->getLogger('dckyiv_commerce')->warning($message);
       $this->messenger()->addWarning($message);
-      return [
-        '#markup' => $message,
+    }
+    else {
+      $order = $commerce_order_item->getOrder();
+      $params = [
+        'headers' => [
+          'Content-Type' => 'text/html; charset=UTF-8;',
+          'Content-Transfer-Encoding' => '8Bit',
+        ],
+        'from' => $order->getStore()->getEmail(),
+        'subject' => 'Ticket info',
+        'attendee_paragraph' => $attendee_paragraph,
       ];
-    }
-    $order = $commerce_order_item->getOrder();
-    $params = [
-      'headers' => [
-        'Content-Type' => 'text/html; charset=UTF-8;',
-        'Content-Transfer-Encoding' => '8Bit',
-      ],
-      'from' => $order->getStore()->getEmail(),
-      'subject' => 'Ticket info',
-      'attendee_paragraph' => $attendee_paragraph,
-    ];
 
-    $viewBuilder = $this->entityTypeManager()->getViewBuilder('paragraph');
-    $build = $viewBuilder->view($attendee_paragraph, 'mail');
-    $params['body'] = \Drupal::service('renderer')->executeInRenderContext(new RenderContext(), function () use ($build) {
-      return $this->renderer->render($build);
-    });
-    $langcode = $this->languageManager()->getDefaultLanguage()->getId();
+      $viewBuilder = $this->entityTypeManager()->getViewBuilder('paragraph');
+      $build = $viewBuilder->view($attendee_paragraph, 'mail');
+      $params['body'] = \Drupal::service('renderer')->executeInRenderContext(new RenderContext(), function () use ($build) {
+        return $this->renderer->render($build);
+      });
+      $langcode = $this->languageManager()->getDefaultLanguage()->getId();
 
-    $result = $this->mailManager->mail('commerce_order', 'receipt', $to, $langcode, $params);
-    if ($result['send']) {
-      $attendee_paragraph->set('field_attendee_email_sent', time());
-      $attendee_paragraph->save();
+      $result = $this->mailManager->mail('commerce_order', 'receipt', $to, $langcode, $params);
+      if ($result['send']) {
+        $attendee_paragraph->set('field_attendee_email_sent', time());
+        $attendee_paragraph->save();
+      }
+      $this->messenger()->addStatus($this->t('Ticket has been sent to @mail', [
+        '@mail' => $to,
+      ]));
     }
-    // @TODO redirect with message.
-    return [
-      '#markup' => $this->t('Ticket has been sent'),
-    ];
+    return new RedirectResponse(Url::fromRoute('view.my_camp_tickets.my_tickets_page', [
+      'user' => $user->id(),
+    ])->toString());
   }
 
 }

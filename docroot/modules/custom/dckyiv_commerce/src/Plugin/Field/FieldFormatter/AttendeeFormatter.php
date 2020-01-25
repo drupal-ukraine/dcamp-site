@@ -114,10 +114,6 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
               'query' => [
                 'destination' => \Drupal::service('path.current')->getPath(),
               ],
-              'attributes' => [
-                'class' => ['use-ajax'],
-                'data-dialog-type'=> 'modal',
-              ],
             ]),
           ];
         }
