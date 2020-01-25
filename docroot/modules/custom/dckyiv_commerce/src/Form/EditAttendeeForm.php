@@ -2,18 +2,24 @@
 
 namespace Drupal\dckyiv_commerce\Form;
 
+use Drupal\commerce_order\Entity\OrderInterface;
+use Drupal\commerce_order\Entity\OrderItem;
+use Drupal\commerce_order\Entity\OrderItemInterface;
 use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Core\Entity\ContentEntityForm;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\paragraphs\ParagraphInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Form controller for profile forms.
  */
-class EditAttendeeForm extends ContentEntityForm {
+class EditAttendeeForm extends ContentEntityForm
+{
 
   /**
    * Constructs a ContentEntityForm object.
@@ -56,54 +62,38 @@ class EditAttendeeForm extends ContentEntityForm {
     $form = parent::form($form, $form_state);
     $build_info = $form_state->getBuildInfo();
     $paragraph = $build_info['callback_object']->getEntity();
-    $attendee_info_default = 'name';
-    if (!$paragraph->field_site_user->isEmpty()) {
-      $attendee_info_default = 'user';
-    }
-    if (!$paragraph->field_attendee_email->isEmpty()) {
-      $attendee_info_default = 'email';
-    }
-/*    $form['attende_info'] = [
-      '#type' => 'radios',
-      '#options' => [
-        'name' => t('Name'),
-        'user' => t('User'),
-        'email' => t('Email'),
-      ],
-      '#default_value' => $attendee_info_default,
-      '#weight' => -1,
-      '#prefix' => '<div class="form-item--inline attendee-info-radio">',
-      '#suffix' => '</div>',
+    $form_state->set('paragraph', $paragraph);
+    $commerce_order_item = $this->routeMatch->getParameter('commerce_order_item');
+    $form_state->set('commerce_order_item', $commerce_order_item);
+
+    $field = $commerce_order_item->get('field_t_shirt_size');
+    $defitition = $field->getFieldDefinition();
+    $settings = $defitition->getSettings();
+    $form['order_item_settings'] = [
+      '#type' => 'container',
+      '#tree' => TRUE,
     ];
-    $form['field_attendee_email']['#states'] = [
-      'visible' => [
-        ':input[name="attende_info"]' => ['value' => 'email'],
-      ],
+    $form['order_item_settings']['field_t_shirt_size'] = [
+      '#type' => 'select',
+      '#title' => $defitition->label(),
+      '#title_display' => 'invisible',
+      '#options' => $settings['allowed_values'],
+      '#default_value' => !empty($field[0]->value) ? $field[0]->value : '_none_',
+      '#required' => TRUE,
     ];
 
-    $form['field_site_user']['#states'] = [
-      'visible' => [
-        ':input[name="attende_info"]' => ['value' => 'user'],
-      ],
+    $field = $commerce_order_item->get('field_t_shirt_type');
+    $defitition = $field->getFieldDefinition();
+    $settings = $defitition->getSettings();
+    $form['order_item_settings']['field_t_shirt_type'] = [
+      '#type' => 'select',
+      '#title' => $defitition->label(),
+      '#title_display' => 'invisible',
+      '#options' => $settings['allowed_values'],
+      '#default_value' => !empty($field[0]->value) ? $field[0]->value : '_none_',
+      '#required' => TRUE,
     ];
-
-
-    $form['field_attendee_firstname']['#states'] = [
-      'visible' => [
-        ':input[name="attende_info"]' => ['value' => 'name'],
-      ],
-    ];
-
-
-    $form['field_attendee_secondname']['#states'] = [
-      'visible' => [
-        ':input[name="attende_info"]' => ['value' => 'name'],
-      ],
-    ];
-  */
-
     $form['field_attendee_status']['#access'] = FALSE;
-    $form_state->set('commerce_order_item', $this->routeMatch->getParameter('commerce_order_item'));
     return $form;
   }
 
@@ -111,27 +101,93 @@ class EditAttendeeForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $attende_info = $form_state->getValue('attende_info');
-    switch ($attende_info) {
-      case 'user':
-        $form_state->setValue(['field_attendee_email', '0'], NULL);
-        $form_state->setValue(['field_attendee_firstname', '0'], NULL);
-        $form_state->setValue(['field_attendee_secondname', '0'], NULL);
-        break;
+    /** @var ParagraphInterface $paragraph */
+    $paragraph = $form_state->get('paragraph');
+    /** @var OrderItemInterface $original_commerce_order_item */
+    $original_commerce_order_item = $form_state->get('commerce_order_item');
+    /** @var OrderInterface $commerce_order */
+    $commerce_order = $original_commerce_order_item->getOrder();
+    $commerce_order_item = NULL;
+    $order_item_settings = $form_state->getValue('order_item_settings');
 
-      case 'name':
-        $form_state->setValue(['field_attendee_email', '0'], NULL);
-        $form_state->setValue(['field_site_user', '0', 'target_id'], NULL);
+    // Checking existing ordet item with changed parameters.
+    /** @var OrderItemInterface $item */
+    foreach ($commerce_order->getItems() as $item) {
+      if ($item->field_t_shirt_type->value == $order_item_settings['field_t_shirt_type']
+        && $item->field_t_shirt_size->value == $order_item_settings['field_t_shirt_size']) {
+        $commerce_order_item = $item;
         break;
+      }
+    }
 
-      case 'email':
-        $form_state->setValue(['field_attendee_firstname', '0'], NULL);
-        $form_state->setValue(['field_attendee_secondname', '0'], NULL);
-        $form_state->setValue(['field_site_user', '0', 'target_id'], NULL);
-        break;
+    // Creating new order item if there is no item with requested parameters.
+    if (empty($commerce_order_item)) {
+      $commerce_order_item = OrderItem::create([
+        'title' => $original_commerce_order_item->getTitle(),
+        'type' => 'drupal_camp_ticket',
+        'field_t_shirt_type' => $order_item_settings['field_t_shirt_type'],
+        'purchased_entity' => $original_commerce_order_item->getPurchasedEntity(),
+        'field_t_shirt_size' => $order_item_settings['field_t_shirt_size'],
+        'unit_price' => $original_commerce_order_item->getUnitPrice(),
+      ]);
+      $commerce_order_item->save();
+      $commerce_order_item = $this->reloadEntity($commerce_order_item);
+      $commerce_order->addItem($commerce_order_item);
+      $commerce_order->save();
+    }
+
+    // Change order item for attendee.
+    if ($commerce_order_item->id() != $original_commerce_order_item->id()) {
+      // Lookup attendee paragraph key.
+      foreach ($original_commerce_order_item->field_attendee as $key => $value) {
+        if ($value->get('entity')->getTarget()->getValue()->id() == $paragraph->id()) {
+          // Remove attendee from previous order item.
+          $original_commerce_order_item->field_attendee->removeItem($key);
+          $this->saveOrderItem($original_commerce_order_item);
+
+          // Add attendee to new order item.
+          $commerce_order_item->field_attendee->appendItem($paragraph);
+          $this->saveOrderItem($commerce_order_item);
+          $paragraph->setParentEntity($commerce_order_item, 'field_attendee');
+          $paragraph->save();
+
+          // Remove order item if there is not items.
+          if ($original_commerce_order_item->field_attendee->isEmpty()) {
+            $commerce_order->removeItem($original_commerce_order_item);
+            $commerce_order->save();
+            $original_commerce_order_item->delete();
+          }
+        }
+      }
     }
 
     parent::submitForm($form, $form_state);
+  }
+
+  /**
+   * Reloads the given entity from the storage and returns it.
+   *
+   * @param \Drupal\Core\Entity\EntityInterface $entity
+   *   The entity to be reloaded.
+   *
+   * @return \Drupal\Core\Entity\EntityInterface
+   *   The reloaded entity.
+   */
+  protected function reloadEntity(EntityInterface $entity) {
+    $controller = $this->entityTypeManager->getStorage($entity->getEntityTypeId());
+    $controller->resetCache([$entity->id()]);
+    return $controller->load($entity->id());
+  }
+
+  /**
+   * Saves order item with additinonal actions.
+   *
+   * @param OrderItemInterface $order_item
+   *   Order item.
+   */
+  protected function saveOrderItem(OrderItemInterface $order_item) {
+    $order_item->setQuantity(count($order_item->field_attendee));
+    $order_item->save();
   }
 
 }
