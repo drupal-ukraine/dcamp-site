@@ -22,12 +22,13 @@ negotiation:
       language-url-fallback: 1
   language_interface:
     enabled:
-      language-url: -20
+      language-user-admin: -20
+      language-url: -19
       language-selected: -15
     method_weights:
-      language-url: -20
-      language-user: -19
-      language-user-admin: -18
+      language-url: -19
+      language-user: -18
+      language-user-admin: -20
       language-session: -17
       language-browser: -16
       language-selected: -15

@@ -10,8 +10,8 @@ roles: {  }
 author: true
 emails: org.drupalcamp.kyiv@gmail.com
 recipient: false
-subject: '[node:title] is reviewed and added to the candidates list.'
+subject: '[node:title] is added to the Speaker candidates list.'
 body:
-  value: "<p>Your session (<strong>[node:title]</strong>) reviewed and added to the list of candidates for DrupalCampKyiv.</p>\r\n\r\n<p>Additional information from org. team:</p>\r\n\r\n<blockquote>\r\n<p><strong><em>[node:log]</em></strong></p>\r\n</blockquote>\r\n\r\n<p>We will inform you about our final decision on the 6th of April.</p>\r\n\r\n<p>Thank you for your activity!</p>\r\n\r\n<hr />\r\n<p>Org team of DrupalCampKyiv.</p>\r\n\r\n<p>Dont forget to tell your friends that you are attending <a href=\"https://www.facebook.com/events/713182682365246/\">DrupalCampKyiv2019</a>&nbsp;and like our pages on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n"
+  value: "<p>Hello,</p>\r\n\r\n<p>Your session (<strong>[node:title]</strong>) has been reviewed and added to the Speaker candidates list of DrupalCamp Kyiv 2020.</p>\r\n\r\n<p>Additional information from Org Team:</p>\r\n\r\n<blockquote>\r\n<p><strong><em>[node:log]</em></strong></p>\r\n</blockquote>\r\n\r\n<p>We will inform you about the final decision on April 6, 2020.</p>\r\n\r\n<p>Thank you!</p>\r\n\r\n<hr />\r\n<p>Org team, DrupalCamp Kyiv</p>\r\n\r\n<p>Let your friends know you're attending&nbsp;<a href=\"https://www.facebook.com/events/430619964428491/\">DrupalCamp Kyiv 2020</a>&nbsp;, follow us on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
   format: full_html
 label: 'Approved Candidate'

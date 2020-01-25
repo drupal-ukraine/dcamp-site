@@ -7,9 +7,6 @@
     "url": ""
   },
   "main": "gulpfile.js",
-  "engines": {
-    "node": "4.4.4"
-  },
   "dependencies": {
     "font-proxima-nova-scss": "^1.0.1",
     "instascan": "^1.0.0",
