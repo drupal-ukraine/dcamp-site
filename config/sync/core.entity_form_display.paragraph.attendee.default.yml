@@ -24,12 +24,6 @@ content:
     third_party_settings: {  }
     type: email_default
     region: content
-  field_attendee_email_sent:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_timestamp
-    region: content
   field_attendee_firstname:
     weight: 1
     settings:
@@ -64,5 +58,6 @@ content:
 hidden:
   created: true
   field_attended: true
+  field_attendee_email_sent: true
   status: true
   uid: true
