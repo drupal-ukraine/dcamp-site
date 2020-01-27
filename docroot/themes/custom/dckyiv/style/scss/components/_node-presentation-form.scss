@@ -82,7 +82,30 @@
 
       input {
         width: calc(50% - 5px);
+
+        @include mq($bp1023max) {
+          width: 50%;
+        }
+
+        @include mq($bp767max) {
+          width: 100%;
+        }
       }
+    }
+  }
+
+  #edit-actions {
+    @include mq($bp1024) {
+      padding: 10px 0 50px;
+    }
+  }
+
+  #edit-footer {
+    @include mq($bp1024) {
+      padding: 24px 0 0;
+    }
+    label {
+      display: none;
     }
   }
 
@@ -142,7 +165,9 @@
     }
   }
 
-  .presentation-info {
+  .presentation-info,
+  .field--name-field-sex,
+  .field--name-field-t-shirt-size {
     label {
       &:after {
         @include mq($bp1024) {
@@ -150,6 +175,14 @@
           right: 0;
         }
       }
+    }
+  }
+
+  .vertical-tabs {
+    margin: 0;
+
+    &__menu {
+      margin: 0;
     }
   }
 }

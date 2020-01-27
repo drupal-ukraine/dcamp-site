@@ -233,6 +233,23 @@ button,
 .button,
 input[type="submit"] {
   @include button;
+
+  &.is-disabled {
+    background: $color-silver;
+    border: solid 2px $color-storm-gray;
+    color: $color-storm-gray;
+    cursor: not-allowed;
+  }
+
+  @include mq($bp1023max) {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  @include mq($bp767max) {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 button.secondary,
 .button.secondary,
@@ -373,6 +390,16 @@ form {
       & > div {
         width: 100% !important;
       }
+    }
+  }
+
+  .vertical-tabs {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include mq($bp1024) {
+      flex-direction: row;
     }
   }
 }
