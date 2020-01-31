@@ -5,7 +5,6 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.storage.commerce_product.body
-    - field.storage.commerce_product.variations
   module:
     - commerce
     - commerce_product
@@ -17,7 +16,6 @@ description: ''
 tag: ''
 base_table: commerce_product_field_data
 base_field: product_id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -210,8 +208,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{{ body }}\r\n<br>\r\n<a href=\"{{ view_commerce_product}}\" class=\"cart-button button edit-button use-ajax\" data-dialog-type=\"modal\">{{ 'Add to Cart'|t }}</a>"
             make_link: false
             path: ''
             absolute: false
@@ -262,69 +260,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        variations:
-          id: variations
-          table: commerce_product__variations
-          field: variations
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: "{{ variations }} \r\n<a href=\"{{ view_commerce_product}}\" class=\"cart-button button edit-button use-ajax\" data-dialog-type=\"modal\">{{ 'Add to Cart'|t }}</a>"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_view
-          settings:
-            view_mode: default
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
       filters:
         status:
           value: '1'
@@ -336,6 +271,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -346,6 +283,9 @@ display:
           entity_type: commerce_product
           entity_field: type
           plugin_id: commerce_entity_bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         langcode:
           id: langcode
           table: commerce_product_field_data
@@ -371,6 +311,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -402,7 +344,6 @@ display:
         - url.query_args
       tags:
         - 'config:field.storage.commerce_product.body'
-        - 'config:field.storage.commerce_product.variations'
   block_1:
     display_plugin: block
     id: block_1
@@ -418,4 +359,3 @@ display:
         - url.query_args
       tags:
         - 'config:field.storage.commerce_product.body'
-        - 'config:field.storage.commerce_product.variations'

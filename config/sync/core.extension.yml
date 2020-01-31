@@ -19,6 +19,7 @@ module:
   commerce_checkout: 0
   commerce_liqpay: 0
   commerce_liqpay_gateway: 0
+  commerce_number_pattern: 0
   commerce_order: 0
   commerce_payment: 0
   commerce_price: 0
@@ -83,6 +84,7 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  path_alias: 0
   profile: 0
   quickedit: 0
   rdf: 0
@@ -94,6 +96,7 @@ module:
   sendgrid_integration: 0
   shortcut: 0
   simple_fb_connect: 0
+  slack: 0
   state_machine: 0
   svg_formatter: 0
   svg_image: 0

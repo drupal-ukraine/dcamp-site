@@ -11,13 +11,12 @@ dependencies:
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: content
-label: Вміст
+label: Content
 module: node
 description: 'Пошук матеріалів і керування ними.'
 tag: default
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_options:
@@ -187,7 +186,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Тип матеріалів'
+          label: Type
           exclude: false
           alter:
             alter_text: false
@@ -250,7 +249,7 @@ display:
           table: users_field_data
           field: name
           relationship: uid
-          label: Автор
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -390,6 +389,8 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -418,7 +419,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Тип матеріалів'
+            label: Type
             description: ''
             use_operator: false
             operator: type_op
@@ -431,6 +432,8 @@ display:
               anonymous: '0'
               administrator: '0'
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -469,9 +472,11 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: true
           group_info:
-            label: 'Стан публікації'
+            label: 'Published status'
             description: ''
             identifier: status
             optional: true
@@ -518,6 +523,8 @@ display:
               anonymous: '0'
               administrator: '0'
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -542,8 +549,11 @@ display:
           plugin_id: node_status
           group: 1
           entity_type: node
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       sorts: {  }
-      title: Вміст
+      title: Content
       empty:
         area_text_custom:
           id: area_text_custom
@@ -588,14 +598,14 @@ display:
       path: admin/content/node
       menu:
         type: 'default tab'
-        title: Вміст
+        title: Content
         description: ''
         menu_name: admin
         weight: -10
         context: ''
       tab_options:
         type: normal
-        title: Вміст
+        title: Content
         description: 'Пошук матеріалів та керування ними'
         menu_name: admin
         weight: -10

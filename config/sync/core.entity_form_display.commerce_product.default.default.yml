@@ -5,10 +5,9 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
-    - field.field.commerce_product.default.stores
-    - field.field.commerce_product.default.variations
   module:
     - commerce
+    - commerce_product
     - path
     - text
 _core:
@@ -25,6 +24,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -37,17 +37,18 @@ content:
     type: language_select
     weight: 3
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -71,10 +72,10 @@ content:
     third_party_settings: {  }
     region: content
   translation:
-    weight: 10
+    weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 4
@@ -82,7 +83,13 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     region: content
-hidden:
-  variations: true
+  variations:
+    type: commerce_product_single_variation
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

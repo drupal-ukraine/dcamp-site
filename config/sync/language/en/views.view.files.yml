@@ -3,7 +3,17 @@ description: 'Пошук файлів та керування ними.'
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+      pager:
+        options:
+          tags:
+            previous: '‹ Попередня'
+            next: 'Наступна ›'
       fields:
+        filename:
+          label: 'Назва (ім''я)'
         filemime:
           label: 'Тип MIME'
         filesize:
@@ -17,3 +27,10 @@ display:
     display_options:
       menu:
         title: Файли
+  page_2:
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ Попередня'
+            next: 'Наступна ›'

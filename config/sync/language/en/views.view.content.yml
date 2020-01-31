@@ -1,6 +1,51 @@
+label: Content
+description: 'Пошук матеріалів і керування ними.'
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+      pager:
+        options:
+          tags:
+            previous: '‹ Попередня'
+            next: 'Наступна ›'
+      fields:
+        title:
+          label: Title
+        type:
+          label: 'Тип матеріалів'
+        name:
+          label: Author
+        status:
+          settings:
+            format_custom_true: Published
+            format_custom_false: Unpublished
+        changed:
+          label: Оновлено
+      filters:
+        title:
+          expose:
+            label: Title
+        type:
+          expose:
+            label: 'Тип матеріалів'
+        status:
+          group_info:
+            label: 'Published status'
+            group_items:
+              1:
+                title: Published
+              2:
+                title: Unpublished
+      title: Content
       empty:
         area_text_custom:
           content: 'Матеріали відсутні.'
+  page_1:
+    display_options:
+      menu:
+        title: Content
+      tab_options:
+        title: Content

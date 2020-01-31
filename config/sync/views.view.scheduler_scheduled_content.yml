@@ -15,7 +15,6 @@ description: 'Find and manage scheduled content.'
 tag: default
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_options:
@@ -28,7 +27,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Фільтр
           reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -40,10 +39,10 @@ display:
         options:
           items_per_page: 50
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
       style:
         type: table
         options:
@@ -144,7 +143,7 @@ display:
           id: title
           table: node_field_data
           field: title
-          label: Title
+          label: Заголовок
           exclude: false
           alter:
             alter_text: false
@@ -261,8 +260,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Published
-            format_custom_false: Unpublished
+            format_custom_true: Опубліковано
+            format_custom_false: Неопубліковано
           plugin_id: field
           entity_type: node
           entity_field: status
@@ -448,6 +447,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: true
           group_info:
             label: 'Published status'
@@ -461,11 +462,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Опубліковано
                 operator: '='
                 value: '1'
               2:
-                title: Unpublished
+                title: Неопубліковано
                 operator: '='
                 value: '0'
           plugin_id: boolean
@@ -497,6 +498,8 @@ display:
               anonymous: '0'
               administrator: '0'
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -525,7 +528,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Заголовок
             description: ''
             use_operator: false
             operator: title_op
@@ -537,6 +540,8 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -578,6 +583,8 @@ display:
               anonymous: '0'
               administrator: '0'
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -622,6 +629,8 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: 'Publish on'
@@ -669,6 +678,8 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

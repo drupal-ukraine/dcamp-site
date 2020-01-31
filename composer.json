@@ -45,6 +45,7 @@
     "drupal/search_api": "^1.10",
     "drupal/sendgrid_integration": "^1.2",
     "drupal/simple_fb_connect": "^3.1",
+    "drupal/slack": "^1.2",
     "drupal/stage_file_proxy": "^1.0@alpha",
     "drupal/svg_formatter": "^1.8",
     "drupal/svg_image": "^1.9",

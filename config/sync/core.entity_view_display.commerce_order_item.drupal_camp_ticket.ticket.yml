@@ -34,7 +34,9 @@ content:
 hidden:
   adjustments: true
   created: true
+  field_t_shirt_type: true
   purchased_entity: true
   quantity: true
+  search_api_excerpt: true
   total_price: true
   unit_price: true

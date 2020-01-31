@@ -8,7 +8,7 @@ id: default
 label: Базово
 description: ''
 variationType: default
-multipleVariations: true
-injectVariationFields: true
+multipleVariations: false
+injectVariationFields: false
 traits: {  }
 locked: false

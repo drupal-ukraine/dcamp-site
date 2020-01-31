@@ -48,6 +48,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Settings
+      region: content
 id: paragraph.swiper_slider.default
 targetEntityType: paragraph
 bundle: swiper_slider

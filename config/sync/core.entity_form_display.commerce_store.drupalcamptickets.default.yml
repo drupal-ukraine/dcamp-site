@@ -5,15 +5,22 @@ dependencies:
   config:
     - commerce_store.commerce_store_type.drupalcamptickets
   module:
+    - address
     - path
 id: commerce_store.drupalcamptickets.default
 targetEntityType: commerce_store
 bundle: drupalcamptickets
 mode: default
 content:
+  address:
+    type: address_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   billing_countries:
     type: options_select
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -22,6 +29,13 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  is_default:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -48,9 +62,15 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    type: options_select
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  address: true
+  uid: true

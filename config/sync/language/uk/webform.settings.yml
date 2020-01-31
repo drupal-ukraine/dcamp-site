@@ -24,3 +24,4 @@ element:
   default_section_title_tag: h2
 mail:
   default_from_name: '[site:name]'
+  default_subject: ''

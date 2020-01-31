@@ -14,6 +14,12 @@ display:
             format_custom_true: Published
             format_custom_false: Unpublished
       filters:
+        title:
+          expose:
+            label: Title
+        type:
+          expose:
+            label: 'Тип матеріалів'
         status:
           group_info:
             label: 'Published status'
@@ -22,9 +28,6 @@ display:
                 title: Published
               2:
                 title: Unpublished
-        title:
-          expose:
-            label: Title
   overview:
     display_options:
       tab_options:

@@ -26,4 +26,5 @@ settings:
   title: ''
   height: ''
   width: ''
+  allowfullscreen: 0
 field_type: iframe

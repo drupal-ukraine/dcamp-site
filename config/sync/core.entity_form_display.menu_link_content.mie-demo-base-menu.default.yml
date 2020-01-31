@@ -8,9 +8,9 @@ dependencies:
     - field.field.menu_link_content.mie-demo-base-menu.field_mie_demo_content_terms
     - image.style.thumbnail
   module:
-    - image
     - link_attributes
     - menu_link_content
+    - svg_image
     - text
 _core:
   default_config_hash: LkpFjQ2WsHkJ7-j75Vpwja0D5zhU5EY27mmJVZDE9Aw
@@ -41,6 +41,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
