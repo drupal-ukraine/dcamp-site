@@ -9,3 +9,8 @@ services:
     arguments: ['@commerce_cart.cart_provider']
     tags:
       - { name: 'event_subscriber' }
+  dckyiv_commerce.order_slack_notify:
+    class: Drupal\dckyiv_commerce\EventSubscriber\OrderNotifySlack
+    arguments: ['@slack.slack_service', '@logger.factory']
+    tags:
+      - { name: 'event_subscriber' }
