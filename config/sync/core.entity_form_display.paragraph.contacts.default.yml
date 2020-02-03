@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.contacts.field_phone
     - paragraphs.paragraphs_type.contacts
   module:
-    - geolocation
+    - geolocation_google_maps
     - telephone
 id: paragraph.contacts.default
 targetEntityType: paragraph
@@ -82,6 +82,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   created: true

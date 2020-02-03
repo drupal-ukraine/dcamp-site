@@ -1,4 +1,5 @@
 settings:
+  default_form_close_message: 'Sorry…This form is closed to new submissions.'
   default_submit_button_label: Submit
   default_wizard_confirmation_label: Complete
   default_preview_message: 'Please review your submission. Your submission is not complete until you press the "Submit" button!'
@@ -9,3 +10,5 @@ settings:
       title: Wide
 element:
   default_more_title: More
+mail:
+  default_subject: 'Webform submission from: [webform_submission:source-entity]'

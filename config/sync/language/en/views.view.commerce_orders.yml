@@ -1,6 +1,43 @@
+label: Замовлення
 display:
   default:
     display_options:
       exposed_form:
         options:
           submit_button: Filter
+      pager:
+        options:
+          tags:
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
+      fields:
+        placed:
+          label: Дата
+        store_id:
+          label: Магазин
+        uid:
+          label: Покупець
+        mail:
+          label: 'Електронна пошта'
+        state:
+          label: Стан
+        total_price__number:
+          label: Всього
+      filters:
+        order_number:
+          expose:
+            label: 'Номер замовлення'
+        state:
+          expose:
+            label: Стан
+      title: Замовлення
+  page_1:
+    display_title: Сторінка
+    display_options:
+      menu:
+        title: Замовлення
+      tab_options:
+        title: Замовлення
+        description: 'Керування своїми замовленнями.'

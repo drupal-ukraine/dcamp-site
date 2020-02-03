@@ -49,3 +49,5 @@ display:
         title: Content
       tab_options:
         title: Content
+        description: 'Пошук матеріалів та керування ними'
+    display_title: Сторінка

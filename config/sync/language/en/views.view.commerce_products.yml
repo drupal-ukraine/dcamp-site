@@ -1,9 +1,17 @@
+label: Товари
 display:
   default:
     display_options:
       exposed_form:
         options:
           submit_button: Filter
+      pager:
+        options:
+          tags:
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
       fields:
         title:
           label: Title
@@ -17,3 +25,6 @@ display:
         title:
           expose:
             label: Title
+      title: Товари
+  page_1:
+    display_title: Сторінка

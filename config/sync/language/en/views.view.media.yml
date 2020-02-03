@@ -1,3 +1,4 @@
+label: Медіа
 display:
   default:
     display_options:
@@ -10,6 +11,12 @@ display:
             previous: '‹ Попередня'
             next: 'Наступна ›'
       fields:
+        media_bulk_form:
+          action_title: Дія
+        thumbnail__target_id:
+          label: Мініатюра
+        name:
+          label: 'Назва медіа'
         uid:
           label: Author
         status:
@@ -19,7 +26,12 @@ display:
         changed:
           label: Оновлено
       filters:
+        name:
+          expose:
+            label: 'Назва медіа'
         status:
+          expose:
+            label: Істина
           group_info:
             label: 'Published status'
             group_items:
@@ -27,3 +39,9 @@ display:
                 title: Published
               2:
                 title: Unpublished
+      title: Медіа
+      empty:
+        area_text_custom:
+          content: 'Мультимедійних файлів не знайдено.'
+  media_page_list:
+    display_title: Медіа

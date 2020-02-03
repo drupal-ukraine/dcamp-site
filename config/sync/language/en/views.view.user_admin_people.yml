@@ -1,3 +1,5 @@
+label: Люди
+description: 'Пошук людей, які взаємодіють з сайтом, і керування ними.'
 display:
   default:
     display_options:
@@ -9,3 +11,49 @@ display:
           tags:
             previous: '‹ Попередня'
             next: 'Наступна ›'
+      fields:
+        user_bulk_form:
+          label: 'Масове оновлення'
+        name:
+          label: 'Ім''я користувача'
+        status:
+          settings:
+            format_custom_true: Активно
+            format_custom_false: Заблоковано
+        roles_target_id:
+          label: Ролі
+        created:
+          label: 'Зареєстрований вже'
+        access:
+          label: 'Останній доступ'
+      filters:
+        combine:
+          expose:
+            label: 'Ім''я чи електронна адреса містять'
+        status:
+          group_info:
+            group_items:
+              1:
+                title: Активно
+              2:
+                title: Заблоковано
+        roles_target_id:
+          expose:
+            label: Роль
+        permission:
+          expose:
+            label: Повноваження
+      title: Люди
+      empty:
+        area_text_custom:
+          content: 'Люди відсутні.'
+      use_more_text: ще
+  page_1:
+    display_title: Сторінка
+    display_options:
+      menu:
+        title: Список
+        description: 'Пошук людей, які взаємодіють з сайтом, і керування ними.'
+      tab_options:
+        title: Люди
+        description: 'Керування обліковими записами, ролями та повноваженнями.'

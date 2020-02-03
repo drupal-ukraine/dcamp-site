@@ -16,6 +16,8 @@ display:
   embed_administer:
     display_options:
       fields:
+        webform_submission_bulk_form:
+          action_title: Дія
         in_draft:
           label: Draft
         sticky:
@@ -38,6 +40,8 @@ display:
   embed_manage:
     display_options:
       fields:
+        webform_submission_bulk_form:
+          action_title: Дія
         in_draft:
           label: Draft
         sticky:

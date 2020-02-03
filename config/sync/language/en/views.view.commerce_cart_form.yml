@@ -4,3 +4,13 @@ display:
       fields:
         edit_tshirt_size:
           label: 'Tshirt size'
+        purchased_entity:
+          label: Елемент
+        unit_price__number:
+          label: Ціна
+        edit_quantity:
+          label: Кількість
+        remove_button:
+          label: Вилучити
+        total_price__number:
+          label: Всього

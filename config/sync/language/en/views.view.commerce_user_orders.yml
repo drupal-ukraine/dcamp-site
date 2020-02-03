@@ -6,3 +6,17 @@ display:
           tags:
             previous: '‹ Попередня'
             next: 'Наступна ›'
+      fields:
+        order_number:
+          label: 'Номер замовлення'
+        placed:
+          label: Дата
+        total_price__number:
+          label: Всього
+        state:
+          label: Стан
+      title: Замовлення
+  order_page:
+    display_options:
+      menu:
+        title: Замовлення

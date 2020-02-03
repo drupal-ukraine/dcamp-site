@@ -18,19 +18,51 @@ display:
           label: 'Тип MIME'
         filesize:
           label: Size
+        status:
+          settings:
+            format_custom_false: Тимчасово
+            format_custom_true: Постійно
+        created:
+          label: 'Дата відвантаження'
+        changed:
+          label: 'Дата зміни'
+        count:
+          label: 'Використано в'
       filters:
+        filename:
+          expose:
+            label: 'Назва файла'
         filemime:
           expose:
             label: 'Тип MIME'
       title: Файли
+      empty:
+        area_text_custom:
+          content: 'Файли відсутні.'
   page_1:
+    display_title: 'Огляд файлів'
     display_options:
       menu:
         title: Файли
   page_2:
+    display_title: 'Використання файла'
     display_options:
       pager:
         options:
           tags:
             previous: '‹ Попередня'
             next: 'Наступна ›'
+      fields:
+        entity_label:
+          label: Сутність
+        type:
+          label: 'Тип сутності'
+        module:
+          label: 'Реєстрація модуля'
+        count:
+          label: 'Підрахунок використань'
+          format_plural_string: !!binary QGNvdW50A0Bjb3VudANAY291bnQ=
+      title: 'Використання файла'
+      arguments:
+        fid:
+          title: 'Відомості про використання файла для {{ arguments.fid }}'

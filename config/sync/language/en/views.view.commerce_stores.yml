@@ -1,6 +1,17 @@
+label: Магазини
 display:
   default:
     display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
       fields:
         name:
           label: 'Назва (ім''я)'
+      title: Магазини
+  page_1:
+    display_title: Сторінка

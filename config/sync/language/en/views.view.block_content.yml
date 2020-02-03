@@ -1,3 +1,5 @@
+label: 'Бібліотека власних блоків'
+description: 'Пошук власних блоків та керування ними.'
 display:
   default:
     display_options:
@@ -7,5 +9,25 @@ display:
             previous: '‹ Попередня'
             next: 'Наступна ›'
       fields:
+        info:
+          label: 'Опис блоку'
+        type:
+          label: 'Тип блоку'
         changed:
           label: Оновлено
+      filters:
+        info:
+          expose:
+            label: 'Опис блоку'
+        type:
+          expose:
+            label: 'Тип блоку'
+      title: 'Бібліотека власних блоків'
+      empty:
+        area_text_custom:
+          content: 'Доступні власні блоки відсутні'
+  page_1:
+    display_title: Сторінка
+    display_options:
+      menu:
+        title: 'Бібліотека власних блоків'

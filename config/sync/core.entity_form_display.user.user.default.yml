@@ -46,6 +46,7 @@ content:
 hidden:
   commerce_remote_id: true
   contact: true
+  customer_profiles: true
   google_analytics: true
   langcode: true
   path: true

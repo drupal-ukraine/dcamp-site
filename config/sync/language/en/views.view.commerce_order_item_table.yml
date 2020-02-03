@@ -4,3 +4,9 @@ display:
       fields:
         title:
           label: Title
+        unit_price__number:
+          label: 'Ціна одиниці товару'
+        quantity:
+          label: Кількість
+        total_price__number:
+          label: 'Загальна вартість'

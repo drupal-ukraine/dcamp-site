@@ -25,7 +25,7 @@ class OrderNotifySlack implements EventSubscriberInterface {
    * @var \Drupal\Core\Logger\LoggerChannelInterface
    */
   protected $logger;
-  
+
   /**
    * OrderNotifySlack constructor.
    *

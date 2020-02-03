@@ -1,3 +1,5 @@
+label: Глосарій
+description: 'Всі матеріали, за літерою.'
 display:
   default:
     display_options:
@@ -6,3 +8,12 @@ display:
           label: Title
         name:
           label: Author
+        changed:
+          label: 'Останнє оновлення'
+  attachment_1:
+    display_title: Долучення
+  page_1:
+    display_title: Сторінка
+    display_options:
+      menu:
+        title: Глосарій

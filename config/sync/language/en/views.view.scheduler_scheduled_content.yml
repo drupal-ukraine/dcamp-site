@@ -4,6 +4,13 @@ display:
       exposed_form:
         options:
           submit_button: Filter
+      pager:
+        options:
+          tags:
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
       fields:
         title:
           label: Title

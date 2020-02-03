@@ -1,8 +1,17 @@
+label: 'Головна сторінка'
+description: 'Всі матеріали винесені на головну сторінку.'
 display:
   default:
     display_options:
+      empty:
+        title:
+          title: 'Ласкаво просимо на сайт [site:name]'
       pager:
         options:
           tags:
             previous: '‹ Попередня'
             next: 'Наступна ›'
+  feed_1:
+    display_title: Потік
+  page_1:
+    display_title: Сторінка

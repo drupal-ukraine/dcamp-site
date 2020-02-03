@@ -4,6 +4,23 @@ display:
       exposed_form:
         options:
           submit_button: Filter
+      pager:
+        options:
+          tags:
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
       fields:
+        store_id:
+          label: Магазин
+        uid:
+          label: Покупець
+        mail:
+          label: 'Електронна пошта'
+        total_price__number:
+          label: Всього
         changed:
           label: Оновлено
+  page_1:
+    display_title: Сторінка

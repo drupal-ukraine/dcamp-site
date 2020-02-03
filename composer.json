@@ -26,7 +26,7 @@
     "drupal/entity_browser": "^2.0",
     "drupal/field_defaults": "^1.0",
     "drupal/field_group": "^3.0",
-    "drupal/geolocation": "^1.11",
+    "drupal/geolocation": "^3",
     "drupal/google_analytics": "^3.0",
     "drupal/iframe": "^1.11",
     "drupal/link_attributes": "^1.5",
@@ -183,17 +183,8 @@
       "drupal/core": {
         "Allow access to menu_item_extra for anonymous": "https://www.drupal.org/files/issues/menu_link_content-view-permissions-2915792.patch"
       },
-      "drupal/views_infinite_scroll": {
-        "Different item count for 1st and other pages": "https://www.drupal.org/files/issues/different_item_count-2852080-9.patch"
-      },
       "drupal/content_moderation_notifications": {
         "Fixed To sending": "https://www.drupal.org/files/issues/2018-10-29/show-emails-3010067-1.patch"
-      },
-      "drupal/conditional_fields": {
-        "Error 'explode() expects parameter": "https://www.drupal.org/files/issues/2018-04-05/conditional_fields-explode_expects_string-2898893-11.patch"
-      },
-      "drupal/field_defaults": {
-        "3040924 -  Undefined property $batch_field_defaults": "https://www.drupal.org/files/issues/2019-03-18/notice-undefined-property-batch-field-defaults-2.patch"
       }
     }
   },

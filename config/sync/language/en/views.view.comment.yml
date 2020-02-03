@@ -1,15 +1,67 @@
+label: Коментарі
+description: 'Пошук коментарів та керування ними.'
 display:
   default:
     display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
       fields:
+        comment_bulk_form:
+          action_title: Дія
+        subject:
+          label: Тема
         name:
           label: Author
+        entity_id:
+          label: Опубліковане
         changed:
           label: Оновлено
-  page_unapproved:
+      filters:
+        subject:
+          expose:
+            label: Тема
+        combine:
+          expose:
+            label: 'Ім’я автора'
+      title: Коментарі
+      empty:
+        area_text_custom:
+          content: 'Коментарі відсутні.'
+      use_more_text: ще
+  page_published:
+    display_title: 'Опубліковані коментарі'
     display_options:
+      menu:
+        title: Коментарі
+        description: 'Коментарі опубліковано'
+      display_description: 'Список затверджених коментарів.'
+  page_unapproved:
+    display_title: 'Несхвалені коментарі'
+    display_options:
+      menu:
+        title: 'Несхвалені коментарі'
+        description: 'Коментарі не затверджено'
+      display_description: 'Список незатверджених коментарів.'
+      filters:
+        subject:
+          expose:
+            label: Тема
+        combine:
+          expose:
+            label: 'Ім''я автора'
       fields:
+        comment_bulk_form:
+          action_title: Дія
+        subject:
+          label: Тема
         name:
           label: Author
+        entity_id:
+          label: Опубліковане
         changed:
           label: Оновлено

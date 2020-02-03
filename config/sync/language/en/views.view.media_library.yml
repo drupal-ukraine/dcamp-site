@@ -4,10 +4,22 @@ display:
       menu:
         title: Media
         description: 'Allows users to browse and administer media items'
+      fields:
+        media_bulk_form:
+          action_title: Дія
+    display_title: Сторінка
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: 'Apply Filters'
+      fields:
+        media_bulk_form:
+          action_title: Дія
       filters:
         status:
+          expose:
+            label: 'Стан публікації'
           group_info:
             label: Published
             group_items:
@@ -18,3 +30,19 @@ display:
         name:
           expose:
             label: 'Назва (ім''я)'
+        bundle:
+          expose:
+            label: 'Тип носія'
+          group_info:
+            label: 'Тип носія'
+      sorts:
+        created:
+          expose:
+            label: 'Найновіші спочатку'
+      title: Медіа
+      empty:
+        area_text_custom:
+          content: 'Мультимедійних файлів не знайдено.'
+  widget:
+    display_title: Віджет
+label: Медіатека

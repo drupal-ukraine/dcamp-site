@@ -1,6 +1,30 @@
+label: Вартовий
+description: 'Останні записи журналу'
 display:
   default:
     display_options:
       exposed_form:
         options:
           submit_button: Filter
+      fields:
+        nothing:
+          admin_label: Іконка
+        severity:
+          label: Важливість
+        timestamp:
+          label: Дата
+        message:
+          label: Повідомлення
+        name:
+          label: Користувач
+      filters:
+        severity:
+          expose:
+            label: Важливість
+      title: 'Останні записи журналу'
+      empty:
+        area:
+          admin_label: 'Повідомлення в журналі відсутні.'
+          content: 'Повідомлення в журналі відсутні.'
+  page:
+    display_title: Сторінка
