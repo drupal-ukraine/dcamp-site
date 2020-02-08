@@ -108,33 +108,42 @@ class DckyivCommerceController extends ControllerBase {
     }
     $build = [];
     $allowed_values = $bundle_fields['field_t_shirt_size']->getSetting('allowed_values');
+    $sex_allowed_values = $bundle_fields['field_t_shirt_type']->getSetting('allowed_values');
 
     $total = 0;
+    foreach ($sex_allowed_values as $sex_key => $sex_value) {
 
-    foreach ($allowed_values as $key => $value) {
-      $args = [$key];
-      $view = Views::getView('attenders_overview');
-      $view->setArguments($args);
-      $view->setDisplay('tshirts_overview');
-      $view->preExecute();
-      $view->execute();
-      if (empty($view->result)) {
-        continue;
-      }
+      $build['sex_' . $sex_key] = [
+        '#type' => 'fieldset',
+        '#title' => 'Sex:' . $sex_value,
+      ];
 
-      $count = count($view->result);
+      foreach ($allowed_values as $key => $value) {
+        $args = [$key, $sex_key];
+        $view = Views::getView('attenders_overview');
+        $view->setArguments($args);
+        $view->setDisplay('tshirts_overview');
+        $view->preExecute();
+        $view->execute();
+        if (empty($view->result)) {
+          continue;
+        }
 
-      $build['report_' . $key] = [
-        '#type' => 'details',
-        '#title' => $this->t('Tshirt size "@size": @count', [
+        $count = count($view->result);
+
+        $build['sex_' . $sex_key]['report_' . $key] = [
+          '#type' => 'details',
+          '#title' => $this->t('Tshirt size "@size": @count', [
             '@size' => $value,
             '@count' => $count,
           ]),
-        '#open' => FALSE,
-        'table' => $view->render(),
-      ];
+          '#open' => FALSE,
+          'table' => $view->render(),
+        ];
 
-      $total +=$count;
+        $total += $count;
+      }
+
     }
 
     $build['total'] = [
