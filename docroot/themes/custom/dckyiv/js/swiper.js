@@ -13,8 +13,6 @@
   Drupal.behaviors.swiper = {
     attach: function (context, settings) {
 
-      console.log('Here');
-
       $('.paragraph--type--swiper-slider').once('swiper').each(function () {
 
         var $slider = $('.swiper-container');
