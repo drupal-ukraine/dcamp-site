@@ -67,28 +67,26 @@ class EditAttendeeForm extends ContentEntityForm
     $form_state->set('commerce_order_item', $commerce_order_item);
 
     $field = $commerce_order_item->get('field_t_shirt_size');
-    $defitition = $field->getFieldDefinition();
-    $settings = $defitition->getSettings();
+    $definition = $field->getFieldDefinition();
+    $settings = $definition->getSettings();
     $form['order_item_settings'] = [
       '#type' => 'container',
       '#tree' => TRUE,
     ];
     $form['order_item_settings']['field_t_shirt_size'] = [
       '#type' => 'select',
-      '#title' => $defitition->label(),
-      '#title_display' => 'invisible',
+      '#title' => $definition->label(),
       '#options' => $settings['allowed_values'],
       '#default_value' => !empty($field[0]->value) ? $field[0]->value : '_none_',
       '#required' => TRUE,
     ];
 
     $field = $commerce_order_item->get('field_t_shirt_type');
-    $defitition = $field->getFieldDefinition();
-    $settings = $defitition->getSettings();
+    $definition = $field->getFieldDefinition();
+    $settings = $definition->getSettings();
     $form['order_item_settings']['field_t_shirt_type'] = [
       '#type' => 'select',
-      '#title' => $defitition->label(),
-      '#title_display' => 'invisible',
+      '#title' => $definition->label(),
       '#options' => $settings['allowed_values'],
       '#default_value' => !empty($field[0]->value) ? $field[0]->value : '_none_',
       '#required' => TRUE,
