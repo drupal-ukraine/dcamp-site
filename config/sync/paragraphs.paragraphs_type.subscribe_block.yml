@@ -1,0 +1,9 @@
+uuid: bfe1fb13-deeb-4094-8a6f-675ad30ff01f
+langcode: en
+status: true
+dependencies: {  }
+id: subscribe_block
+label: 'Subscribe block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
