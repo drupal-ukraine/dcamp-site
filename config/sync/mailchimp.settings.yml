@@ -1,0 +1,7 @@
+api_key: XXXXXXXXXXXXXX-us12
+enable_connected: false
+connected_id: null
+connected_paths: null
+cron: false
+batch_limit: 1
+webhook_hash: XXXXXXXXXX

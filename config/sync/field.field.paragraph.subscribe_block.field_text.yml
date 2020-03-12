@@ -1,0 +1,21 @@
+uuid: 121154eb-e1cc-44b6-b54c-85fb374f5b2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.subscribe_block
+  module:
+    - text
+id: paragraph.subscribe_block.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: subscribe_block
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

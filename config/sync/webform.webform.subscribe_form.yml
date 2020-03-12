@@ -1,29 +1,24 @@
-uuid: dec5c7eb-b28e-4311-a152-8f8bf04bb9e2
-langcode: uk
+uuid: 0bbedfb5-2e85-447a-82d8-563d4f95d447
+langcode: en
 status: open
 dependencies:
-  enforced:
-    module:
-      - webform
   module:
     - webform_mailchimp
-_core:
-  default_config_hash: XmVvfioCEWZuviJP_L885YzaG8QwS6hcTfgQU3cFyyk
 open: null
 close: null
 weight: 0
-uid: null
+uid: 1
 template: false
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: subscribe_form
+title: 'Subscribe Form'
+description: 'Subscribe Form in the Paragraph'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#placeholder': 'Ім''я'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#placeholder': Тема\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\ntelefon:\n  '#type': tel\n  '#title': Phone\n  '#placeholder': Телефон\nemail:\n  '#type': email\n  '#title': Email\n  '#placeholder': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#placeholder': 'Опишіть своє питання до нас...'\n  '#required': true\n  '#test': 'Please ignore this email.'\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: "email:\n  '#type': email\n  '#title': Email\n  '#title_display': none\n  '#placeholder': my_email@company.com\n  '#required': true\n  '#required_error': 'Please enter your email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Submit"
 css: ''
 javascript: ''
 settings:
-  ajax: true
+  ajax: false
   ajax_scroll_top: form
   ajax_progress_type: ''
   ajax_effect: ''
@@ -106,10 +101,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: page
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_message: ''
+  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -183,92 +178,18 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
-    id: email
-    label: 'Email confirmation'
-    handler_id: email_confirmation
-    status: true
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: '[webform_submission:values:email:raw]'
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      subject: 'New request at the Contact form of website.'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      theme_name: ''
-      parameters: {  }
-      theme: ''
-  email_notification:
-    id: email
-    label: 'Email notification'
-    handler_id: email_notification
-    status: true
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: org.drupalcamp.kyiv@gmail.com
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      subject: 'New request at the Contact form of website.'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      theme_name: ''
-      parameters: {  }
-      theme: ''
   mailchimp:
     id: mailchimp
-    label: MailChimp_ContactUs
+    label: 'MailChimp Subscribe '
     handler_id: mailchimp
     status: true
     conditions: {  }
-    weight: 2
+    weight: 0
     settings:
       list: 77246c763a
       email: email
       double_optin: false
-      mergevars: 'WSF: Contact Us'
+      mergevars: 'WSF: Subscribe'
       interest_groups: {  }
       control: ''
 variants: {  }
