@@ -118,7 +118,6 @@
 
       &:last-child {
         text-align: right;
-        margin: 20px 20px 0 auto;
       }
     }
   }
@@ -135,11 +134,13 @@
   }
 
   .add-to-calendar {
+    display: inline-block;
     font-size: 12px;
     font-weight: normal;
     color: $color-white;
     text-transform: uppercase;
     padding: 5px 10px 4px 30px;
+    margin: 20px 20px 0 auto;
     background-color: $color-fern;
     border: 1px solid $color-fern;
     position: relative;

@@ -17,6 +17,20 @@ function dckyiv_core_preprocess_html(&$variables) {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function dckyiv_core_theme() {
+  return [
+    'dckyiv_core_ical' => [
+      'template' => 'dckyiv-core-ical',
+      'variables' => [
+        'info' => [],
+      ],
+    ],
+  ];
+}
+
+/**
  * Implements hook_entity_type_alter().
  */
 function dckyiv_core_entity_type_alter(array &$entity_types) {
