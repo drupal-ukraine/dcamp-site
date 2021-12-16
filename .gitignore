@@ -79,3 +79,13 @@ docroot/charge.php
 
 cypress/node_modules/*
 docroot/sites/default/setting.stage_file_proxy.php
+/.editorconfig
+/.gitattributes
+/docroot/update.php
+/docroot/.csslintrc
+/docroot/.eslintignore
+/docroot/.eslintrc.json
+/docroot/.htaccess
+/docroot/autoload.php
+/docroot/index.php
+/docroot/robots.txt
