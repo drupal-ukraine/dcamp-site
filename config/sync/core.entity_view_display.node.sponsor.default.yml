@@ -129,3 +129,4 @@ content:
 hidden:
   field_person: true
   langcode: true
+  search_api_excerpt: true

@@ -67,7 +67,11 @@ hidden:
   field_linkedin: true
   field_meta_tags: true
   field_presentation_description: true
+  field_sex: true
+  field_t_shirt_size: true
   field_twitter: true
   field_yoast_seo: true
   langcode: true
   links: true
+  moderation_state_buttons_widget: true
+  search_api_excerpt: true
