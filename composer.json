@@ -84,7 +84,7 @@
             "type": "package",
             "package": {
                 "version": "v0.5.0-beta4",
-                "name": "html2canvas",
+                "name": "niklasvh/html2canvas",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/niklasvh/html2canvas.git",
@@ -97,7 +97,7 @@
             "type": "package",
             "package": {
                 "version": "v4.1.0",
-                "name": "es6-promise",
+                "name": "stefanpenner/es6-promise",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/stefanpenner/es6-promise.git",
@@ -149,7 +149,7 @@
         {
             "type": "package",
             "package": {
-                "name": "hilios/jQuery.countdown",
+                "name": "hilios/jquery.countdown",
                 "version": "v2.2.0",
                 "type": "drupal-library",
                 "dist": {
@@ -176,8 +176,7 @@
                 "[web-root]/sites/default/default.settings.php": false,
                 "[web-root]/modules/README.txt": false,
                 "[web-root]/profiles/README.txt": false,
-                "[web-root]/themes/README.txt": false,
-                "[web-root]/example.gitignore": false
+                "[web-root]/themes/README.txt": false
             }
         },
         "drupal-composer-helper": {
@@ -228,6 +227,13 @@
     },
     "config": {
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/console-extend-plugin": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
+        }
     }
 }
