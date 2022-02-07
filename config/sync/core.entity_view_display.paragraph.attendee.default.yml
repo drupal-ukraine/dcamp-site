@@ -51,3 +51,4 @@ hidden:
   field_attended: true
   field_attendee_email_sent: true
   field_attendee_status: true
+  search_api_excerpt: true

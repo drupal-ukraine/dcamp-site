@@ -4,6 +4,7 @@ jobs:
   build:
     # Override CIRCLE_WORKING_DIRECTORY (set to ~/project by default)
     working_directory: /home/agent/build
+    resource_class: medium
     docker:
       - image: docksal/ci-agent:php
     steps:
