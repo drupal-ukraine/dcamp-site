@@ -46,10 +46,10 @@ content:
       allow_override_map_settings: 0
       google_map_settings:
         type: ROADMAP
-        zoom: '10'
+        zoom: 10
         minZoom: 0
         maxZoom: 18
-        rotateControl: 0
+        rotateControl: false
         mapTypeControl: 1
         streetViewControl: 1
         zoomControl: 1

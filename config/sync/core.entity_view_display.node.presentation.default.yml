@@ -174,3 +174,5 @@ hidden:
   field_sex: true
   field_t_shirt_size: true
   langcode: true
+  moderation_state_buttons_widget: true
+  search_api_excerpt: true
