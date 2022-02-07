@@ -11,36 +11,36 @@
 */
 #}
 <div class="checkout-complete">
-   <div class="checkout-complete__message">
-       <div class="checkout-complete__heading">
-           {{ 'Great News!'|t }}
-         </div>
-       <div class="checkout-complete__text">
-           <p>
-               {{ 'Your payment for DrupalCamp Kyiv 2020 ticket(s) successful.'|t }}
-             </p>
-           <p>
-               {{ 'Please visit <a href=":url">:text</a> section of your Profile to find the QR code(s). Please add missing information to your ticket (it should contain name, email address, a preferred t-shirt size). If you have two or more tickets under your account - please, ensure to add the missing information to each ticket (name, email address, a preferred t-shirt size). ' | t({
+  <div class="checkout-complete__message">
+    <div class="checkout-complete__heading">
+      {{ 'Great News!'|t }}
+      </div>
+    <div class="checkout-complete__text">
+      <p>
+        {{ 'Your payment for DrupalCamp Kyiv 2022 ticket(s) successful.'|t }}
+        </p>
+      <p>
+        {{ 'Please visit <a href=":url">:text</a> section of your Profile to find the QR code(s). Please add missing information to your ticket (it should contain name, email address, a preferred t-shirt size). If you have two or more tickets under your account - please, ensure to add the missing information to each ticket (name, email address, a preferred t-shirt size). ' | t({
           ':url' : '/user/login?destination=/user/' ~ order_entity.getCustomerId() ~ '/my-tickets',
           ':text' : 'My tickets' | t
         })}}
-             </p>
-           <p>
-               {{ 'Please, <a href="https://calendar.google.com/calendar/r/eventedit?dates=20200606T100000Z/20200607T170000Z&text=Drupal+Camp+Kyiv+2020&location=Mercure+Kyiv+Congress+Hall,+Vadyma+Hetmana+St,+6,+Kyiv,+Ukraine&details=https://drupalcampkyiv.org/en&sf=true" target="_blank">add DrupalCamp Kyiv 2020 to your calendar</a>'|t }}
-             </p>
-           <p>
-               {{ 'If you want to be a Speaker at DrupalCamp Kyiv 2020, please log in and submit you session <a href="http://drupalcampkyiv.org/user/login?destination=/en/node/add/presentation" target="_blank">following the link</a>, and we will get back to you soon.'|t }}
-             </p>
-           <p>
-               {{ 'Please, follow the Conference Facebook page to stay in the loop!'|t }}
-             </p>
-         </div>
-       <div class="checkout-complete__shares">
-           <div id="fb-root"></div>
-           <script async defer src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v3.2&appId=2020216808272525&autoLogAppEvents=1"></script>
-           <div class="fb-page" data-href="https://www.facebook.com/drupalcampkyiv/" data-tabs="events" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-               <blockquote cite="https://www.facebook.com/drupalcampkyiv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/drupalcampkyiv/">DrupalCamp Kyiv</a></blockquote>
-             </div>
-         </div>
-     </div>
+        </p>
+      <p>
+        {{ 'Please, <a href="https://calendar.google.com/calendar/r/eventedit?dates=20220604T100000Z/20200607T170000Z&text=Drupal+Camp+Kyiv+2022&location=Mercure+Kyiv+Congress+Hall,+Vadyma+Hetmana+St,+6,+Kyiv,+Ukraine&details=https://drupalcampkyiv.org/en&sf=true" target="_blank">add DrupalCamp Kyiv 2022 to your calendar</a>'|t }}
+        </p>
+      <p>
+        {{ 'If you want to be a Speaker at DrupalCamp Kyiv 2022, please log in and submit you session <a href="http://drupalcampkyiv.org/user/login?destination=/en/node/add/presentation" target="_blank">following the link</a>, and we will get back to you soon.'|t }}
+        </p>
+      <p>
+        {{ 'Please, follow the Conference Facebook page to stay in the loop!'|t }}
+        </p>
+      </div>
+    <div class="checkout-complete__shares">
+      <div id="fb-root"></div>
+      <script async defer src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v3.2&appId=2020216808272525&autoLogAppEvents=1"></script>
+      <div class="fb-page" data-href="https://www.facebook.com/drupalcampkyiv/" data-tabs="events" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/drupalcampkyiv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/drupalcampkyiv/">DrupalCamp Kyiv</a></blockquote>
+        </div>
+      </div>
+    </div>
 </div>
