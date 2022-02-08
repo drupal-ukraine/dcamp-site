@@ -6,7 +6,7 @@ admin_menu_icons:
 
 countdown-lib:
   js:
-    /libraries/jQuery.countdown/jquery.countdown.min.js: {}
+    /libraries/jquery.countdown/jquery.countdown.min.js: {}
 
 countdown-widget:
   js:
