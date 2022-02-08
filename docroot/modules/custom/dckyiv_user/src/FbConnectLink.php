@@ -6,7 +6,7 @@ use Drupal\Core\Url;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
- * Class FbConnectLink.
+ * Class Facebook Connect Link.
  */
 class FbConnectLink {
 

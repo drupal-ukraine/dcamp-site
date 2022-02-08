@@ -6,8 +6,6 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\commerce_order\Entity\OrderItemInterface;
-use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * Implements hook_help().

@@ -3,13 +3,12 @@
 namespace Drupal\dckyiv_core;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
-use Drupal\Core\Routing\RouteMatch;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\node\NodeInterface;
 
 /**
- * PreprocessTransparentMenu class.
+ * Preprocess Transparent Menu class.
  */
 class PreprocessTransparentMenu implements ContainerInjectionInterface {
 

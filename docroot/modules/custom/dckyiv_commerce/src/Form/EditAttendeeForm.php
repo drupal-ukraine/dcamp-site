@@ -2,7 +2,6 @@
 
 namespace Drupal\dckyiv_commerce\Form;
 
-use Drupal\commerce_order\Entity\OrderInterface;
 use Drupal\commerce_order\Entity\OrderItem;
 use Drupal\commerce_order\Entity\OrderItemInterface;
 use Drupal\Component\Datetime\TimeInterface;
@@ -12,26 +11,24 @@ use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\paragraphs\ParagraphInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Form controller for profile forms.
  */
-class EditAttendeeForm extends ContentEntityForm
-{
+class EditAttendeeForm extends ContentEntityForm {
 
   /**
    * Constructs a ContentEntityForm object.
    *
    * @param \Drupal\Core\Entity\EntityRepositoryInterface $entity_repository
    *   The entity repository service.
-   * @param \Drupal\Core\Entity\EntityTypeBundleInfoInterface $entity_type_bundle_info
-   *   The entity type bundle service.
-   * @param \Drupal\Component\Datetime\TimeInterface $time
-   *   The time service.
    * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
    *   The route match.
+   * @param \Drupal\Core\Entity\EntityTypeBundleInfoInterface|null $entity_type_bundle_info
+   *   The entity type bundle service.
+   * @param \Drupal\Component\Datetime\TimeInterface|null $time
+   *   The time service.
    */
   public function __construct(
     EntityRepositoryInterface $entity_repository,
@@ -41,7 +38,6 @@ class EditAttendeeForm extends ContentEntityForm
     parent::__construct($entity_repository, $entity_type_bundle_info, $time);
     $this->routeMatch = $route_match;
   }
-
 
   /**
    * {@inheritdoc}
@@ -99,17 +95,17 @@ class EditAttendeeForm extends ContentEntityForm
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    /** @var ParagraphInterface $paragraph */
+    /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
     $paragraph = $form_state->get('paragraph');
-    /** @var OrderItemInterface $original_commerce_order_item */
+    /** @var \Drupal\commerce_order\Entity\OrderItemInterface $original_commerce_order_item */
     $original_commerce_order_item = $form_state->get('commerce_order_item');
-    /** @var OrderInterface $commerce_order */
+    /** @var \Drupal\commerce_order\Entity\OrderInterface $commerce_order */
     $commerce_order = $original_commerce_order_item->getOrder();
     $commerce_order_item = NULL;
     $order_item_settings = $form_state->getValue('order_item_settings');
 
     // Checking existing ordet item with changed parameters.
-    /** @var OrderItemInterface $item */
+    /** @var \Drupal\commerce_order\Entity\OrderItemInterface $item */
     foreach ($commerce_order->getItems() as $item) {
       if ($item->field_t_shirt_type->value == $order_item_settings['field_t_shirt_type']
         && $item->field_t_shirt_size->value == $order_item_settings['field_t_shirt_size']) {
@@ -180,7 +176,7 @@ class EditAttendeeForm extends ContentEntityForm
   /**
    * Saves order item with additinonal actions.
    *
-   * @param OrderItemInterface $order_item
+   * @param \Drupal\commerce_order\Entity\OrderItemInterface $order_item
    *   Order item.
    */
   protected function saveOrderItem(OrderItemInterface $order_item) {

@@ -10,8 +10,6 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\user\Entity\User;
 use Drupal\user\ProfileForm;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Drupal\Core\Url;
 use Drupal\dckyiv_user\FbConnectLink;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 
@@ -81,7 +79,7 @@ class DCKUserRegisterForm extends ProfileForm {
     $form['fb_login'] = [
       '#type' => 'link',
       '#weight' => -2,
-      '#title' => t('Sign Up with Facebook'),
+      '#title' => $this->t('Sign Up with Facebook'),
       '#url' => $url,
       '#attributes' => ['class' => ['fb-login']],
       '#access' => TRUE,
@@ -95,15 +93,6 @@ class DCKUserRegisterForm extends ProfileForm {
     $form['actions']['submit']['#value'] = $this->t('Register Me');
 
     return $form;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-
-    parent::validateForm($form, $form_state);
-
   }
 
   /**

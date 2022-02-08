@@ -47,16 +47,16 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
       $defaults['message_' . $status_name] = $status['message'];
     }
 
-    $defaults = $defaults + [
-        'version'     => $config->get('commerce_liqpay.version'),
-        'public_key'  => '',
-        'private_key' => '',
-        'action_url'  => $config->get('commerce_liqpay.checkout_url'),
-        'action'      => $config->get('commerce_liqpay.action'),
-        'api_url'     => $config->get('commerce_liqpay.api_url'),
-        'server_notifications'     => $config->get('commerce_liqpay.server_notifications'),
-        'description' => 'Ordered # [commerce_order:order_id] at [site:name].',
-      ];
+    $defaults += [
+      'version'     => $config->get('commerce_liqpay.version'),
+      'public_key'  => '',
+      'private_key' => '',
+      'action_url'  => $config->get('commerce_liqpay.checkout_url'),
+      'action'      => $config->get('commerce_liqpay.action'),
+      'api_url'     => $config->get('commerce_liqpay.api_url'),
+      'server_notifications'     => $config->get('commerce_liqpay.server_notifications'),
+      'description' => 'Ordered # [commerce_order:order_id] at [site:name].',
+    ];
     return $defaults + parent::defaultConfiguration();
   }
 
@@ -251,7 +251,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
     ];
     foreach ($required_fields as $key) {
       if (empty($values[$key])) {
-        drupal_set_message(t('LiqPay service is not configured for use. Please contact an administrator to resolve this issue.'), 'error');
+        drupal_set_message($this->t('LiqPay service is not configured for use. Please contact an administrator to resolve this issue.'), 'error');
         return FALSE;
       }
     }
@@ -264,14 +264,14 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
     parent::submitConfigurationForm($form, $form_state);
 
     if (!$form_state->getErrors()) {
-      $values                             = $form_state->getValue($form['#parents']);
-      $this->configuration['version']     = $values['version'];
-      $this->configuration['public_key']  = $values['public_key'];
-      $this->configuration['private_key'] = $values['private_key'];
-      $this->configuration['action']      = $values['action'];
-      $this->configuration['action_url']  = $values['action_url'];
-      $this->configuration['api_url']     = $values['api_url'];
-      $this->configuration['description'] = $values['description'];
+      $values                                      = $form_state->getValue($form['#parents']);
+      $this->configuration['version']              = $values['version'];
+      $this->configuration['public_key']           = $values['public_key'];
+      $this->configuration['private_key']          = $values['private_key'];
+      $this->configuration['action']               = $values['action'];
+      $this->configuration['action_url']           = $values['action_url'];
+      $this->configuration['api_url']              = $values['api_url'];
+      $this->configuration['description']          = $values['description'];
       $this->configuration['server_notifications'] = $values['server_notifications'];
 
       foreach ($values['messages'] as $message_name => $message) {
@@ -334,7 +334,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
   public function getStoreDataConfiguration() {
     $config = \Drupal::config('commerce_liqpay.settings');
 
-    return $store_data = [
+    return [
       'public_key'   => isset($this->configuration['public_key']) ? $this->configuration['public_key'] : '',
       'private_key'  => isset($this->configuration['private_key']) ? $this->configuration['private_key'] : '',
       'api_url'      => isset($this->configuration['api_url']) ? $this->configuration['api_url'] : $config->get('commerce_liqpay.api_url'),
@@ -439,7 +439,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
   /**
    * IPN callback.
    *
-   * IPN will be called after a succesful liqpay payment or changed state
+   * IPN will be called after a succesful liqpay payment or changed state.
    *
    * @param \Symfony\Component\HttpFoundation\Request $request
    *   The request.
@@ -474,10 +474,10 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
     $payment->save();
     drupal_set_message($data['message']);
     \Drupal::logger('commerce_payment')->notice('Liqpay response for order id: @order. Status: @status.',
-      array(
+      [
         '@order' => $data['order_id'],
         '@status' => $data['status'],
-      ));
+      ]);
 
     return new Response('Received new payment status', 200);
   }

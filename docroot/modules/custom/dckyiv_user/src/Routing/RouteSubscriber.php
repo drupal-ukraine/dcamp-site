@@ -14,7 +14,6 @@ class RouteSubscriber extends RouteSubscriberBase {
    * {@inheritdoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
-    $i=1;
     if ($route = $collection->get('user.login')) {
       $route->setDefaults([
         '_form' => '\Drupal\dckyiv_user\Form\DCKUserLoginForm',
