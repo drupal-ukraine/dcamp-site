@@ -5,7 +5,6 @@ namespace Drupal\commerce_liqpay\PluginForm\OffsiteRedirect;
 use Drupal\commerce_payment\PluginForm\PaymentOffsiteForm as BasePaymentOffsiteForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Serialization\Json;
-use Drupal\Core\Url;
 
 /**
  * Provides the class for payment off-site form.
@@ -63,7 +62,7 @@ class LiqpaymentForm extends BasePaymentOffsiteForm {
     ];
 
     if ($this->getConfiguration('server_notifications') !== NULL) {
-     $data['server_url'] = $this->paymentGatewayPlugin->getNotifyUrl()->toString();
+      $data['server_url'] = $this->paymentGatewayPlugin->getNotifyUrl()->toString();
     }
 
     $private_key       = $this->getConfiguration('private_key');

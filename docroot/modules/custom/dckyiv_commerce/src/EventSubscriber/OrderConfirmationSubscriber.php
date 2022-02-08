@@ -75,7 +75,9 @@ class OrderConfirmationSubscriber implements EventSubscriberInterface {
    *   The order total summary.
    * @param \Drupal\Core\Render\Renderer $renderer
    *   The renderer.
-   * @throws
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   public function __construct(EntityTypeManagerInterface $entity_type_manager, LanguageManagerInterface $language_manager, MailManagerInterface $mail_manager, OrderTotalSummaryInterface $order_total_summary, Renderer $renderer) {
     $this->orderTypeStorage = $entity_type_manager->getStorage('commerce_order_type');
@@ -150,8 +152,9 @@ class OrderConfirmationSubscriber implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
-    $events = ['commerce_order.place.post_transition' => ['sendOrderConfirmation', -100]];
-    return $events;
+    return [
+      'commerce_order.place.post_transition' => ['sendOrderConfirmation', -100],
+    ];
   }
 
 }

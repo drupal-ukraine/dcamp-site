@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains dckyiv_user module functionality.
+ */
+
 use Drupal\dckyiv_user\Form\DCKUserRegisterForm;
 
 /**

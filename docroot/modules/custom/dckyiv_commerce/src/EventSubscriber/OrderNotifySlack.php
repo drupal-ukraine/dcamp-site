@@ -17,11 +17,15 @@ class OrderNotifySlack implements EventSubscriberInterface {
   use StringTranslationTrait;
 
   /**
+   * Slack instance.
+   *
    * @var \Drupal\slack\Slack
    */
   protected $slack;
 
   /**
+   * Logger channel.
+   *
    * @var \Drupal\Core\Logger\LoggerChannelInterface
    */
   protected $logger;
@@ -30,7 +34,9 @@ class OrderNotifySlack implements EventSubscriberInterface {
    * OrderNotifySlack constructor.
    *
    * @param \Drupal\slack\Slack $slack
+   *   Slack instance.
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $loggerChannelFactory
+   *   Logger chanel factory.
    */
   public function __construct(Slack $slack, LoggerChannelFactoryInterface $loggerChannelFactory) {
 
@@ -51,13 +57,14 @@ class OrderNotifySlack implements EventSubscriberInterface {
     $author = $order->getCustomer()->getDisplayName();
     $price = $order->getTotalPrice();
 
-    $order_url = Url::fromUserInput('/admin/commerce/orders/' . $order->id(), ['absolute'=> TRUE ]);
+    $order_url = Url::fromUserInput('/admin/commerce/orders/' . $order->id(), ['absolute' => TRUE]);
 
     try {
       $this->slack->sendMessage($author . ' has payed ' . $price->getNumber() . ' ' . $price->getCurrencyCode() . ' \n'
-        . 'Details: ' .$order_url->toString()
+        . 'Details: ' . $order_url->toString()
       );
-    } catch (\Exception $e) {
+    }
+    catch (\Exception $e) {
       $this->logger->error('DC Kyiv slack error: ' . $e->getMessage());
     }
 

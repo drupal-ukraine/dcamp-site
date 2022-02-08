@@ -26,6 +26,9 @@ jobs:
           command: |
             DEBUG=1 source build-env
             build-exec 'fin drush status'
+            build-exec 'fin phpcs docroot/modules/custom'
+            build-exec 'fin phpcs docroot/themes/custom'
+            build-exec 'fin phpcs README.md'
 
 workflows:
   version: 2

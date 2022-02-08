@@ -6,12 +6,15 @@ use Drupal\commerce_cart\Form\AddToCartForm as AddToCartFormParent;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class AddToCartForm
+ * Add-To-Cart Form class.
  *
  * @package Drupal\dckyiv_commerce\Form
  */
 class AddToCartForm extends AddToCartFormParent {
 
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 

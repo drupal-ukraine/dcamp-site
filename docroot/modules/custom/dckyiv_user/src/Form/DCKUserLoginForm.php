@@ -75,7 +75,8 @@ class DCKUserLoginForm extends UserLoginForm {
 
     if (!empty($request->query->get('destination'))) {
       $return_path = Url::fromUserInput($request->query->get('destination'));
-    } else {
+    }
+    else {
       $return_path = Url::fromUserInput('/user');
     }
 
@@ -90,7 +91,7 @@ class DCKUserLoginForm extends UserLoginForm {
     ];
 
     $form['separator'] = [
-      '#markup' => '<div class="separator"><span>' . t('or') . '</span></div>',
+      '#markup' => '<div class="separator"><span>' . $this->t('or') . '</span></div>',
     ];
 
     $config = $this->config('system.site');
@@ -118,9 +119,11 @@ class DCKUserLoginForm extends UserLoginForm {
       '#required' => TRUE,
     ];
 
-
     $form['actions'] = ['#type' => 'actions'];
-    $form['actions']['submit'] = ['#type' => 'submit', '#value' => $this->t('Log in')];
+    $form['actions']['submit'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Log in'),
+    ];
 
     $form['separator_second'] = [
       '#markup' => '<div class="separator_second"></div>',
@@ -132,7 +135,7 @@ class DCKUserLoginForm extends UserLoginForm {
         'class' => ['user-register'],
       ],
       'message' => [
-        '#markup' => t("Don't have an account? "),
+        '#markup' => $this->t("Don't have an account?") . ' ',
       ],
       'link' => [
         '#type' => 'link',
@@ -173,7 +176,7 @@ class DCKUserLoginForm extends UserLoginForm {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $account = $this->userStorage->load($form_state->get('uid'));
 
-    // A destination was set, probably on an exception controller,
+    // A destination was set, probably on an exception controller,.
     if (!$this->getRequest()->request->has('destination')) {
       $form_state->setRedirect(
         'entity.user.canonical',

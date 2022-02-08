@@ -2,26 +2,27 @@
 
 namespace Drupal\dckyiv_commerce\EventSubscriber;
 
-use Drupal\address\Plugin\Field\FieldType\AddressItem;
-use Drupal\commerce_order\Entity\OrderInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\commerce_cart\CartProviderInterface;
 use Drupal\state_machine\Event\WorkflowTransitionEvent;
 
+/**
+ * Order Event Subscriber class.
+ */
 class OrderEventSubscriber implements EventSubscriberInterface {
 
   /**
    * The cart provider.
    *
-   * @var CartProviderInterface
+   * @var \Drupal\commerce_cart\CartProviderInterface
    */
   protected $cartProvider;
 
   /**
    * Constructs a new OrderEventSubscriber object.
    *
-   * @param CartProviderInterface $cart_provider
+   * @param \Drupal\commerce_cart\CartProviderInterface $cart_provider
    *   The cart provider.
    */
   public function __construct(CartProviderInterface $cart_provider) {
@@ -41,12 +42,11 @@ class OrderEventSubscriber implements EventSubscriberInterface {
   /**
    * Finalizes order attendees when the order is placed.
    *
-   * @param WorkflowTransitionEvent $event
+   * @param \Drupal\state_machine\Event\WorkflowTransitionEvent $event
    *   The workflow transition event.
-   * @throws
    */
   public function finalizeAttendee(WorkflowTransitionEvent $event) {
-    /** @var OrderInterface $order */
+    /** @var \Drupal\commerce_order\Entity\OrderInterface $order */
     $order = $event->getEntity();
     $profile = $order->getBillingProfile();
 
@@ -54,7 +54,7 @@ class OrderEventSubscriber implements EventSubscriberInterface {
       return;
     }
 
-    foreach ($order->getItems() as $commerce_order_item)  {
+    foreach ($order->getItems() as $commerce_order_item) {
       $quantity = (int) $commerce_order_item->getQuantity();
       $items = $quantity;
       $field_value = $commerce_order_item->get('field_attendee');
@@ -69,7 +69,7 @@ class OrderEventSubscriber implements EventSubscriberInterface {
             'type' => 'attendee',
           ];
           if ($delta == 0 && !empty($profile->address[0])) {
-            /** @var AddressItem $address */
+            /** @var \Drupal\address\Plugin\Field\FieldType\AddressItem $address */
             $address = $profile->address[0];
             $default_values['field_attendee_firstname'] = $address->getGivenName();
             $default_values['field_attendee_secondname'] = $address->getFamilyName();

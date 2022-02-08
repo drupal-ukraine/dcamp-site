@@ -1,13 +1,17 @@
 <?php
 
+/**
+ * @file
+ * Contains dckyiv_commerce module installation functionality.
+ */
+
 use Drupal\commerce_order\Entity\Order;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
- * Mass update of attendee information
+ * Mass update of attendee information.
  */
 function dckyiv_commerce_update_8002(&$sandbox) {
-
 
   if (!isset($sandbox['total'])) {
 
@@ -35,7 +39,7 @@ function dckyiv_commerce_update_8002(&$sandbox) {
       $order = Order::load($order_id);
       $profile = $order->getBillingProfile();
 
-      foreach ($order->getItems() as $commerce_order_item)  {
+      foreach ($order->getItems() as $commerce_order_item) {
         $quantity = (int) $commerce_order_item->getQuantity();
         $items = $quantity;
         $field_value = $commerce_order_item->get('field_attendee');
@@ -82,7 +86,8 @@ function dckyiv_commerce_update_8002(&$sandbox) {
 
   if ($sandbox['total'] == 0) {
     $sandbox['#finished'] = 1;
-  } else {
+  }
+  else {
     $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
   }
 

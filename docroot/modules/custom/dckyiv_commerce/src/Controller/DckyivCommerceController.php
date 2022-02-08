@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 /**
- * DckyivCommerceController.
+ * Dckyiv Commerce Controller class.
  */
 class DckyivCommerceController extends ControllerBase {
 
@@ -54,11 +54,13 @@ class DckyivCommerceController extends ControllerBase {
    * Constructs a DckyivCommerceController object.
    *
    * @param \Drupal\Core\Entity\EntityFormBuilderInterface $entity_form_builder
-   * The entity form builder.
+   *   The entity form builder.
    * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
-   * The entity field manager.
+   *   The entity field manager.
    * @param \Drupal\Core\Mail\MailManagerInterface $mail_manager
-   * The mail manager service.
+   *   The mail manager service.
+   * @param \Drupal\Core\Render\Renderer $renderer
+   *   The renderer.
    */
   public function __construct(EntityFormBuilderInterface $entity_form_builder, EntityFieldManagerInterface $entity_field_manager, MailManagerInterface $mail_manager, Renderer $renderer) {
     $this->entityFormBuilder = $entity_form_builder;
@@ -172,7 +174,6 @@ class DckyivCommerceController extends ControllerBase {
     $build = [];
     $allowed_values = $bundle_fields[$field_name]->getSetting('allowed_values');
 
-
     $total = 0;
 
     foreach ($allowed_values as $key => $value) {
@@ -198,7 +199,7 @@ class DckyivCommerceController extends ControllerBase {
         'table' => $view->render(),
       ];
 
-      $total +=$count;
+      $total += $count;
     }
 
     $build['total'] = [
@@ -214,11 +215,15 @@ class DckyivCommerceController extends ControllerBase {
   /**
    * Attendee send ticket callback page.
    *
-   * @param UserInterface $user
-   * @param OrderItemInterface $commerce_order_item
-   * @param ParagraphInterface $attendee_paragraph
+   * @param \Drupal\user\UserInterface $user
+   *   User instance.
+   * @param \Drupal\commerce_order\Entity\OrderItemInterface $commerce_order_item
+   *   Order item instance.
+   * @param \Drupal\paragraphs\ParagraphInterface $attendee_paragraph
+   *   Attendee info.
    *
    * @return array|RedirectResponse
+   *   Redirect user to the tickets page.
    */
   public function sendTicket(UserInterface $user, OrderItemInterface $commerce_order_item, ParagraphInterface $attendee_paragraph) {
     $to = $attendee_paragraph->get('field_attendee_email')->value;

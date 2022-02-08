@@ -25,7 +25,7 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $view_mode = $this->getSetting('view_mode');
-    $elements = array();
+    $elements = [];
 
     $commerce_order_item = $items->getParent()->getValue();
     $quantity = (int) $commerce_order_item->getQuantity();
@@ -38,7 +38,13 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
         static $depth = 0;
         $depth++;
         if ($depth > 20) {
-          $this->loggerFactory->get('entity')->error('Recursive rendering detected when rendering entity @entity_type @entity_id. Aborting rendering.', array('@entity_type' => $entity->getEntityTypeId(), '@entity_id' => $entity->id()));
+          $this->loggerFactory->get('entity')->error(
+            'Recursive rendering detected when rendering entity @entity_type @entity_id. Aborting rendering.',
+            [
+              '@entity_type' => $entity->getEntityTypeId(),
+              '@entity_id' => $entity->id(),
+            ]
+          );
           return $elements;
         }
         $view_builder = \Drupal::entityTypeManager()->getViewBuilder($entity->getEntityTypeId());
@@ -48,7 +54,7 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
         // entity's url. Since we don't know what the markup of the entity will
         // be, we shouldn't rely on it for structured data such as RDFa.
         if (!empty($items[$delta]->_attributes) && !$entity->isNew() && $entity->hasLinkTemplate('canonical')) {
-          $items[$delta]->_attributes += array('resource' => $entity->toUrl()->toString());
+          $items[$delta]->_attributes += ['resource' => $entity->toUrl()->toString()];
         }
         $depth = 0;
 
@@ -80,7 +86,7 @@ class AttendeeFormatter extends EntityReferenceRevisionsEntityFormatter {
               ],
               'attributes' => [
                 'class' => ['use-ajax'],
-                'data-dialog-type'=> 'modal',
+                'data-dialog-type' => 'modal',
               ],
             ]),
           ],
