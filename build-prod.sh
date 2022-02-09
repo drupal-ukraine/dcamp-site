@@ -13,11 +13,7 @@ composer install
 
 echo "Importing config and updating database"
 cd $HOME
-./vendor/bin/drush updb -y
-./vendor/bin/drush cr
-./vendor/bin/drush cim -y
-./vendor/bin/drush cr
-
+./vendor/bin/drush deploy
 
 
 
