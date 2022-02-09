@@ -186,6 +186,7 @@ handlers:
   email_confirmation:
     id: email
     label: 'Email confirmation'
+    notes: ''
     handler_id: email_confirmation
     status: true
     conditions: {  }
@@ -223,6 +224,7 @@ handlers:
   email_notification:
     id: email
     label: 'Email notification'
+    notes: ''
     handler_id: email_notification
     status: true
     conditions: {  }
@@ -260,6 +262,7 @@ handlers:
   mailchimp:
     id: mailchimp
     label: MailChimp_ContactUs
+    notes: ''
     handler_id: mailchimp
     status: true
     conditions: {  }

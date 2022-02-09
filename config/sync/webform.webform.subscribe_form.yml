@@ -181,6 +181,7 @@ handlers:
   mailchimp:
     id: mailchimp
     label: 'MailChimp Subscribe '
+    notes: ''
     handler_id: mailchimp
     status: true
     conditions: {  }
