@@ -17,19 +17,27 @@ jobs:
           command: echo 'source build-env' > $BASH_ENV
       # Code checkout in the build agent
       - checkout
+      # Run PHPCS checks
+      - run:
+          name: PHPCS checks
+          command: |
+            DEBUG=1 source build-env
+            build-exec 'fin composer install --no-ansi --no-interaction --optimize-autoloader --no-progress --prefer-dist'
+            build-exec 'fin phpcs docroot/modules/custom'
+            build-exec 'fin phpcs docroot/themes/custom'
+            build-exec 'fin phpcs README.md'
       # Launch a sandbox on the sandbox server
       - run:
           name: Build sandbox
-          command: sandbox-init
+          command: |
+            DEBUG=1 source build-env
+            build-exec 'fin drush status'
+            sandbox-init
       # Run other commands
       - run:
           name: Other commands
           command: |
             DEBUG=1 source build-env
-            build-exec 'fin drush status'
-            build-exec 'fin phpcs docroot/modules/custom'
-            build-exec 'fin phpcs docroot/themes/custom'
-            build-exec 'fin phpcs README.md'
             build-exec 'fin drush en upgrade_status -y'
             build-exec 'fin drush us-a --all --ignore-uninstalled --ignore-contrib'
             build-exec 'fin drush pmu upgrade_status -y'
