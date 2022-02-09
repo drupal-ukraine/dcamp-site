@@ -6,7 +6,8 @@ jobs:
     working_directory: /home/agent/build
     resource_class: medium
     docker:
-      - image: docksal/ci-agent:php
+      # See https://github.com/docksal/ci-agent#stable and available image tags.
+      - image: docksal/ci-agent:1.11-php
     steps:
       # Inject build environment variables.
       # Each run statement runs in its own isolated shell (exported variables are not preserved).
