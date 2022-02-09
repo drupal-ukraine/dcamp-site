@@ -45,4 +45,4 @@ display:
           content: 'Мультимедійних файлів не знайдено.'
   widget:
     display_title: Віджет
-label: Медіатека
+label: 'Media library'

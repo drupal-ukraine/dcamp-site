@@ -16,7 +16,7 @@ display:
         message:
           label: Повідомлення
         name:
-          label: Користувач
+          label: User
       filters:
         severity:
           expose:
