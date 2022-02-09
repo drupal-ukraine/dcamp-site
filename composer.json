@@ -66,7 +66,8 @@
         "oomphinc/composer-installers-extender": "~2.0"
     },
     "require-dev": {
-        "drupal/core-dev": "~8.8.2"
+        "drupal/core-dev": "~8.8.2",
+        "drupal/upgrade_status": "^3.13"
     },
     "authors": [
         {
@@ -213,7 +214,8 @@
         },
         "patches": {
             "drupal/core": {
-                "Allow access to menu_item_extra for anonymous": "https://www.drupal.org/files/issues/menu_link_content-view-permissions-2915792.patch"
+                "Allow access to menu_item_extra for anonymous": "https://www.drupal.org/files/issues/menu_link_content-view-permissions-2915792.patch",
+                "We use internal form classes and keep an eye on them": "assets/patches/internal.patch"
             }
         }
     },

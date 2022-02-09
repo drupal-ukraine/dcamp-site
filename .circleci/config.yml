@@ -29,6 +29,9 @@ jobs:
             build-exec 'fin phpcs docroot/modules/custom'
             build-exec 'fin phpcs docroot/themes/custom'
             build-exec 'fin phpcs README.md'
+            build-exec 'fin drush en upgrade_status -y'
+            build-exec 'fin drush us-a --all --ignore-uninstalled --ignore-contrib'
+            build-exec 'fin drush pmu upgrade_status -y'
 
 workflows:
   version: 2

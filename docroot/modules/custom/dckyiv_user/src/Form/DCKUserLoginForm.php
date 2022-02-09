@@ -7,6 +7,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Drupal\user\Form\UserLoginForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\UserInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\dckyiv_user\FbConnectLink;
 use Drupal\Core\Flood\FloodInterface;
@@ -55,7 +56,7 @@ class DCKUserLoginForm extends UserLoginForm {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('flood'),
-      $container->get('entity.manager')->getStorage('user'),
+      $container->get('entity_type.manager')->getStorage('user'),
       $container->get('user.auth'),
       $container->get('renderer'),
       $container->get('dckyiv_user.fb_connect_link')
@@ -100,7 +101,7 @@ class DCKUserLoginForm extends UserLoginForm {
       '#type' => 'textfield',
       '#title' => $this->t('Username'),
       '#size' => 60,
-      '#maxlength' => USERNAME_MAX_LENGTH,
+      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
       '#description' => $this->t('Enter your @s username.', ['@s' => $config->get('name')]),
       '#required' => TRUE,
       '#attributes' => [

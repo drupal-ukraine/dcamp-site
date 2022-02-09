@@ -121,6 +121,7 @@ if ($env == 'dev') {
   $config['mailsystem.settings']['modules']['user']['none']['sender'] = 'devel_mail_log';
 
   $config['devel.settings']['debug_mail_directory'] = 'public://maildebug';
+  $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy', 'upgrade_status'];
 }
 
 // Workaround for permission issues with NFS shares in Vagrant.

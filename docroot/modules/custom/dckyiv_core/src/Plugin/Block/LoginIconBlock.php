@@ -3,6 +3,7 @@
 namespace Drupal\dckyiv_core\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Url;
@@ -63,12 +64,22 @@ class LoginIconBlock extends BlockBase implements ContainerFactoryPluginInterfac
    */
   public function build() {
     return [
-      '#type' => 'link',
-      '#url' => Url::fromRoute(
-        $this->currentUser->isAuthenticated() ? 'user.page' : 'user.login'
-      ) ,
-      '#attributes' => ['class' => ['login_icon']],
+      'link' => [
+        '#type' => 'link',
+        '#title' => '',
+        '#url' => Url::fromRoute(
+          $this->currentUser->isAuthenticated() ? 'user.page' : 'user.login'
+        ) ,
+        '#attributes' => ['class' => ['login_icon']],
+      ]
     ];
+  }
+
+  /**
+   * {@inheritdocs}
+   */
+  public function getCacheContexts() {
+    return Cache::mergeContexts(['user.roles'], parent::getCacheContexts());
   }
 
 }

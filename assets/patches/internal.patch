@@ -1,0 +1,26 @@
+diff --git a/core/modules/user/src/Form/UserLoginForm.php b/core/modules/user/src/Form/UserLoginForm.php
+index 6f1a19fc04..d44451790c 100644
+--- a/core/modules/user/src/Form/UserLoginForm.php
++++ b/core/modules/user/src/Form/UserLoginForm.php
+@@ -14,8 +14,6 @@
+ 
+ /**
+  * Provides a user login form.
+- *
+- * @internal
+  */
+ class UserLoginForm extends FormBase {
+ 
+diff --git a/core/modules/user/src/ProfileForm.php b/core/modules/user/src/ProfileForm.php
+index a1e1550360..1b55a9f706 100644
+--- a/core/modules/user/src/ProfileForm.php
++++ b/core/modules/user/src/ProfileForm.php
+@@ -6,8 +6,6 @@
+ 
+ /**
+  * Form handler for the profile forms.
+- *
+- * @internal
+  */
+ class ProfileForm extends AccountForm {
+ 
