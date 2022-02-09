@@ -10,7 +10,7 @@
   "dependencies": {
     "font-proxima-nova-scss": "^1.0.1",
     "instascan": "^1.0.0",
-    "swiper": "^4.4.1"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "bourbon": "^4.3.4",
