@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91cb98c2b29a2f3bf8351685300c6ef4",
+    "content-hash": "db738b72e62cfc07d54b8ec3496aec10",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2621,52 +2621,6 @@
             }
         },
         {
-            "name": "drupal/commerce_liqpay_gateway",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/commerce_liqpay_gateway.git",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce_liqpay_gateway-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "71a0758543529942dce142e4c7d248c2089ffc38"
-            },
-            "require": {
-                "drupal/commerce_payment": "*",
-                "drupal/core": "~8.0",
-                "drupal/token": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1513672985",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Detal",
-                    "homepage": "https://www.drupal.org/user/3541864"
-                }
-            ],
-            "description": "Implements LiqPay payment gateway for commerce(Off-site redirect).",
-            "homepage": "https://www.drupal.org/project/commerce_liqpay_gateway",
-            "support": {
-                "source": "https://git.drupalcode.org/project/commerce_liqpay_gateway"
-            }
-        },
-        {
             "name": "drupal/commerce_number_pattern",
             "version": "2.28.0",
             "require": {
@@ -2768,58 +2722,6 @@
                 }
             ],
             "description": "Defines the Order entity and associated features.",
-            "homepage": "https://www.drupal.org/project/commerce",
-            "support": {
-                "source": "https://git.drupalcode.org/project/commerce"
-            }
-        },
-        {
-            "name": "drupal/commerce_payment",
-            "version": "2.28.0",
-            "require": {
-                "drupal/commerce": "*",
-                "drupal/commerce_order": "*",
-                "drupal/core": "^8.9 || ^9",
-                "drupal/entity_reference_revisions": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.28",
-                    "datestamp": "1639899120",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Centarro",
-                    "homepage": "https://www.drupal.org/user/3661446"
-                },
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "jsacksick",
-                    "homepage": "https://www.drupal.org/user/972218"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Provides payment functionality.",
             "homepage": "https://www.drupal.org/project/commerce",
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce"
@@ -3591,62 +3493,6 @@
             "homepage": "https://www.drupal.org/project/content_planner",
             "support": {
                 "source": "https://git.drupalcode.org/project/content_planner"
-            }
-        },
-        {
-            "name": "drupal/contribute",
-            "version": "5.0.0-beta3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/contribute.git",
-                "reference": "8.x-5.0-beta3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/contribute-8.x-5.0-beta3.zip",
-                "reference": "8.x-5.0-beta3",
-                "shasum": "8ee067c4b9472b51af90b9481e4302527080129c"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-5.0-beta3",
-                    "datestamp": "1515761285",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "adriancid",
-                    "homepage": "https://www.drupal.org/user/1962106"
-                },
-                {
-                    "name": "develCuy",
-                    "homepage": "https://www.drupal.org/user/125473"
-                },
-                {
-                    "name": "jrockowitz",
-                    "homepage": "https://www.drupal.org/user/371407"
-                }
-            ],
-            "description": "Provides status report message which encourage users or organizations to join the Drupal community, become a member of Drupal Association, and contribute back to Drupal.",
-            "homepage": "https://www.drupal.org/project/contribute",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/contribute",
-                "issues": "https://www.drupal.org/project/issues/contribute"
             }
         },
         {
@@ -15942,7 +15788,6 @@
     "stability-flags": {
         "drupal/conditional_fields": 15,
         "drupal/content_planner": 10,
-        "drupal/contribute": 10,
         "drupal/email_registration": 5,
         "drupal/moderation_state_buttons_widget": 15,
         "drupal/rabbit_hole": 10,
