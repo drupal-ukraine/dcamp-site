@@ -13,7 +13,7 @@
         "drupal/commerce": "2.16",
         "drupal/commerce_cart_flyout": "^1.7",
         "drupal/commerce_liqpay_gateway": "^1.0",
-        "drupal/conditional_fields": "^1.0@alpha",
+        "drupal/conditional_fields": "^4.0@alpha",
         "drupal/config_split": "^1.7",
         "drupal/console": "^1.0.2",
         "drupal/content_moderation_notifications": "^3.3",
