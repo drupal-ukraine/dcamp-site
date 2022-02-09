@@ -12,6 +12,6 @@ emails: ''
 recipient: false
 subject: 'Your Presentation has been saved ([node:title])'
 body:
-  value: "<p>Hello,</p>\r\n\r\n<p>here is the notification from the DrupalCamp Kyiv website that your session called \"[node:title]\" has been saved on the website.</p>\r\n\r\n<p>You can still edit the saved session using <a href=\"[site:url]/user\">your profile page</a>.</p>\r\n\r\n<hr />\r\n<p>Org team, DrupalCamp Kyiv</p>\r\n\r\n<p>Let your friends know you're attending&nbsp;<a href=\"https://www.facebook.com/events/430619964428491/\">DrupalCamp Kyiv 2020</a>&nbsp;, follow us on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  value: "<p>Hello,</p>\r\n\r\n<p>here is the notification from the DrupalCamp Kyiv website that your session called \"[node:title]\" has been saved on the website.</p>\r\n\r\n<p>You can still edit the saved session using <a href=\"[site:url]/user\">your profile page</a>.</p>\r\n\r\n<hr />\r\n<p>Org team, DrupalCamp Kyiv</p>\r\n\r\n<p>Let your friends know you're attending&nbsp;<a href=\"https://www.facebook.com/events/591837701848390/\">DrupalCamp Kyiv 2022</a>&nbsp;, follow us on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
   format: full_html
 label: 'Presentation has been added'
