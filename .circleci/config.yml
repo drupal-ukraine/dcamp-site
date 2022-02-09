@@ -6,7 +6,8 @@ jobs:
     working_directory: /home/agent/build
     resource_class: medium
     docker:
-      - image: docksal/ci-agent:php
+      # See https://github.com/docksal/ci-agent#stable and available image tags.
+      - image: docksal/ci-agent:1.11-php
     steps:
       # Inject build environment variables.
       # Each run statement runs in its own isolated shell (exported variables are not preserved).
@@ -29,6 +30,9 @@ jobs:
             build-exec 'fin phpcs docroot/modules/custom'
             build-exec 'fin phpcs docroot/themes/custom'
             build-exec 'fin phpcs README.md'
+            build-exec 'fin drush en upgrade_status -y'
+            build-exec 'fin drush us-a --all --ignore-uninstalled --ignore-contrib'
+            build-exec 'fin drush pmu upgrade_status -y'
 
 workflows:
   version: 2

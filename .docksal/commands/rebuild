@@ -6,7 +6,7 @@
 ##
 ## Docksal custom command rebuild script
 ## Syncs DB from Pantheon environment, @see PANTHEON_ENV setting below
-## Runs composer, drush cim, drush updb, drush cr
+## Runs composer, drush deploy
 ## Builds theme @see scripts/build_theme.sh
 ##
 ## TODO: Add ability to force new Pantheon backup to be create for latest DB sync
@@ -46,12 +46,10 @@ fin db import $PROJECT_ROOT/db/database.sql --db-user=user --db-password=user
 echo
 
 # Running Drush commands
-echo-yellow "Running drush cim, drush updb, drush cr"
+echo-yellow "Running drush deploy"
 cd $DOCROOT_PATH
 fin drush cr
-fin drush updb -y
-fin drush cim -y
-fin drush cr
+fin drush deploy
 fin drush en stage_file_proxy -y
 fin drush config-set stage_file_proxy.settings origin "https://drupalcampkyiv.org"
 fin drush en devel -y

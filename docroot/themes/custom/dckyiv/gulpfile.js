@@ -21,7 +21,7 @@ var paths = {
     '!js/**/*.min.js'
   ],
   sass: {
-    main: ['style/scss/styles.scss', 'style/scss/iframes.scss', 'style/scss/print.scss', 'style/scss/wysiwyg.scss'],
+    main: ['style/scss/styles.scss', 'style/scss/print.scss', 'style/scss/wysiwyg.scss'],
     watch: 'style/scss/**/*'
   },
   css: {
@@ -35,32 +35,30 @@ var paths = {
 };
 
 // Copy dependencies to ./assets
-gulp.task('assets', function () {
-  gulp.src(npmDist(), {base: './node_modules'})
+gulp.task('assets', () => {
+  return gulp.src(npmDist(), {base: './node_modules'})
     .pipe(gulp.dest('./assets'));
 });
 
 // Build icomoon font
-gulp.task('build-icomoon', function () {
-  return gulp.src('./fonts/icomoon/selection.json')
-    .pipe(icomoonBuilder({
-      templateType: 'map',
-    }))
-    .on('error', function (error) {
-      console.log(error);
-    })
-    .pipe(gulp.dest('./style/scss/icomoon'))
-    .on('error', function (error) {
-      console.log(error);
-    });
-});
+gulp.task('build-icomoon', () => gulp.src('./fonts/icomoon/selection.json')
+  .pipe(icomoonBuilder({
+    templateType: 'map'
+  }))
+  .on('error', function (error) {
+    console.log(error);
+  })
+  .pipe(gulp.dest('./style/scss/icomoon'))
+  .on('error', function (error) {
+    console.log(error);
+  }));
 
-gulp.task('clean', function () {
+gulp.task('clean', () => {
   'use strict';
   return del(paths.clean);
 });
 
-gulp.task('js-lint', function () {
+gulp.task('js-lint', () => {
   'use strict';
   return gulp.src(paths.scripts)
     .pipe(eslint())
@@ -68,7 +66,7 @@ gulp.task('js-lint', function () {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('sass-lint', function () {
+gulp.task('sass-lint', () => {
   'use strict';
   return gulp.src(paths.sass.watch)
     .pipe(sassLint({
@@ -99,9 +97,9 @@ gulp.task('sass-lint', function () {
     .pipe(sassLint.failOnError());
 });
 
-gulp.task('lint', ['js-lint', 'sass-lint']);
+gulp.task('lint', gulp.series('js-lint', 'sass-lint'));
 
-gulp.task('compress', function () {
+gulp.task('compress', () => {
   'use strict';
   return gulp.src(paths.scripts)
     .pipe(rename({suffix: '.min'}))
@@ -109,7 +107,7 @@ gulp.task('compress', function () {
     .pipe(gulp.dest('js/dist'));
 });
 
-gulp.task('sass', ['build-icomoon'], function () {
+gulp.task('sass', gulp.series('build-icomoon', () => {
   'use strict';
   return gulp.src(paths.sass.main)
     .pipe(sassGlob())
@@ -127,9 +125,9 @@ gulp.task('sass', ['build-icomoon'], function () {
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(paths.css.root))
     .pipe(livereload());
-});
+}));
 
-gulp.task('sourcemaps', function () {
+gulp.task('sourcemaps', () => {
   'use strict';
   return gulp.src(paths.sass.main)
     .pipe(sassGlob())
@@ -139,13 +137,13 @@ gulp.task('sourcemaps', function () {
     .pipe(gulp.dest(paths.css.root));
 });
 
-gulp.task('build', ['build-icomoon', 'assets', 'sass', 'compress']);
+gulp.task('build', gulp.series('build-icomoon', 'assets', 'sass', 'compress'));
 
-gulp.task('watch', ['build'], function () {
+gulp.task('watch', gulp.series('build', () => {
   'use strict';
   livereload.listen();
   gulp.watch(paths.sass.watch, ['sass']);
-  gulp.watch(paths.scripts, ['compress']);
-});
+  return gulp.watch(paths.scripts, ['compress']);
+}));
 
-gulp.task('default', ['build']);
+gulp.task('default', gulp.series('build'));

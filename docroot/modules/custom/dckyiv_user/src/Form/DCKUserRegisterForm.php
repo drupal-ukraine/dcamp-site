@@ -39,9 +39,9 @@ class DCKUserRegisterForm extends ProfileForm {
   public function __construct(
     EntityRepositoryInterface $entity_repository,
     LanguageManagerInterface $language_manager,
+    FbConnectLink $fbConnectLink,
     EntityTypeBundleInfoInterface $entity_type_bundle_info = NULL,
-    TimeInterface $time = NULL,
-    FbConnectLink $fbConnectLink
+    TimeInterface $time = NULL
    ) {
     parent::__construct($entity_repository, $language_manager, $entity_type_bundle_info, $time);
     $this->fbConnectLink = $fbConnectLink;
@@ -54,9 +54,9 @@ class DCKUserRegisterForm extends ProfileForm {
     return new static(
       $container->get('entity.repository'),
       $container->get('language_manager'),
+      $container->get('dckyiv_user.fb_connect_link'),
       $container->get('entity_type.bundle.info'),
-      $container->get('datetime.time'),
-      $container->get('dckyiv_user.fb_connect_link')
+      $container->get('datetime.time')
     );
   }
 

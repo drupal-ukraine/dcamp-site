@@ -12,7 +12,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
 use Drupal\commerce_liqpay\Controller\LiqPayStatusRequestSender;
-use Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\SupportsNotificationsInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Drupal\Component\Serialization\Json;
 
@@ -32,7 +31,7 @@ use Drupal\Component\Serialization\Json;
  *   },
  * )
  */
-class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificationsInterface {
+class Liqpayment extends OffsitePaymentGatewayBase {
 
   use StringTranslationTrait;
 
@@ -226,10 +225,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
     ];
 
     if (NULL !== $name) {
-      if (isset($statuses[$name])) {
-        return $statuses[$name];
-      }
-      return FALSE;
+      return $statuses[$name] ?? FALSE;
     }
 
     return $statuses;
@@ -251,7 +247,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
     ];
     foreach ($required_fields as $key) {
       if (empty($values[$key])) {
-        drupal_set_message($this->t('LiqPay service is not configured for use. Please contact an administrator to resolve this issue.'), 'error');
+        $this->messenger()->addError($this->t('LiqPay service is not configured for use. Please contact an administrator to resolve this issue.'));
         return FALSE;
       }
     }
@@ -285,19 +281,15 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
    */
   public function onReturn(OrderInterface $order, Request $request) {
     // Receiving transaction status.
-    if (!$data = $this->receivingLiqpayTransaction($order)) {
-      drupal_set_message($this->t('Invalid Transaction. Please try again'), 'error');
+    $data = $this->receivingLiqpayTransaction($order);
+    if (!$data) {
+      $this->messenger()->addError($this->t('Invalid Transaction. Please try again'));
       return $this->onCancel($order, $request);
     }
     else {
-      $data = $this->receivingLiqpayTransaction($order);
-
       // Check that payment was successful.
-      if (
-        ($data['status'] != 'success')
-        && ($data['status'] != 'sandbox')
-      ) {
-        drupal_set_message($this->t('Invalid Transaction. Please try again'), 'error');
+      if (!in_array($data['status'], ['success', 'sandbox'], TRUE)) {
+        $this->messenger()->addError($this->t('Invalid Transaction. Please try again'));
         throw new PaymentGatewayException($data['message']);
       }
 
@@ -305,13 +297,13 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
       $payment         = $payment_storage->create([
         'state'           => $data['status'],
         'amount'          => $order->getTotalPrice(),
-        'payment_gateway' => $this->entityId,
+        'payment_gateway' => $this->parentEntity->id(),
         'order_id'        => $data['order_id'],
         'remote_id'       => $data['liqpay_order_id'],
         'remote_state'    => $data['status'],
       ]);
       $payment->save();
-      drupal_set_message($data['message']);
+      $this->messenger()->addStatus($data['message']);
     }
   }
 
@@ -319,7 +311,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
    * {@inheritdoc}
    */
   public function onCancel(OrderInterface $order, Request $request) {
-    drupal_set_message($this->t('You have canceled checkout at @gateway but may resume the checkout process here when you are ready.', [
+    $this->messenger()->addStatus($this->t('You have canceled checkout at @gateway but may resume the checkout process here when you are ready.', [
       '@gateway' => $this->getDisplayLabel(),
     ]));
     throw new PaymentGatewayException('Payment cancelled by user');
@@ -335,11 +327,11 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
     $config = \Drupal::config('commerce_liqpay.settings');
 
     return [
-      'public_key'   => isset($this->configuration['public_key']) ? $this->configuration['public_key'] : '',
-      'private_key'  => isset($this->configuration['private_key']) ? $this->configuration['private_key'] : '',
-      'api_url'      => isset($this->configuration['api_url']) ? $this->configuration['api_url'] : $config->get('commerce_liqpay.api_url'),
-      'checkout_url' => isset($this->configuration['checkout_url']) ? $this->configuration['checkout_url'] : $config->get('commerce_liqpay.checkout_url'),
-      'version'      => isset($this->configuration['version']) ? $this->configuration['version'] : $config->get('commerce_liqpay.version'),
+      'public_key'   => $this->configuration['public_key'] ?? '',
+      'private_key'  => $this->configuration['private_key'] ?? '',
+      'api_url'      => $this->configuration['api_url'] ?? $config->get('commerce_liqpay.api_url'),
+      'checkout_url' => $this->configuration['checkout_url'] ?? $config->get('commerce_liqpay.checkout_url'),
+      'version'      => $this->configuration['version'] ?? $config->get('commerce_liqpay.version'),
     ];
   }
 
@@ -360,7 +352,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
     // Check transaction status.
     $data = $liqpay->api("request", [
       'action'   => 'status',
-      'version'  => isset($this->configuration['version']) ? $this->configuration['version'] : $store_data['version'],
+      'version'  => $this->configuration['version'] ?? $store_data['version'],
       'order_id' => $order->id(),
     ]);
 
@@ -389,12 +381,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
 
     // Find out a message for this transaction.
     $message_liqpay = $this->configuration['message_' . $status['status']];
-    if (!empty($message_liqpay)) {
-      $data['message'] = $message_liqpay;
-    }
-    else {
-      $data['message'] = $status['message'];
-    }
+    $data['message'] = !empty($message_liqpay) ? $message_liqpay : $status['message'];
 
     // Everything is ok with this transaction.
     return $data;
@@ -412,10 +399,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
    *   TRUE on successful validation FALSE otherwise.
    */
   protected function validateCurrency($transaction_currency, $order_currency) {
-    if ($transaction_currency != $order_currency) {
-      return FALSE;
-    }
-    return TRUE;
+    return $transaction_currency == $order_currency;
   }
 
   /**
@@ -430,10 +414,7 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
    *   TRUE on successful validation FALSE otherwise.
    */
   protected function validateAmount($transaction_amount, $order_amount) {
-    if ($transaction_amount != $order_amount) {
-      return FALSE;
-    }
-    return TRUE;
+    return $transaction_amount == $order_amount;
   }
 
   /**
@@ -454,25 +435,23 @@ class Liqpayment extends OffsitePaymentGatewayBase implements SupportsNotificati
 
     $order = Order::load($liqpay_response_convert_to_array['order_id']);
     // Receiving transaction status.
-    if (!$data = $this->receivingLiqpayTransaction($order)) {
-      drupal_set_message($this->t('Invalid Transaction. Please try again'), 'error');
+    $data = $this->receivingLiqpayTransaction($order);
+    if (!$data) {
+      $this->messenger()->addError($this->t('Invalid Transaction. Please try again'));
       return $this->onCancel($order, $request);
-    }
-    else {
-      $data = $this->receivingLiqpayTransaction($order);
     }
 
     $payment_storage = $this->entityTypeManager->getStorage('commerce_payment');
     $payment         = $payment_storage->create([
       'state'           => $data['status'],
       'amount'          => $order->getTotalPrice(),
-      'payment_gateway' => $this->entityId,
+      'payment_gateway' => $this->parentEntity->id(),
       'order_id'        => $data['order_id'],
       'remote_id'       => $data['liqpay_order_id'],
       'remote_state'    => $data['status'],
     ]);
     $payment->save();
-    drupal_set_message($data['message']);
+    $this->messenger()->addStatus($data['message']);
     \Drupal::logger('commerce_payment')->notice('Liqpay response for order id: @order. Status: @status.',
       [
         '@order' => $data['order_id'],

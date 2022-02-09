@@ -50,15 +50,13 @@ echo
 # Running composer
 echo-yellow "Running composer install"
 cd $PROJECT_ROOT
-fin composer install --no-ansi --no-dev --no-interaction --optimize-autoloader --no-progress --prefer-dist --ignore-platform-reqs
+fin composer install --no-ansi --no-interaction --optimize-autoloader --no-progress --prefer-dist --ignore-platform-reqs
 echo-green "Done.\n"
 
 # Running Drush commands
-echo-yellow "Running drush cim, drush updb, drush cr"
+echo-yellow "Running drush deploy"
 cd $DOCROOT_PATH
-fin drush updb -y
-fin drush cim -y
-fin drush cr
+fin drush deploy
 fin drush en stage_file_proxy -y
 fin drush config-set stage_file_proxy.settings origin "https://drupalcampkyiv.org" -y
 fin drush uli

@@ -4,7 +4,7 @@
  * see @ https://jshakespeare.com/easy-icomoon-icons-with-sass
  */
 
-@import "icons";
+@import "../icomoon_icons";
 
 @mixin icoMoon($icon, $position: "before", $replace: false) {
   // If we're replacing the text, set font-size to 0
