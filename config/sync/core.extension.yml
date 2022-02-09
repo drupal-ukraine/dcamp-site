@@ -2,6 +2,7 @@ module:
   address: 0
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
+  admin_toolbar_search: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   automated_cron: 0
@@ -103,7 +104,6 @@ module:
   state_machine: 0
   svg_formatter: 0
   svg_image: 0
-  swiftmailer: 0
   system: 0
   taxonomy: 0
   telephone: 0

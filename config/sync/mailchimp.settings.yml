@@ -1,7 +1,9 @@
-api_key: XXXXXXXXXXXXXX-us12
-enable_connected: false
-connected_id: null
-connected_paths: null
+api_key: ''
+api_timeout: 10
 cron: false
-batch_limit: 1
-webhook_hash: XXXXXXXXXX
+batch_limit: 100
+api_classname: Mailchimp\Mailchimp
+test_mode: false
+_core:
+  default_config_hash: ViXe1Mhsdfc0AY1y-5R7vwxUoVItsnRfbQbQYzQGEEs
+langcode: uk
