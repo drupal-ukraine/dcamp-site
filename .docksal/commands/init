@@ -56,7 +56,6 @@ echo-green "Done.\n"
 # Running Drush commands
 echo-yellow "Running drush deploy"
 cd $DOCROOT_PATH
-fin logs db
 fin drush deploy
 fin drush en stage_file_proxy -y
 fin drush config-set stage_file_proxy.settings origin "https://drupalcampkyiv.org" -y
