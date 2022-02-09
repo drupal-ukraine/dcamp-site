@@ -50,7 +50,7 @@
         "drupal/svg_formatter": "^1.8",
         "drupal/svg_image": "^1.9",
         "drupal/token": "^1.5",
-        "drupal/twig_field_value": "^1.1",
+        "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^2.1",
         "drupal/video_embed_field": "^2.0",
         "drupal/views_infinite_scroll": "^1.5",
