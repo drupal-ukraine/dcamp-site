@@ -44,7 +44,7 @@ set -e
 # Database import
 echo-yellow "Importing..."
 #
-gunzip db.sql.gz | fin db import $PROJECT_ROOT/db/database.sql --db=default --db-user=user --db-password=user
+gunzip $PROJECT_ROOT/db/database.sql.gz | fin db import --db=default --db-user=root --db-password=root
 echo
 
 # Running composer
