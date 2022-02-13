@@ -3,9 +3,6 @@ elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#placeholder': 'Ð†Ð
 settings:
   confirmation_message: 'Your message has been sent.'
 handlers:
-  email_confirmation:
-    settings:
-      subject: 'New request at the Contact form of website.'
   email_notification:
     settings:
       subject: 'New request at the Contact form of website.'

@@ -7,6 +7,8 @@ dependencies:
       - webform
   module:
     - webform_mailchimp
+_core:
+  default_config_hash: XmVvfioCEWZuviJP_L885YzaG8QwS6hcTfgQU3cFyyk
 open: null
 close: null
 weight: 0
@@ -200,44 +202,6 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
-    id: email
-    label: 'Email confirmation'
-    notes: ''
-    handler_id: email_confirmation
-    status: true
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: '[current-user:mail]'
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      subject: 'New request at the Contact form of website.'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      theme_name: ''
-      parameters: {  }
-      theme: ''
   email_notification:
     id: email
     label: 'Email notification'
@@ -292,5 +256,3 @@ handlers:
       interest_groups: {  }
       control: ''
 variants: {  }
-_core:
-  default_config_hash: XmVvfioCEWZuviJP_L885YzaG8QwS6hcTfgQU3cFyyk
