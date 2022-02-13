@@ -6,6 +6,7 @@ dependencies:
     - commerce_order.commerce_order_type.drupal_camp_ticket
   module:
     - commerce_order
+    - commerce_price
     - state_machine
     - user
 id: commerce_order.drupal_camp_ticket.default
@@ -13,6 +14,15 @@ targetEntityType: commerce_order
 bundle: drupal_camp_ticket
 mode: default
 content:
+  balance:
+    type: commerce_price_default
+    label: inline
+    weight: 11
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    region: content
   completed:
     label: above
     type: timestamp
@@ -81,5 +91,6 @@ hidden:
   billing_profile: true
   changed: true
   order_number: true
+  search_api_excerpt: true
   store_id: true
   total_paid: true
