@@ -6,10 +6,11 @@ id: need_changes
 workflow: presentation
 transitions:
   need_changes: need_changes
-roles: {  }
+roles:
+  administrator: administrator
 author: true
+site_mail: false
 emails: ''
-recipient: false
 subject: 'Please update your [node:title] presentation.'
 body:
   value: "<p>Hello,</p>\r\n\r\n<p>Your session has been already reviewed and we're here to ask for some adjustments.</p>\r\n\r\n<p>Additional information from the Org Team:</p>\r\n\r\n<blockquote>\r\n<p><strong>[node:log]</strong></p>\r\n</blockquote>\r\n\r\n<p>Please, visit the website and update your session according to this request.</p>\r\n\r\n<p><a href=\"https://drupalcampkyiv.org/node/[node:nid]/edit\">EDIT MY SESSION</a></p>\r\n\r\n<hr />\r\n<p>Org team, DrupalCamp Kyiv</p>\r\n\r\n<p>Let your friends know you're attending&nbsp;<a href=\"https://www.facebook.com/events/430619964428491/\">DrupalCamp Kyiv 2022</a>&nbsp;, follow us on&nbsp;<a href=\"https://www.facebook.com/drupalcampkyiv/\">Facebook</a>&nbsp;and <a href=\"https://twitter.com/drupalcampkyiv\">Twitter</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
