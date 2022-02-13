@@ -56,6 +56,7 @@
         "drupal/webform": "^5.0@RC",
         "drupal/webform_mailchimp": "^5.4",
         "drupal/workflow": "^1.1",
+        "drupal/workflow_buttons": "^1.0@beta",
         "drupal/yoast_seo": "^1.3",
         "drush/drush": "^10.0",
         "enyo/dropzone": "^5.5",

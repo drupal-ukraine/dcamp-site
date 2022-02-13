@@ -21,15 +21,14 @@ dependencies:
     - field.field.node.presentation.field_yoast_seo
     - image.style.thumbnail
     - node.type.presentation
-    - workflows.workflow.presentation
   module:
     - field_group
     - link
-    - moderation_state_buttons_widget
     - path
     - scheduler
     - svg_image
     - text
+    - workflow_buttons
 third_party_settings:
   field_group:
     group_presentation_info:
@@ -207,10 +206,10 @@ content:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
-    type: moderation_state_buttons
+    type: workflow_buttons
     weight: 3
     settings:
-      show_forbidden_transitions: false
+      show_current_state: '1'
     region: content
     third_party_settings: {  }
   path:
