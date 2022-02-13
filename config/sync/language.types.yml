@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: dqouFqVseNJNvEjsoYKxbinFOITuCxYhi4y2OTNQP_8
+langcode: uk
 all:
   - language_interface
   - language_content
@@ -31,6 +34,3 @@ negotiation:
       language-session: -17
       language-browser: -16
       language-selected: -15
-_core:
-  default_config_hash: dqouFqVseNJNvEjsoYKxbinFOITuCxYhi4y2OTNQP_8
-langcode: uk

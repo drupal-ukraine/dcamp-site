@@ -18,34 +18,34 @@ bundle: mie-demo-base-menu
 mode: default
 content:
   children:
+    settings: {  }
+    third_party_settings: {  }
     weight: 3
     region: content
-    settings: {  }
-    third_party_settings: {  }
   field_body:
-    weight: 0
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
   field_image:
-    weight: 1
+    type: image
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: image
+    weight: 1
     region: content
   field_mie_demo_content_terms:
-    weight: 2
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 2
     region: content
 hidden:
   langcode: true

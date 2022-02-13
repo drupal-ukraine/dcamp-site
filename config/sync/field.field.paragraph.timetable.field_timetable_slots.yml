@@ -21,13 +21,10 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       timetable_slot: timetable_slot
+    negate: 0
     target_bundles_drag_drop:
-      timetable:
-        weight: 20
-        enabled: false
       camp_products:
         weight: 21
         enabled: false
@@ -70,12 +67,15 @@ settings:
       teaser:
         weight: 34
         enabled: false
+      timetable:
+        weight: 20
+        enabled: false
       timetable_presentation:
         weight: 35
         enabled: false
       timetable_slot:
-        enabled: true
         weight: 36
+        enabled: true
       wrapper_teasers:
         weight: 37
         enabled: false

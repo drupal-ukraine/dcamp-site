@@ -8,17 +8,17 @@ dependencies:
     - email_registration
 _core:
   default_config_hash: wwkDVBiXUqSzRifJbb71ajFBklJdNJ_DgS67IF-_qgY
-id: default
 label: Базово
+id: default
 plugin: multistep_default
 configuration:
   display_checkout_progress: true
   panes:
     dckyiv_login:
-      allow_guest_checkout: false
-      allow_registration: true
       step: login
       weight: 0
+      allow_guest_checkout: false
+      allow_registration: true
     payment_information:
       step: order_information
       weight: 1
@@ -26,27 +26,27 @@ configuration:
       step: review
       weight: 2
     payment_process:
-      capture: true
       step: payment
       weight: 3
+      capture: true
     completion_message:
       step: complete
       weight: 4
     order_summary:
-      view: commerce_checkout_order_summary
       step: _sidebar
       weight: 5
+      view: commerce_checkout_order_summary
     contact_information:
-      double_entry: false
       step: _disabled
       weight: 6
+      double_entry: false
     login:
-      allow_guest_checkout: true
-      allow_registration: false
       step: _disabled
       weight: 7
-    email_registration_login:
       allow_guest_checkout: true
       allow_registration: false
+    email_registration_login:
       step: _disabled
       weight: 8
+      allow_guest_checkout: true
+      allow_registration: false

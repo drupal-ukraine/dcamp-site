@@ -14,7 +14,9 @@ bundle: sponsor_wrapper_full
 mode: default
 content:
   field_sponsor_section:
+    type: entity_reference_paragraphs
     weight: 1
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -23,16 +25,14 @@ content:
       form_display_mode: default
       default_paragraph_type: sponsors
     third_party_settings: {  }
-    type: entity_reference_paragraphs
-    region: content
   field_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   status: true

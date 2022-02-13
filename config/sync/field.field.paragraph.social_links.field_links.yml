@@ -21,9 +21,9 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       icomoon_link: icomoon_link
+    negate: 0
     target_bundles_drag_drop:
       contacts:
         weight: 10
@@ -41,8 +41,8 @@ settings:
         weight: 14
         enabled: false
       icomoon_link:
-        enabled: true
         weight: 15
+        enabled: true
       menu_cta:
         weight: 16
         enabled: false

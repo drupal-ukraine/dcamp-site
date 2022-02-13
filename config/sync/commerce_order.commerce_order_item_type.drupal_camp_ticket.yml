@@ -2,9 +2,9 @@ uuid: 8b3c1a56-ded8-4285-b42e-f08ffdd931ea
 langcode: en
 status: true
 dependencies: {  }
-label: 'Drupal Camp Ticket'
 id: drupal_camp_ticket
-purchasableEntityType: commerce_product_variation
-orderType: drupal_camp_ticket
+label: 'Drupal Camp Ticket'
 traits: {  }
 locked: false
+purchasableEntityType: commerce_product_variation
+orderType: drupal_camp_ticket

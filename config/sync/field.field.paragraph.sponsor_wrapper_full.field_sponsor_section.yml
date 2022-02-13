@@ -21,13 +21,10 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       sponsors: sponsors
+    negate: 0
     target_bundles_drag_drop:
-      sponsor_wrapper_full:
-        weight: 18
-        enabled: false
       camp_products:
         weight: 19
         enabled: false
@@ -64,9 +61,12 @@ settings:
       sponsor_wrapper:
         weight: 30
         enabled: false
+      sponsor_wrapper_full:
+        weight: 18
+        enabled: false
       sponsors:
-        enabled: true
         weight: 31
+        enabled: true
       teaser:
         weight: 32
         enabled: false

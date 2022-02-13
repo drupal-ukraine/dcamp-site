@@ -1,7 +1,23 @@
 uuid: 6f998dc4-f2ec-4a76-b8b5-9264cd9385e7
 langcode: uk
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - node.type.presentation
+    - workflows.workflow.presentation
+  module:
+    - comment
+    - commerce_checkout
+    - commerce_order
+    - commerce_product
+    - contact
+    - content_moderation
+    - filter
+    - media
+    - node
+    - search
+    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated

@@ -24,33 +24,33 @@ bundle: sponsor
 mode: only_image
 content:
   field_image:
-    weight: 1
+    type: image
     label: hidden
     settings:
+      image_link: ''
+      image_style: ''
       svg_attributes:
         width: null
         height: null
       svg_render_as_image: true
-      image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    weight: 1
     region: content
   field_person:
     type: boolean
-    weight: 2
-    region: content
     label: hidden
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-  links:
-    weight: 0
+    weight: 2
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_drupal_org: true
   field_email: true

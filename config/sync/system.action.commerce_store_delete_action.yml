@@ -2,12 +2,12 @@ uuid: b975ed02-0ae0-4095-9f3b-f5cd342b43a3
 langcode: uk
 status: true
 dependencies:
-  enforced:
-    module:
-      - commerce_store
   module:
     - commerce_store
     - entity
+  enforced:
+    module:
+      - commerce_store
 _core:
   default_config_hash: UdhJAuixyuIu-hp_uqul-Gm97CiABMd1mM6GgzdwL3I
 id: commerce_store_delete_action

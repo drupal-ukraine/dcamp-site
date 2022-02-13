@@ -30,46 +30,46 @@ content:
       form_display_mode: default
       default_paragraph_type: attendee
       features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
         add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_t_shirt_size:
+    type: options_select
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_t_shirt_type:
+    type: options_select
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   purchased_entity:
     type: entity_reference_autocomplete
     weight: 0
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   quantity:
     type: commerce_quantity
     weight: 1
     region: content
     settings:
-      step: '1'
       placeholder: ''
+      step: '1'
     third_party_settings: {  }
   unit_price:
     type: commerce_unit_price
     weight: 2
+    region: content
     settings:
       require_confirmation: true
-    region: content
     third_party_settings: {  }
 hidden:
   created: true

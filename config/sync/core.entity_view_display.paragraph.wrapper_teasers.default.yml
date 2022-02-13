@@ -14,21 +14,21 @@ bundle: wrapper_teasers
 mode: default
 content:
   field_background_image:
-    weight: 0
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      link: true
       view_mode: default
+      link: true
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 0
     region: content
   field_teasers:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: in_wrapper
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden: {  }

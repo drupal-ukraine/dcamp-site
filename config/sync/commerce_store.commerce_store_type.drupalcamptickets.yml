@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: drupalcamptickets
 label: DrupalCampTickets
-description: ''
 traits: {  }
 locked: false
+description: ''

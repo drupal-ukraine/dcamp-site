@@ -15,19 +15,19 @@ bundle: menu_cta
 mode: default
 content:
   field_background_color:
-    weight: 1
+    type: color_field_formatter_text
     label: hidden
     settings:
       format: hex
-      opacity: '1'
+      opacity: true
     third_party_settings: {  }
-    type: color_field_formatter_text
+    weight: 1
     region: content
   field_text:
-    weight: 0
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
 hidden: {  }

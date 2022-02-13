@@ -24,33 +24,33 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_color:
-    weight: 123
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 123
     region: content
-  field_end_time:
-    weight: 122
     settings: {  }
     third_party_settings: {  }
+  field_end_time:
     type: datetime_timestamp
+    weight: 122
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_presentations:
+    type: entity_reference_autocomplete
     weight: 124
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_start_time:
+    type: datetime_timestamp
     weight: 121
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_timestamp
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -61,8 +61,8 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 100
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -72,10 +72,10 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 15
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
@@ -85,17 +85,17 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 120
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 16
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -107,18 +107,18 @@ content:
     third_party_settings: {  }
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default

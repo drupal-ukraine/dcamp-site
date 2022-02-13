@@ -1,16 +1,16 @@
-definitions:
-  contact__site_page:
-    enabled: false
-    menu_name: footer
-    parent: ''
-    expanded: false
-    weight: 0
-  standard__front_page:
-    weight: -46
-    menu_name: main
-    parent: ''
-    expanded: false
-    enabled: false
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
 langcode: uk
+definitions:
+  contact__site_page:
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: false
+  standard__front_page:
+    menu_name: main
+    parent: ''
+    weight: -46
+    expanded: false
+    enabled: false

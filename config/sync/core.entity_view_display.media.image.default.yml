@@ -15,16 +15,16 @@ bundle: image
 mode: default
 content:
   field_media_image:
+    type: image
     label: visually_hidden
     settings:
-      image_style: ''
       image_link: file
+      image_style: ''
       svg_attributes:
         width: null
         height: null
       svg_render_as_image: true
     third_party_settings: {  }
-    type: image
     weight: 1
     region: content
 hidden:

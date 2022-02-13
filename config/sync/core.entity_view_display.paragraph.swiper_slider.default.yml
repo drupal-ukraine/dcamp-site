@@ -28,123 +28,123 @@ bundle: swiper_slider
 mode: default
 content:
   field_swiper_autoplay:
-    weight: 4
+    type: number_integer
     label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: false
     third_party_settings: {  }
-    type: number_integer
+    weight: 4
     region: content
   field_swiper_buttons:
-    weight: 13
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 13
     region: content
   field_swiper_class:
-    weight: 14
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 14
     region: content
   field_swiper_direction:
-    weight: 2
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 2
     region: content
   field_swiper_effect:
-    weight: 7
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 7
     region: content
   field_swiper_grab:
-    weight: 8
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 8
     region: content
   field_swiper_height:
-    weight: 10
+    type: number_integer
     label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: false
     third_party_settings: {  }
-    type: number_integer
+    weight: 10
     region: content
   field_swiper_images:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
-      svg_render_as_image: true
+      image_style: ''
       svg_attributes:
         width: null
         height: null
+      svg_render_as_image: true
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_swiper_loop:
-    weight: 3
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 3
     region: content
   field_swiper_pagination:
-    weight: 11
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 11
     region: content
   field_swiper_scrollbar:
-    weight: 12
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 12
     region: content
   field_swiper_slider_width:
-    weight: 16
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 16
     region: content
   field_swiper_speed:
-    weight: 5
+    type: number_integer
     label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: false
     third_party_settings: {  }
-    type: number_integer
+    weight: 5
     region: content
   field_swiper_video_autoplay:
-    weight: 9
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 9
     region: content
   field_title:
-    weight: 15
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 15
     region: content
 hidden:
   search_api_excerpt: true

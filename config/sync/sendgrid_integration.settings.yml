@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: g4qz7cPnloXFwtnLYfIKI2VS0gf_UFOz_I2uQiiulC8
+langcode: uk
 apikey: null
 test_defaults:
   to: anpolimus@gmail.com
@@ -8,6 +11,3 @@ test_defaults:
   from_name: info@drupalcampkyiv.org.ua
   to_name: 'Anatoliy Polyakov'
   reply_to: org.drupalcamp.kyiv@gmail.com
-_core:
-  default_config_hash: g4qz7cPnloXFwtnLYfIKI2VS0gf_UFOz_I2uQiiulC8
-langcode: uk

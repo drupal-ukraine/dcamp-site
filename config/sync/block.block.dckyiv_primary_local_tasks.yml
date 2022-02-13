@@ -17,13 +17,13 @@ plugin: local_tasks_block
 settings:
   id: local_tasks_block
   label: 'Primary tabs'
-  provider: core
   label_display: '0'
+  provider: core
   primary: true
   secondary: false
 visibility:
   request_path:
     id: request_path
-    pages: "/user/login\r\n/user/register"
     negate: true
     context_mapping: {  }
+    pages: "/user/login\r\n/user/register"

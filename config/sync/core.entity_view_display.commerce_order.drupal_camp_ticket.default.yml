@@ -17,76 +17,76 @@ content:
   balance:
     type: commerce_price_default
     label: inline
-    weight: 11
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
+    weight: 11
     region: content
   completed:
-    label: above
     type: timestamp
-    weight: 0
-    region: content
+    label: above
     settings:
       date_format: medium
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
   ip_address:
-    label: above
     type: string
-    weight: 0
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   mail:
-    label: above
     type: string
-    weight: 0
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   order_items:
     type: commerce_order_item_table
-    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
-    region: content
-  placed:
-    label: above
-    type: timestamp
     weight: 0
     region: content
+  placed:
+    type: timestamp
+    label: above
     settings:
       date_format: medium
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
   state:
-    label: hidden
     type: state_transition_form
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 10
     region: content
-    settings: {  }
-    third_party_settings: {  }
   total_price:
-    label: hidden
     type: commerce_order_total_summary
-    weight: 0
-    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   uid:
-    label: above
     type: author
-    weight: 0
-    region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   billing_profile: true
   changed: true

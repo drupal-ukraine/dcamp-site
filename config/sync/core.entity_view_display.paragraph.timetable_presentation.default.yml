@@ -17,30 +17,30 @@ bundle: timetable_presentation
 mode: default
 content:
   field_background:
-    weight: 0
+    type: color_field_formatter_text
     label: hidden
     settings:
       format: hex
       opacity: true
     third_party_settings: {  }
-    type: color_field_formatter_text
+    weight: 0
     region: content
   field_place:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
   field_presentation_ref:
-    weight: 2
+    type: entity_reference_entity_view_timetable_presentation
     label: hidden
     settings:
       view_mode: timetable_teaser
       address: 'Mercure Kyiv Congress Hall, м.Київ, вул. Вадима Гетьмана, 6'
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view_timetable_presentation
+    weight: 2
     region: content
 hidden:
   search_api_excerpt: true
