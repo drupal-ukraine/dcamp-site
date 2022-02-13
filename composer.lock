@@ -2377,32 +2377,36 @@
         },
         {
             "name": "drupal/commerce",
-            "version": "2.16.0",
+            "version": "2.28.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce.git",
-                "reference": "8.x-2.16"
+                "reference": "8.x-2.28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce-8.x-2.16.zip",
-                "reference": "8.x-2.16",
-                "shasum": "9c3297f4f18d1276bd76d2129aac3b4476dc5db5"
+                "url": "https://ftp.drupal.org/files/projects/commerce-8.x-2.28.zip",
+                "reference": "8.x-2.28",
+                "shasum": "8a8ff91603c7b69064ce16701e15d6945d731e03"
             },
             "require": {
                 "commerceguys/intl": "^1.0.0",
                 "drupal/address": "^1.7",
-                "drupal/core": "^8.7",
-                "drupal/entity": "^1.0-rc2",
+                "drupal/core": "^8.9 || ^9",
+                "drupal/entity": "^1.0",
                 "drupal/entity_reference_revisions": "~1.0",
-                "drupal/inline_entity_form": "^1.0-rc1",
-                "drupal/profile": "^1.0",
-                "drupal/state_machine": "^1.0-rc1",
-                "drupal/token": "^1.0",
+                "drupal/inline_entity_form": "^1.0-rc6",
+                "drupal/profile": "^1.2",
+                "drupal/state_machine": "^1.5",
+                "drupal/token": "^1.7",
                 "ext-bcmath": "*",
-                "php": ">=7.0.8"
+                "php": "^7.1 || ^8.0"
+            },
+            "conflict": {
+                "drupal/commerce_shipping": "<2.1"
             },
             "require-dev": {
+                "behat/mink-goutte-driver": "^1.2",
                 "drupal/commerce_cart": "*",
                 "drupal/commerce_number_pattern": "*",
                 "drupal/commerce_order": "*",
@@ -2410,16 +2414,17 @@
                 "drupal/commerce_price": "*",
                 "drupal/commerce_product": "*",
                 "drupal/commerce_store": "*",
+                "drupal/entity_print": "^2.2",
                 "drupal/entity_reference_revisions": "*",
-                "drupal/mailsystem": "^4.1",
+                "drupal/mailsystem": "^4.3",
                 "drupal/profile": "*",
                 "drupal/state_machine": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.16",
-                    "datestamp": "1590598198",
+                    "version": "8.x-2.28",
+                    "datestamp": "1639899120",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
