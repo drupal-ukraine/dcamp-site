@@ -1,0 +1,50 @@
+# Site aliases for YMCA HBB for Drush 9.
+#
+# Usage:
+#   To copy the development database to your local site:
+#     $ drush sql-sync @y.develop @y.local
+#   To copy your local database to the development site:
+#     $ drush sql-sync @y.local @y.develop --structure-tables-key=common --no-ordered-dump --sanitize=0 --no-cache
+#   To copy the production database to your local site:
+#     $ drush sql-sync @y.production @y.local
+#   To copy all files in development site to your local site:
+#     $ drush rsync @y.develop:%files @y.local:%files
+#   Clear the cache in production:
+#     $ drush @y.production cr
+
+# Alias for the local environment.
+local:
+  paths:
+    site: sites/default/
+  root: /var/www/docroot
+  uri: 'http://dcamp-site.docksal'
+
+'production':
+  host: drupalcampkyiv.org
+  options:
+    command-specific:
+      sql-sync:
+        sanitize: true
+        no-ordered-dump: true
+        structure-tables:
+          common:
+            - cache
+            - cache_filter
+            - cache_menu
+            - cache_page
+            - history
+            - sessions
+            - watchdog
+      rsync:
+        mode: rlptzO
+        verbose: true
+        no-perms: true
+    source-command-specific:
+      sql-sync:
+        no-cache: true
+        structure-tables-key: common
+  paths:
+    dump-dir: /tmp
+  root: /var/www/drupalcampkyiv.org/docroot
+  uri: 'http://drupalcampkyiv.org'
+  user: root
