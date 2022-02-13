@@ -53,7 +53,7 @@
         "drupal/video_embed_field": "^2.0",
         "drupal/views_infinite_scroll": "^1.5",
         "drupal/viewsreference": "^1.2",
-        "drupal/webform": "^5.0@RC",
+        "drupal/webform": "^6.1",
         "drupal/webform_mailchimp": "^5.4",
         "drupal/workflow": "^1.1",
         "drupal/workflow_buttons": "^1.0@beta",
