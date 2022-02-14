@@ -21,13 +21,10 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       presentations_cta: presentations_cta
+    negate: 0
     target_bundles_drag_drop:
-      presentations_cta:
-        enabled: true
-        weight: 10
       camp_products:
         weight: 11
         enabled: false
@@ -49,6 +46,9 @@ settings:
       presentations:
         weight: 17
         enabled: false
+      presentations_cta:
+        weight: 10
+        enabled: true
       teaser:
         weight: 18
         enabled: false

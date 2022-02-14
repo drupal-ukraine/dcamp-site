@@ -7,9 +7,9 @@ dependencies:
       - commerce_product
 _core:
   default_config_hash: 6n6q97CDOCqHGs4Dun3BqVJE6e1o6TA-69qCwoUU-SY
-label: Базово
 id: default
-purchasableEntityType: commerce_product_variation
-orderType: default
+label: Базово
 traits: {  }
 locked: false
+purchasableEntityType: commerce_product_variation
+orderType: default

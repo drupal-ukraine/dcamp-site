@@ -16,13 +16,13 @@ bundle: mie_demo_content
 mode: default
 content:
   field_mie_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: mie_demo_teaser
       image_link: ''
+      image_style: mie_demo_teaser
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
 hidden:
   description: true

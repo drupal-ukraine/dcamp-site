@@ -5,11 +5,11 @@ dependencies:
   config:
     - commerce_order.commerce_order_item_type.default
     - field.field.commerce_order_item.default.field_t_shirt_size
+  module:
+    - commerce_order
   enforced:
     module:
       - commerce_product
-  module:
-    - commerce_order
 _core:
   default_config_hash: AI9120ApX7uexCUMTuO3RgE5bWu8175i_bNlPMRXe7M
 id: commerce_order_item.default.default
@@ -18,36 +18,36 @@ bundle: default
 mode: default
 content:
   field_t_shirt_size:
+    type: options_select
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   purchased_entity:
     type: entity_reference_autocomplete
     weight: 0
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    region: content
   quantity:
     type: commerce_quantity
     weight: 1
+    region: content
     settings:
       placeholder: ''
       step: '1'
     third_party_settings: {  }
-    region: content
   unit_price:
     type: commerce_unit_price
     weight: 2
+    region: content
     settings:
       require_confirmation: true
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   status: true

@@ -34,20 +34,20 @@ bundle: presentation
 mode: default
 content:
   content_moderation_control:
-    weight: 8
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 8
+    region: content
   field_company:
-    weight: 11
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 11
     region: content
   field_drupal_org:
-    weight: 7
+    type: link_separate
     label: hidden
     settings:
       trim_length: 80
@@ -56,10 +56,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link_separate
+    weight: 7
     region: content
   field_facebook:
-    weight: 4
+    type: link_separate
     label: hidden
     settings:
       trim_length: 80
@@ -68,44 +68,44 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link_separate
+    weight: 4
     region: content
   field_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
+      image_link: ''
+      image_style: ''
       svg_attributes:
         width: null
         height: null
       svg_render_as_image: true
-      image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_information_about_author:
-    weight: 3
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: content
   field_language:
-    weight: 13
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 13
     region: content
   field_level:
-    weight: 12
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 12
     region: content
   field_linkedin:
-    weight: 5
+    type: link_separate
     label: hidden
     settings:
       trim_length: 80
@@ -114,40 +114,40 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link_separate
+    weight: 5
     region: content
   field_meta_tags:
-    weight: 14
+    type: metatag_empty_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 14
     region: content
   field_name:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_presentation_description:
-    weight: 10
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 10
     region: content
   field_second_name:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_twitter:
-    weight: 6
+    type: link_separate
     label: hidden
     settings:
       trim_length: 80
@@ -156,20 +156,20 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link_separate
+    weight: 6
     region: content
   field_yoast_seo:
-    weight: 15
+    type: yoastseo_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: yoastseo_formatter
+    weight: 15
     region: content
   links:
-    weight: 9
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 9
+    region: content
 hidden:
   field_sex: true
   field_t_shirt_size: true

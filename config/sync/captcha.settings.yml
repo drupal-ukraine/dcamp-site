@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: pfrv6lPS72f5WG1UB4wHkgQV2invlHwVpaCy_mY-ClQ
+langcode: uk
 default_challenge: recaptcha/reCAPTCHA
 description: Pl
 administration_mode: false
@@ -7,6 +10,3 @@ default_validation: 1
 persistence: 1
 enable_stats: false
 log_wrong_responses: false
-_core:
-  default_config_hash: pfrv6lPS72f5WG1UB4wHkgQV2invlHwVpaCy_mY-ClQ
-langcode: uk

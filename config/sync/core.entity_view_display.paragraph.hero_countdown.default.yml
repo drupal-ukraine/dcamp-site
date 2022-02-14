@@ -19,7 +19,7 @@ bundle: hero_countdown
 mode: default
 content:
   field_cta_link:
-    weight: 4
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -28,38 +28,38 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 4
     region: content
   field_date:
-    weight: 1
+    type: datetime_custom
     label: hidden
     settings:
       timezone_override: Europe/Kiev
       date_format: 'Y/m/d H:i:s'
     third_party_settings: {  }
-    type: datetime_custom
+    weight: 1
     region: content
   field_heading:
-    weight: 2
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_subheading:
-    weight: 3
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: content
 hidden: {  }

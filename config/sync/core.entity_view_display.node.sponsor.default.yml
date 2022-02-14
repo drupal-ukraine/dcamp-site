@@ -25,7 +25,7 @@ bundle: sponsor
 mode: default
 content:
   field_drupal_org:
-    weight: 6
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -34,17 +34,17 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 6
     region: content
   field_email:
-    weight: 7
+    type: email_mailto
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: email_mailto
+    weight: 7
     region: content
   field_facebook:
-    weight: 3
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -53,23 +53,23 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 3
     region: content
   field_image:
-    weight: 1
+    type: image
     label: hidden
     settings:
+      image_link: ''
+      image_style: ''
       svg_attributes:
         width: null
         height: null
       svg_render_as_image: true
-      image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    weight: 1
     region: content
   field_linkedin:
-    weight: 4
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -78,27 +78,27 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 4
     region: content
   field_page_content:
-    weight: 8
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    weight: 8
     region: content
   field_sponsor_type:
     type: entity_reference_label
-    weight: 9
-    region: content
     label: hidden
     settings:
       link: false
     third_party_settings: {  }
+    weight: 9
+    region: content
   field_twitter:
-    weight: 5
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -107,25 +107,25 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 5
     region: content
   field_web_site:
-    weight: 2
+    type: link
     label: inline
     settings:
       trim_length: 80
       url_only: true
-      target: _blank
       url_plain: false
       rel: '0'
+      target: _blank
     third_party_settings: {  }
-    type: link
+    weight: 2
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_person: true
   langcode: true

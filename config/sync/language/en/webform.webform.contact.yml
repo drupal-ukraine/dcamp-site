@@ -1,5 +1,40 @@
 title: Contact
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#placeholder': 'Ім''я'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#placeholder': Тема\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\ntelefon:\n  '#type': tel\n  '#title': Phone\n  '#placeholder': Телефон\nemail:\n  '#type': email\n  '#title': Email\n  '#placeholder': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#placeholder': 'Опишіть своє питання до нас...'\n  '#required': true\n  '#test': 'Please ignore this email.'\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: |-
+  name:
+    '#type': textfield
+    '#title': Name
+    '#placeholder': 'Ім''я'
+    '#required': true
+    '#default_value': '[current-user:display-name]'
+  subject:
+    '#type': textfield
+    '#title': Subject
+    '#placeholder': Тема
+    '#required': true
+    '#test': 'Testing contact webform from [site:name]'
+  telefon:
+    '#type': tel
+    '#title': Phone
+    '#placeholder': Телефон
+  email:
+    '#type': email
+    '#title': Email
+    '#placeholder': Email
+    '#required': true
+    '#default_value': '[current-user:mail]'
+  message:
+    '#type': textarea
+    '#title': Message
+    '#placeholder': 'Опишіть своє питання до нас...'
+    '#required': true
+    '#test': 'Please ignore this email.'
+  captcha:
+    '#type': captcha
+    '#captcha_type': recaptcha/reCAPTCHA
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Send message'
 settings:
   confirmation_message: 'Your message has been sent.'
 handlers:

@@ -1,4 +1,4 @@
-login_with_username: true
 _core:
   default_config_hash: 6cFmNHjhs_glkuywBEhzcUQ8aiHXcFe6hZfW7PLN-qg
 langcode: uk
+login_with_username: true

@@ -36,8 +36,8 @@ content:
     weight: 1
     region: content
     settings:
-      preview_image_style: large
       progress_indicator: throbber
+      preview_image_style: large
     third_party_settings: {  }
 hidden:
   commerce_remote_id: true

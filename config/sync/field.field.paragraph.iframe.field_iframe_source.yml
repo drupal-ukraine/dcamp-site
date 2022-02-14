@@ -18,13 +18,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  title: ''
   class: iframe_field
   frameborder: '0'
   scrolling: auto
   transparency: '1'
+  allowfullscreen: '0'
   tokensupport: '2'
-  title: ''
-  height: ''
   width: ''
-  allowfullscreen: 0
+  height: ''
 field_type: iframe

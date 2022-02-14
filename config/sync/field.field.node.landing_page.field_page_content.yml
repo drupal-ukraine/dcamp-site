@@ -21,40 +21,34 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
     target_bundles:
       menu_cta: menu_cta
+    negate: 1
     target_bundles_drag_drop:
-      container:
-        weight: 6
-        enabled: false
-      cta_block:
-        weight: 7
-        enabled: false
-      html_widget:
-        weight: 8
-        enabled: false
-      menu_cta:
-        enabled: true
-        weight: 9
-      teaser:
-        weight: 10
-        enabled: false
-      timetable:
-        weight: 20
-        enabled: false
       camp_products:
         weight: 21
         enabled: false
       contacts:
         weight: 22
         enabled: false
+      container:
+        weight: 6
+        enabled: false
+      cta_block:
+        weight: 7
+        enabled: false
       hero_countdown:
         weight: 25
+        enabled: false
+      html_widget:
+        weight: 8
         enabled: false
       icomoon_link:
         weight: 27
         enabled: false
+      menu_cta:
+        weight: 9
+        enabled: true
       presentations:
         weight: 29
         enabled: false
@@ -67,11 +61,17 @@ settings:
       sponsor_wrapper:
         weight: 32
         enabled: false
+      sponsor_wrapper_full:
+        weight: 33
+        enabled: false
       sponsors:
         weight: 33
         enabled: false
-      sponsor_wrapper_full:
-        weight: 33
+      teaser:
+        weight: 10
+        enabled: false
+      timetable:
+        weight: 20
         enabled: false
       timetable_presentation:
         weight: 35

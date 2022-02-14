@@ -15,6 +15,6 @@ plugin: search_icon
 settings:
   id: search_icon
   label: 'Search Icon'
-  provider: dckyiv_core
   label_display: '0'
+  provider: dckyiv_core
 visibility: {  }

@@ -21,13 +21,13 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       attendee: attendee
+    negate: 0
     target_bundles_drag_drop:
       attendee:
-        enabled: true
         weight: 16
+        enabled: true
       camp_products:
         weight: 17
         enabled: false

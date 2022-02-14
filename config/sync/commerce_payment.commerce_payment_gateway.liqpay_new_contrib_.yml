@@ -9,6 +9,10 @@ label: 'LiqPay (new contrib)'
 weight: null
 plugin: liqpay_offsite_gateway
 configuration:
+  display_label: Liqpay
+  mode: live
+  payment_method_types:
+    - credit_card
   message_success: 'Payment completed.'
   message_reversed: 'Payment amount reversed to card holder.'
   message_sandbox: 'Transaction marked as sandbox.'
@@ -24,9 +28,5 @@ configuration:
   api_url: 'https://www.liqpay.ua/api/'
   server_notifications: '1'
   description: 'Ordered # [commerce_order:order_id] at [site:name].'
-  display_label: Liqpay
-  mode: live
-  payment_method_types:
-    - credit_card
 conditions: {  }
 conditionOperator: AND

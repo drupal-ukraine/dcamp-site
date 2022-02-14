@@ -14,31 +14,31 @@ bundle: iframe
 mode: default
 content:
   field_iframe_source:
-    weight: 1
+    type: iframe_default
     label: hidden
     settings:
       url: ''
       title: ''
-      width: ''
-      height: ''
       class: ''
-      expose_class: ''
       frameborder: '0'
       scrolling: auto
       transparency: '0'
       tokensupport: '0'
+      width: ''
+      height: ''
+      expose_class: ''
     third_party_settings: {  }
-    type: iframe_default
+    weight: 1
     region: content
   field_wide_screen:
-    weight: 2
+    type: boolean
     label: hidden
     settings:
       format: true-false
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 2
     region: content
 hidden:
   search_api_excerpt: true

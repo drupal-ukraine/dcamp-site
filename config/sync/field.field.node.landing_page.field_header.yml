@@ -21,9 +21,9 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
     target_bundles:
       menu_cta: menu_cta
+    negate: 1
     target_bundles_drag_drop:
       container:
         weight: 6
@@ -35,8 +35,8 @@ settings:
         weight: 8
         enabled: false
       menu_cta:
-        enabled: true
         weight: 9
+        enabled: true
       teaser:
         weight: 10
         enabled: false

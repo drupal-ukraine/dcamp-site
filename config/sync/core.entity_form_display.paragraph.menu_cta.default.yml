@@ -15,7 +15,9 @@ bundle: menu_cta
 mode: default
 content:
   field_background_color:
+    type: color_field_widget_spectrum
     weight: 0
+    region: content
     settings:
       show_input: '1'
       show_palette: '1'
@@ -24,16 +26,14 @@ content:
       show_buttons: '0'
       allow_empty: '0'
     third_party_settings: {  }
-    type: color_field_widget_spectrum
-    region: content
   field_text:
+    type: text_textarea
     weight: 1
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   status:
     type: boolean_checkbox
     weight: 2

@@ -26,7 +26,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       camp_products: camp_products
       contacts: contacts
@@ -34,16 +33,17 @@ settings:
       html_widget: html_widget
       social_links: social_links
       sponsors: sponsors
+    negate: 0
     target_bundles_drag_drop:
       camp_products:
-        enabled: true
         weight: 16
+        enabled: true
       contacts:
-        enabled: true
         weight: 17
-      container:
         enabled: true
+      container:
         weight: 18
+        enabled: true
       cta_block:
         weight: 19
         enabled: false
@@ -51,8 +51,8 @@ settings:
         weight: 20
         enabled: false
       html_widget:
-        enabled: true
         weight: 21
+        enabled: true
       icomoon_link:
         weight: 22
         enabled: false
@@ -66,11 +66,11 @@ settings:
         weight: 25
         enabled: false
       social_links:
-        enabled: true
         weight: 26
-      sponsors:
         enabled: true
+      sponsors:
         weight: 27
+        enabled: true
       teaser:
         weight: 28
         enabled: false

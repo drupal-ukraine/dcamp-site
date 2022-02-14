@@ -7,16 +7,16 @@ dependencies:
     - commerce_checkout
 third_party_settings:
   commerce_cart:
-    cart_form_view: commerce_cart_form
     cart_block_view: commerce_cart_block
+    cart_form_view: commerce_cart_form
   commerce_checkout:
     checkout_flow: default
-label: 'Drupal Camp Ticket'
 id: drupal_camp_ticket
+label: 'Drupal Camp Ticket'
+traits: {  }
+locked: false
 workflow: order_default
 refresh_mode: customer
 refresh_frequency: 300
 sendReceipt: true
 receiptBcc: ''
-traits: {  }
-locked: false

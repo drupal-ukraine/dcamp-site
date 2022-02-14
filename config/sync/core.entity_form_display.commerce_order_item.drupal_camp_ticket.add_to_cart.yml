@@ -31,16 +31,16 @@ content:
   purchased_entity:
     type: commerce_product_variation_attributes
     weight: 0
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   quantity:
     type: commerce_quantity
     weight: 1
     region: content
     settings:
-      step: '1'
       placeholder: ''
+      step: '1'
     third_party_settings: {  }
 hidden:
   created: true

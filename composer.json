@@ -17,8 +17,8 @@
         "drupal/console": "^1.0.2",
         "drupal/content_moderation_notifications": "^3.3",
         "drupal/content_planner": "^1.0@beta",
-        "drupal/core-composer-scaffold": "8.9.0",
-        "drupal/core-recommended": "8.9.20",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-recommended": "^9.3",
         "drupal/devel": "^4.1",
         "drupal/dropzonejs": "^2.5",
         "drupal/email_registration": "^1.0@RC",
@@ -58,14 +58,10 @@
         "drupal/workflow": "^1.1",
         "drupal/workflow_buttons": "^1.0@beta",
         "drupal/yoast_seo": "^1.3",
-        "drush/drush": "^10.0",
+        "drush/drush": "^11.0",
         "enyo/dropzone": "^5.5",
         "hilios/jquery.countdown": "^2.2",
         "oomphinc/composer-installers-extender": "~2.0"
-    },
-    "require-dev": {
-        "drupal/core-dev": "~8.8.2",
-        "drupal/upgrade_status": "^3.13"
     },
     "authors": [
         {
@@ -168,6 +164,7 @@
                 "[web-root]/example.gitignore": false,
                 "[web-root]/INSTALL.txt": false,
                 "[web-root]/README.txt": false,
+                "[web-root]/README.md": false,
                 "[web-root]/web.config": false,
                 "[web-root]/sites/README.txt": false,
                 "[web-root]/sites/default/default.services.yml": false,
@@ -232,5 +229,9 @@
             "oomphinc/composer-installers-extender": true,
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "^9.3",
+        "drupal/upgrade_status": "^3.13"
     }
 }

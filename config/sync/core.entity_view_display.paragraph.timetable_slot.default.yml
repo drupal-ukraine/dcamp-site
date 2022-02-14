@@ -19,40 +19,40 @@ bundle: timetable_slot
 mode: default
 content:
   field_background:
-    weight: 0
+    type: color_field_formatter_text
     label: hidden
     settings:
       format: hex
       opacity: true
     third_party_settings: {  }
-    type: color_field_formatter_text
+    weight: 0
     region: content
   field_presentations:
     type: entity_reference_revisions_entity_view
-    weight: 3
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 3
     region: content
   field_time_slot:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_time_slot_start_end:
-    weight: 4
+    type: daterange_custom
     label: hidden
     settings:
       timezone_override: Europe/Kiev
       date_format: 'H:i'
       separator: '-'
     third_party_settings: {  }
-    type: daterange_custom
+    weight: 4
     region: content
 hidden:
   field_content: true

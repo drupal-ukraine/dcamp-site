@@ -20,8 +20,8 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
     target_bundles: null
+    negate: 1
     target_bundles_drag_drop:
       contacts:
         weight: 10

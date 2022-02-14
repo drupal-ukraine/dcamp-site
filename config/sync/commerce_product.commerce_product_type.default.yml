@@ -6,9 +6,9 @@ _core:
   default_config_hash: 5TqAuVTl1_arKIBeD1qDfJM-pKmaFnqyYSQNdwEK_DQ
 id: default
 label: Базово
+traits: {  }
+locked: false
 description: ''
 variationType: default
 multipleVariations: false
 injectVariationFields: false
-traits: {  }
-locked: false
