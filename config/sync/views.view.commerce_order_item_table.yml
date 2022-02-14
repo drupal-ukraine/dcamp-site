@@ -386,17 +386,17 @@ display:
           tokenize: false
       sorts: {  }
       arguments:
-        order_id:
-          id: order_id
+        order_item_id:
+          id: order_item_id
           table: commerce_order_item
-          field: order_id
+          field: order_item_id
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: commerce_order_item
-          entity_field: order_id
+          entity_field: order_item_id
           plugin_id: numeric
-          default_action: 'not found'
+          default_action: empty
           exception:
             value: all
             title_enable: false
@@ -421,7 +421,7 @@ display:
             type: none
             fail: 'not found'
           validate_options: {  }
-          break_phrase: false
+          break_phrase: true
           not: false
       filters: {  }
       style:

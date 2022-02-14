@@ -8,7 +8,6 @@ dependencies:
     - comment
     - commerce_checkout
     - commerce_product
-    - contact
     - filter
     - media
     - search
@@ -23,7 +22,6 @@ permissions:
   - 'access checkout'
   - 'access comments'
   - 'access content'
-  - 'access site-wide contact form'
   - 'access user profiles'
   - 'search content'
   - 'use text format restricted_html'
