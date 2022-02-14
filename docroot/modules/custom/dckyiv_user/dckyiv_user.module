@@ -5,6 +5,7 @@
  * Contains dckyiv_user module functionality.
  */
 
+use Drupal\Component\Render\MarkupInterface;
 use Drupal\dckyiv_user\Form\DCKUserRegisterForm;
 
 /**
@@ -27,9 +28,9 @@ function dckyiv_user_mail_alter(&$message) {
   // Set html type.
   $use_html = FALSE;
   foreach ($message['body'] as $item) {
-    if ($item != strip_tags($item)) {
+    if ($item instanceof MarkupInterface::class || $item !== strip_tags($item)) {
       $use_html = TRUE;
-      continue;
+      break;
     }
   }
 
