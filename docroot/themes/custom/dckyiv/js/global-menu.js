@@ -2,7 +2,7 @@
  * Global menu behaviour.
  */
 
-(function (Drupal, $) {
+(function (Drupal, $, once) {
   'use strict';
 
   Drupal = Drupal || {};
@@ -195,10 +195,8 @@
    */
   Drupal.behaviors.meganavMenu = {
     attach: function (context, settings) {
-      var $menuContainer = $('#block-meganav-main-menu');
-
-      $menuContainer.once('meganavMenu').each(function () {
-        var $links = $('.menu-level-0 > li > .link-container', $(this));
+      once('meganavMenu', '#block-meganav-main-menu').forEach(function (el) {
+        var $links = $('.menu-level-0 > li > .link-container', $(el));
         if ($links.length > 0) {
           var menu = new Drupal.meganavMenu($links);
           menu.init();
@@ -206,4 +204,4 @@
       });
     }
   };
-})(Drupal, jQuery);
+})(Drupal, jQuery, once);

@@ -43,6 +43,7 @@ content:
       step: '1'
     third_party_settings: {  }
 hidden:
+  adjustments: true
   created: true
   field_attendee: true
   unit_price: true

@@ -82,8 +82,10 @@ content:
     weight: 6
     region: content
 hidden:
+  balance: true
   changed: true
   ip_address: true
+  search_api_excerpt: true
   store_id: true
   total_paid: true
   uid: true

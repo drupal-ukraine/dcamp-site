@@ -10,7 +10,7 @@ global-header:
     js/dist/list-as-dropdown.min.js: {minified: true}
   dependencies:
   - core/drupal
-  - core/jquery.once
+  - core/once
   - core/underscore
 
 global-menu:
@@ -18,7 +18,7 @@ global-menu:
     js/dist/global-menu.min.js: {minified: true}
   dependencies:
   - core/drupal
-  - core/jquery.once
+  - core/once
 
 swiper:
   js:

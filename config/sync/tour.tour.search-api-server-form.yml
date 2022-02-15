@@ -26,19 +26,19 @@ tips:
     plugin: text
     label: 'Назва сервера'
     weight: 2
-    body: 'Enter a name to identify this server. For example, "Solr server". This will only be displayed in the admin user interface.'
     selector: '#edit-name'
+    body: 'Enter a name to identify this server. For example, "Solr server". This will only be displayed in the admin user interface.'
   search-api-server-form-description:
     id: search-api-server-form-description
     plugin: text
     label: 'Опис сервера'
     weight: 3
-    body: 'Optionally, enter a description to explain the function of the server in more detail. This will only be displayed in the admin user interface.'
     selector: '#edit-description'
+    body: 'Optionally, enter a description to explain the function of the server in more detail. This will only be displayed in the admin user interface.'
   search-api-server-form-backend:
     id: search-api-server-form-backend
     plugin: text
     label: 'Server backend'
     weight: 4
-    body: 'Servers can be based on different technologies. These are called "backends". A server uses exactly one backend and cannot change it later. You can make the "Database" backend available by enabling the "Database Search" module. Another very common backend is <a href="https://www.drupal.org/project/search_api_solr">"Solr"</a>, which requires to be set up separately.'
     selector: '#edit-backend'
+    body: 'Servers can be based on different technologies. These are called "backends". A server uses exactly one backend and cannot change it later. You can make the "Database" backend available by enabling the "Database Search" module. Another very common backend is <a href="https://www.drupal.org/project/search_api_solr">"Solr"</a>, which requires to be set up separately.'

@@ -49,6 +49,7 @@ content:
       require_confirmation: true
     third_party_settings: {  }
 hidden:
+  adjustments: true
   created: true
   status: true
   uid: true
