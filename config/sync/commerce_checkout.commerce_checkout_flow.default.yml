@@ -13,6 +13,7 @@ id: default
 plugin: multistep_default
 configuration:
   display_checkout_progress: true
+  display_checkout_progress_breadcrumb_links: false
   panes:
     dckyiv_login:
       step: login

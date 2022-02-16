@@ -35,5 +35,6 @@ hidden:
   body: true
   created: true
   langcode: true
+  search_api_excerpt: true
   stores: true
   uid: true

@@ -29,4 +29,4 @@ else
 fi
 
 
-fin exec "cd ${THEME_PATH_INSIDE_CONTAINER}; gulp $1"
+fin exec "cd ${THEME_PATH_INSIDE_CONTAINER}; yarn run gulp $1"

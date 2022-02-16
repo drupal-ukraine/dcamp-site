@@ -25,7 +25,9 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  adjustments: true
   created: true
+  field_t_shirt_size: true
   quantity: true
   status: true
   uid: true

@@ -3,7 +3,7 @@
  * Custom Select Dropdown init.
  */
 
-(function ($, Drupal) {
+(function ($, Drupal, once) {
   'use strict';
 
   /**
@@ -11,10 +11,12 @@
    */
   Drupal.behaviors.listAsDropdown = {
     attach: function (context, settings) {
-      $('#block-dckyiv-primary-local-tasks').once('list-as-dropdown').on('click', function() {
-        $(this).toggleClass('nav-is-visible');
-      });
+      once('list-as-dropdown', '#block-dckyiv-primary-local-tasks').forEach(function (el) {
+        $(el).on('click', function() {
+          $(this).toggleClass('nav-is-visible');
+        });
+      })
     }
   };
 
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);

@@ -16,6 +16,7 @@ label: 'Drupal Camp Ticket'
 traits: {  }
 locked: false
 workflow: order_default
+numberPattern: null
 refresh_mode: customer
 refresh_frequency: 300
 sendReceipt: true

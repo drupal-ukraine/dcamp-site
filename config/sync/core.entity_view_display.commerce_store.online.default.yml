@@ -22,7 +22,12 @@ content:
     region: content
 hidden:
   billing_countries: true
+  created: true
   default_currency: true
+  is_default: true
   langcode: true
   mail: true
   name: true
+  search_api_excerpt: true
+  timezone: true
+  uid: true

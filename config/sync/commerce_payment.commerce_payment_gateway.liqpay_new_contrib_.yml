@@ -13,6 +13,7 @@ configuration:
   mode: live
   payment_method_types:
     - credit_card
+  collect_billing_information: true
   message_success: 'Payment completed.'
   message_reversed: 'Payment amount reversed to card holder.'
   message_sandbox: 'Transaction marked as sandbox.'

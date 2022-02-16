@@ -142,8 +142,8 @@ gulp.task('build', gulp.series('build-icomoon', 'assets', 'sass', 'compress'));
 gulp.task('watch', gulp.series('build', () => {
   'use strict';
   livereload.listen();
-  gulp.watch(paths.sass.watch, ['sass']);
-  return gulp.watch(paths.scripts, ['compress']);
+  gulp.watch(paths.sass.watch, gulp.series('sass'));
+  return gulp.watch(paths.scripts, gulp.series('compress'));
 }));
 
 gulp.task('default', gulp.series('build'));

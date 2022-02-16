@@ -2,7 +2,7 @@
  * Global header behaviour.
  */
 
-(function (Drupal, $) {
+(function (Drupal, $, once) {
   'use strict';
 
   Drupal = Drupal || {};
@@ -71,11 +71,11 @@
   Drupal.behaviors.dckyivHeader = {
     attach: function (context, settings) {
 
-      $('header.main-header').once('dckyivHeader').each(function () {
+      once('dckyivHeader', 'header.main-header').forEach(function () {
         Drupal.dckyivHeaderObj = new Drupal.dckyivHeader;
         Drupal.dckyivHeaderObj.init();
       });
     }
   };
 
-})(Drupal, jQuery);
+})(Drupal, jQuery, once);
